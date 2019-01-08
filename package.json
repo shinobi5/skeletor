@@ -1,14 +1,14 @@
 {
-  "name": "skeletor-static",
+  "name": "skeletor",
   "version": "1.0.0",
-  "description": "Front-end development boilerplate",
+  "description": "Front-end boilerplate",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shinobi5/skeletor-static.git"
+    "url": "git+https://github.com/shinobi5/skeletor.git"
   },
   "author": "",
   "license": "ISC",
