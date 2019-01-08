@@ -6,18 +6,6 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # remove .git from root
 rm -rf "$DIR/../.git"
 
-# remove .gitmodules from root
-rm "$DIR/../.gitmodules"
-
-# remove .git from submodule
-rm -rf "$DIR/../src/scss/.git"
-
-# remove readme from submodule
-rm -rf "$DIR/../src/scss/README.md"
-
-# remove editorconfig from submodule
-rm -rf "$DIR/../src/scss/.editorconfig"
-
 # install npm modules
 npm install
 
