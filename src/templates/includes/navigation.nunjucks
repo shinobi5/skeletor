@@ -1,15 +1,14 @@
-<nav id="nav" class="nav" role="navigation">
-    <button type="menu" menu="popup-menu" class="nav__trigger">
+<nav id="navigation" role="navigation">
+    <button type="menu" menu="popup-menu">
         <span class="u-screen-reader">Mobile Menu Button</span>
     </button>
 
-    <ul class="nav__list">
-        <li class="nav__item">
+    <ul>
+        <li>
             <a href="#" title="Go to Homepage" class="s-active">Home</a>
         </li>
-        <li class="nav__item">
+        <li>
             <a href="#" title="Go to Page">Page</a>
         </li>
     </ul>
 </nav>
-<!-- end: .nav -->
