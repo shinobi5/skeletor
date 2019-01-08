@@ -1,0 +1,14 @@
+// -- path: img folder
+@function image-path($file, $asset: false) {
+	@return $path-image-assets + "/" + $file;
+}
+
+// -- path: font folder
+@function font-path($file) {
+	@return $path-font + "/" + $file;
+}
+
+// -- value: get icon from list of icon variables
+@function icon($ref) {
+	@return map-get($icons, $ref);
+}

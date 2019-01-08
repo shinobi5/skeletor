@@ -1,0 +1,23 @@
+// -- fonts: font face
+@mixin font-face($font-name, $font, $weight: normal, $style: normal, $woff2: false) {
+	@if ($woff2) {
+		@font-face {
+			font-family: $font-name;
+			font-weight: $weight;
+			font-style: $style;
+			src: url(font-path("#{$font}.woff")) format("woff"), // Pretty Modern Browsers
+				 url(font-path("#{$font}.woff2")) format("woff2"), // Super Modern Browsers
+				 url(font-path("#{$font}.ttf")) format("truetype"), // Safari, Android, iOS
+		}
+	}
+
+	@else {
+		@font-face {
+			font-family: $font-name;
+			font-weight: $weight;
+			font-style: $style;
+			src: url(font-path("#{$font}.woff")) format("woff"), // Pretty Modern Browsers
+				 url(font-path("#{$font}.ttf")) format("truetype"), // Safari, Android, iOS
+		}
+	}
+}

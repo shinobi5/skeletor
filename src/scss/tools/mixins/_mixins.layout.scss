@@ -1,0 +1,21 @@
+// -- absolute and relative centering
+@mixin centered($direction, $position: absolute) {
+	display:block;
+	position: $position;
+
+	@if ($direction == 'vertical') {
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	@elseif ($direction == 'horizontal') {
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	@elseif ($direction == 'both') {
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+}

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Title</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    	<meta name="theme-color" content="#333">
+        <link rel="shortcut icon" href="favicon.png" type="image/png">
+        <link href="style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <a href="#content" class="u-visuallyhidden">Skip to content</a>
+
+        {% block header %}{% include "includes/header.nunjucks" %}{% endblock %}
+
+        <main id="content" class="content">
+        {% block content %}{% endblock %}
+        </main>
+
+        {% block footer %}{% include "includes/footer.nunjucks" %}{% endblock %}
+
+        <!--build:js js/post.min.js -->
+        <script src="../js/all.js"></script>
+        <!-- endbuild -->
+    </body>
+</html>

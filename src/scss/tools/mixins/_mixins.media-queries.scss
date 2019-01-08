@@ -1,0 +1,17 @@
+// -- breakpoints
+// usage examples:
+// @media #{min($bp-sm)} { content }
+// @media #{max($bp-max-lg)} { content }
+// @media #{min-max($bp-sm, $bp-md)} { content }
+
+@function min($bp) {
+	@return "(min-width: #{($bp / 16) * 1em})";
+}
+
+@function max($bp) {
+	@return "(max-width: #{($bp / 16) * 1em})";
+}
+
+@function min-max($bp-min, $bp-max) {
+	@return "#{min($bp-min)} and #{max($bp-max)}";
+}
