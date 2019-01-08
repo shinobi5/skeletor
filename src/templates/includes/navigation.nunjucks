@@ -1,6 +1,6 @@
 <nav id="nav" class="nav" role="navigation">
     <button type="menu" menu="popup-menu" class="nav__trigger">
-        <span class="u-visuallyhidden">Mobile Menu Button</span>
+        <span class="u-screen-reader">Mobile Menu Button</span>
     </button>
 
     <ul class="nav__list">
