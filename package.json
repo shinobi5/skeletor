@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Front-end boilerplate",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/shinobi5/skeletor.git"
@@ -30,8 +27,9 @@
     "gulp-useref": "^3.1.6",
     "jshint": "^2.9.2"
   },
-  "script": {
-    "build": "gulp build",
-    "watch": "gulp watch"
+  "scripts": {
+    "clean": "gulp clean",
+    "cleanDist": "gulp cleanDist",
+    "build": "gulp"
   }
 }
