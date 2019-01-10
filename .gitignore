@@ -21,3 +21,5 @@ build
 
 # nunjucks
 src/**/*.html
+
+package-lock.json
