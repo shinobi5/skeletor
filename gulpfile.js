@@ -4,23 +4,22 @@ var gulp = require('gulp'),
 
     // include plugins
     jshint = require('gulp-jshint'),
-    sass = require('gulp-sass'),
     uglify = require('gulp-uglify'),
     gulpIf = require('gulp-if'),
     browserSync = require('browser-sync').create(),
     useref = require('gulp-useref'),
     imagemin = require('gulp-imagemin'),
     cache = require('gulp-cache'),
+    concat = require('gulp-concat');
+    cleanCSS = require('gulp-clean-css');
     nunjucksRender = require('gulp-nunjucks-render');
-
 
 // clean
 gulp.task('clean:all', function () {
     return del([
         'node_modules',
         'dist',
-        'src/js/lib/*',
-        'src/js/app/*',
+        'src/js/modules/*',
         'src/pages/**/*.html'
     ]);
 });
@@ -32,7 +31,6 @@ gulp.task('clean:dist', function () {
     ]);
 });
 
-
 // browser sync: setup server
 gulp.task('browserSync', function() {
     browserSync.init({
@@ -42,14 +40,12 @@ gulp.task('browserSync', function() {
     })
 });
 
-
 // lint: check js for errors
 gulp.task('lint', function() {
     return gulp.src('js/**/*.js')
         .pipe(jshint())
         .pipe(jshint.reporter('default'));
 });
-
 
 // nunjucks
 gulp.task('nunjucks', function() {
@@ -66,10 +62,7 @@ gulp.task('nunjucks', function() {
   .pipe(gulp.dest('src/pages'))
 });
 
-
-// useref: concatenate, minify and place JS refs into HTML
-
-// useref:build
+// useref:build - concatenate, minify and place JS refs into HTML
 gulp.task('useref:build', ['nunjucks'], function(){
     return gulp.src('src/pages/*.html')
         .pipe(useref())
@@ -79,7 +72,7 @@ gulp.task('useref:build', ['nunjucks'], function(){
         .pipe(gulp.dest('dist'));
 });
 
-// useref:watch
+// useref:watch - concatenate, minify and place JS refs into HTML
 gulp.task('useref:watch', ['nunjucks'], function(){
     return gulp.src('src/pages/*.html')
         .pipe(useref())
@@ -89,17 +82,23 @@ gulp.task('useref:watch', ['nunjucks'], function(){
         .pipe(gulp.dest('dist'));
 });
 
-
-// sass: compile sass
-gulp.task('sass', function() {
-    return gulp.src('src/scss/*.scss')
-        .pipe(sass())
+// concat css files
+gulp.task('css', function() {
+    return gulp.src([
+        'src/css/settings/**/*.css',
+        'src/css/global/**/*.css',
+        'src/css/elements/**/*.css',
+        'src/css/objects/**/*.css',
+        'src/css/components/**/*.css',
+        'src/css/utilities/**/*.css'
+    ])
+        .pipe(concat('style.css'))
+        .pipe(cleanCSS())
         .pipe(gulp.dest('dist'))
         .pipe(browserSync.reload({
             stream: true
         }));
 });
-
 
 // img: optimise images
 gulp.task('img', function(){
@@ -112,22 +111,19 @@ gulp.task('img', function(){
         .pipe(gulp.dest('dist/img'))
 });
 
-
 // fonts: move font files from src to dist
 gulp.task('fonts', function() {
     return gulp.src('src/font/**/*')
         .pipe(gulp.dest('dist/font'))
 });
 
-
 // watch: watch files For changes
-gulp.task('watch', ['browserSync', 'sass'], function() {
-    gulp.watch('src/scss/**/*.scss', ['sass'], browserSync.reload);
+gulp.task('watch', ['browserSync', 'css'], function() {
+    gulp.watch('src/css/**/*.css', ['css'], browserSync.reload);
     gulp.watch('src/templates/**/*.nunjucks', ['useref:watch'], browserSync.reload);
     gulp.watch('src/pages/**/*.nunjucks', ['useref:watch'], browserSync.reload);
     gulp.watch('src/js/**/*.js', ['lint', 'useref:watch'], browserSync.reload);
 });
 
-
 // gulp: default task
-gulp.task('default', ['browserSync', 'useref:build', 'img', 'fonts', 'lint', 'sass', 'watch']);
+gulp.task('default', ['browserSync', 'useref:build', 'img', 'fonts', 'lint', 'css', 'watch']);

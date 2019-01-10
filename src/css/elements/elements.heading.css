@@ -1,0 +1,29 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-secondary);
+}
+
+h1,
+h2 {
+	margin-bottom: 2rem;
+}
+
+h1 {
+	font-size: var(--font-size-lg);
+}
+
+h2 {
+	font-size: var(--font-size-md-lg);
+}
+
+h3,
+h4,
+h5,
+h6 {
+	font-size: var(--font-size-md);
+	margin-bottom: 1rem;
+}

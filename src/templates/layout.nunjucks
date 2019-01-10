@@ -22,7 +22,7 @@
 
         {% block footer %}{% include "includes/footer.nunjucks" %}{% endblock %}
 
-        <!--build:js js/post.min.js -->
+        <!--build:js js/app.min.js -->
         <script src="../js/app.js"></script>
         <!-- endbuild -->
     </body>

@@ -1,0 +1,23 @@
+html {
+	box-sizing: border-box;
+	color: var(--color-black);
+	font-size: 62.5%;
+	line-height: var(--font-line-height-base);
+}
+
+body {
+	font-family: var(--font-primary);
+	font-size: var(--font-size-base);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* remove the gaps */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+	vertical-align: middle;
+}

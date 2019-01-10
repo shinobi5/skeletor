@@ -1,8 +1,0 @@
-// -- accessibility
-@if ($accessibility-test == true) {
-	// tests
-	img:not([alt]) {
-		border: 0.5rem solid $color-tests;
-		outline: $color-tests;
-	}
-}

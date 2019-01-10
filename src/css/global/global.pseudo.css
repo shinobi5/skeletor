@@ -1,0 +1,12 @@
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+/* remove text-shadow in selection highlight */
+::selection {
+	background: var(--color-selection);
+	color: var(--color-white);
+	text-shadow: none;
+}

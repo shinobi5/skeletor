@@ -5,7 +5,7 @@
 	*:first-letter,
 	*:first-line {
 		background: transparent !important;
-		color: $color-black !important;
+		color: var(--color-black) !important;
 		box-shadow: none !important;
 		text-shadow: none !important;
 	}
@@ -23,8 +23,10 @@
 		content: " (" attr(title) ")";
 	}
 
-	// don't show links that are fragment identifiers,
-	// or use the `javascript:` pseudo protocol
+	/* 
+		don't show links that are fragment identifiers,
+		or use the `javascript:` pseudo protocol
+	*/
 	a[href^="#"]:after,
 	a[href^="javascript:"]:after {
 		content: "";
@@ -32,12 +34,14 @@
 
 	pre,
 	blockquote {
-		border: 1px solid $color-black;
+		border: 1px solid var(--color-black);
 		page-break-inside: avoid;
 	}
 
-	// -- printing tables:
-	// http://css-discuss.incutio.com/wiki/Printing_Tables
+	/* 
+		printing tables:
+		http://css-discuss.incutio.com/wiki/Printing_Tables
+	*/	
 	thead {
 		display: table-header-group;
 	}
