@@ -1,5 +1,5 @@
 ### Description
-Front-end development boilerplate with gulp, sass and nunjucks.
+Front-end development boilerplate with gulp and nunjucks.
 
 ### Setup
 
