@@ -29,5 +29,9 @@
     "gulp-uglify": "^1.5.3",
     "gulp-useref": "^3.1.6",
     "jshint": "^2.9.2"
+  },
+  "script": {
+    "build": "gulp build",
+    "watch": "gulp watch"
   }
 }
