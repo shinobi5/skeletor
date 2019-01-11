@@ -2,9 +2,6 @@ const { dest, series, src, watch } = require('gulp');
 const del = require('del');
 const browserSync = require('browser-sync').create();
 const jshint = require('gulp-jshint');
-const uglify = require('gulp-uglify');
-const gulpIf = require('gulp-if');
-const useref = require('gulp-useref');
 const imagemin = require('gulp-imagemin');
 const cache = require('gulp-cache');
 const concat = require('gulp-concat');
@@ -15,8 +12,6 @@ function clean() {
     return del([
         'node_modules',
         'dist',
-        'src/js/modules/*',
-        'src/pages/**/*.html'
     ]);
 }
 
@@ -29,21 +24,14 @@ function cleanDist() {
 function nunjucks() {
     watch(
         ['src/templates/**/*.nunjucks', 'src/pages/**/*.nunjucks'], 
-        series(nunjucks, build, browserSync.reload)
+        series(nunjucks, browserSync.reload)
     );  
 
     return src('src/pages/**/*.nunjucks')
     .pipe(nunjucksRender({
         path: ['src/templates']
     }))
-    .pipe(dest('src/pages'))
-}
-
-function build() {
-    return src('src/pages/*.html')
-        .pipe(useref())
-        .pipe(gulpIf('*.js', uglify()))
-        .pipe(dest('dist'));
+    .pipe(dest('dist'))
 }
 
 function img() {
@@ -60,11 +48,18 @@ function fonts() {
 }
 
 function lint() {
-    watch('src/js/**/*.js', series(lint, build, browserSync.reload));
+    watch('src/js/**/*.js', series(lint, browserSync.reload));
 
     return src('js/**/*.js')
         .pipe(jshint())
         .pipe(jshint.reporter('default'));
+}
+
+function js() {
+    watch('src/js/**/*.js', series(js, browserSync.reload));
+
+    return src('src/js/**/*')
+        .pipe(dest('dist/js'))
 }
 
 function css() {
@@ -96,12 +91,14 @@ exports.cleanDist = cleanDist;
 exports.img = img;
 exports.fonts = fonts;
 exports.lint = lint;
+exports.js = js;
 exports.css = css;
 exports.default = series(
-    series(nunjucks, build),
+    nunjucks,
     img,
     fonts,
     lint,
+    js,
     css,
     browserSyncInit
 );
