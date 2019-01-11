@@ -1,5 +1,5 @@
-### Description
-Front-end development boilerplate with gulp and nunjucks.
+## Skeletor
+Front-end boilerplate with gulp and nunjucks.
 
 ### Setup
 

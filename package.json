@@ -7,7 +7,7 @@
     "type": "git",
     "url": "git+https://github.com/shinobi5/skeletor.git"
   },
-  "author": "",
+  "author": "David White",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/shinobi5/skeletor/issues"
@@ -30,6 +30,10 @@
   "scripts": {
     "clean": "gulp clean",
     "cleanDist": "gulp cleanDist",
+    "img": "gulp img",
+    "fonts": "gulp fonts",
+    "lint": "gulp lint",
+    "css": "gulp css",
     "build": "gulp"
   }
 }
