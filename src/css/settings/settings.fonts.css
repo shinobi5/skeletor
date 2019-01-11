@@ -1,12 +1,12 @@
 :root {
-    /* font family */
+    /* Font family */
     --font-primary: "arial, sans-serif";
     --font-secondary: "serif";
     
-    /* font line height */
+    /* Font line height */
     --font-line-height-base: 1.6rem;
     
-    /* font size */
+    /* Font size */
     --font-size-base: 1.6rem;
     --font-size-sm: 1.6rem;
     --font-size-sm-md: 2rem;

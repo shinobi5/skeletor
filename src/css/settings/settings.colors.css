@@ -1,18 +1,18 @@
 :root {
-    /* base */
+    /* Base */
     --color-heading: #111;
     --color-paragraph: #333;
     --color-hr: #333;
     --color-placeholder: #333;
     --color-selection: #2793c7;
 
-    /* brand */
+    /* Brand */
     --color-primary: #111;
     --color-secondary: #222;
     --color-tertiary: #333;
     --color-black: #000;
     --color-white: #fff;
 
-    /* mix */
+    /* Mix */
     --color-tests: #f00;
 }
