@@ -12,7 +12,7 @@ html {
 		Px units are fine but there's a small accessibility gain that is a
 		free win by building the project with rem values.
 
-		62.5% is set to make calculations through the project easier and it's
+		62.5% is set to make calculations in the project easier and it's
 		based on a common standard of 16px for the default browser font size. 
 		62.5% of 16 = 10. This means we can calculate values like this 20px = 2rem 
 		and 300px = 30rem (divide px value by 10). 
