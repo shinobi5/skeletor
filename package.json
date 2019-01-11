@@ -29,7 +29,7 @@
   },
   "scripts": {
     "clean": "gulp clean",
-    "cleanDist": "gulp cleanDist",
+    "clean:dist": "gulp cleanDist",
     "img": "gulp img",
     "fonts": "gulp fonts",
     "lint": "gulp lint",
