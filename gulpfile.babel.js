@@ -91,7 +91,14 @@ function browserSyncInit() {
     });
 }
 
-exports.default = series(series(nunjucks, build), img, fonts, lint, css, browserSyncInit);
+exports.default = series(
+    series(nunjucks, build),
+    img,
+    fonts,
+    lint,
+    css,
+    browserSyncInit
+);
 
 exports = {
     clean,
