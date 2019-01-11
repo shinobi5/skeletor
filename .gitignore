@@ -11,16 +11,16 @@ node_modules/
 # Optional npm cache directory
 .npm
 
-# dotenv environment variables file
+# Dotenv environment variables file
 .env
 .env.test
 
-# build
+# Build
 dist
 build
 
-# nunjucks
+# Nunjucks
 src/**/*.html
 
-# lock files
+# Lock files
 package-lock.json
