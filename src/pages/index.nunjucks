@@ -1,3 +1,4 @@
+{% set title = "Home" %}
 {% extends "layout.nunjucks" %}
 {% block content %}
 {% endblock %}
