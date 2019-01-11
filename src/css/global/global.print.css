@@ -24,7 +24,7 @@
 	}
 
 	/* 
-		don't show links that are fragment identifiers,
+		Don't show links that are fragment identifiers,
 		or use the `javascript:` pseudo protocol
 	*/
 	a[href^="#"]:after,
@@ -49,10 +49,6 @@
 	tr,
 	img {
 		page-break-inside: avoid;
-	}
-
-	img {
-		max-width: 100% !important;
 	}
 
 	p,
