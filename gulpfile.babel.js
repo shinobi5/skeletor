@@ -91,6 +91,12 @@ function browserSyncInit() {
     });
 }
 
+exports.clean = clean;
+exports.cleanDist = cleanDist;
+exports.img = img;
+exports.fonts = fonts;
+exports.lint = lint;
+exports.css = css;
 exports.default = series(
     series(nunjucks, build),
     img,
@@ -99,12 +105,3 @@ exports.default = series(
     css,
     browserSyncInit
 );
-
-exports = {
-    clean,
-    cleanDist,
-    img,
-    fonts,
-    lint,
-    css,
-}
