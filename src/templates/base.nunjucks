@@ -23,8 +23,6 @@
 
         {% block footer %}{% include "includes/footer.nunjucks" %}{% endblock %}
 
-        <!--build:js js/app.js -->
-        <script src="../js/app.js"></script>
-        <!-- endbuild -->
+        <script type="module" src="js/app.js"></script>
     </body>
 </html>
