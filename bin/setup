@@ -1,13 +1,13 @@
 #!/bin/bash
 
-# set current dir
+# Set current dir
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-# remove .git from root
+# Remove .git from root
 rm -rf "$DIR/../.git"
 
-# install npm modules
+# Install npm modules
 npm install
 
-# run gulp build
+# Run gulp build
 npm run build
