@@ -9,7 +9,7 @@ Clone the project
 git clone git@github.com:shinobi5/skeletor.git <project-name>
 ```
 
-cd into project and run the setup script to remove git, install modules and start the project in the browser
+CD into project and run the setup script to remove git files, install modules and start the project in the browser
 
 ```
 bin/setup
