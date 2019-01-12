@@ -27,14 +27,14 @@
     "jshint": "^2.9.2"
   },
   "scripts": {
+    "build": "gulp build",
     "clean": "gulp clean",
     "clean:build": "gulp cleanBuild",
-    "img": "gulp img",
-    "fonts": "gulp fonts",
-    "lint": "gulp lint",
-    "js": "gulp js",
     "css": "gulp css",
-    "start": "gulp",
-    "build": "gulp build"
+    "fonts": "gulp fonts",
+    "img": "gulp img",
+    "js": "gulp js",
+    "lint": "gulp lint",
+    "start": "gulp"
   }
 }
