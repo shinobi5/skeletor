@@ -17,7 +17,7 @@
 
         {% block header %}{% include "includes/header.nunjucks" %}{% endblock %}
 
-        <main id="content" class="content">
+        <main id="content">
         {% block content %}{% endblock %}
         </main>
 

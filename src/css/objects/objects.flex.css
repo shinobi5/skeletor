@@ -1,3 +1,8 @@
 .o-flex {
-    
+    display: flex;
+}
+
+.o-flex--center {
+    align-items: center;
+    justify-content: center;
 }
