@@ -9,5 +9,5 @@ rm -rf "$DIR/../.git"
 # Install npm modules
 npm install
 
-# Run gulp build
-npm run build
+# Build and start the project
+npm run start
