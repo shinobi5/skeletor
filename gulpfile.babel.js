@@ -34,15 +34,19 @@ function nunjucks(dev = true) {
     .pipe(dest('build'))
 }
 
-function img() {
-    return src('src/img/**/*.+(png|jpg|jpeg|gif|svg)')
+function img(dev = true) {
+    dev && watch('src/img/**/*', series(img, browserSync.reload));
+
+    return src('src/img/**/*')
         .pipe(cache(imagemin({
             interlaced: true
         })))
         .pipe(dest('build/img'));
 }
 
-function fonts() {
+function font(dev = true) {
+    dev && watch('src/font/**/*', series(font, browserSync.reload));
+    
     return src('src/font/**/*')
         .pipe(dest('build/font'))
 }
@@ -89,7 +93,7 @@ function browserSyncInit() {
 function build(done) {
     nunjucks(false);
     img(false);
-    fonts(false);
+    font(false);
     lint(false);
     js(false);
     css(false);
@@ -99,7 +103,7 @@ function build(done) {
 exports.clean = clean;
 exports.cleanBuild = cleanBuild;
 exports.img = img;
-exports.fonts = fonts;
+exports.font = font;
 exports.lint = lint;
 exports.js = js;
 exports.css = css;
@@ -108,7 +112,7 @@ exports.build = build;
 exports.default = series(
     nunjucks,
     img,
-    fonts,
+    font,
     lint,
     js,
     css,

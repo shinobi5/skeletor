@@ -31,7 +31,7 @@
     "clean": "gulp clean",
     "clean:build": "gulp cleanBuild",
     "css": "gulp css",
-    "fonts": "gulp fonts",
+    "font": "gulp font",
     "img": "gulp img",
     "js": "gulp js",
     "lint": "gulp lint",
