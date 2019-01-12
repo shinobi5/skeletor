@@ -9,5 +9,5 @@ rm -rf "$DIR/../.git"
 # Install npm modules
 npm install
 
-# Build and start the project
+# Build and start project
 npm run start
