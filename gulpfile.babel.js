@@ -11,18 +11,18 @@ const nunjucksRender = require('gulp-nunjucks-render');
 function clean() {
     return del([
         'node_modules',
-        'dist',
+        'build',
     ]);
 }
 
-function cleanDist() {
+function cleanBuild() {
     return del([
-        'dist',
+        'build',
     ]);
 }
 
-function nunjucks() {
-    watch(
+function nunjucks(dev = true) {
+    dev && watch(
         ['src/templates/**/*.nunjucks', 'src/pages/**/*.nunjucks'], 
         series(nunjucks, browserSync.reload)
     );  
@@ -31,7 +31,7 @@ function nunjucks() {
     .pipe(nunjucksRender({
         path: ['src/templates']
     }))
-    .pipe(dest('dist'))
+    .pipe(dest('build'))
 }
 
 function img() {
@@ -39,31 +39,31 @@ function img() {
         .pipe(cache(imagemin({
             interlaced: true
         })))
-        .pipe(dest('dist/img'));
+        .pipe(dest('build/img'));
 }
 
 function fonts() {
     return src('src/font/**/*')
-        .pipe(dest('dist/font'))
+        .pipe(dest('build/font'))
 }
 
-function lint() {
-    watch('src/js/**/*.js', series(lint, browserSync.reload));
+function lint(dev = true) {
+    dev && watch('src/js/**/*.js', series(lint, browserSync.reload));
 
     return src('js/**/*.js')
         .pipe(jshint())
         .pipe(jshint.reporter('default'));
 }
 
-function js() {
-    watch('src/js/**/*.js', series(js, browserSync.reload));
+function js(dev = true) {
+    dev && watch('src/js/**/*.js', series(js, browserSync.reload));
 
     return src('src/js/**/*')
-        .pipe(dest('dist/js'))
+        .pipe(dest('build/js'))
 }
 
-function css() {
-    watch('src/css/**/*.css', series(css, browserSync.reload));
+function css(dev = true) {
+    dev && watch('src/css/**/*.css', series(css, browserSync.reload));
 
     return src([
         'src/css/settings/**/*.css',
@@ -75,24 +75,36 @@ function css() {
     ])
     .pipe(concat('style.css'))
     .pipe(cleanCSS())
-    .pipe(dest('dist'));
+    .pipe(dest('build'));
 }
 
 function browserSyncInit() {
     browserSync.init({
         server: {
-          baseDir: 'dist'
+          baseDir: 'build'
         },
     });
 }
 
+function build(done) {
+    nunjucks(false);
+    img(false);
+    fonts(false);
+    lint(false);
+    js(false);
+    css(false);
+    done();
+}
+
 exports.clean = clean;
-exports.cleanDist = cleanDist;
+exports.cleanBuild = cleanBuild;
 exports.img = img;
 exports.fonts = fonts;
 exports.lint = lint;
 exports.js = js;
 exports.css = css;
+exports.build = build;
+
 exports.default = series(
     nunjucks,
     img,
@@ -100,5 +112,5 @@ exports.default = series(
     lint,
     js,
     css,
-    browserSyncInit
+    browserSyncInit,
 );

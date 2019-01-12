@@ -28,12 +28,13 @@
   },
   "scripts": {
     "clean": "gulp clean",
-    "clean:dist": "gulp cleanDist",
+    "clean:build": "gulp cleanBuild",
     "img": "gulp img",
     "fonts": "gulp fonts",
     "lint": "gulp lint",
     "js": "gulp js",
     "css": "gulp css",
-    "build": "gulp"
+    "start": "gulp",
+    "build": "gulp build"
   }
 }
