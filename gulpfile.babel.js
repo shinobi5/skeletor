@@ -1,11 +1,11 @@
 const { dest, series, src, watch } = require('gulp');
-const del = require('del');
 const browserSync = require('browser-sync').create();
-const jshint = require('gulp-jshint');
-const imagemin = require('gulp-imagemin');
 const cache = require('gulp-cache');
 const concat = require('gulp-concat');
 const cleanCSS = require('gulp-clean-css');
+const del = require('del');
+const imagemin = require('gulp-imagemin');
+const jshint = require('gulp-jshint');
 const nunjucksRender = require('gulp-nunjucks-render');
 
 function clean() {
