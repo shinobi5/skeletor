@@ -22,10 +22,11 @@ function cleanBuild() {
 }
 
 function nunjucks(dev = true) {
-    dev && watch(
-                ['src/templates/**/*.nunjucks', 'src/pages/**/*.nunjucks'], 
-                series(nunjucks, browserSync.reload)
-            );  
+    dev && 
+    watch(
+        ['src/templates/**/*.nunjucks', 'src/pages/**/*.nunjucks'], 
+        series(nunjucks, browserSync.reload)
+    );  
 
     return src('src/pages/**/*.nunjucks')
     .pipe(nunjucksRender({
