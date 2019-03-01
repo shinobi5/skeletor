@@ -1,7 +1,4 @@
 <nav id="navigation" role="navigation">
-    <button type="menu" menu="popup-menu">
-        <span class="u-screen-reader">Mobile Menu Button</span>
-    </button>
     <ul>
         <li><a href="#" title="Go to Homepage">Home</a></li>
         <li><a href="#" title="Go to Page">Page</a></li>
