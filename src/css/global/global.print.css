@@ -5,7 +5,7 @@
 	*:first-letter,
 	*:first-line {
 		background: transparent !important;
-		color: var(--color-black) !important;
+		color: #000 !important;
 		box-shadow: none !important;
 		text-shadow: none !important;
 	}
@@ -34,7 +34,7 @@
 
 	pre,
 	blockquote {
-		border: 1px solid var(--color-black);
+		border: 1px solid #000;
 		page-break-inside: avoid;
 	}
 
