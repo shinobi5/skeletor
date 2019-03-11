@@ -17,7 +17,7 @@ bin/setup
 
 ### CSS
 
-Gulp [css task](https://github.com/shinobi5/skeletor/blob/master/gulpfile.babel.js#L61) contenates the css contained in each folder in the following order:
+Gulp [css task](https://github.com/shinobi5/skeletor/blob/master/gulpfile.babel.js#L61) contenates the css contained in each folder (`src/css`) in the following order:
 
 1. Settings
 2. Global
