@@ -1,5 +1,5 @@
 ## Skeletor
-Front-end boilerplate with gulp and nunjucks.
+Simple Front-end boilerplate with gulp and nunjucks.
 
 ### Setup
 
@@ -14,6 +14,8 @@ cd into project and run the setup script to remove git files, install modules an
 ```
 bin/setup
 ```
+
+Task commands are [here](https://github.com/shinobi5/skeletor/blob/master/package.json#L29)
 
 ### CSS
 
