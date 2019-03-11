@@ -82,7 +82,7 @@ const browserSyncInit = () => {
     });
 }
 
-const build = (done) => {
+const build = done => {
     nunjucks(false);
     img(false);
     font(false);
