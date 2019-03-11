@@ -8,20 +8,11 @@ const imagemin = require('gulp-imagemin');
 const jshint = require('gulp-jshint');
 const nunjucksRender = require('gulp-nunjucks-render');
 
-function clean() {
-    return del([
-        'node_modules',
-        'build',
-    ]);
-}
+const clean = () => del(['node_modules', 'build']);
 
-function cleanBuild() {
-    return del([
-        'build',
-    ]);
-}
+const cleanBuild = () => del(['build']);
 
-function nunjucks(dev = true) {
+const nunjucks = (dev = true) => {
     dev && 
     watch(
         ['src/templates/**/*.nunjucks', 'src/pages/**/*.nunjucks'], 
@@ -35,7 +26,7 @@ function nunjucks(dev = true) {
     .pipe(dest('build'))
 }
 
-function img(dev = true) {
+const img = (dev = true) => {
     dev && watch('src/img/**/*', series(img, browserSync.reload));
 
     return src('src/img/**/*')
@@ -45,14 +36,14 @@ function img(dev = true) {
         .pipe(dest('build/img'));
 }
 
-function font(dev = true) {
+const font = (dev = true) => {
     dev && watch('src/font/**/*', series(font, browserSync.reload));
     
     return src('src/font/**/*')
         .pipe(dest('build/font'))
 }
 
-function lint(dev = true) {
+const lint = (dev = true) => {
     dev && watch('src/js/**/*.js', series(lint, browserSync.reload));
 
     return src('js/**/*.js')
@@ -60,14 +51,14 @@ function lint(dev = true) {
         .pipe(jshint.reporter('default'));
 }
 
-function js(dev = true) {
+const js = (dev = true) => {
     dev && watch('src/js/**/*.js', series(js, browserSync.reload));
 
     return src('src/js/**/*')
         .pipe(dest('build/js'))
 }
 
-function css(dev = true) {
+const css = (dev = true) => {
     dev && watch('src/css/**/*.css', series(css, browserSync.reload));
 
     return src([
@@ -83,7 +74,7 @@ function css(dev = true) {
     .pipe(dest('build'));
 }
 
-function browserSyncInit() {
+const browserSyncInit = () => {
     browserSync.init({
         server: {
           baseDir: 'build'
@@ -91,7 +82,7 @@ function browserSyncInit() {
     });
 }
 
-function build(done) {
+const build = (done) => {
     nunjucks(false);
     img(false);
     font(false);
