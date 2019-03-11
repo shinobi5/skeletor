@@ -15,7 +15,7 @@ cd into project and run the setup script to remove git files, install modules an
 bin/setup
 ```
 
-Task commands are [here](https://github.com/shinobi5/skeletor/blob/master/package.json#L29)
+Task commands are [here](https://github.com/shinobi5/skeletor/blob/master/package.json#L29) e.g. `npm run start` or `gulp`.
 
 ### CSS
 
