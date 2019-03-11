@@ -3,7 +3,7 @@ Front-end boilerplate with gulp and nunjucks.
 
 ### Setup
 
-Clone the project
+Clone the project and give it a name
 
 ```
 git clone git@github.com:shinobi5/skeletor.git <project-name>
