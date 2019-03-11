@@ -19,7 +19,7 @@ Task commands are [here](https://github.com/shinobi5/skeletor/blob/master/packag
 
 ### CSS
 
-The gulp [css task](https://github.com/shinobi5/skeletor/blob/master/gulpfile.babel.js#L61) contenates the css contained in each folder (`src/css`) in the following order (to minify css from global to more specific styles):
+The gulp [css task](https://github.com/shinobi5/skeletor/blob/master/gulpfile.babel.js#L61) contenates the css contained in each folder (`src/css`) in the following order (from global to specific styles):
 
 1. Settings
 2. Global
