@@ -29,7 +29,3 @@ The gulp [css task](https://github.com/shinobi5/skeletor/blob/master/gulpfile.ba
 4. Objects
 5. Components
 6. Utilities
-
-#### Todo
-
-1. Add [pa11y](https://github.com/pa11y/pa11y-ci) accessibility testing
