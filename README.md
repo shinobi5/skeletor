@@ -1,5 +1,5 @@
 ## Skeletor
-Simple Front-end boilerplate using gulp for the builds and nunjucks for the templating.
+Simple Front-end boilerplate using gulp for build tasks and nunjucks for the templating.
 
 ### Setup
 
