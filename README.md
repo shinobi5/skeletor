@@ -1,4 +1,4 @@
-## Skeletor
+## Skeletor Boilerplate
 Simple Front-end boilerplate using [gulp](https://github.com/gulpjs/gulp) for the build tasks and [nunjucks](https://github.com/mozilla/nunjucks) for the templating.
 
 ### Setup
