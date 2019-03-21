@@ -32,7 +32,7 @@ The gulp [css task](https://github.com/shinobi5/skeletor/blob/master/gulpfile.ba
 
 ### TODO
 1. Add web component template
-2. Setup tests (jest/pa11y)
+2. Configure Jest and pa11y
 3. Add bundler (one of)
     + [Rollup](https://rollupjs.org/guide/en#quick-start)
     + [Parcel](https://parceljs.org/)
