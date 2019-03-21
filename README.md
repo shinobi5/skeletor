@@ -47,3 +47,4 @@ The gulp [css task](https://github.com/shinobi5/skeletor/blob/master/gulpfile.ba
     - [Rollup](https://rollupjs.org/guide/en#quick-start)
     - [Parcel](https://parceljs.org/)
     - [Webpack](https://webpack.js.org/)  
+8. Add serverless option
