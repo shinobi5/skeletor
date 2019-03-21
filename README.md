@@ -31,10 +31,10 @@ The gulp [css task](https://github.com/shinobi5/skeletor/blob/master/gulpfile.ba
 6. Utilities
 
 ### TODO
-1. Add CLI option for setup (css/spa/templating engine...)
+1. Add CLI option for setup (styling/spa/templating...)
 2. Add web component template
 3. Add service worker
-4. Add Webapp manifest
+4. Add webapp manifest
 5. Add option for routing
     - [sk-router](https://github.com/skatejs/skatejs/tree/master/packages/sk-router)
     - [@thi.ng/router](https://github.com/thi-ng/umbrella/tree/master/packages/router)
