@@ -1,5 +1,5 @@
 ## Front-end boilerplate
-Front-end boilerplate using [gulp](https://github.com/gulpjs/gulp) for build tasks and [nunjucks](https://github.com/mozilla/nunjucks) for templating.
+Front-end boilerplate with [gulp](https://github.com/gulpjs/gulp) for build tasks and [nunjucks](https://github.com/mozilla/nunjucks) for templating.
 
 ### Setup
 
