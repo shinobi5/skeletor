@@ -32,22 +32,21 @@ The gulp [css task](https://github.com/shinobi5/skeletor/blob/master/gulpfile.ba
 
 ### TODO
 1. Add web component template
-2. Add tests
-    + [Jest](https://github.com/facebook/jest)
-    + [pa11y](https://github.com/pa11y/pa11y)
+2. Setup tests (jest/pa11y)
 3. Add bundler (one of)
     + [Rollup](https://rollupjs.org/guide/en#quick-start)
     + [Parcel](https://parceljs.org/)
     + [Webpack](https://webpack.js.org/)    
-4. Add routing (one of)
+4. Task runner (replace gulp?)    
+5. Add routing (one of)
     + [sk-router](https://github.com/skatejs/skatejs/tree/master/packages/sk-router)
     + [@thi.ng/router](https://github.com/thi-ng/umbrella/tree/master/packages/router)
     + [redux-first-router](https://github.com/faceyspacey/redux-first-router)
     + [app-router](https://github.com/erikringsmuth/app-router)
-5. Add serverless options
-6. Add webapp manifest 
-7. Add service worker   
-8. Add CLI for setup and scaffolding
+6. Add serverless options
+7. Add webapp manifest 
+8. Add service worker   
+9. Add CLI for setup and scaffolding
     + Web components
     + Templating
     + CSS

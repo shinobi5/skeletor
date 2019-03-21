@@ -24,7 +24,10 @@
     "gulp-imagemin": "^3.0.1",
     "gulp-jshint": "^2.0.1",
     "gulp-nunjucks-render": "^2.0.0",
-    "jshint": "^2.9.2"
+    "jest": "^24.5.0",
+    "jshint": "^2.9.2",
+    "pa11y": "^5.1.0",
+    "pa11y-ci": "^2.1.1"
   },
   "scripts": {
     "build": "gulp build",
