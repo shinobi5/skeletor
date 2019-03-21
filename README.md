@@ -30,7 +30,7 @@ The gulp [css task](https://github.com/shinobi5/skeletor/blob/master/gulpfile.ba
 5. Components
 6. Utilities
 
-### Todo
+### TODO
 1. Add CLI option for setup (CSS/PWA/SPA...)
 2. Add web component template
 3. Add [Service worker](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
