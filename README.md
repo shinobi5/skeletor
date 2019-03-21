@@ -31,7 +31,7 @@ The gulp [css task](https://github.com/shinobi5/skeletor/blob/master/gulpfile.ba
 6. Utilities
 
 ### TODO
-1. Add CLI option for setup (styling/spa/templating...)
+1. Add CLI option for setup (static/styling/spa/templating...)
 2. Add web component template generator
 3. Add service worker
 4. Add webapp manifest
