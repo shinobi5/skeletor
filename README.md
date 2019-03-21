@@ -1,5 +1,5 @@
-## Skeletor
-Simple Front-end boilerplate with gulp and nunjucks.
+## Front-end boilerplate
+Front-end boilerplate using [gulp](https://github.com/gulpjs/gulp) for build tasks and [nunjucks](https://github.com/mozilla/nunjucks) for templating.
 
 ### Setup
 
@@ -15,7 +15,7 @@ cd into project and run the setup script to remove git files, install modules an
 bin/setup
 ```
 
-Task commands are found under [scripts](https://github.com/shinobi5/skeletor/blob/master/package.json#L29) in `package.json` e.g. `npm run start` or `gulp`.
+Task commands are found under [scripts](https://github.com/shinobi5/skeletor/blob/master/package.json#L29) in `package.json` e.g. `yarn start` or `gulp`.
 
 See [gulpfile](https://github.com/shinobi5/skeletor/blob/master/gulpfile.babel.js) for tasks.
 
