@@ -33,8 +33,8 @@ The gulp [css task](https://github.com/shinobi5/skeletor/blob/master/gulpfile.ba
 ### TODO
 1. Add CLI option for setup (CSS/PWA/SPA...)
 2. Add web component template
-3. Add [Service worker](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
-4. Add [Webapp manifest](https://developer.mozilla.org/en-US/docs/Web/Manifest)
+3. Add Service workerService_Worker_API)
+4. Add Webapp manifest
 5. Add option for routing
     - [sk-router](https://github.com/skatejs/skatejs/tree/master/packages/sk-router)
     - [@thi.ng/router](https://github.com/thi-ng/umbrella/tree/master/packages/router)
@@ -46,4 +46,4 @@ The gulp [css task](https://github.com/shinobi5/skeletor/blob/master/gulpfile.ba
 7. Add bundler
     - [Rollup](https://rollupjs.org/guide/en#quick-start)
     - [Parcel](https://parceljs.org/)
-    - [Webpack](https://webpack.js.org/)
+    - [Webpack](https://webpack.js.org/)  
