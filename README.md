@@ -36,8 +36,8 @@ The gulp [css task](https://github.com/shinobi5/skeletor/blob/master/gulpfile.ba
 3. Add service worker
 4. Add webapp manifest
 5. Add option for routing
-    * [sk-router](https://github.com/skatejs/skatejs/tree/master/packages/sk-router)
-    * [@thi.ng/router](https://github.com/thi-ng/umbrella/tree/master/packages/router)
++ ** [sk-router](https://github.com/skatejs/skatejs/tree/master/packages/sk-router)
++ ** [@thi.ng/router](https://github.com/thi-ng/umbrella/tree/master/packages/router)
     * [redux-first-router](https://github.com/faceyspacey/redux-first-router)
     * [app-router](https://github.com/erikringsmuth/app-router)
 6. Add tests
