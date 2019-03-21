@@ -36,15 +36,15 @@ The gulp [css task](https://github.com/shinobi5/skeletor/blob/master/gulpfile.ba
 3. Add service worker
 4. Add webapp manifest
 5. Add option for routing
-+ ** [sk-router](https://github.com/skatejs/skatejs/tree/master/packages/sk-router)
-+ ** [@thi.ng/router](https://github.com/thi-ng/umbrella/tree/master/packages/router)
-    * [redux-first-router](https://github.com/faceyspacey/redux-first-router)
-    * [app-router](https://github.com/erikringsmuth/app-router)
+    + [sk-router](https://github.com/skatejs/skatejs/tree/master/packages/sk-router)
+    + [@thi.ng/router](https://github.com/thi-ng/umbrella/tree/master/packages/router)
+    + [redux-first-router](https://github.com/faceyspacey/redux-first-router)
+    + [app-router](https://github.com/erikringsmuth/app-router)
 6. Add tests
-    * [Jest](https://github.com/facebook/jest)
-    * [pa11y](https://github.com/pa11y/pa11y)
+    + [Jest](https://github.com/facebook/jest)
+    + [pa11y](https://github.com/pa11y/pa11y)
 7. Add bundler
-    * [Rollup](https://rollupjs.org/guide/en#quick-start)
-    * [Parcel](https://parceljs.org/)
-    * [Webpack](https://webpack.js.org/)  
+    + [Rollup](https://rollupjs.org/guide/en#quick-start)
+    + [Parcel](https://parceljs.org/)
+    + [Webpack](https://webpack.js.org/)  
 8. Add serverless option
