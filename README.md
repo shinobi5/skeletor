@@ -2,9 +2,9 @@
 
 From the root of the project run `bin/setup` to remove git, install dependencies and start the project.
 
-Run server and watch files in dev mode: `yarn start`
-Create build for production: `yarn build`
-Run tests: `yarn test`
++ Run server and watch files in dev mode: `yarn start`
++ Create build for production: `yarn build`
++ Run tests: `yarn test`
 
 ### TODO
 1. Add web component template generator
