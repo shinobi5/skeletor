@@ -20,7 +20,7 @@ Task commands are found under [scripts](https://github.com/shinobi5/skeletor/blo
 See [gulpfile](https://github.com/shinobi5/skeletor/blob/master/gulpfile.babel.js) for tasks.
 
 ### TODO
-1. Remove `gulp`
+1. Remove `gulp` and replace necessary tasks with `npm scripts`
 2. Add bundler (one of)
     + [Rollup](https://rollupjs.org/guide/en#quick-start)
     + [Parcel](https://parceljs.org/)
