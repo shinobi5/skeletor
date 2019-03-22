@@ -20,13 +20,13 @@ Task commands are found under [scripts](https://github.com/shinobi5/skeletor/blo
 See [gulpfile](https://github.com/shinobi5/skeletor/blob/master/gulpfile.babel.js) for tasks.
 
 ### TODO
-1. Add web component template
-2. Configure Jest and pa11y
+1. Remove `gulp`
+2. Add web component template
 3. Add bundler (one of)
     + [Rollup](https://rollupjs.org/guide/en#quick-start)
     + [Parcel](https://parceljs.org/)
-    + [Webpack](https://webpack.js.org/)    
-4. Remove `gulp`
+    + [Webpack](https://webpack.js.org/) 
+4. Configure Jest and pa11y
 5. Add routing (one of)
     + [sk-router](https://github.com/skatejs/skatejs/tree/master/packages/sk-router)
     + [@thi.ng/router](https://github.com/thi-ng/umbrella/tree/master/packages/router)
