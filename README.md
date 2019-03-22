@@ -8,6 +8,10 @@ From the root of the project run the setup script to remove git, install depende
 bin/setup
 ```
 
+Run server and watch files in dev mode: `yarn start`
+Create build for production: `yarn build`
+Run tests: `yarn test`
+
 ### TODO
 1. Add web component template generator
 2. Add routing - [sk-router](https://github.com/skatejs/skatejs/tree/master/packages/sk-router)/[@thi.ng/router](https://github.com/thi-ng/umbrella/tree/master/packages/router)/[redux-first-router](https://github.com/faceyspacey/redux-first-router)/[app-router](https://github.com/erikringsmuth/app-router)
