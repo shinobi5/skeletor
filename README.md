@@ -25,9 +25,4 @@ bin/setup
 4. Add webapp manifest 
 5. Add service worker   
 6. Add serverless options
-7. Add CLI for setup and scaffolding
-    + Web components
-    + Templating
-    + CSS
-    + SPA/Routing
-    + Serverless
+7. Add CLI for setup
