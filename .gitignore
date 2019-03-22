@@ -18,9 +18,3 @@ node_modules/
 # Build
 dist
 build
-
-# Nunjucks
-src/**/*.html
-
-# Lock files
-package-lock.json

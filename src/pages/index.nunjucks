@@ -1,4 +1,0 @@
-{% set title = "Home" %}
-{% extends "base.nunjucks" %}
-{% block content %}
-{% endblock %}
