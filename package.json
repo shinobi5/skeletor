@@ -14,30 +14,14 @@
   },
   "homepage": "https://github.com/shinobi5/skeletor#readme",
   "devDependencies": {
-    "babel-register": "^6.26.0",
-    "browser-sync": "^2.26.3",
-    "del": "^4.0.0",
-    "gulp": "^4.0.0",
-    "gulp-cache": "^1.1.1",
-    "gulp-clean-css": "^4.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-imagemin": "^5.0.3",
-    "gulp-jshint": "^2.1.0",
-    "gulp-nunjucks-render": "^2.2.3",
     "jest": "^24.5.0",
-    "jshint": "^2.10.2",
     "pa11y": "^5.1.0",
-    "pa11y-ci": "^2.1.1"
+    "pa11y-ci": "^2.1.1",
+    "parcel-bundler": "^1.12.3"
   },
   "scripts": {
-    "build": "gulp build",
-    "clean": "gulp clean",
-    "clean:build": "gulp cleanBuild",
-    "css": "gulp css",
-    "font": "gulp font",
-    "img": "gulp img",
-    "js": "gulp js",
-    "lint": "gulp lint",
-    "start": "gulp"
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "clean": "rm -rf build && rm -rf node_modules"
   }
 }

@@ -16,7 +16,7 @@ rm -rf "$DIR/../README.MD"
 rm -rf "$DIR/../LICENSE"
 
 # Install npm modules
-npm install
+yarn
 
 # Build and start project
-npm run start
+yarn start
