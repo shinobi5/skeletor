@@ -26,7 +26,7 @@ See [gulpfile](https://github.com/shinobi5/skeletor/blob/master/gulpfile.babel.j
     + [Rollup](https://rollupjs.org/guide/en#quick-start)
     + [Parcel](https://parceljs.org/)
     + [Webpack](https://webpack.js.org/) 
-4. Configure Jest and pa11y
+4. Configure [Jest](https://jestjs.io/) and [pa11y](https://github.com/pa11y/pa11y)
 5. Add routing (one of)
     + [sk-router](https://github.com/skatejs/skatejs/tree/master/packages/sk-router)
     + [@thi.ng/router](https://github.com/thi-ng/umbrella/tree/master/packages/router)
