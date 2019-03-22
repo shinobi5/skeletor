@@ -2,7 +2,7 @@
 
 ### Setup
 
-From the root of the project run the setup script to remove git files, install node modules and start the project
+From the root of the project run the setup script to remove git, install dependencies and start the project
 
 ```
 bin/setup
