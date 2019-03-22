@@ -21,11 +21,11 @@ See [gulpfile](https://github.com/shinobi5/skeletor/blob/master/gulpfile.babel.j
 
 ### TODO
 1. Remove `gulp`
-2. Add web component template generator
-3. Add bundler (one of)
+2. Add bundler (one of)
     + [Rollup](https://rollupjs.org/guide/en#quick-start)
     + [Parcel](https://parceljs.org/)
     + [Webpack](https://webpack.js.org/) 
+3. Add web component template generator
 4. Configure [Jest](https://jestjs.io/) and [pa11y](https://github.com/pa11y/pa11y)
 5. Add routing (one of)
     + [sk-router](https://github.com/skatejs/skatejs/tree/master/packages/sk-router)
