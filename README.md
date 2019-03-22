@@ -2,7 +2,7 @@
 
 ### Setup
 
-Clone then cd into project and run the setup script to remove git files, install modules and start the project
+From the root of the project run the setup script to remove git files, install node modules and start the project
 
 ```
 bin/setup
