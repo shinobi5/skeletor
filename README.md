@@ -1,7 +1,6 @@
 ## Front-end boilerplate
 
-From the root of the project run `bin/setup` to remove git, install dependencies and start the project.
-
++ Remove git, install dependencies and start the project: `bin/setup`
 + Run server and watch files in dev mode: `yarn start`
 + Create build for production: `yarn build`
 + Run tests: `yarn test`
