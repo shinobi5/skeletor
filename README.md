@@ -37,7 +37,7 @@ The gulp [css task](https://github.com/shinobi5/skeletor/blob/master/gulpfile.ba
     + [Rollup](https://rollupjs.org/guide/en#quick-start)
     + [Parcel](https://parceljs.org/)
     + [Webpack](https://webpack.js.org/)    
-4. Task runner (replace gulp?)    
+4. Remove gulp and replace needed tasks with npm scripts
 5. Add routing (one of)
     + [sk-router](https://github.com/skatejs/skatejs/tree/master/packages/sk-router)
     + [@thi.ng/router](https://github.com/thi-ng/umbrella/tree/master/packages/router)
