@@ -31,9 +31,9 @@ See [gulpfile](https://github.com/shinobi5/skeletor/blob/master/gulpfile.babel.j
     + [@thi.ng/router](https://github.com/thi-ng/umbrella/tree/master/packages/router)
     + [redux-first-router](https://github.com/faceyspacey/redux-first-router)
     + [app-router](https://github.com/erikringsmuth/app-router)
-6. Add serverless options
-7. Add webapp manifest 
-8. Add service worker   
+6. Add webapp manifest 
+7. Add service worker   
+8. Add serverless options
 9. Add CLI for setup and scaffolding
     + Web components
     + Templating
