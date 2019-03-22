@@ -19,17 +19,6 @@ Task commands are found under [scripts](https://github.com/shinobi5/skeletor/blo
 
 See [gulpfile](https://github.com/shinobi5/skeletor/blob/master/gulpfile.babel.js) for tasks.
 
-### CSS
-
-The gulp [css task](https://github.com/shinobi5/skeletor/blob/master/gulpfile.babel.js#L61) contenates and minifies the css contained in each folder (`src/css`) in the following order (from global to more specific styles):
-
-1. Settings
-2. Global
-3. Elements
-4. Objects
-5. Components
-6. Utilities
-
 ### TODO
 1. Add web component template
 2. Configure Jest and pa11y
@@ -37,7 +26,7 @@ The gulp [css task](https://github.com/shinobi5/skeletor/blob/master/gulpfile.ba
     + [Rollup](https://rollupjs.org/guide/en#quick-start)
     + [Parcel](https://parceljs.org/)
     + [Webpack](https://webpack.js.org/)    
-4. Remove gulp and replace needed tasks with npm scripts
+4. Remove `gulp`
 5. Add routing (one of)
     + [sk-router](https://github.com/skatejs/skatejs/tree/master/packages/sk-router)
     + [@thi.ng/router](https://github.com/thi-ng/umbrella/tree/master/packages/router)
