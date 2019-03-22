@@ -2,13 +2,7 @@
 
 ### Setup
 
-Clone the project and give it a name
-
-```
-git clone git@github.com:shinobi5/skeletor.git <project-name>
-```
-
-cd into project and run the setup script to remove git files, install modules and start the project
+Clone then cd into project and run the setup script to remove git files, install modules and start the project
 
 ```
 bin/setup
