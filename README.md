@@ -1,6 +1,6 @@
 ## Front-end boilerplate
 
-### Setup
+### Commands
 
 From the root of the project run `bin/setup` to remove git, install dependencies and start the project
 
