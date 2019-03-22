@@ -21,7 +21,7 @@ See [gulpfile](https://github.com/shinobi5/skeletor/blob/master/gulpfile.babel.j
 
 ### TODO
 1. Remove `gulp`
-2. Add web component template
+2. Add web component template generator
 3. Add bundler (one of)
     + [Rollup](https://rollupjs.org/guide/en#quick-start)
     + [Parcel](https://parceljs.org/)
