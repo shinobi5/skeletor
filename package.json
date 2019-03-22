@@ -20,8 +20,9 @@
     "parcel-bundler": "^1.12.3"
   },
   "scripts": {
-    "start": "parcel src/index.html",
     "build": "parcel build src/index.html",
-    "clean": "rm -rf dist && rm -rf node_modules"
+    "clean": "rm -rf dist && rm -rf node_modules",
+    "start": "parcel src/index.html",
+    "test": "jest"
   }
 }
