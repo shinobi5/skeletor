@@ -2,11 +2,7 @@
 
 ### Setup
 
-From the root of the project run the setup script to remove git, install dependencies and start the project
-
-```
-bin/setup
-```
+From the root of the project run `bin/setup` to remove git, install dependencies and start the project
 
 Run server and watch files in dev mode: `yarn start`
 Create build for production: `yarn build`
