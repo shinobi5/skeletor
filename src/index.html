@@ -3,29 +3,24 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>title</title>
+        <title>Skeletor</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     	<meta name="theme-color" content="#333">
-        <link rel="manifest" href="site.webmanifest">
-        <link rel="shortcut icon" href="favicon.png">
-        <link rel="stylesheet" href="style.css">
+        <!-- <link rel="manifest" href="site.webmanifest"> -->
+        <!-- <link rel="shortcut icon" href="favicon.png"> -->
+        <!-- <link rel="stylesheet" href="style.css"> -->
     </head>
     <body>
         <a href="#content" class="u-screen-reader">Skip to content</a>
-        <header>
-            <nav id="navigation" role="navigation">
-                <ul>
-                    <li><a href="#" title="Go to Homepage">Home</a></li>
-                    <li><a href="#" title="Go to Page">Page</a></li>
-                </ul>
-            </nav>
-        </header>
 
-        <main id="content"></main>
+        <skeletor-header>
+            <li><a href="#" title="Go to Homepage">Home</a></li>
+            <li><a href="#" title="Go to Page 1">Page 1</a></li>
+        </skeletor-header>
+
+        <main id="content">Content...</main>
         
-        <footer></footer>
-        
-        <script type="module" src="app.js"></script>
+        <script type="module" src="index.js"></script>
     </body>
 </html>
