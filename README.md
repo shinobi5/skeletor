@@ -6,4 +6,4 @@
 + `yarn test`: Run tests
 
 ### Notes
-5. Add CLI setup option
++ Add CLI setup option
