@@ -3,3 +3,6 @@ dist
 
 # Parcel
 .cache
+
+# Error logs
+yarn-error.log

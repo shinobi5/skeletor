@@ -6,4 +6,5 @@
 + `yarn test`: Run tests
 
 ### TODO
++ Add web component template generator
 + Add CLI setup option
