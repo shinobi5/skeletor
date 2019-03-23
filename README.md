@@ -5,5 +5,5 @@
 + `yarn build`: Create build for production
 + `yarn test`: Run tests
 
-### Notes
+### TODO
 + Add CLI setup option
