@@ -920,6 +920,18 @@
     "@parcel/utils" "^1.11.0"
     physical-cpu-count "^2.0.0"
 
+"@skatejs/element-lit-html@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@skatejs/element-lit-html/-/element-lit-html-0.0.1.tgz#1624a51030169864976e3b18ded06a5ede773b80"
+  integrity sha512-rrrhYagsrKXLHt5Oq4M37HycTKLYOYr+MqrBfHZDZDsXcsVPYno3muE+Yi2LzNjXOelJLS/CV+BsPrheyLkfYg==
+  dependencies:
+    "@skatejs/element" "^0.0.0"
+
+"@skatejs/element@^0.0.0":
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/@skatejs/element/-/element-0.0.0.tgz#07010b71cc37788baeddd41211418d361e476fa2"
+  integrity sha512-bZFtJ/W3HuC3p15coRBbdyXI2/qEO6TyiBSepGWrGChKSxSvq9POfTolHjYDo/pNK9ENZbUXifgYCbnwvVrCfg==
+
 "@types/babel__core@^7.1.0":
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.1.0.tgz#710f2487dda4dcfd010ca6abb2b4dc7394365c51"
