@@ -6,7 +6,6 @@ export default class extends HTMLElement {
 
         shadowRoot.innerHTML = `
             <style></style>
-
             <header>
                 <nav>
                     <ul>
