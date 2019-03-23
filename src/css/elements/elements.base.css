@@ -1,6 +1,5 @@
 html {
 	box-sizing: border-box;
-	color: var(--color-black);
 	/*
 		Font-size is set to a percentage of the user agent font size setting
 		so users have the option of controlling the base font size in their 

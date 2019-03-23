@@ -5,18 +5,7 @@
     /* Font: font-family */
     --font-primary: "arial, sans-serif";
     --font-secondary: "serif";
-    
-    /* Font: line-height */
-    --font-line-height-base: 1.6rem;
-    
-    /* Font: font-size */
-    --font-size-base: 1.6rem;
-    --font-size-sm: 1.6rem;
-    --font-size-sm-md: 2rem;
-    --font-size-md: 2.4rem;
-    --font-size-md-lg: 2.8rem;
-    --font-size-lg: 3.2rem;
-    --font-size-xlg: 4rem;
+    --font-line-height-base: 1.8;
 
     /* Color: base */
     --color-heading: #111;
@@ -28,14 +17,5 @@
     /* Color: brand */
     --color-primary: #111;
     --color-secondary: #222;
-    --color-tertiary: #333;
-    --color-black: #000;
-    --color-white: #fff;
-
-    /* Color: Misc */
-    --color-tests: #f00;    
-
-    /* Paths */
-    --path-image: 'img';
-    --path-font: 'font';    
+    --color-tertiary: #333; 
 }

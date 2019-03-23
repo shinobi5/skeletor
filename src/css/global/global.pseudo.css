@@ -7,6 +7,6 @@
 /* Remove text-shadow in selection highlight */
 ::selection {
 	background: var(--color-selection);
-	color: var(--color-white);
+	color: white;
 	text-shadow: none;
 }
