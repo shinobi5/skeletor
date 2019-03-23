@@ -20,6 +20,11 @@
 
         <main id="content">Content...</main>
         
+        <!-- 
+            Parcel breaks when declaring type="module": 
+            https://github.com/parcel-bundler/parcel/issues/1401
+            https://github.com/parcel-bundler/parcel/issues/864
+        -->
         <script type="module" src="index.js"></script>
     </body>
 </html>

@@ -21,7 +21,7 @@
   },
   "scripts": {
     "build": "parcel build src/index.html",
-    "clean": "rm -rf dist && rm -rf node_modules",
+    "clean": "rm -rf node_modules && rm -rf dist && rm -rf .cache",
     "start": "parcel src/index.html",
     "test": "jest"
   }
