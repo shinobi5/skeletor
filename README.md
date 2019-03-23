@@ -7,5 +7,5 @@
 
 ### TODO
 1. Routing alternatives - [@thi.ng/router](https://github.com/thi-ng/umbrella/tree/master/packages/router) / [redux-first-router](https://github.com/faceyspacey/redux-first-router) / [app-router](https://github.com/erikringsmuth/app-router)  
-4. Add serverless options
-5. Add CLI for setup
+4. Add serverless
+5. Add CLI option
