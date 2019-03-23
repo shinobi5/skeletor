@@ -1,4 +1,4 @@
-export default class Header extends HTMLElement {
+export default class extends HTMLElement {
     constructor() {
         super();
 
@@ -25,25 +25,3 @@ export default class Header extends HTMLElement {
         // ...
     }
 }
-
-// import Element, { html } from '@skatejs/element-lit-html';
-
-// export default class Header extends Element {
-//     static props = {
-//         name: String
-//     };
-
-//     render() {
-//         return html`
-//             <style></style>
-
-//             <header>
-//                 <nav>
-//                     <ul>
-//                         <slot></slot>
-//                     </ul>
-//                 </nav>
-//             </header>
-//         `;
-//     }
-// }
