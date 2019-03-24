@@ -4,6 +4,7 @@ import Header from '/components/Header/Header.js';
 customElements.define('skl-header', Header);
 
 // Register service worker
-// if('serviceWorker' in navigator) {
-//     navigator.serviceWorker.register('service-worker.js');
-// };
+if('serviceWorker' in navigator) {
+    console.log("Service Worker");
+    // navigator.serviceWorker.register('service-worker.js');
+};

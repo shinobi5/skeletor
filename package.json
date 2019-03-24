@@ -8,22 +8,26 @@
     "url": "git+https://github.com/shinobi5/skeletor.git"
   },
   "author": "David White",
-  "license": "ISC",
+  "license": "MIT",
   "homepage": "https://github.com/shinobi5/skeletor#readme",
   "bugs": {
     "url": "https://github.com/shinobi5/skeletor/issues"
   },
   "devDependencies": {
+    "clean-css-cli": "^4.2.1",
     "jest": "^24.5.0",
+    "onchange": "^5.2.0",
     "pa11y": "^5.1.0",
     "pa11y-ci": "^2.1.1",
     "parcel-bundler": "^1.12.3"
   },
   "scripts": {
-    "build": "parcel build src/index.html",
+    "build": "css:minify && parcel build src/index.html",
     "clean": "rm -rf node_modules && rm -rf dist && rm -rf .cache",
-    "start": "parcel src/index.html",
-    "test": "jest",
-    "css": "cat src/css/**/* > src/style.css"
+    "css:concat": "cat src/css/**/* > src/css/style.css",
+    "css:minify": "cleancss -o src/css/styles.css dist/css/styles.css",
+    "setup": "rm -rf .git .editorconfig READEME.MD LICENSE && yarn && yarn start",
+    "start": "css:concat && parcel src/index.html",
+    "test": "jest"
   }
 }
