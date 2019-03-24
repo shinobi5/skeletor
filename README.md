@@ -7,6 +7,6 @@
 + `yarn css`: Concatenate CSS files and output to `src/style.css`
 + `yarn create-component`: Create component and test template
 
-### TODO
+### Todo
 + Add redux
 + Add router
