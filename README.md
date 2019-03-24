@@ -5,7 +5,8 @@
 + `yarn build`: Create build for production
 + `yarn test`: Run test
 + `yarn css`: Concatenate CSS files and output to `src/style.css`
++ `yarn create-component`: Create component and test template
 
 ### TODO
-+ Add web component template generator
-+ Add CLI setup option
++ Add redux
++ Add router

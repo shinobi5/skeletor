@@ -1,7 +1,7 @@
-import Header from './js/components/Header/Header.js';
+// import mycomponent from './js/components/mycomponent/mycomponent';
 
 // Register components
-customElements.define('skl-header', Header);
+// customElements.define('x-mycomponent', mycomponent);
 
 // Register service worker
 if('serviceWorker' in navigator) {
