@@ -5,7 +5,7 @@
 + `yarn build`: Create build for production
 + `yarn test`: Run test
 + `yarn css`: Concatenate CSS files and output to `src/style.css`
-+ `yarn create-component`: Create component and test templates under `src/js/components`
++ `yarn create-component`: Create component and test templates under `src/js/components/{component}`
 
 ### Todo
 + Add redux
