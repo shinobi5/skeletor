@@ -7,6 +7,8 @@
 + `yarn css`: Concatenate CSS files and output to `src/style.css`
 + `yarn create-component`: CLI to create component and test templates under `src/js/components/{component}`
 
+The above yarn commands can be replaced with `npm` alternative e.g. `npm run start`
+
 ### Todo
 + Add redux
 + Add router
