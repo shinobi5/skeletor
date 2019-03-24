@@ -1,4 +1,4 @@
-import Header from './components/Header/Header.js';
+import Header from './js/components/Header/Header.js';
 
 // Register components
 customElements.define('skl-header', Header);

@@ -15,7 +15,9 @@
   },
   "devDependencies": {
     "clean-css-cli": "^4.2.1",
+    "imagemin-cli": "^4.0.1",
     "jest": "^24.5.0",
+    "npm-run-all": "^4.1.5",
     "onchange": "^5.2.0",
     "pa11y": "^5.1.0",
     "pa11y-ci": "^2.1.1",
@@ -24,10 +26,13 @@
   "scripts": {
     "build": "yarn css:minify && parcel build src/index.html",
     "clean": "rm -rf node_modules && rm -rf dist && rm -rf .cache",
-    "css:concat": "cat src/css/**/* > src/css/styles.css",
+    "css:concat": "cat src/css/**/* > src/styles.css",
     "css:minify": "cleancss -o src/css/styles.css dist/css/styles.css",
+    "css:watch": "onchange 'src/css/**/*' -- yarn css:concat",
+    "imagemin": "imagemin --out-dir=src/img src/img/**/*.{png,jpg,gif}",
+    "parcel": "parcel src/index.html",
     "setup": "rm -rf .git .editorconfig READEME.MD LICENSE && yarn && yarn start",
-    "start": "yarn css:concat && parcel src/index.html",
+    "start": " yarn css:concat && npm-run-all --parallel css:watch parcel",
     "test": "jest"
   }
 }
