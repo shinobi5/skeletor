@@ -9,7 +9,7 @@ These commands can be replaced with `npm` e.g. `npm run start`
 
 ### Creating components
 + `yarn create-component`: CLI to create component and test templates under `src/js/components/{component}`
-+ Import component to `src/app.js`: `import component from './js/components/component/component';`
++ Import component in `src/app.js`: `import component from './js/components/component/component';`
 + Register the component in `src/app.js`: `customElements.define('x-component', component);`
 
 ### Todo
