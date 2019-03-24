@@ -1,6 +1,9 @@
 # Build
 dist
 
+# Generated styles
+src/styles.css
+
 # Parcel
 .cache
 

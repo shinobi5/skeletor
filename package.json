@@ -24,15 +24,16 @@
     "parcel-bundler": "^1.12.3"
   },
   "scripts": {
-    "build": "yarn css:minify && parcel build src/index.html",
+    "build": "yarn css:minify && yarn parcel:build",
     "clean": "rm -rf node_modules && rm -rf dist && rm -rf .cache",
     "css:concat": "cat src/css/**/* > src/styles.css",
-    "css:minify": "cleancss -o src/css/styles.css dist/css/styles.css",
+    "css:minify": "cleancss -o src/styles.css src/styles.css",
     "css:watch": "onchange 'src/css/**/*' -- yarn css:concat",
     "imagemin": "imagemin --out-dir=src/img src/img/**/*.{png,jpg,gif}",
-    "parcel": "parcel src/index.html",
-    "setup": "rm -rf .git .editorconfig READEME.MD LICENSE && yarn && yarn start",
-    "start": " yarn css:concat && npm-run-all --parallel css:watch parcel",
+    "parcel:start": "parcel src/index.html",
+    "parcel:build": "parcel build src/index.html",
+    "setup": "rm -rf .git .editorconfig README.MD LICENSE && yarn && yarn start",
+    "start": " yarn css:concat && npm-run-all --parallel css:watch parcel:start",
     "test": "jest"
   }
 }
