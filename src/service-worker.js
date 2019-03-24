@@ -3,8 +3,8 @@ const cacheName = 'skeletor-v1';
 const contentToCache = [
     '/',
     '/index.html',
-    '/index.js',
-    '/style.css',
+    '/app.js',
+    '/styles.css',
     '/favicon.ico',
     '/icons/icon-32.png',
     '/icons/icon-64.png',
