@@ -12,7 +12,7 @@
 	Hide only visually, but have it available for screen readers:
 	http://snook.ca/archives/html_and_css/hiding-content-for-accessibility 
 */
-.u-screen-reader {
+.u-sr {
 	margin: -1px;
 	padding: 0;
 	width: 1px;
@@ -28,8 +28,8 @@
 	when navigated to via the keyboard:
 	https://www.drupal.org/node/897638 
 */
-.u-screen-reader.u-focusable:focus,
-.u-screen-reader.u-focusable:active {
+.u-sr.u-focusable:focus,
+.u-sr.u-focusable:active {
 	clip: auto;
 	height: auto;
 	margin: 0;

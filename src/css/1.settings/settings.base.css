@@ -2,20 +2,14 @@
     /* Base: base unit for project spacing */
     --bu: 4;
 
-    /* Font: font-family */
+    /* Font */
     --font-primary: "arial, sans-serif";
     --font-secondary: "serif";
-    --font-line-height-base: 1.8;
+    --font-line-height: 1.8;
 
-    /* Color: base */
-    --color-heading: #111;
-    --color-paragraph: #333;
-    --color-hr: #333;
-    --color-placeholder: #333;
-    --color-selection: #2793c7;
-
-    /* Color: brand */
+    /* Color */
     --color-primary: #111;
     --color-secondary: #222;
-    --color-tertiary: #333; 
+    --color-tertiary: #333;     
+    --color-selection: #2793c7;
 }

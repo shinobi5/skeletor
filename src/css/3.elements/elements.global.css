@@ -1,8 +1,7 @@
 body {
 	box-sizing: border-box;
 	font-family: var(--font-primary);
-	font-size: var(--font-size-base);
-	line-height: var(--font-line-height-base);
+	line-height: var(--font-line-height);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
