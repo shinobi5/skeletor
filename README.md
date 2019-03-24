@@ -7,6 +7,5 @@
 + `yarn css`: Concatenate CSS files and output to `src/style.css`
 
 ### TODO
-+ Watch changes to CSS files
 + Add web component template generator
 + Add CLI setup option
