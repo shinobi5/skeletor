@@ -7,7 +7,7 @@ These commands can be replaced with `npm` e.g. `npm run start`
 + `yarn build`: Create build for production
 + `yarn test`: Run tests
 
-### Creating components
+### Creating web components
 + `yarn create-component`: CLI to create component and test templates under `src/js/components/{component}`
 + Import component in `src/app.js`: `import component from './js/components/component/component';`
 + Register the component in `src/app.js`: `customElements.define('x-component', component);`
