@@ -14,6 +14,10 @@
     "url": "https://github.com/shinobi5/skeletor/issues"
   },
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "babel-jest": "^24.5.0",
     "clean-css-cli": "^4.2.1",
     "hankey": "^0.0.3",
     "imagemin-cli": "^4.0.1",
@@ -37,6 +41,10 @@
     "parcel:build": "parcel build src/index.html",
     "setup": "rm -rf .git .editorconfig README.MD LICENSE && yarn && yarn start",
     "start": " yarn css:concat && npm-run-all --parallel css:watch parcel:start",
-    "test": "jest"
+    "test": "jest --config jest.config.js --no-cache"
+  },
+  "dependencies": {
+    "js": "^0.1.0",
+    "src": "^1.1.2"
   }
 }
