@@ -13,7 +13,7 @@ These commands can be replaced with `npm` e.g. `npm run start`
 + Import component in `src/app.js`: `import component from './js/components/component/component';`
 + After the `import` register the component in `src/app.js`: `customElements.define('x-component', component);`
 + Custom element names require a dash e.g. `'x-component'`. See [Using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements).
-+ See [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components) for more info on how to build custom web components.
++ See [MDN](https://developer.mozilla.org/en-US/docs/Web/Web_Components) and [webcomponents.org](https://www.webcomponents.org/introduction) for more info on getting started with web components.
 
 ### Todo
 + Improve `component` and `test` templates
