@@ -14,7 +14,6 @@ These commands can be replaced with `npm` e.g. `npm run start`
 + After the `import` register the component in `src/app.js`: `customElements.define('x-component', component);`
 + Custom element names require a dash e.g. `'x-component'`. See [Using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements).
 + See [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components) for more info on how to build custom web components.
-+ Currently generated unit tests are very barebones. This is intentional. I haven't found a suitable way to test web components to have an opinion about biolerplate code...
 
 ### Todo
 + Web component testing with jest?
