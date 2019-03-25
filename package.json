@@ -30,6 +30,7 @@
     "prompt": "^1.0.0"
   },
   "scripts": {
+    "a11y": "pa11y-ci",
     "build": "yarn css:minify && yarn parcel:build",
     "clean": "rm -rf node_modules && rm -rf dist && rm -rf .cache",
     "create-component": "node scripts/create-component.js",
