@@ -3,8 +3,8 @@
 These commands can be replaced with `npm` e.g. `npm run start`
 
 + `yarn setup`: Remove git, install dependencies and start the project
-+ `yarn start`: Run server and watch files in dev mode
-+ `yarn build`: Create build for production
++ `yarn start`: Run server and watch files in dev mode with [parcel](https://parceljs.org/)
++ `yarn build`: Create build for production with [parcel](https://parceljs.org/)
 + `yarn test`: Run unit tests with [Jest](https://github.com/facebook/jest)
 + `yarn a11y`: Run accessibility tests with [pa11y-ci](https://github.com/pa11y/pa11y-ci)
 
