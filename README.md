@@ -16,6 +16,7 @@ These commands can be replaced with `npm` e.g. `npm run start`
 + See [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components) for more info on how to build custom web components.
 
 ### Todo
-+ Improve `test.js` template
++ Improve `templates/component.js`
++ Improve `templates/test.js`
 + Add redux
 + Add router
