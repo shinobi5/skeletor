@@ -15,6 +15,11 @@ These commands can be replaced with `npm` e.g. `npm run start`
 + Custom element names require a dash e.g. `'x-component'`. See [Using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements).
 + See [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components) for more info on how to build custom web components.
 
+### Stack
++ [Parcel](https://github.com/parcel-bundler/parcel)
++ [Jest](https://github.com/facebook/jest)
++ [pa11y-ci](https://github.com/pa11y/pa11y-ci)
+
 ### Todo
 + Improve `component` and `test` templates
 + Add redux
