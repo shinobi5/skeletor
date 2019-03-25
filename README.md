@@ -15,6 +15,6 @@ These commands can be replaced with `npm` e.g. `npm run start`
 + See [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components) for more info on how to build custom web components.
 
 ### Todo
-+ Configure pa11y and finish test template
++ Web component testing with jest?
 + Add redux
 + Add router
