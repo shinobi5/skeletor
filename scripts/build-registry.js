@@ -26,7 +26,7 @@ const output = [header, ...componentExports].join('\n');
 
 try {
 	fs.writeFileSync(componentRegistry, output);
-	info(`:floppy_disk: Component saved to ${componentRegistry}`);
+	info(`:floppy_disk: Component added to ${componentRegistry}`);
 } catch (err) {
 	error(`:bomb: ${err}`);
 }
