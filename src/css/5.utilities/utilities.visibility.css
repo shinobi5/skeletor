@@ -8,10 +8,7 @@
 	visibility: hidden;
 }
 
-/* 
-	Hide only visually, but have it available for screen readers:
-	http://snook.ca/archives/html_and_css/hiding-content-for-accessibility 
-*/
+/* Hide only visually, but have it available for screen readers */
 .u-sr {
 	margin: -1px;
 	padding: 0;
@@ -25,8 +22,7 @@
 
 /*	
 	Extends the .u-visuallyhidden class to allow the element to be focusable
-	when navigated to via the keyboard:
-	https://www.drupal.org/node/897638 
+	when navigated to via the keyboard 
 */
 .u-sr.u-focusable:focus,
 .u-sr.u-focusable:active {

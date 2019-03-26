@@ -19,31 +19,24 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
-body {
-	line-height: 1;
-}
-
 ol,
 ul {
 	list-style: none;
 }
 
-blockquote,
-q {
-	quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-	content: '';
-	content: none;
-}
-
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+/* Remove the gaps */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+	vertical-align: middle;
 }
 
 /* Remove default fieldset styles */
@@ -56,4 +49,11 @@ fieldset {
 /* Allow only vertical resizing of textareas */
 textarea {
 	resize: vertical;
+}
+
+/* Remove text-shadow in selection highlight */
+::selection {
+	background: var(--color-selection);
+	color: white;
+	text-shadow: none;
 }

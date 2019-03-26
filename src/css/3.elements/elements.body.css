@@ -1,17 +1,7 @@
 body {
 	box-sizing: border-box;
 	font-family: var(--font-primary);
-	line-height: var(--font-line-height);
+	line-height: var(--font-lineheight);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-}
-
-/* Remove the gaps */
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-	vertical-align: middle;
 }

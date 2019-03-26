@@ -1,9 +1,7 @@
 .o-container {
 	position: relative;
 	width: auto;
-	max-width: 120rem;
-	margin-left: auto;
-	margin-right: auto;
-	padding-left: 2rem;
-	padding-right: 2rem;
+	max-width: var(--container-maxwidth);
+	margin: auto;
+	padding: 20px;
 }
