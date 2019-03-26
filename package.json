@@ -19,6 +19,7 @@
     "@babel/preset-env": "^7.4.2",
     "babel-jest": "^24.5.0",
     "clean-css-cli": "^4.2.1",
+    "glob": "^7.1.3",
     "hankey": "^0.0.3",
     "imagemin-cli": "^4.0.1",
     "jest": "^24.5.0",
@@ -26,13 +27,14 @@
     "onchange": "^5.2.0",
     "pa11y-ci": "^2.1.1",
     "parcel-bundler": "^1.12.3",
-    "prompt": "^1.0.0"
+    "prompt": "^1.0.0",
+    "slash": "^2.0.0"
   },
   "scripts": {
     "a11y": "pa11y-ci",
     "build": "yarn css:minify && yarn parcel:build",
     "clean": "rm -rf node_modules dist .cache",
-    "create-component": "node scripts/create-component.js",
+    "create-component": "node scripts/create-component.js && node scripts/build-registry.js",
     "css:concat": "cat src/css/**/* > src/styles.css",
     "css:minify": "cleancss -o src/styles.css src/styles.css",
     "css:watch": "onchange 'src/css/**/*' -- yarn css:concat",
@@ -42,9 +44,5 @@
     "setup": "rm -rf .git .editorconfig README.MD LICENSE && yarn && yarn start",
     "start": " yarn css:concat && npm-run-all --parallel css:watch parcel:start",
     "test": "jest --config jest.config.js --no-cache"
-  },
-  "dependencies": {
-    "js": "^0.1.0",
-    "src": "^1.1.2"
   }
 }
