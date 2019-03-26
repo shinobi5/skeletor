@@ -33,10 +33,10 @@
   "scripts": {
     "a11y": "pa11y-ci",
     "build": "yarn css:minify && yarn parcel:build",
-    "build-component": "node scripts/create-component.js",
-    "build-registry": "node scripts/build-registry.js",
+    "build:component": "node scripts/create-component.js",
+    "build:registry": "node scripts/build-registry.js",
     "clean": "rm -rf node_modules dist .cache",
-    "create-component": "yarn build-component && yarn build-registry",
+    "create-component": "yarn build:component && yarn build:registry",
     "css:concat": "cat src/css/**/* > src/styles.css",
     "css:minify": "cleancss -o src/styles.css src/styles.css",
     "css:watch": "onchange 'src/css/**/*' -- yarn css:concat",
