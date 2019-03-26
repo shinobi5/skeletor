@@ -19,5 +19,5 @@ These commands can be replaced with `npm` e.g. `npm run start`
 + Improve `component` and `test` templates
 + Add web components [polyfill](https://www.webcomponents.org/polyfills)
 + Look into [document-register-element](https://github.com/WebReflection/document-register-element)
-+ Add [redux](https://github.com/reduxjs/redux)
-+ Add [router](https://github.com/faceyspacey/redux-first-router)
++ Look into [redux](https://github.com/reduxjs/redux)
++ Look into [redux-first-router](https://github.com/faceyspacey/redux-first-router)
