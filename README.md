@@ -10,7 +10,7 @@ These commands can be replaced with `npm` e.g. `npm run start`
 
 ### Creating web components
 + `yarn create-component`: CLI to create component and test templates under `src/js/components/{component}`
-+ The script also runs `scripts/build-registry.js` which will import and register the component in `src/component-registry.js`. At this point you can start using the component e.g. `<x-mycomponent>What's crackin?</x-mycomponent>`
++ The script also runs `scripts/build-registry.js` which will import and register the component in `src/component-registry.js`. The component is now ready to use e.g. `<x-mycomponent>What's crackin?</x-mycomponent>`
 + Custom element names require a dash e.g. `'x-component'`. See [Using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements). `x` is the default. To change this change the value of `componentPrefix` in `scripts/build-registry.js`.  
 + See [MDN](https://developer.mozilla.org/en-US/docs/Web/Web_Components) and [webcomponents.org](https://www.webcomponents.org/introduction) for more info on getting started with web components.
 
