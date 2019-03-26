@@ -9,14 +9,14 @@ These commands can be replaced with `npm` e.g. `npm run start`
 + `yarn a11y`: Run accessibility tests with [pa11y-ci](https://github.com/pa11y/pa11y-ci)
 
 ### Creating web components
-+ `yarn create-component`: CLI to create `component` and `test` templates under `src/js/components/{component}`
++ `yarn create-component`: CLI to create component and test templates under `src/js/components/{component}`
 + The script also imports and registers the component in `src/component-registry.js`. The barebones component is now ready to use e.g. `<x-component>I'm alive!</x-component>`
-+ Custom element names require a dash e.g. `'x-component'` (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)). To change the default prefix, update the value of `componentPrefix` in `scripts/build-registry.js` and rebuild the registry with `yarn build-registry`  
++ Custom element names require a dash e.g. 'x-component' (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)). To change the default prefix, update the value of `componentPrefix` in `scripts/build-registry.js` and rebuild the registry with `yarn build-registry`  
 + See [MDN](https://developer.mozilla.org/en-US/docs/Web/Web_Components) and [webcomponents.org](https://www.webcomponents.org/introduction) for more info on getting started with web components.
 
 ### Todo
 + Improve `component` and `test` templates
 + Add web components [polyfill](https://www.webcomponents.org/polyfills)
 + Look into [document-register-element](https://github.com/WebReflection/document-register-element)
-+ Add redux
-+ Add router
++ Add [redux](https://github.com/reduxjs/redux)
++ Add [router](https://github.com/faceyspacey/redux-first-router)
