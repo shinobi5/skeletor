@@ -15,7 +15,6 @@ These commands can be replaced with `npm` e.g. `npm run start`
 + See [MDN](https://developer.mozilla.org/en-US/docs/Web/Web_Components) and [webcomponents.org](https://www.webcomponents.org/introduction) for more info on getting started with web components.
 
 ### Todo
-+ Add component registry generator
 + Improve `component` and `test` templates
 + Add web components [polyfill](https://www.webcomponents.org/polyfills)
 + Add redux
