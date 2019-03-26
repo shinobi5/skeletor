@@ -17,5 +17,6 @@ These commands can be replaced with `npm` e.g. `npm run start`
 ### Todo
 + Improve `component` and `test` templates
 + Add web components [polyfill](https://www.webcomponents.org/polyfills)
++ Look into [document-register-element](https://github.com/WebReflection/document-register-element)
 + Add redux
 + Add router
