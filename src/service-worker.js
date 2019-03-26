@@ -1,9 +1,10 @@
+
 // Files to cache
 const cacheName = 'skeletor-v1';
 const contentToCache = [
     '/',
     '/index.html',
-    '/app.js',
+    '/index.js',
     '/styles.css',
     '/favicon.ico',
     '/icons/icon-32.png',
