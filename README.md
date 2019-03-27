@@ -15,7 +15,7 @@ These commands can be replaced with `npm` e.g. `npm run start`
 + See [MDN](https://developer.mozilla.org/en-US/docs/Web/Web_Components) and [webcomponents.org](https://www.webcomponents.org/introduction) for more info on getting started with web components.
 
 ### Todo
-+ Create reference to `component-registry.js` in `index.html` as partf of `scripts/create-component` so the registry is not included by default (current state) when web components aren't used in the project
++ Create command to add `component-registry.js` reference in `index.html` so the registry is not included by default (current state) when web components aren't used in the project
 + Improve `component` and `test` templates
 + Add docs around the state of web components
 + Add web components [polyfill](https://www.webcomponents.org/polyfills)
