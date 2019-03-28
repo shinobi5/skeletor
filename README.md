@@ -22,7 +22,7 @@ These commands can be replaced with `npm` e.g. `npm run start`
 
 ### Todo
 + Add setup CLI and add options:
-	- Web components: `Yes` -> Add regiistry (`component-registry.js` reference in `index.html`) followed by option to include [hyperHTML](https://github.com/WebReflection/hyperhtml) as a virtual DOM alternative
+	- Web components: `Yes` -> Add regiistry (`component-registry.js` reference in `index.html`) followed by option to include [hyperHTML](https://github.com/WebReflection/hyperhtml) as a light virtual DOM alternative
 	- SPA: add [redux](https://github.com/reduxjs/redux)) for state management and [redux-first-router](https://github.com/faceyspacey/redux-first-router) for routing.
 + Remove text utilitites
 + Add `grid` and `flex` starters
