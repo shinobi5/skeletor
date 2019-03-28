@@ -8,8 +8,8 @@ It can be used for static projects or for spinnning up proof of concepts. A serv
 These commands can be replaced with `npm` e.g. `npm run start`
 
 + `yarn setup`: Remove git, install dependencies and start the project
-+ `yarn start`: Run server and watch files in dev mode with [parcel](https://parceljs.org/)
-+ `yarn build`: Create build for production with [parcel](https://parceljs.org/)
++ `yarn start`: Run server and watch files in dev mode with `parcel`
++ `yarn build`: Create build for production with `parcel`
 + `yarn test`: Run unit tests with [Jest](https://github.com/facebook/jest)
 + `yarn a11y`: Run accessibility tests with [pa11y-ci](https://github.com/pa11y/pa11y-ci)
 
@@ -22,7 +22,8 @@ These commands can be replaced with `npm` e.g. `npm run start`
 
 ### Todo
 + Add setup CLI:
-	- Web components: `Yes` -> Add registry (`component-registry.js` reference in `index.html`) followed by option to include [hyperHTML](https://github.com/WebReflection/hyperhtml) as a light virtual DOM alternative
+	- Web components: `Yes` -> add registry (`component-registry.js` reference in `index.html`)
+	- Renderer: `Yes` -> add [hyperHTML](https://github.com/WebReflection/hyperhtml) as a light virtual DOM alternative
 	- SPA: add [redux](https://github.com/reduxjs/redux)) for state management and [redux-first-router](https://github.com/faceyspacey/redux-first-router) for routing.
 + Remove text utilitites
 + Add `grid` and `flex` starters
