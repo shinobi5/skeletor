@@ -15,6 +15,7 @@ These commands can be replaced with `npm` e.g. `npm run start`
 + See [MDN](https://developer.mozilla.org/en-US/docs/Web/Web_Components) and [webcomponents.org](https://www.webcomponents.org/introduction) for more info on getting started with web components.
 
 ### Todo
++ Add intro explaining boilerplate
 + Remove text utilitites
 + Add `grid` and `flex` starters
 + Update `css:concat` to concat CSS folders in correct order (without need for folder numbers)
