@@ -2,7 +2,7 @@
 
 Front-end boilerplate with a focus on current and upcoming web standards. Its purpose is to be as vanilla as possible, while adding a bundler (parcel) to take care of browsers that don't currently support module imports. Web component polyfills are included for browsers that lack support for: Custom Elements, Shadow DOM and Templates/Slots.
 
-It can be used for static projects or for spinnning up proof of comcepts. A service worker and webmanifest are included for basic PWA features. A router like [redux-first-router](https://github.com/faceyspacey/redux-first-router) can be used with [redux](https://github.com/reduxjs/redux) to manage routes and state for SPA's.
+It can be used for static projects or for spinnning up proof of comcepts. A service worker and webmanifest are included for basic PWA features. A router like [redux-first-router](https://github.com/faceyspacey/redux-first-router) can be included with [redux](https://github.com/reduxjs/redux) to manage routes and state for SPA's. Currenlty looking into adding these as options to the project.
 
 ### Commands
 These commands can be replaced with `npm` e.g. `npm run start`
