@@ -1,6 +1,6 @@
 ## Skeletor
 
-Front-end boilerplate with a focus on current and upcoming web standards. ([Parcel](https://parceljs.org/)) takes care of browsers that don't currently support module imports. Web component polyfills are included for browsers that lack support for Custom Elements, Shadow DOM and Templates/Slots.
+Front-end boilerplate with a focus on current and upcoming web standards. [Parcel](https://parceljs.org/) takes care of browsers that don't currently support module imports. Web component polyfills are included for browsers that lack support for Custom Elements, Shadow DOM and Templates/Slots.
 
 It can be used for static projects or for spinnning up proof of concepts. A service worker and webmanifest are included for basic PWA features. A router like [redux-first-router](https://github.com/faceyspacey/redux-first-router) can be included with [redux](https://github.com/reduxjs/redux) to manage routes and state for SPA's (can be included via the setup CLI).
 
