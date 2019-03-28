@@ -21,7 +21,7 @@ These commands can be replaced with `npm` e.g. `npm run start`
 + See [MDN](https://developer.mozilla.org/en-US/docs/Web/Web_Components) and [webcomponents.org](https://www.webcomponents.org/introduction) for more info on getting started with web components.
 
 ### Todo
-+ Add setup CLI and:
++ Add setup CLI:
 	- Web components: `Yes` -> Add regiistry (`component-registry.js` reference in `index.html`) followed by option to include [hyperHTML](https://github.com/WebReflection/hyperhtml) as a light virtual DOM alternative
 	- SPA: add [redux](https://github.com/reduxjs/redux)) for state management and [redux-first-router](https://github.com/faceyspacey/redux-first-router) for routing.
 + Remove text utilitites
