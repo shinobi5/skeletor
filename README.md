@@ -7,8 +7,7 @@ It can be used for static projects or for spinnning up proof of concepts. A serv
 ### Commands
 These commands can be replaced with `npm` e.g. `npm run start`
 
-+ `yarn setup`: Remove git, install dependencies and start the project
-+ `yarn start`: Run server and watch files in dev mode with `parcel`
++ `yarn start`: Build, run server and watch files in dev mode with `parcel`
 + `yarn build`: Create build for production with `parcel`
 + `yarn test`: Run unit tests with [Jest](https://github.com/facebook/jest)
 + `yarn a11y`: Run accessibility tests with [pa11y-ci](https://github.com/pa11y/pa11y-ci)
