@@ -1,8 +1,8 @@
-## Front-end boilerplate
+## Skeletor
 
-A front-end boilerplate with a focus on current and upcoming web standards. Idea is to be as vanilla as possible, while adding a bundler (parcel) and polyfill support options for non-supporting browsers of module imports and the technologies that make up web components: Custom Elements, Shadow DOM and templates/slots.
+Front-end boilerplate with a focus on current and upcoming web standards. Its purpose is to be as vanilla as possible, while adding a bundler (parcel) to take care of browsers that don't support module imports and web component polyfill for browsers that lack support for the technologies that make up web components: Custom Elements, Shadow DOM and templates/slots.
 
-At it's barebones it can be used for static projects or for spinnning up a POC. A basic service worker and webmanifest are included for PWA features. A router and a state management library can be included for SPA's.
+It can be used for static projects or for spinnning up proof of comcepts. A service worker and webmanifest are included for basic PWA features. A router like [redux-first-router](https://github.com/faceyspacey/redux-first-router) can be used with [redux](https://github.com/reduxjs/redux) to manage routes and state for SPA's.
 
 ### Commands
 These commands can be replaced with `npm` e.g. `npm run start`
