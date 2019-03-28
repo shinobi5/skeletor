@@ -2,7 +2,7 @@
 
 Front-end boilerplate with a focus on current and upcoming web standards. Its purpose is to be as vanilla as possible, while adding a bundler ([parcel](https://parceljs.org/)) to take care of browsers that don't currently support module imports. Web component polyfills are included for browsers that lack support for Custom Elements, Shadow DOM and Templates/Slots.
 
-It can be used for static projects or for spinnning up proof of concepts. A service worker and webmanifest are included for basic PWA features. A router like [redux-first-router](https://github.com/faceyspacey/redux-first-router) can be included with [redux](https://github.com/reduxjs/redux) to manage routes and state for SPA's (option to include via the setup CLI).
+It can be used for static projects or for spinnning up proof of concepts. A service worker and webmanifest are included for basic PWA features. A router like [redux-first-router](https://github.com/faceyspacey/redux-first-router) can be included with [redux](https://github.com/reduxjs/redux) to manage routes and state for SPA's (can be included via the setup CLI).
 
 ### Commands
 These commands can be replaced with `npm` e.g. `npm run start`
@@ -17,7 +17,7 @@ These commands can be replaced with `npm` e.g. `npm run start`
 + `yarn create-component`: CLI to create a component and test boilerplate under `src/js/components/{component}`
 + The script also imports and registers the component in `src/component-registry.js`. The barebones component is now ready to use e.g. `<x-component>I'm alive!</x-component>`
 + Custom element names require a dash e.g. x-component (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)). To change the default prefix update the value of `componentPrefix` in `scripts/build-registry.js` and rebuild the registry with `yarn build:registry`
-+ A small library like [hyperHTML](https://github.com/WebReflection/hyperhtml) can be used as a virtual DOM alternative (option to include via the setup CLI)
++ A small library like [hyperHTML](https://github.com/WebReflection/hyperhtml) can be used as a virtual DOM alternative (can be included via the setup CLI)
 + See [MDN](https://developer.mozilla.org/en-US/docs/Web/Web_Components) and [webcomponents.org](https://www.webcomponents.org/introduction) for more info on getting started with web components.
 
 ### Todo
