@@ -22,8 +22,8 @@ These commands can be replaced with `npm` e.g. `npm run start`
 
 ### Todo
 + Add setup CLI and add options:
-1. Web components[Yes]: add `component-registry.js` reference in `index.html` followed by option to include [hyperHTML](https://github.com/WebReflection/hyperhtml) as a virtual DOM alternative
-2. SPA: add [redux](https://github.com/reduxjs/redux)) for state management and [redux-first-router](https://github.com/faceyspacey/redux-first-router) for routing.
+	1. Web components[Yes]: add `component-registry.js` reference in `index.html` followed by option to include [hyperHTML](https://github.com/WebReflection/hyperhtml) as a virtual DOM alternative
+	2. SPA: add [redux](https://github.com/reduxjs/redux)) for state management and [redux-first-router](https://github.com/faceyspacey/redux-first-router) for routing.
 + Remove text utilitites
 + Add `grid` and `flex` starters
 + Update `css:concat` to concat CSS folders in correct order (without need for folder numbers)
