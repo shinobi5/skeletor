@@ -1,5 +1,10 @@
 ## Front-end boilerplate
 
+A front-end boilerplate with a focus on current and upcoming web standards. Idea is to be as vanilla as possible, while adding a bundler (parcel) and polyfill support options for non-supporting browsers of module imports and the technologies that make up web components: Custom Elements, Shadow DOM and templates/slots.
+
+At it's barebones it can be used for static projects or for spinnning up a POC. A basic service worker and webmanifest are included for PWA features. A router and a state management library can be included for SPA's.
+
+### Commands
 These commands can be replaced with `npm` e.g. `npm run start`
 
 + `yarn setup`: Remove git, install dependencies and start the project
@@ -15,7 +20,6 @@ These commands can be replaced with `npm` e.g. `npm run start`
 + See [MDN](https://developer.mozilla.org/en-US/docs/Web/Web_Components) and [webcomponents.org](https://www.webcomponents.org/introduction) for more info on getting started with web components.
 
 ### Todo
-+ Add intro explaining boilerplate
 + Remove text utilitites
 + Add `grid` and `flex` starters
 + Update `css:concat` to concat CSS folders in correct order (without need for folder numbers)
