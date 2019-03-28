@@ -2,7 +2,7 @@
 
 Front-end boilerplate with a focus on current and upcoming web standards. [Parcel](https://parceljs.org/) takes care of browsers that lack support for module imports. Web component polyfills are included for browsers that lack support for Custom Elements, Shadow DOM and Templates/Slots.
 
-It can be used for static projects or for spinnning up proof of concepts. A service worker and webmanifest are included for basic PWA features. [redux-first-router](https://github.com/faceyspacey/redux-first-router) and [redux](https://github.com/reduxjs/redux) can be included to manage routes and state for SPA's (can be included via the setup CLI).
+It can be used for static projects or for spinnning up proof of concepts. A service worker and webmanifest are included for basic PWA features. [Redux-first-router](https://github.com/faceyspacey/redux-first-router) and [redux](https://github.com/reduxjs/redux) can be included to manage routes and state for SPA's (can be included via the setup CLI).
 
 ### Commands
 These commands can be replaced with `npm` e.g. `npm run start`
