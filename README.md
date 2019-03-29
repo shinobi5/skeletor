@@ -19,9 +19,9 @@ These commands can be replaced with `npm` e.g. `npm run start`
 + A small library like [hyperHTML](https://github.com/WebReflection/hyperhtml) can be used as a virtual DOM alternative (can be included via the setup CLI)
 
 ### Web component resources
-+ [Open WC](https://open-wc.org/)
 + [Gold standard](https://github.com/webcomponents/gold-standard/wiki)
 + [webcomponents.org](https://www.webcomponents.org/introduction)
++ [Open WC](https://open-wc.org/)
 + [MDN](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
 
 ### Todo
