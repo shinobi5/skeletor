@@ -2,7 +2,7 @@
 
 Front-end boilerplate with [parcel](https://parceljs.org/) for bundling dependencies.
 
-A web component generator produces a minimal web component boilerplate and test file. Web components are not required to be used, but the project is setup to work with web components out of the box. If web components are not required and component styles are desired then css files created under `src/css/components` can be used for component styles (e.g. BEM). A service worker and webmanifest are included for basic PWA features.
+A web component generator (`scripts/create-component.js`) produces a minimal web component boilerplate and test file. Web components are not required to be used, but the project is setup to work with web components out of the box. If web components are not required and component styles are desired then css files created under `src/css/components` can be used for component styles (e.g. BEM). A service worker and webmanifest are included for basic PWA features.
 
 ### Commands
 These commands can be replaced with `npm` e.g. `npm run start`
