@@ -23,10 +23,3 @@ These commands can be replaced with `npm` e.g. `npm run start`
 + [webcomponents.org](https://www.webcomponents.org/introduction)
 + [Open WC](https://open-wc.org/)
 + [MDN](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
-
-### Todo
-+ Improve `component` and `test` templates
-+ Add setup CLI:
-	- Web components: `Yes` -> add registry (create `component-registry.js` and reference in `index.html`) and add [polyfill](https://www.webcomponents.org/polyfills)
-	- Renderer: `Yes` -> add [hyperHTML](https://github.com/WebReflection/hyperhtml) as a light virtual DOM alternative
-	- SPA `Yes` -> add [redux](https://github.com/reduxjs/redux) for state management and [redux-first-router](https://github.com/faceyspacey/redux-first-router) for routing.
