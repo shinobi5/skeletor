@@ -1,4 +1,2 @@
-/**
- * Auto generated components registry
- */
+console.log('No web components registered');
  
