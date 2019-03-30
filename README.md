@@ -16,7 +16,6 @@ These commands can be replaced with `npm` e.g. `npm run start`
 + `yarn create-component`: CLI to create component and unit test boilerplates in `src/js/components/{component}`
 + The script also imports and registers the component in `src/component-registry.js`. The barebones component is now ready to use e.g. `<x-component>I'm alive!</x-component>`
 + Custom element names require a dash e.g. x-component (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)). To change the default prefix update the value of `componentPrefix` in `scripts/build-registry.js` and rebuild the registry with `yarn build:registry`
-+ A small library like [hyperHTML](https://github.com/WebReflection/hyperhtml) can be used as a virtual DOM alternative.
 
 ### Web component resources
 + [Gold standard](https://github.com/webcomponents/gold-standard/wiki)
