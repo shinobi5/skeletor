@@ -37,7 +37,7 @@
     "build:registry": "node scripts/build-registry.js",
     "clean": "rm -rf node_modules dist .cache",
     "create-component": "yarn build:component && yarn build:registry",
-    "css:concat": "cat src/css/settings/* src/css/global/* src/css/elements/* src/css/objects/* src/css/utilities/* > src/styles.css",
+    "css:concat": "cat src/css/settings/* src/css/global/* src/css/elements/* src/css/objects/* src/css/components/* src/css/utilities/* > src/styles.css",
     "css:minify": "cleancss -o src/styles.css src/styles.css",
     "css:watch": "onchange 'src/css/**/*' -- yarn css:concat",
     "imagemin": "imagemin --out-dir=src/img src/img/**/*.{png,jpg,gif}",
