@@ -25,7 +25,6 @@ These commands can be replaced with `npm` e.g. `npm run start`
 + [MDN](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
 
 ### Todo
-+ Update `css:concat` to concat CSS folders in correct order (without need for folder numbers)
 + Add `grid` and `flex` starters
 + Improve `component` and `test` templates
 + Add setup CLI:
