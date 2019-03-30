@@ -1,6 +1,6 @@
 ## Skeletor
 
-Front-end boilerplate with [parcel](https://parceljs.org/) to take care of browsers that lack support for module imports.
+Front-end boilerplate with [parcel](https://parceljs.org/) to take care of browsers lacking support for module imports.
 
 It can be used for static projects or for spinnning up proof of concepts. A service worker and webmanifest are included for basic PWA features.
 
