@@ -20,6 +20,6 @@ These commands can be replaced with `npm` e.g. `npm run start`
 
 ### Web component resources
 + [Gold standard](https://github.com/webcomponents/gold-standard/wiki)
-+ [webcomponents.org](https://www.webcomponents.org/introduction)
++ [webcomponents.org](https://www.webcomponents.org)
 + [Open WC](https://open-wc.org/)
 + [MDN](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
