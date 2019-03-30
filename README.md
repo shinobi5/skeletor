@@ -1,6 +1,6 @@
 ## Skeletor
 
-Front-end boilerplate with [parcel](https://parceljs.org/) to take care of browsers that lack support for module imports. Web component polyfills are included for browsers that lack support for Custom Elements, Shadow DOM and Templates/Slots.
+Front-end boilerplate with [parcel](https://parceljs.org/) to take care of browsers that lack support for module imports.
 
 It can be used for static projects or for spinnning up proof of concepts. A service worker and webmanifest are included for basic PWA features.
 
