@@ -7374,6 +7374,11 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     hash-base "^3.0.0"
     inherits "^2.0.1"
 
+router-component@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/router-component/-/router-component-0.7.0.tgz#1ea26c0ad2a9b1014a5b2f0bb8ce73dffc7f1acb"
+  integrity sha512-J9q/EmAYWDuu9J+NBSx2OGtN/FzvRDUGsiuae5DbEHMzBBOl6vX7haP77Rw4evwG3uYTIBb1L3twRBd0lqthCA==
+
 rsvp@^4.8.4:
   version "4.8.4"
   resolved "https://registry.yarnpkg.com/rsvp/-/rsvp-4.8.4.tgz#b50e6b34583f3dd89329a2f23a8a2be072845911"
