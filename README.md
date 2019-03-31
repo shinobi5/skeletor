@@ -2,7 +2,7 @@
 
 Front-end boilerplate with [parcel](https://parceljs.org/) for bundling dependencies.
 
-A web component generator (`scripts/create-component.js`) produces a minimal web component boilerplate and test file. Web components are not required to be used, but the project is setup to work with web components out of the box. If web components are not required and component styles are desired then css files created under `src/css/components/` can be used for component styles (e.g. BEM). When using web components the intention is for component styles to be encapsulated within the custom element via the shadowDOM. All other css styles are intended to be global.
+A web component generator (`scripts/create-component.js`) produces a minimal web component boilerplate and test file. Web components are not required to be used, but the project is setup to work with web components. If web components are not required, component styles can be created in `src/css/components`. Web components don't need external component styles because styles can be encapsulated within the custom element via the shadowDOM.
 
 A service worker and webmanifest are included for basic PWA features. For single page applications, a router like [sk-router](https://github.com/skatejs/skatejs/tree/master/packages/sk-router) can be used with [redux](https://redux.js.org/) for state management.
 
