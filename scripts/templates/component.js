@@ -1,11 +1,18 @@
 module.exports = component => {
-return `export default class ${component} extends HTMLElement {
+return `import { html, render } from 'lit-html';
+
+export default class ${component} extends HTMLElement {
     constructor() {
         super();
+        this.root = this.attachShadow({ mode: 'open' });        
+    }
 
-        const shadowRoot = this.attachShadow({ mode: 'open' });
+    connectedCallback() {
+        render(this.render(), this.root);
+    }
 
-        shadowRoot.innerHTML = \`
+    render() {
+        return html\`
             <style></style>
             <div>
                 <slot></slot>

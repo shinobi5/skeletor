@@ -2,7 +2,7 @@
 
 Front-end boilerplate with [parcel](https://parceljs.org/) for bundling dependencies.
 
-A web component generator (`scripts/create-component.js`) produces a minimal web component boilerplate and test file. This is an optional script, web components are not required to be used. If web components are not used, component styles can be created in `src/css/components` and the folder can be added to the `css:concat` command in `package.json`. Web components don't need external component classes because styles can be encapsulated within the custom element via the shadowDOM.
+A web component generator (`scripts/create-component.js`) produces a minimal web component boilerplate and test file. This is an optional script, web components are not required to be used. If web components are not used, component styles can be created in `src/css/components` and the folder can be added to the `css:concat` command in `package.json`. Web components don't need external component classes because styles can be encapsulated within the custom element via the shadowDOM. [lit-html](https://github.com/polymer/lit-html) is used for template rendering.
 
 A service worker and webmanifest are included for basic PWA features. For single page applications, a router like [sk-router](https://github.com/skatejs/skatejs/tree/master/packages/sk-router) can be used with [redux](https://redux.js.org/) managing state.
 

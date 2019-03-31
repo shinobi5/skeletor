@@ -1,2 +1,1 @@
-console.log('No web components registered');
- 
+console.log('No components registered');
