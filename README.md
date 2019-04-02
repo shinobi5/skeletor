@@ -63,7 +63,7 @@ The script also imports and registers the component in `src/component-registry.j
 + [MDN](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
 
 ### Tests
-> Still deciding whether jest is the right choice for this boilerplate... but for now it's available
+> Still deciding whether jest is the right choice for this boilerplate... but for now it's available and a simple unit test boilerplate is created with each generated web component (via `yarn create-component`)
 
 Run unit tests with [jest](https://github.com/facebook/jest)
 ```
