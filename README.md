@@ -4,7 +4,7 @@ Front-end boilerplate using [parcel](https://parceljs.org/) for browsers lacking
 
 An optional web component [generator](https://github.com/shinobi5/skeletor/blob/master/scripts/create-component.js) produces a minimal [boilerplate](https://github.com/shinobi5/skeletor/blob/master/scripts/templates/component.js) (includes [lit-html](https://github.com/polymer/lit-html) for fast template rendering) and a corresponding test file.
 
-A service worker and webmanifest are included for basic PWA features. For SPAs a lightweight web component router ([router-component](https://github.com/mkay581/router-component)) is included while [redux](https://github.com/reduxjs/redux) is included for managing state.
+A service worker and webmanifest are included for basic PWA features. For SPAs a lightweight web [component router](https://github.com/mkay581/router-component) is included while [redux](https://github.com/reduxjs/redux) is included for managing state.
 
 ### Getting Started
 
