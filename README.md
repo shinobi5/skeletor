@@ -42,7 +42,7 @@ src/
 
 ### Web components
 
-Custom element names require a dash e.g. x-component (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)). To change the default prefix for generated components, update the value of `componentPrefix` in `scripts/build-registry.js`
+__NOTE:__: Before generating a custom element change the default prefix by updating the value of `componentPrefix` in `scripts/build-registry.js`. Custom element names require a dash e.g. x-component (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements))
 
 Create boilerplate component and test in `src/js/components/`
 ```
@@ -61,7 +61,7 @@ The script also imports and registers the component in `src/component-registry.j
 + [MDN](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
 
 ### Tests
-Run unit tests with [Jest](https://github.com/facebook/jest)
+Run unit tests with [jest](https://github.com/facebook/jest)
 ```
 yarn test
 ```
@@ -72,7 +72,7 @@ yarn a11y
 ```
 
 ### Production Build
-Create build for production with `parcel`
+Create build for production with [parcel](https://parceljs.org/)
 ```
 yarn build
 ```
