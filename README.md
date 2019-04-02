@@ -44,7 +44,7 @@ src/
 
 > Before generating a custom element change the default prefix (`x` by default) by updating the value of `componentPrefix` in `scripts/build-registry.js`. Custom element names require a dash (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements))
 
-> If web components aren't used then remove `<script type="module" src="component-registry.js"></script>` from `index.html`
+> If web components are not going to be used then remove `<script type="module" src="component-registry.js"></script>` from `index.html` and also remove `src/component-registry.js`
 
 Create boilerplate component and test in `src/js/components/`
 ```
