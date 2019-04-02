@@ -40,9 +40,9 @@ src/
 └── site.webmanifest
 ```
 
-### Web components
+### Web Components
 
-__NOTE:__ Before generating a custom element change the default prefix (set to `x` by default) by updating the value of `componentPrefix` in `scripts/build-registry.js`. Custom element names require a dash e.g. `x-component` (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements))
+__NOTE:__ Before generating a custom element change the default prefix (`x` by default) by updating the value of `componentPrefix` in `scripts/build-registry.js`. Custom element names require a dash e.g. `x-component` (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements))
 
 Create boilerplate component and test in `src/js/components/`
 ```
