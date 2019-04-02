@@ -13,7 +13,7 @@ Clone the repo and give the project a new name
 git clone git@github.com:shinobi5/skeletor.git <project-name>
 ```
 
-Install npm modules, run the server (localhost:1234) and watch files for changes 
+Install npm modules, run the server (`localhost:1234`) and watch files for changes 
 
 ```
 yarn && yarn start
