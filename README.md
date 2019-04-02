@@ -54,6 +54,8 @@ The script also imports and registers the component in `src/component-registry.j
 <x-component>I'm alive!</x-component>
 ```
 
+> If web components aren't used then remove `<script type="module" src="component-registry.js"></script>` from `index.html`
+
 #### Resources
 + [Gold standard](https://github.com/webcomponents/gold-standard/wiki)
 + [webcomponents.org](https://www.webcomponents.org)
