@@ -33,7 +33,6 @@ src/
 ├── js
 │   └── components
 │   └── utilities
-├── component-registry.js
 ├── index.html
 ├── index.js
 ├── service-worker.js
