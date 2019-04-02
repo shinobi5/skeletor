@@ -60,7 +60,7 @@ The script also imports and registers the component in `src/component-registry.j
 + [Open WC](https://open-wc.org/)
 + [MDN](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
 
-### Tests and Build
+### Test and Build
 Run unit tests with [jest](https://github.com/facebook/jest)
 ```
 yarn test
