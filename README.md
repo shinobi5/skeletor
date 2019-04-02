@@ -60,7 +60,7 @@ The script also imports and registers the component in `src/component-registry.j
 + [Open WC](https://open-wc.org/)
 + [MDN](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
 
-### Test and Build
+### Tests
 Run unit tests with [jest](https://github.com/facebook/jest)
 ```
 yarn test
@@ -70,6 +70,8 @@ Run accessibility tests with [pa11y-ci](https://github.com/pa11y/pa11y-ci)
 ```
 yarn a11y
 ```
+
+### Build
 
 Create build for production with [parcel](https://parceljs.org/)
 ```
