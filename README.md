@@ -11,15 +11,15 @@ A service worker and webmanifest are included for basic PWA features. For SPAs t
 Clone the repo and give the project a new name
 ```
 git clone git@github.com:shinobi5/skeletor.git <project-name>
-
 ```
+
 Install npm modules, run the server (localhost:1234) and watch files for changes 
 
 ```
 yarn && yarn start
 ```
 
-Project structure
+Boilerplate structure
 ```
 src/
 ├── css
@@ -61,8 +61,18 @@ The script also imports and registers the component in `src/component-registry.j
 + [MDN](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
 
 ### Tests
-+ `yarn test`: Run unit tests with [Jest](https://github.com/facebook/jest)
-+ `yarn a11y`: Run accessibility tests with [pa11y-ci](https://github.com/pa11y/pa11y-ci)
+Run unit tests with [Jest](https://github.com/facebook/jest)
+```
+yarn test
+```
+
+Run accessibility tests with [pa11y-ci](https://github.com/pa11y/pa11y-ci)
+```
+yarn a11y
+```
 
 ### Production Build
-+ `yarn build`: Create build for production with `parcel`
+Create build for production with `parcel`
+```
+yarn build
+```
