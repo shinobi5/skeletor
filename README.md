@@ -35,6 +35,7 @@ src/
 │   └── utilities
 ├── index.html
 ├── index.js
+├── component-registry.js
 ├── service-worker.js
 └── site.webmanifest
 ```
