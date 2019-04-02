@@ -14,6 +14,29 @@ These commands can be replaced with `npm` e.g. `npm run start`
 + `yarn test`: Run unit tests with [Jest](https://github.com/facebook/jest)
 + `yarn a11y`: Run accessibility tests with [pa11y-ci](https://github.com/pa11y/pa11y-ci)
 
+### Getting Started
+
+```
+src/
+├── css
+│   └── settings
+│   └── global
+│   └── elements
+│   └── objects
+│   └── utilities
+├── font
+├── img
+├── js
+│   └── components
+│   └── utilities
+├── .babelrc
+├── component-registry.js
+├── index.html
+├── index.js
+├── service-worker.js
+└── site.webmanifest
+```
+
 ### Web components
 
 Custom element names require a dash e.g. x-component (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)). To change the default prefix for generated components, update the value of `componentPrefix` in `scripts/build-registry.js`
