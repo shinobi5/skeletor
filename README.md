@@ -29,7 +29,6 @@ src/
 ├── js
 │   └── components
 │   └── utilities
-├── .babelrc
 ├── component-registry.js
 ├── index.html
 ├── index.js
