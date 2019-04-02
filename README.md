@@ -42,7 +42,7 @@ src/
 
 ### Web Components
 
-> Before generating a custom element change the default prefix (`x` by default) by updating the value of `componentPrefix` in `scripts/build-registry.js`. Custom element names require a dash e.g. `x-component` (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements))
+> Before generating a custom element change the default prefix (`x` by default) by updating the value of `componentPrefix` in `scripts/build-registry.js`. Custom element names require a dash (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements))
 
 > If web components aren't used then remove `<script type="module" src="component-registry.js"></script>` from `index.html`
 
