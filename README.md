@@ -90,3 +90,4 @@ An opinionated CSS structure is provided for global styles (settings, utilities.
 ```
 
 2. Removing now redundant CSS scripts: `css:concat`, `css:minify` and `css:watch` from `package.json`
+3. Possibly removing reference to generated stylesheet from `index.html`. It can be left there if a generated or manually produced `styles.css` is added to the root of the project (`src/`).
