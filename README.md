@@ -6,16 +6,20 @@ An optional web component [generator](https://github.com/shinobi5/skeletor/blob/
 
 A service worker and webmanifest are included for basic PWA features. For SPAs the lightweight [router-component](https://github.com/mkay581/router-component) is included to handle routing while [redux](https://github.com/reduxjs/redux) is included for managing state.
 
-### Commands
-These commands can be replaced with `npm` e.g. `npm run start`
-
-+ `yarn start`: Build, run server and watch files in dev mode with `parcel`
-+ `yarn build`: Create build for production with `parcel`
-+ `yarn test`: Run unit tests with [Jest](https://github.com/facebook/jest)
-+ `yarn a11y`: Run accessibility tests with [pa11y-ci](https://github.com/pa11y/pa11y-ci)
-
 ### Getting Started
 
+Clone the repo and give the project a new name
+```
+git clone git@github.com:shinobi5/skeletor.git <project-name>
+
+```
+Install npm modules, run the server (localhost:1234) and watch files for changes 
+
+```
+yarn && yarn start
+```
+
+Project structure
 ```
 src/
 ├── css
@@ -55,3 +59,10 @@ The script also imports and registers the component in `src/component-registry.j
 + [webcomponents.org](https://www.webcomponents.org)
 + [Open WC](https://open-wc.org/)
 + [MDN](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
+
+### Tests
++ `yarn test`: Run unit tests with [Jest](https://github.com/facebook/jest)
++ `yarn a11y`: Run accessibility tests with [pa11y-ci](https://github.com/pa11y/pa11y-ci)
+
+### Production Build
++ `yarn build`: Create build for production with `parcel`
