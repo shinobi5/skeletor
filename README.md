@@ -44,6 +44,8 @@ src/
 
 > Before generating a custom element change the default prefix (`x` by default) by updating the value of `componentPrefix` in `scripts/build-registry.js`. Custom element names require a dash e.g. `x-component` (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements))
 
+> If web components aren't used then remove `<script type="module" src="component-registry.js"></script>` from `index.html`
+
 Create boilerplate component and test in `src/js/components/`
 ```
 yarn create-component
@@ -53,8 +55,6 @@ The script also imports and registers the component in `src/component-registry.j
 ```
 <x-component>I'm alive!</x-component>
 ```
-
-> If web components aren't used then remove `<script type="module" src="component-registry.js"></script>` from `index.html`
 
 #### Resources
 + [Gold standard](https://github.com/webcomponents/gold-standard/wiki)
