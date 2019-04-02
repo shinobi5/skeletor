@@ -16,7 +16,7 @@ These commands can be replaced with `npm` e.g. `npm run start`
 
 ### Web components
 
-Create boilerplate component and test in `src/js/components/{component}`
+Create boilerplate component and test in `src/js/components`
 ```
 yarn create-component
 ```
@@ -27,7 +27,9 @@ The script also imports and registers the component in `src/component-registry.j
 ```
 
 Custom element names require a dash e.g. x-component (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)). To change the default prefix update the value of `componentPrefix` in `scripts/build-registry.js` and rebuild the registry:
-```yarn build:registry```
+```
+yarn build:registry
+```
 
 #### resources
 + [Gold standard](https://github.com/webcomponents/gold-standard/wiki)
