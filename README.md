@@ -79,3 +79,14 @@ Create build for production with [parcel](https://parceljs.org/)
 ```
 yarn build
 ```
+
+### Styling
+An opinionated CSS structure is provided for global styles (settings, utilities...). This can be removed if it doesn't suit the project. It will require:
+
+1. Updating the `start` and `build` scripts in `package.json` by removing the css tasks and changing the commands to: 
+```
+"start": "yarn parcel:start"
+"build": "yarn parcel:build"
+```
+
+2. Removing css scripts: `css:concat`, `css:minify` and `css:watch`
