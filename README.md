@@ -6,7 +6,7 @@ An optional web component [generator](https://github.com/shinobi5/skeletor/blob/
 
 A service worker and webmanifest are included for basic PWA features. For SPAs a lightweight [web component router](https://github.com/mkay581/router-component) is included while [redux](https://github.com/reduxjs/redux) is included for managing state.
 
-Component styles are intended to be managed inside custom elements via the shadow DOM. If web components are not used then a component folder (`src/css/components`) can be created and `src/css/components/*` added to the `css:concat` script in `package.json` (the place in the command dictates the order in which the files files are concatenated).
+Component styles are intended to be managed inside custom elements via the shadow DOM. If web components are not used then a component folder (`src/css/components`) can be created and `src/css/components/*` added to the `css:concat` script in `package.json` (the place in the command dictates the order in which the files are concatenated).
 
 ### Getting Started
 
