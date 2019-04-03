@@ -5,6 +5,7 @@ const contentToCache = [
     '/',
     '/index.html',
     '/index.js',
+	'/component-registry.js',
     '/styles.css',
     '/favicon.ico',
     '/icons/icon-32.png',
