@@ -83,7 +83,7 @@ yarn build
 ```
 
 ### Removing Default CSS
-An opinionated CSS structure is provided for global styles (settings, utilities...). This can be removed if it doesn't suit the project. It will require:
+An opinionated CSS structure is provided for global styles (settings, utilities...). This can be removed by:
 
 1. Updating the `start` and `build` scripts in `package.json` to: 
 ```
