@@ -85,11 +85,7 @@ yarn build
 ### Removing Default CSS
 An opinionated CSS structure is provided for global styles (settings, utilities...). This can be removed by:
 
-1. Updating the `start` and `build` scripts in `package.json` to: 
-```
-"start": "yarn parcel:start"
-"build": "yarn parcel:build"
-```
-
-2. Removing now redundant CSS scripts: `css:concat`, `css:minify` and `css:watch` from `package.json`
-3. Possibly removing reference to generated stylesheet from `index.html`. It can be left there if a generated or manually produced `styles.css` is added to the root of the project (`src/`).
+1. Removing `src/css/`
+2. Updating the `start` and `build` scripts in `package.json` to `"start": "yarn parcel:start"` and  `"build": "yarn parcel:build"`
+3. Removing now redundant CSS scripts: `css:concat`, `css:minify` and `css:watch` from `package.json`
+4. Possibly removing reference to generated stylesheet from `index.html`. It can be left there if a generated or manually produced `styles.css` is added to the root of the project (`src/`).
