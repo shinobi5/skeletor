@@ -42,7 +42,7 @@ src/
 
 ### Web Components
 
-> Before generating a custom element change the default prefix (`x` by default) by updating the value of `componentPrefix` in `scripts/build-registry.js`. Custom element names require a dash (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements))
+> Before generating a custom element change the default prefix (`x` by default) by updating the value of `componentPrefix` in [build-registry.js](https://github.com/shinobi5/skeletor/blob/master/scripts/build-registry.js). Custom element names require a dash (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements))
 
 > If web components are not used, remove `<script type="module" src="component-registry.js"></script>` from `index.html` and remove [component-registry.js](https://github.com/shinobi5/skeletor/blob/master/src/component-registry.js) and its reference in [service-worker.js](https://github.com/shinobi5/skeletor/blob/master/src/service-worker.js)
 
