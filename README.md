@@ -53,7 +53,7 @@ yarn create-component
 
 The script also imports and registers the component in `src/component-registry.js`. The barebones component is now ready to use e.g. 
 ```
-<x-component>I'm alive!</x-component>
+<x-component>Johnny 5 alive!</x-component>
 ```
 
 #### Resources
