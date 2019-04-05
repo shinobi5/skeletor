@@ -90,4 +90,4 @@ An opinionated CSS structure is provided for global styles (settings, utilities.
 3. Removing now redundant CSS scripts: `css:concat`, `css:minify` and `css:watch` from `package.json`
 4. Possibly removing reference to generated stylesheet from `index.html`. It can be left there if a generated or manually produced `styles.css` is added to the root of the project (`src/`).
 
-To add folders modify the `css:concat` command by adding (or removing) folders with the glob pattern to target all files within e.g. `src/css/new-folder/*` (place in the command dictates order of concatenation). 
+To add folders modify the `css:concat` command by adding (or removing) folders with `*` to target all files within e.g. `src/css/new-folder/*` (place in the command dictates order of concatenation). 
