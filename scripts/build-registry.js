@@ -4,6 +4,7 @@ const path = require('path');
 const fs = require('fs');
 const slash = require('slash');
 
+const { camelCaseHyphen } = require('../src/js/utils/patterns');
 const srcDir = slash(path.join(process.cwd(), 'src')); 
 const componentsDir = slash(path.join(process.cwd(), 'src/js/components')); 
 const componentRegistry = path.join(srcDir, 'component-registry.js');
@@ -17,13 +18,10 @@ const header = `/**
 
 const componentExports = components.map(componentPath => {
     const component = path.basename(componentPath, '.js');
-    
-    const camelCaseComponent = component.replace(/-([a-z])/gi, (s, group1) => {
-        return group1.toUpperCase();
-    });
+    const processedComponent = camelCaseHyphen(component);
 	
-	return `import ${camelCaseComponent} from './js/components/${component}/${component}'; 
-	customElements.define('${componentPrefix}-${component}', ${camelCaseComponent});`
+	return `import ${processedComponent} from './js/components/${component}/${component}'; 
+	customElements.define('${componentPrefix}-${component}', ${processedComponent});`
 });
 
 const output = [header, ...componentExports].join('\n');

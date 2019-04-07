@@ -4,6 +4,7 @@ const mkdirp = require('mkdirp');
 const prompt = require('prompt');
 const { info, error } = require('hankey');
 
+const { camelCaseHyphen } = require('../src/js/utils/patterns');
 const componentTemplate = require('./templates/component');
 const testTemplate = require('./templates/test');
 const componentsDir = path.join(process.cwd(), 'src/js/components');
@@ -32,7 +33,8 @@ prompt.get(
 );
 
 function createComponent(config) {
-	const { componentName } = config;
+    const { componentName } = config;
+    const processedComponent = camelCaseHyphen(componentName);
 	const componentDir = path.join(componentsDir, componentName);
 	const componentFileName = path.join(componentDir, `${componentName}.js`);
 	const testFileName = path.join(componentDir, `${componentName}.test.js`);
@@ -43,7 +45,7 @@ function createComponent(config) {
 	}
 
 	mkdirp.sync(componentDir);
-	fs.writeFileSync(componentFileName, componentTemplate(componentName));
-	fs.writeFileSync(testFileName, testTemplate(componentName));
+	fs.writeFileSync(componentFileName, componentTemplate(processedComponent));
+	fs.writeFileSync(testFileName, testTemplate(processedComponent));
 	info(`:floppy_disk: ${componentName} created`);
 }
