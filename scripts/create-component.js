@@ -16,8 +16,8 @@ prompt.get(
 			description: 'Component name',
 			name: 'componentName',
 			type: 'string',
-			pattern: /^[a-z]\w+$/,
-			default: 'mycomponent'
+            pattern: /^[a-zA-Z0-9\-]+$/,
+			default: 'component'
 		}
 	],
 	(err, result) => {
