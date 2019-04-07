@@ -8,7 +8,7 @@ const srcDir = slash(path.join(process.cwd(), 'src'));
 const componentsDir = slash(path.join(process.cwd(), 'src/js/components')); 
 const componentRegistry = path.join(srcDir, 'component-registry.js');
 const components = glob.sync(`${componentsDir}/*/`);
-const componentPrefix = 'x';
+const componentPrefix = 'vt';
 
 const header = `/**
  * Auto generated components registry
@@ -16,10 +16,14 @@ const header = `/**
  `;
 
 const componentExports = components.map(componentPath => {
-	const component = path.basename(componentPath, '.js');
+    const component = path.basename(componentPath, '.js');
+    
+    const camelCaseComponent = component.replace(/-([a-z])/gi, (s, group1) => {
+        return group1.toUpperCase();
+    });
 	
-	return `import ${component} from './js/components/${component}/${component}'; 
-	customElements.define('${componentPrefix}-${component}', ${component});`
+	return `import ${camelCaseComponent} from './js/components/${component}/${component}'; 
+	customElements.define('${componentPrefix}-${component}', ${camelCaseComponent});`
 });
 
 const output = [header, ...componentExports].join('\n');
