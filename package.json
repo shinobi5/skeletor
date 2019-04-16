@@ -48,7 +48,7 @@
     "imagemin": "imagemin --out-dir=src/img src/img/**/*.{png,jpg,gif}",
     "parcel:start": "parcel src/index.html",
     "parcel:build": "parcel build src/index.html",
-    "setup": "rm -rf .git .editorconfig README.MD LICENSE && yarn && yarn start",
+    "setup": "rm -rf .git .editorconfig && yarn && yarn start",
     "start": " yarn css:concat && npm-run-all --parallel css:watch parcel:start",
     "test": "jest --config jest.config.js --no-cache"
   }
