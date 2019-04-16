@@ -45,7 +45,6 @@
     "css:concat": "cat src/css/settings/* src/css/global/* src/css/elements/* src/css/objects/* src/css/components/* src/css/utilities/* > src/styles.css",
     "css:minify": "cleancss -o src/styles.css src/styles.css",
     "css:watch": "onchange 'src/css/**/*' -- yarn css:concat",
-    "lit-html": "^1.0.0",
     "imagemin": "imagemin --out-dir=src/img src/img/**/*.{png,jpg,gif}",
     "parcel:start": "parcel src/index.html",
     "parcel:build": "parcel build src/index.html",
