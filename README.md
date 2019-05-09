@@ -27,7 +27,7 @@ src/
 │   └── global
 │   └── elements
 │   └── objects
-│   └── compomemts
+│   └── components
 │   └── utilities
 ├── font
 ├── img
