@@ -27,6 +27,7 @@ src/
 │   └── global
 │   └── elements
 │   └── objects
+│   └── compomemts
 │   └── utilities
 ├── font
 ├── img
@@ -94,5 +95,4 @@ An opinionated CSS structure is provided for global styles (settings, utilities.
 - Automate setup with CLI
 - Decide on test framework (currently jest) and improve component test boilerplate
 - Improve web component boilerplate
-- Remove global CSS or update it (needs some work if it remains)?
-- Replace Parcel with [pikapkg/web](https://github.com/pikapkg/web)?
+- Investigate [pikapkg/web](https://github.com/pikapkg/web)
