@@ -1,5 +1,6 @@
 # Build
 dist
+build
 
 # Generated styles
 src/styles.css
