@@ -29,7 +29,7 @@ table {
 	border-spacing: 0;
 }
 
-/* Remove the gaps */
+/* remove the gaps */
 audio,
 canvas,
 iframe,
@@ -39,19 +39,19 @@ video {
 	vertical-align: middle;
 }
 
-/* Remove default fieldset styles */
+/* remove default fieldset styles */
 fieldset {
 	border: 0;
 	margin: 0;
 	padding: 0;
 }
 
-/* Allow only vertical resizing of textareas */
+/* allow only vertical resizing of textareas */
 textarea {
 	resize: vertical;
 }
 
-/* Remove text-shadow in selection highlight */
+/* remove text-shadow in selection highlight */
 ::selection {
 	background: var(--color-selection);
 	color: white;

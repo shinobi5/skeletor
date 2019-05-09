@@ -24,7 +24,7 @@
 	}
 
 	/* 
-		Don't show links that are fragment identifiers,
+		don't show links that are fragment identifiers,
 		or use the `javascript:` pseudo protocol
 	*/
 	a[href^="#"]:after,
@@ -39,7 +39,7 @@
 	}
 
 	/* 
-		Printing tables:
+		printing tables:
 		http://css-discuss.incutio.com/wiki/Printing_Tables
 	*/	
 	thead {

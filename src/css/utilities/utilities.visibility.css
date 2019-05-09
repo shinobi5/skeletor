@@ -1,14 +1,14 @@
-/* Hide from screen readers */
+/* hide from screen readers */
 .u-hidden {
 	display: none !important;
 }
 
-/* Hide visually and from screen readers, but maintain layout */
+/* hide visually and from screen readers, but maintain layout */
 .u-invisible {
 	visibility: hidden;
 }
 
-/* Hide only visually, but have it available for screen readers */
+/* hide only visually, but have it available for screen readers */
 .u-sr {
 	margin: -1px;
 	padding: 0;
@@ -21,7 +21,7 @@
 }
 
 /*	
-	Extends the .u-visuallyhidden class to allow the element to be focusable
+	extends the .u-visuallyhidden class to allow the element to be focusable
 	when navigated to via the keyboard 
 */
 .u-sr.u-focusable:focus,
