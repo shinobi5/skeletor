@@ -96,3 +96,4 @@ An opinionated CSS structure is provided for global styles (settings, utilities.
 - Decide on test framework (currently jest) and improve component test boilerplate
 - Improve web component boilerplate
 - Investigate [pikapkg/web](https://github.com/pikapkg/web)
+- Add favicons
