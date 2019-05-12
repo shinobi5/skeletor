@@ -95,4 +95,4 @@ An opinionated CSS structure is provided for global styles (settings, utilities.
 1. Setup CLI
 2. Improve web component and test boilerplates
 3. Investigate [pikapkg/web](https://github.com/pikapkg/web)
-4. Investigate [axe-core](https://github.com/dequelabs/axe-core) and decide on default test framework
+4. Investigate [axe-core](https://github.com/dequelabs/axe-core) and decide on default test framework (currently jest)
