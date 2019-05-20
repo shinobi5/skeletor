@@ -64,13 +64,6 @@ The script also imports and registers the component in `src/component-registry.j
 + [MDN](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
 
 ### Tests
-> Still deciding whether jest is the right choice... but for now it's available and a simple unit test boilerplate is created with each generated web component (via `yarn create-component`)
-
-Run unit tests with [jest](https://github.com/facebook/jest)
-```
-yarn test
-```
-
 Run accessibility tests with [pa11y-ci](https://github.com/pa11y/pa11y-ci)
 ```
 yarn a11y
@@ -93,6 +86,5 @@ An opinionated CSS structure is provided for global styles (settings, utilities.
 
 #### Todo
 1. Setup CLI
-2. Improve web component and test boilerplates
+2. Unit Tests: Investigate [axe-core](https://github.com/dequelabs/axe-core) and decide on default test framework
 3. Investigate [pikapkg/web](https://github.com/pikapkg/web)
-4. Investigate [axe-core](https://github.com/dequelabs/axe-core) and decide on default test framework (currently jest)
