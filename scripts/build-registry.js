@@ -4,12 +4,17 @@ const path = require('path');
 const fs = require('fs');
 const slash = require('slash');
 
-const { camelCaseHyphen } = require('../src/js/utils/patterns');
 const srcDir = slash(path.join(process.cwd(), 'src')); 
 const componentsDir = slash(path.join(process.cwd(), 'src/js/components')); 
 const componentRegistry = path.join(srcDir, 'component-registry.js');
 const components = glob.sync(`${componentsDir}/*/`);
-const componentPrefix = 'vt';
+const componentPrefix = 'x';
+
+const camelCaseHyphen = pattern => {
+    return pattern.replace(/-([a-z])/gi, (_, match) => {
+        return match.toUpperCase();
+    });
+};
 
 const header = `/**
  * Auto generated components registry

@@ -3,11 +3,15 @@ const fs = require('fs');
 const mkdirp = require('mkdirp');
 const prompt = require('prompt');
 const { info, error } = require('hankey');
-
-const { camelCaseHyphen } = require('../src/js/utils/patterns');
 const componentTemplate = require('./templates/component');
 const testTemplate = require('./templates/test');
 const componentsDir = path.join(process.cwd(), 'src/js/components');
+
+const camelCaseHyphen = pattern => {
+    return pattern.replace(/-([a-z])/gi, (_, match) => {
+        return match.toUpperCase();
+    });
+};
 
 prompt.start();
 
