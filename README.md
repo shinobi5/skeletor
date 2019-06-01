@@ -27,7 +27,6 @@ src/
 │   └── global
 │   └── elements
 │   └── objects
-│   └── components
 │   └── utilities
 ├── font
 ├── img
@@ -83,6 +82,6 @@ An opinionated CSS structure is provided for global styles (settings, utilities.
 4. Possibly removing reference to generated stylesheet from `index.html`. It can be left there if a generated or manually produced `styles.css` is added to the root of the project (`src/`).
 
 #### Todo
-1. Setup CLI
+1. Setup CLI (components prefix, css option ...)
 2. Unit Tests: Investigate [axe-core](https://github.com/dequelabs/axe-core) and decide on default test framework
 3. Investigate [pikapkg/web](https://github.com/pikapkg/web)
