@@ -8,7 +8,7 @@ A [service worker](https://github.com/shinobi5/skeletor/blob/master/src/service-
 
 ### Getting Started
 
-Clone the repo and give the project a new name
+Clone the repo and give the project a name
 ```
 git clone git@github.com:shinobi5/skeletor.git <project-name>
 ```
