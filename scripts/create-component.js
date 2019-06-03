@@ -7,7 +7,7 @@ const componentTemplate = require('./templates/component');
 const testTemplate = require('./templates/test');
 const componentsDir = path.join(process.cwd(), 'src/js/components');
 
-const camelCaseHyphen = pattern => {
+const camelCase = pattern => {
     return pattern.replace(/-([a-z])/gi, (_, match) => {
         return match.toUpperCase();
     });
@@ -38,7 +38,7 @@ prompt.get(
 
 function createComponent(config) {
     const { componentName } = config;
-    const processedComponent = camelCaseHyphen(componentName);
+    const processedComponent = camelCase(componentName);
 	const componentDir = path.join(componentsDir, componentName);
 	const componentFileName = path.join(componentDir, `${componentName}.js`);
 	const testFileName = path.join(componentDir, `${componentName}.test.js`);

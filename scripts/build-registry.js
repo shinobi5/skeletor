@@ -10,7 +10,7 @@ const componentRegistry = path.join(srcDir, 'component-registry.js');
 const components = glob.sync(`${componentsDir}/*/`);
 const componentPrefix = 'x';
 
-const camelCaseHyphen = pattern => {
+const camelCase = pattern => {
     return pattern.replace(/-([a-z])/gi, (_, match) => {
         return match.toUpperCase();
     });
@@ -23,7 +23,7 @@ const header = `/**
 
 const componentExports = components.map(componentPath => {
     const component = path.basename(componentPath, '.js');
-    const processedComponent = camelCaseHyphen(component);
+    const processedComponent = camelCase(component);
 	
 	return `import ${processedComponent} from './js/components/${component}/${component}'; 
 	customElements.define('${componentPrefix}-${component}', ${processedComponent});`
