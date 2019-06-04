@@ -83,7 +83,8 @@ An opinionated CSS structure is provided for global styles (settings, utilities.
 4. Possibly removing reference to generated stylesheet from `index.html`. It can be left there if a generated or manually produced `styles.css` is added to the root of the project (`src/`).
 
 #### Todo
-1. Investigate [axe-core](https://github.com/dequelabs/axe-core) for a11y unit testing
-2. Investigate web component unit testing approaches (Shadow DOM?)
-3. Investigate [pikapkg/web](https://github.com/pikapkg/web)
-4. Setup CLI (components prefix, css option...)
+1. Update css reset (it's a bit dated)
+2. Investigate [axe-core](https://github.com/dequelabs/axe-core) for a11y unit testing
+3. Investigate web component unit testing approaches (Shadow DOM?)
+4. Investigate [pikapkg/web](https://github.com/pikapkg/web)
+5. Setup CLI (components prefix, css option...)
