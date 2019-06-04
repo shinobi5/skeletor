@@ -30,7 +30,6 @@ src/
 │   └── utilities
 ├── font
 ├── img
-│   └── icons
 ├── js
 │   └── components
 │   └── utilities
