@@ -30,6 +30,7 @@ src/
 │   └── utilities
 ├── font
 ├── img
+│   └── icons
 ├── js
 │   └── components
 │   └── utilities
@@ -38,6 +39,7 @@ src/
 ├── component-registry.js
 ├── service-worker.js
 └── site.webmanifest
+└── favicon.ico
 ```
 
 ### Web Components

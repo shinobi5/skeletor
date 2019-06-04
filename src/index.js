@@ -1,5 +1,7 @@
+// TODO: conditionally load service worker...
+
 // Register service worker
-if('serviceWorker' in navigator) {
-    console.log("Service Worker");
-    // navigator.serviceWorker.register('service-worker.js');
-};
+// if('serviceWorker' in navigator) {
+//     console.log("Service Worker");
+//     navigator.serviceWorker.register('service-worker.js');
+// };
