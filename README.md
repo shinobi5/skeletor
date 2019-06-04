@@ -86,4 +86,4 @@ An opinionated CSS structure is provided for global styles (settings, utilities.
 1. Investigate [axe-core](https://github.com/dequelabs/axe-core) for a11y unit testing
 2. Investigate web component unit testing approaches (Shadow DOM?)
 3. Investigate [pikapkg/web](https://github.com/pikapkg/web)
-4. Setup CLI (components prefix, css option ...)
+4. Setup CLI (components prefix, css option...)
