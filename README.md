@@ -2,7 +2,7 @@
 
 __[Work in progress]__
 
-Front-end boilerplate using [parcel](https://parceljs.org/) to handle bundling (for browsers lacking native support for es modules).
+Front-end boilerplate using [parcel](https://parceljs.org/) for bundling (for browsers lacking native support for es modules).
 
 An optional web component [generator](https://github.com/shinobi5/skeletor/blob/master/scripts/create-component.js) produces a minimal [boilerplate](https://github.com/shinobi5/skeletor/blob/master/scripts/templates/component.js) and a corresponding test file.
 
