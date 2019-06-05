@@ -8,7 +8,7 @@ An optional web component [generator](https://github.com/shinobi5/skeletor/blob/
 
 A [service worker](https://github.com/shinobi5/skeletor/blob/master/src/service-worker.js) and [webmanifest](https://github.com/shinobi5/skeletor/blob/master/src/site.webmanifest) are included for PWA features. 
 
-For SPAs lightweight tools like [router-component](https://github.com/mkay581/router-component) and [beedle](https://github.com/andybelldesign/beedle) can be included client-side routing and state management.
+For SPAs, lightweight tools like [router-component](https://github.com/mkay581/router-component) and [beedle](https://github.com/andybelldesign/beedle) can be included client-side routing and state management.
 
 ### Getting Started
 
