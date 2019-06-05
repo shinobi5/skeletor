@@ -15,7 +15,6 @@
   },
   "dependencies": {
     "lit-html": "^1.0.0",
-    "router-component": "^0.7.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
