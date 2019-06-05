@@ -4,9 +4,11 @@ __[Work in progress]__
 
 Front-end boilerplate using [parcel](https://parceljs.org/) to handle bundling (for browsers lacking native support for es modules).
 
-An optional web component [generator](https://github.com/shinobi5/skeletor/blob/master/scripts/create-component.js) produces a minimal [boilerplate](https://github.com/shinobi5/skeletor/blob/master/scripts/templates/component.js) (includes [lit-html](https://github.com/polymer/lit-html) for template rendering) and a corresponding test file.
+An optional web component [generator](https://github.com/shinobi5/skeletor/blob/master/scripts/create-component.js) produces a minimal [boilerplate](https://github.com/shinobi5/skeletor/blob/master/scripts/templates/component.js) and a corresponding test file.
 
-A [service worker](https://github.com/shinobi5/skeletor/blob/master/src/service-worker.js) and [webmanifest](https://github.com/shinobi5/skeletor/blob/master/src/site.webmanifest) are included for PWA features. For SPAs the lightweight [router-component](https://github.com/mkay581/router-component) is included for routing while a tool like [redux](https://github.com/reduxjs/redux) can be included to handle state.
+A [service worker](https://github.com/shinobi5/skeletor/blob/master/src/service-worker.js) and [webmanifest](https://github.com/shinobi5/skeletor/blob/master/src/site.webmanifest) are included for PWA features. 
+
+For SPAs lightweight tools like [router-component](https://github.com/mkay581/router-component) and [beedle](https://github.com/andybelldesign/beedle) can be included client-side routing and state management.
 
 ### Getting Started
 
