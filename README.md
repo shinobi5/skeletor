@@ -1,6 +1,6 @@
 ## Skeletor
 
-Work in progress...
+__[Work in progress]__
 
 Front-end boilerplate using [parcel](https://parceljs.org/) to handle bundling (for browsers lacking native support for es modules).
 
