@@ -84,9 +84,10 @@ An opinionated CSS structure is provided for global styles (settings, utilities.
 3. Removing now redundant CSS scripts: `css:concat`, `css:minify` and `css:watch` from `package.json`
 4. Possibly removing reference to generated stylesheet from `index.html`. It can be left there if a generated or manually produced `styles.css` is added to the root of the project (`src/`).
 
-### TODO
+### Todo
 1. Update css reset (it's a bit dated)
 2. Investigate [axe-core](https://github.com/dequelabs/axe-core) for a11y unit testing
 3. Investigate web component unit testing approaches (Shadow DOM?)
 4. Investigate [pikapkg/web](https://github.com/pikapkg/web)
 5. Setup CLI (components prefix, css option...)
+6. register/unregister service worker function
