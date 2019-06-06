@@ -2,9 +2,9 @@
 
 __[Work in progress]__
 
-Front-end boilerplate using [parcel](https://parceljs.org/) for bundling, generating a local development server and [Hot module replacement](https://parceljs.org/hmr.html).
+Front-end boilerplate using [parcel](https://parceljs.org/) for bundling, generating a local development server and [hot module replacement](https://parceljs.org/hmr.html).
 
-An optional web component [generator](https://github.com/shinobi5/skeletor/blob/master/scripts/create-component.js) produces a minimal [boilerplate](https://github.com/shinobi5/skeletor/blob/master/scripts/templates/component.js) and a corresponding test file.
+An optional web component [generator](https://github.com/shinobi5/skeletor/blob/master/scripts/create-component.js) produces a minimal [boilerplate](https://github.com/shinobi5/skeletor/blob/master/scripts/templates/component.js) (with [lighterhtml](https://github.com/WebReflection/lighterhtml) for template rendering) and a corresponding test file.
 
 A [service worker](https://github.com/shinobi5/skeletor/blob/master/src/service-worker.js) and [webmanifest](https://github.com/shinobi5/skeletor/blob/master/src/site.webmanifest) are included for PWA features. 
 
