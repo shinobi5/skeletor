@@ -10,7 +10,7 @@ For SPA's, lightweight tools like [router-component](https://github.com/mkay581/
 
 ### Rationale
 
-The intention of this boilerplate is to be framework agnostic as close to the lower level web API as possible while still providing minimal requirements for building static websites, PWA's and SPA's.
+The intention of this boilerplate is to be framework agnostic and as close to the lower level web API as possible while still providing minimal requirements for building static websites, PWA's and SPA's.
 
 [parcel](https://parceljs.org/) is included because it provides some nice development features (a development server and hot module replacement). It also provides configuration free bundling. 
 
