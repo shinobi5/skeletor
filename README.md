@@ -1,6 +1,6 @@
 ## Skeletor [WIP]
 
-Front-end boilerplate with a focus on the web platofrm.
+Front-end boilerplate with a focus on the web platform.
 
 An optional web component [generator](https://github.com/shinobi5/skeletor/blob/master/scripts/create-component.js) produces a minimal [boilerplate](https://github.com/shinobi5/skeletor/blob/master/scripts/templates/component.js) (with [lighterhtml](https://github.com/WebReflection/lighterhtml) for template rendering) and a corresponding test file.
 
