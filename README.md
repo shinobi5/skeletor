@@ -8,7 +8,7 @@ A simple [service worker](https://github.com/shinobi5/skeletor/blob/master/src/s
 
 ### Overview
 
-The intention of this boilerplate is to to be as close to the lower level web API as possible while still providing minimal requirements for building static websites, PWA's and SPA's.
+The intention of this boilerplate is to be as close to the lower level web API as possible while still providing minimal requirements for building static websites, PWA's and SPA's.
 
 [parcel](https://parceljs.org/) is included because it provides some nice development features (a development server and hot module replacement). It also provides configuration free bundling. 
 
