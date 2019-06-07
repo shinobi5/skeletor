@@ -10,7 +10,7 @@ For [SPA's](https://en.wikipedia.org/wiki/Single-page_application), lightweight 
 
 ### Rationale
 
-The intention of this boilerplate is to remove remove as many abstraction layers as possible from building front-end websites and applications. To be as close to the lower level web API as possible while still providing minimal requirements for building static websites, PWA's and SPA's.
+The intention of this boilerplate is to remove as many abstraction layers as possible from the process of building client-side websites and applications. To be as close to the lower level web API as possible while still providing minimal requirements for building static websites, PWA's and SPA's.
 
 [parcel](https://parceljs.org/) is included because it provides some nice development features (a development server and hot module replacement). It also provides configuration free bundling. 
 
