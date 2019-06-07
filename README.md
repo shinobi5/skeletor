@@ -16,7 +16,7 @@ The intention of this boilerplate is to be as close to the lower level web API a
 
 Global CSS is provided (with an opinionated structure) with tools to concatenate and minify the separate files. The intention is for these styles to be global in nature while component styles are applied by each components encapsulated [shadow DOM](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM) (for custom web components).
 
-[Router-component](https://github.com/mkay581/router-component) and [beedle](https://github.com/andybelldesign/beedle) are recommended for adding client-side routing and state management because they're lightweight and inspired by the web platform. [Redux](https://redux.js.org/) could be used for more complex state management.
+[Router-component](https://github.com/mkay581/router-component) and [beedle](https://github.com/andybelldesign/beedle) are recommended for adding client-side routing and state management because they're lightweight and inspired by the web platform. [Redux](https://github.com/reduxjs/redux) could be used for more complex state management.
 
 ### Getting Started
 
