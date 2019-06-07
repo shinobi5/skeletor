@@ -18,7 +18,7 @@ The intention of this boilerplate is to be framework agnostic and as close to th
 
 [router-component](https://github.com/mkay581/router-component) and [beedle](https://github.com/andybelldesign/beedle) are recommended for adding SPA features to this boilerplate because they're lightweight, framework agnostic and inspired by the web platform.
 
-React and Vue are great and helpful for building large scale web applications (I work daily with React) but for personal projects I like to interact with the lower level API of the platform and strip away the framework and library specific layers. Get back to the roots, so to speak.
+React and Vue are great and helpful for building large scale web applications (I work daily with React) but for personal projects I like to interact with the lower level API of the platform and strip away the framework and library specific layers - get back to the roots, so to speak.
 
 ### Getting Started
 
