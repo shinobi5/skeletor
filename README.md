@@ -12,7 +12,7 @@ The intention of this boilerplate is to be as close to the lower level web API a
 
 [Parcel](https://parceljs.org/) is included because it provides some nice development features (a development server and [hot module replacement](https://parceljs.org/hmr.html)). It also provides configuration free bundling. 
 
-[Lighterhtml](https://github.com/WebReflection/lighterhtml) is included because it feels like reactive templates should be a native feature in custom web components. A native alternative (without the reactive features) would be [innerHTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML) (with some potential security issues...).
+[Lighterhtml](https://github.com/WebReflection/lighterhtml) is included as a virtual DOM alternative for performant DOM diffing and updates.
 
 Global CSS is provided (with an opinionated structure) with tools to concatenate and minify the separate files. The intention is for these styles to be global in nature while component styles are applied by each components encapsulated [shadow DOM](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM) (for custom web components).
 
