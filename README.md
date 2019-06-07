@@ -16,9 +16,9 @@ The intention of this boilerplate is to be framework agnostic and as close to th
 
 [lighterhtml](https://github.com/WebReflection/lighterhtml) is included because it feels like reactive templates should be a native feature in custom web components (native virtual DOM alternative). A native alternative (without the reactive benefits) would be [innerHTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML) (with some potential security issues...).
 
-[router-component](https://github.com/mkay581/router-component) and [beedle](https://github.com/andybelldesign/beedle) are recommended for adding SPA features to the boilerplate because they're lightweight, framework agnostic and inspired by the web platform.
+[router-component](https://github.com/mkay581/router-component) and [beedle](https://github.com/andybelldesign/beedle) are recommended for adding SPA features to this boilerplate because they're lightweight, framework agnostic and inspired by the web platform.
 
-React and Vue are great and helpful for building large scale web applications (I work daily with React) but sometimes it nice to interact with the lower level API of the platform and strip away the framework and library specific layers.
+React and Vue are great and helpful for building large scale web applications (I work daily with React) but for personal projects I like to interact with the lower level API of the platform and strip away the framework and library specific layers. Get back to the roots, so to speak.
 
 ### Getting Started
 
