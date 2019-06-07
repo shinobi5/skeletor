@@ -8,18 +8,6 @@ A [service worker](https://github.com/shinobi5/skeletor/blob/master/src/service-
 
 For SPA's, lightweight tools like [router-component](https://github.com/mkay581/router-component) and [beedle](https://github.com/andybelldesign/beedle) can be included for client-side routing and state management.
 
-### Rationale
-
-The intention of this boilerplate is to be framework agnostic and as close to the lower level web API as possible while still providing minimal requirements for building static websites, PWA's and SPA's.
-
-[parcel](https://parceljs.org/) is included because it provides some nice development features (a development server and hot module replacement). It also provides configuration free bundling. 
-
-[lighterhtml](https://github.com/WebReflection/lighterhtml) is included because it feels like reactive templates should be a native feature in custom web components (native virtual DOM alternative). A native alternative (without the reactive benefits) would be [innerHTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML) (with some potential security issues...).
-
-[router-component](https://github.com/mkay581/router-component) and [beedle](https://github.com/andybelldesign/beedle) are recommended for adding SPA features to this boilerplate because they're lightweight, framework agnostic and inspired by the web platform.
-
-React and Vue are great and helpful for building large scale web applications (I work daily with React) but for personal projects I like to interact with the lower level API of the platform and strip away the framework and library specific layers - get back to the roots, so to speak.
-
 ### Getting Started
 
 Clone the repo and give the project a name
@@ -87,6 +75,20 @@ Create build for production with [parcel](https://parceljs.org/)
 ```
 yarn build
 ```
+
+### Rationale
+
+The intention of this boilerplate is to be framework agnostic and as close to the lower level web API as possible while still providing minimal requirements for building static websites, PWA's and SPA's.
+
+[parcel](https://parceljs.org/) is included because it provides some nice development features (a development server and hot module replacement). It also provides configuration free bundling. 
+
+[lighterhtml](https://github.com/WebReflection/lighterhtml) is included because it feels like reactive templates should be a native feature in custom web components (native virtual DOM alternative). A native alternative (without the reactive benefits) would be [innerHTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML) (with some potential security issues...).
+
+[router-component](https://github.com/mkay581/router-component) and [beedle](https://github.com/andybelldesign/beedle) are recommended for adding SPA features to this boilerplate because they're lightweight, framework agnostic and inspired by the web platform.
+
+Global CSS opinionated structure is provided with tools to concatenate and minify the separate files, structured into folders by purpose. The intention is for these styles to be global in nature while component styles are applied via a components encapsulated shadow DOM.
+
+For personal projects I like to interact with the lower level API of the platform and strip away the framework and library specific layers - get back to the roots, so to speak.
 
 ### Todo
 1. Update css reset (it's a bit dated)
