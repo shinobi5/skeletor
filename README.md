@@ -1,6 +1,6 @@
 ## Skeletor
 
-__[Work in progress]__
+__[Work In Progress]__
 
 Front-end boilerplate using [parcel](https://parceljs.org/) for bundling, generating a local development server and [hot module replacement](https://parceljs.org/hmr.html).
 
@@ -64,12 +64,6 @@ The script also imports and registers the component in `src/component-registry.j
 + [webcomponents.org](https://www.webcomponents.org)
 + [Open WC](https://open-wc.org/)
 + [MDN](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
-
-### Tests
-Run accessibility tests with [pa11y-ci](https://github.com/pa11y/pa11y-ci)
-```
-yarn a11y
-```
 
 ### Build
 

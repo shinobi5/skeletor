@@ -1,5 +1,5 @@
 module.exports = component => {
-return `import { html, render } from 'lit-html';
+return `import { html, render } from 'lighterhtml';
 
 export default class ${component} extends HTMLElement {
     constructor() {
@@ -8,7 +8,7 @@ export default class ${component} extends HTMLElement {
     }
 
     connectedCallback() {
-        render(this.render(), this.root);
+        render(this.root, this.render());
     }
 
     render() {
