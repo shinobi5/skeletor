@@ -1,16 +1,14 @@
 ## Skeletor [WIP]
 
-Front-end boilerplate using [parcel](https://parceljs.org/) for bundling, generating a local development server and [hot module replacement](https://parceljs.org/hmr.html).
+Front-end boilerplate with a focus on the web platofrm.
 
 An optional web component [generator](https://github.com/shinobi5/skeletor/blob/master/scripts/create-component.js) produces a minimal [boilerplate](https://github.com/shinobi5/skeletor/blob/master/scripts/templates/component.js) (with [lighterhtml](https://github.com/WebReflection/lighterhtml) for template rendering) and a corresponding test file.
 
 A [service worker](https://github.com/shinobi5/skeletor/blob/master/src/service-worker.js) and [webmanifest](https://github.com/shinobi5/skeletor/blob/master/src/site.webmanifest) are included for [PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) features. 
 
-For [SPA's](https://en.wikipedia.org/wiki/Single-page_application), lightweight tools like [router-component](https://github.com/mkay581/router-component) and [beedle](https://github.com/andybelldesign/beedle) can be included for client-side routing and state management.
-
 ### Overview
 
-The intention of this boilerplate is to remove as many abstraction layers as possible from the process of building client-side websites and applications. To be as close to the lower level web API as possible while still providing minimal requirements for building static websites, PWA's and SPA's.
+The intention of this boilerplate is to to be as close to the lower level web API while still providing minimal requirements for building static websites, PWA's and SPA's.
 
 [parcel](https://parceljs.org/) is included because it provides some nice development features (a development server and hot module replacement). It also provides configuration free bundling. 
 
@@ -18,7 +16,7 @@ The intention of this boilerplate is to remove as many abstraction layers as pos
 
 Global CSS is provided (with an opinionated structure) with tools to concatenate and minify the separate files. The intention is for these styles to be global in nature while component styles are applied via each components encapsulated [shadow DOM](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM) (for custom web components).
 
-[router-component](https://github.com/mkay581/router-component) and [beedle](https://github.com/andybelldesign/beedle) are recommended for adding SPA features because they're lightweight, framework agnostic and inspired by the web platform.
+[router-component](https://github.com/mkay581/router-component) and [beedle](https://github.com/andybelldesign/beedle) are recommended for adding client-side routing and state management because they're lightweight and inspired by the web platform.
 
 ### Getting Started
 
