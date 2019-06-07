@@ -1,6 +1,4 @@
-## Skeletor
-
-__[Work In Progress]__
+## Skeletor [WIP]
 
 Front-end boilerplate using [parcel](https://parceljs.org/) for bundling, generating a local development server and [hot module replacement](https://parceljs.org/hmr.html).
 
