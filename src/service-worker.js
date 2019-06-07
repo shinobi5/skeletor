@@ -1,6 +1,6 @@
 
 // Files to cache
-const cacheName = 'skeletor-v1';
+const cacheName = 'skeletor';
 const contentToCache = [
     '/',
     '/index.html',
