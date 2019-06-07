@@ -10,13 +10,13 @@ A simple [service worker](https://github.com/shinobi5/skeletor/blob/master/src/s
 
 The intention of this boilerplate is to be as close to the lower level web API as possible while still providing minimal requirements for building static websites, PWA's and SPA's.
 
-[parcel](https://parceljs.org/) is included because it provides some nice development features (a development server and hot module replacement). It also provides configuration free bundling. 
+[Parcel](https://parceljs.org/) is included because it provides some nice development features (a development server and hot module replacement). It also provides configuration free bundling. 
 
-[lighterhtml](https://github.com/WebReflection/lighterhtml) is included because it feels like reactive templates should be a native feature in custom web components. A native alternative (without the reactive features) would be [innerHTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML) (with some potential security issues...).
+[Lighterhtml](https://github.com/WebReflection/lighterhtml) is included because it feels like reactive templates should be a native feature in custom web components. A native alternative (without the reactive features) would be [innerHTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML) (with some potential security issues...).
 
 Global CSS is provided (with an opinionated structure) with tools to concatenate and minify the separate files. The intention is for these styles to be global in nature while component styles are applied by each components encapsulated [shadow DOM](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM) (for custom web components).
 
-[router-component](https://github.com/mkay581/router-component) and [beedle](https://github.com/andybelldesign/beedle) are recommended for adding client-side routing and state management because they're lightweight and inspired by the web platform. [redux](https://redux.js.org/) could be used for more complex state management.
+[Router-component](https://github.com/mkay581/router-component) and [beedle](https://github.com/andybelldesign/beedle) are recommended for adding client-side routing and state management because they're lightweight and inspired by the web platform. [Redux](https://redux.js.org/) could be used for more complex state management.
 
 ### Getting Started
 
