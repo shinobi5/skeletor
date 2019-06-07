@@ -12,7 +12,7 @@ For SPA's, lightweight tools like [router-component](https://github.com/mkay581/
 
 ### Rationale
 
-The intention of this boilerplate is to be framework and library agnostic and to be as close as possible to the platform as possible while still providing minimal requirements for building static websites, PWA's and SPA's.
+The intention of this boilerplate is to be framework and library agnostic and to be as close to the lower level web platform API as possible while still providing minimal requirements for building static websites, PWA's and SPA's.
 
 ### Getting Started
 
