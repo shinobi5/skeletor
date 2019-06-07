@@ -27,14 +27,12 @@
     "imagemin-cli": "^4.0.1",
     "npm-run-all": "^4.1.5",
     "onchange": "^5.2.0",
-    "pa11y-ci": "^2.1.1",
     "parcel-bundler": "^1.12.3",
     "prettier": "1.17.0",
     "prompt": "^1.0.0",
     "slash": "^2.0.0"
   },
   "scripts": {
-    "a11y": "pa11y-ci",
     "build": "yarn css:minify && yarn parcel:build",
     "build:component": "node scripts/create-component.js",
     "build:registry": "node scripts/build-registry.js",
