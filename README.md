@@ -8,7 +8,7 @@ A [service worker](https://github.com/shinobi5/skeletor/blob/master/src/service-
 
 For [SPA's](https://en.wikipedia.org/wiki/Single-page_application), lightweight tools like [router-component](https://github.com/mkay581/router-component) and [beedle](https://github.com/andybelldesign/beedle) can be included for client-side routing and state management.
 
-### Rationale
+### Overview
 
 The intention of this boilerplate is to remove as many abstraction layers as possible from the process of building client-side websites and applications. To be as close to the lower level web API as possible while still providing minimal requirements for building static websites, PWA's and SPA's.
 
