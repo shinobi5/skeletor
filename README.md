@@ -14,7 +14,7 @@ The intention of this boilerplate is to be framework and library agnostic and to
 
 [parcel](https://parceljs.org/) is included because it provides some nice development features like generating a development server and hot module replacement. It also provides configuration free bundling. 
 
-[lighterhtml](https://github.com/WebReflection/lighterhtml) is included because it feels something like this is a missing feature in custom web components for creating html templates and allowing them to be reactive (virtual DOM alternative). A native alternative (without a lot of the template rendering benefits) would probably be [innetHTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML).
+[lighterhtml](https://github.com/WebReflection/lighterhtml) is included because it feels something like this is a missing feature in custom web components for creating html templates and allowing them to be reactive (virtual DOM alternative). A native alternative (without the reactive benefits) would be [innetHTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML) (with some potential security issues...).
 
 ### Getting Started
 
