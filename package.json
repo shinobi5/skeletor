@@ -3,17 +3,12 @@
   "version": "0.0.0",
   "description": "Front-end boilerplate",
   "private": true,
-  "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shinobi5/skeletor.git"
+    "url": "https://github.com/shinobi5/skeletor"
   },
-  "author": "David White",
   "license": "MIT",
   "homepage": "https://github.com/shinobi5/skeletor#readme",
-  "bugs": {
-    "url": "https://github.com/shinobi5/skeletor/issues"
-  },
   "dependencies": {
     "lighterhtml": "^0.14.1"
   },
