@@ -12,9 +12,9 @@ For SPA's, lightweight tools like [router-component](https://github.com/mkay581/
 
 The intention of this boilerplate is to be framework and library agnostic and to be as close to the lower level web platform API as possible while still providing minimal requirements for building static websites, PWA's and SPA's.
 
-[parcel](https://parceljs.org/) is included because it provides some nice development features like generating a development server and hot module replacement. It also provides configuration free bundling. 
+[parcel](https://parceljs.org/) is included because it provides some nice development features (a development server and hot module replacement). It also provides configuration free bundling. 
 
-[lighterhtml](https://github.com/WebReflection/lighterhtml) is included because it feels something like this is a missing feature in custom web components for creating html templates and allowing them to be reactive (virtual DOM alternative). A native alternative (without the reactive benefits) would be [innetHTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML) (with some potential security issues...).
+[lighterhtml](https://github.com/WebReflection/lighterhtml) is included because it feels like reactive templates should be a native feature in custom web components (native virtual DOM alternative). A native alternative (without the reactive benefits) would be [innetHTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML) (with some potential security issues...).
 
 ### Getting Started
 
