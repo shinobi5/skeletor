@@ -49,7 +49,7 @@ src/
 ├── index.js
 ├── component-registry.js
 ├── service-worker.js
-└── site.webmanifest
+└── manifest.json
 └── favicon.ico
 ```
 
