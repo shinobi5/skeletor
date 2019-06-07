@@ -18,7 +18,7 @@ The intention of this boilerplate is to be framework agnostic and as close to th
 
 [router-component](https://github.com/mkay581/router-component) and [beedle](https://github.com/andybelldesign/beedle) are recommended for adding SPA features to this boilerplate because they're lightweight, framework agnostic and inspired by the web platform.
 
-Global CSS is provided (with an opinionated structure) with tools to concatenate and minify the separate files. The intention is for these styles to be global in nature while component styles are applied via a components encapsulated shadow DOM.
+Global CSS is provided (with an opinionated structure) with tools to concatenate and minify the separate files. The intention is for these styles to be global in nature while component styles are applied via an encapsulated shadow DOM (for custom web components).
 
 ### Getting Started
 
