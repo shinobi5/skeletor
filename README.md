@@ -81,8 +81,8 @@ yarn build
 ```
 
 ### Todo
++ Register/unregister service worker function
 + Look into [axe-core](https://github.com/dequelabs/axe-core) for a11y unit testing
 + Look into web component unit testing approaches (Shadow DOM)
 + Setup CLI (project name, components prefix, css option etc.)
-+ Register/unregister service worker function
 + Look into [pikapkg/web](https://github.com/pikapkg/web)
