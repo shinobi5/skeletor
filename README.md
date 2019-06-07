@@ -81,9 +81,8 @@ yarn build
 ```
 
 ### Todo
-1. Update css reset (it's a bit dated)
-2. Investigate [axe-core](https://github.com/dequelabs/axe-core) for a11y unit testing
-3. Investigate web component unit testing approaches (Shadow DOM?)
-4. Investigate [pikapkg/web](https://github.com/pikapkg/web)
-5. Setup CLI (components prefix, css option...)
-6. register/unregister service worker function
++ Add [axe-core](https://github.com/dequelabs/axe-core) for a11y unit testing
++ Look into web component unit testing approaches (Shadow DOM)
++ Look into [pikapkg/web](https://github.com/pikapkg/web)
++ Setup CLI (components prefix, css option...)
++ Register/unregister service worker function
