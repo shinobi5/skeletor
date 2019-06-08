@@ -8,8 +8,6 @@ A simple [service worker](https://github.com/shinobi5/skeletor/blob/master/src/s
 
 ### Overview
 
-The intention of this boilerplate is to be as close to the lower level web API as possible while still providing minimal features for building static websites, PWA's and SPA's.
-
 [Parcel](https://parceljs.org/) is included because it provides some nice development features (a local development server and [hot module replacement](https://parceljs.org/hmr.html)). It also provides configuration free bundling. 
 
 [Lighterhtml](https://github.com/WebReflection/lighterhtml) is included as a virtual DOM alternative for performant DOM diffing and updates.
