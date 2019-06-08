@@ -39,12 +39,12 @@ src/
 │   └── global
 │   └── elements
 │   └── objects
-│   └── utils
+│   └── utilities
 ├── font
 ├── img
 ├── js
 │   └── components
-│   └── utilities
+│   └── utils
 ├── index.html
 ├── index.js
 ├── component-registry.js
