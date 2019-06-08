@@ -39,7 +39,7 @@ src/
 │   └── global
 │   └── elements
 │   └── objects
-│   └── utilities
+│   └── utils
 ├── font
 ├── img
 ├── js
