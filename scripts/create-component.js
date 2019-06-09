@@ -7,11 +7,11 @@ const componentTemplate = require('./templates/component');
 const testTemplate = require('./templates/test');
 const componentsDir = path.join(process.cwd(), 'src/js/components');
 
-const camelCase = pattern => {
-    return pattern.replace(/-([a-z])/gi, (_, match) => {
+const camelCase = pattern => (
+    pattern.replace(/-([a-z])/gi, (_, match) => {
         return match.toUpperCase();
-    });
-};
+    })
+);
 
 prompt.start();
 

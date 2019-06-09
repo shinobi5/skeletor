@@ -10,11 +10,11 @@ const componentRegistry = path.join(srcDir, 'component-registry.js');
 const components = glob.sync(`${componentsDir}/*/`);
 const componentPrefix = 'x';
 
-const camelCase = pattern => {
-    return pattern.replace(/-([a-z])/gi, (_, match) => {
+const camelCase = pattern => (
+    pattern.replace(/-([a-z])/gi, (_, match) => {
         return match.toUpperCase();
-    });
-};
+    })
+);
 
 const header = `/**
  * auto generated components registry
