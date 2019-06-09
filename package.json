@@ -8,7 +8,6 @@
     "url": "https://github.com/shinobi5/skeletor"
   },
   "license": "MIT",
-  "homepage": "https://github.com/shinobi5/skeletor#readme",
   "dependencies": {
     "lighterhtml": "^0.14.1"
   },
