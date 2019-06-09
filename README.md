@@ -12,7 +12,7 @@ A simple [service worker](https://github.com/shinobi5/skeletor/blob/master/src/s
 
 [Lighterhtml](https://github.com/WebReflection/lighterhtml) is included as a virtual DOM alternative for performant DOM diffing and updates.
 
-Minimal global CSS is provided with tools to watch for changes and concatenate the individual files into a single minified `styles.css`. The concatenating happens in order from broad to specific styles based on the folder they're in: settings, global, elements, objects, utilities. The intention is for these styles to be global in nature while a component's styles are applied via its encapsulated [shadow DOM](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM) (for custom web components).
+Minimal global CSS is provided with tools to watch for changes and concatenate the individual files into a single minified `styles.css`. The concatenating happens in order from broad to specific styles based on the folder they're in (in the following order): `settings, global, elements, objects, utilities`. The intention is for these styles to be global in nature while a component's styles are applied via its encapsulated [shadow DOM](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM) (for custom web components).
 
 [Router-component](https://github.com/mkay581/router-component) and [beedle](https://github.com/andybelldesign/beedle) are lightweight and recommended for adding client-side routing and state management. If necessary, [redux](https://github.com/reduxjs/redux) could be used for more complex state management.
 
