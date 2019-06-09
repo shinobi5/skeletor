@@ -1,5 +1,5 @@
 /**
- * Auto generated components registry
+ * auto generated components registry
  */
  
  console.log('No components registered');
