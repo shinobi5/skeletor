@@ -5,10 +5,15 @@ export default class ${component} extends HTMLElement {
     constructor() {
         super();
         this.root = this.attachShadow({ mode: 'open' });
+        this.render = render.bind(
+            this,
+            this.root,
+            this.render
+        );
     }
 
     connectedCallback() {
-        render(this.root, this.render());
+        this.render();
     }
 
     render() {
