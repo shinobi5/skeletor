@@ -1,5 +1,5 @@
 
-// Files to cache
+// files to cache
 const cacheName = 'skeletor';
 const contentToCache = [
     '/',
@@ -10,7 +10,7 @@ const contentToCache = [
     '/favicon.ico',
 ];
 
-// Installing service worker
+// installing service worker
 self.addEventListener('install', event => {
     console.log('[Service Worker] Install');
 
@@ -22,7 +22,7 @@ self.addEventListener('install', event => {
     );
 });
 
-// Fetching content using service worker
+// fetching content using service worker
 self.addEventListener('fetch', event => {
     event.respondWith(
         caches.match(event.request).then(r => {
