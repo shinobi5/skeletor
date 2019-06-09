@@ -17,7 +17,7 @@ const camelCase = pattern => {
 };
 
 const header = `/**
- * Auto generated components registry
+ * auto generated components registry
  */
  `;
 
