@@ -2,7 +2,7 @@
 
 Front-end boilerplate with a focus on the web platform.
 
-An optional web component [generator](https://github.com/shinobi5/skeletor/blob/master/scripts/create-component.js) produces a minimal [boilerplate](https://github.com/shinobi5/skeletor/blob/master/scripts/templates/component.js) (with [lighterhtml](https://github.com/WebReflection/lighterhtml) for template rendering) and a corresponding test file.
+An optional web component [generator](https://github.com/shinobi5/skeletor/blob/master/scripts/create-component.js) produces a minimal [boilerplate](https://github.com/shinobi5/skeletor/blob/master/scripts/templates/component.js) (with [lit-html](https://github.com/polymer/lit-html) for template rendering) and a corresponding test file.
 
 A simple [service worker](https://github.com/shinobi5/skeletor/blob/master/src/service-worker.js) and [manifest](https://github.com/shinobi5/skeletor/blob/master/src/manifest.json) are included for [PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) features. 
 
