@@ -10,7 +10,7 @@ A simple [service worker](https://github.com/shinobi5/skeletor/blob/master/src/s
 
 [Parcel](https://parceljs.org/) is included because it provides some nice development features (a local development server and [hot module replacement](https://parceljs.org/hmr.html)). It also provides configuration free bundling. 
 
-[Lighterhtml](https://github.com/WebReflection/lighterhtml) is included as a virtual DOM alternative for performant DOM diffing and updates.
+[lit-html](https://github.com/polymer/lit-html) is included as a virtual DOM alternative for performant updates to the DOM.
 
 Minimal global CSS is provided with tools to watch for changes and concatenate the individual files into a single minified `styles.css`. The concatenating happens in order from broad to specific styles based on the folder they're in (in the following order): `settings, global, elements, objects, utilities`. The intention is for these styles to be global in nature while a component's styles are applied via its encapsulated [shadow DOM](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM) (for custom web components).
 

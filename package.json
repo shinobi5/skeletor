@@ -9,7 +9,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "lighterhtml": "^0.14.1"
+    "lit-html": "^1.1.0"
   },
   "devDependencies": {
     "clean-css-cli": "^4.2.1",
