@@ -4,7 +4,7 @@ return `import { html, render } from 'lit-html';
 export default class ${component} extends HTMLElement {
     constructor() {
         super();
-        this.root = this.attachShadow({ mode: 'open' });        
+        this.root = this.attachShadow({ mode: 'open' });
     }
 
     connectedCallback() {
@@ -13,10 +13,12 @@ export default class ${component} extends HTMLElement {
 
     render() {
         return html\`
-            <style></style>
-            <div>
-                <slot></slot>
-            </div>
+            <style>
+                :host {
+                    display: block;
+                }
+            </style>
+            <slot></slot>
         \`;
     }
 }
