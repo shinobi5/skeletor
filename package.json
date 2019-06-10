@@ -9,6 +9,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@webcomponents/webcomponentsjs": "^2.2.10",
     "lit-html": "^1.1.0"
   },
   "devDependencies": {
