@@ -79,8 +79,6 @@ yarn build
 ```
 
 ### Todo
-+ Add web components polyfill
-+ Add transpiling support for `class`
 + Register/unregister service worker function
 + Look into web component unit testing approaches (Shadow DOM)
 + Setup CLI (project name, components prefix, css option etc.)
