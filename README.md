@@ -14,7 +14,7 @@ A simple [service worker](https://github.com/shinobi5/skeletor/blob/master/src/s
 
 Minimal global CSS is provided with tools to watch for changes and concatenate the individual files into a single minified `styles.css`. The concatenating happens in order from broad to specific styles based on the folder they're in (in the following order): `settings, global, elements, objects, utilities`. The intention is for these styles to be global in nature while a component's styles are applied via its encapsulated [shadow DOM](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM) (for custom web components).
 
-[Router-component](https://github.com/mkay581/router-component) and [beedle](https://github.com/andybelldesign/beedle) are lightweight and recommended for adding client-side routing and state management. If necessary, [redux](https://github.com/reduxjs/redux) could be used for more complex state management.
+[Router-component](https://github.com/mkay581/router-component) and [beedle](https://github.com/andybelldesign/beedle) are lightweight and recommended for adding client-side routing and state management. [Redux](https://github.com/reduxjs/redux) is another option for managing state.
 
 ### Getting Started
 
@@ -79,6 +79,8 @@ yarn build
 ```
 
 ### Todo
++ Add web components polyfill
++ Add transpiling support for `class`
 + Register/unregister service worker function
 + Look into web component unit testing approaches (Shadow DOM)
 + Setup CLI (project name, components prefix, css option etc.)
