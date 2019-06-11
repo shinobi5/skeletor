@@ -89,4 +89,3 @@ yarn build
 + Setup CLI (project name, components prefix, css option etc.)
 + Look into web component unit testing approaches (Shadow DOM)
 + Look into [axe-core](https://github.com/dequelabs/axe-core) for a11y unit testing
-+ Look into [pikapkg/web](https://github.com/pikapkg/web)

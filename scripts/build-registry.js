@@ -25,7 +25,7 @@ const componentExports = components.map(componentPath => {
     const component = path.basename(componentPath, '.js');
     const processedComponent = camelCase(component);
 	
-	return `import ${processedComponent} from './js/components/${component}/${component}'; 
+	return `import ${processedComponent} from './js/components/${component}/${component}.js'; 
 	customElements.define('${componentPrefix}-${component}', ${processedComponent});`
 });
 
