@@ -23,10 +23,16 @@ Clone the repo and give the project a name
 git clone git@github.com:shinobi5/skeletor.git <project-name>
 ```
 
-Install npm modules, run the server at `localhost:1234` and watch files for changes 
+Install npm modules
 
 ```
-yarn && yarn start
+yarn
+```
+
+Run the server at `localhost:1234` and watch files for changes 
+
+```
+yarn start
 ```
 
 Boilerplate structure
@@ -80,7 +86,7 @@ yarn build
 
 ### Todo
 + Register/unregister service worker function
-+ Look into web component unit testing approaches (Shadow DOM)
 + Setup CLI (project name, components prefix, css option etc.)
++ Look into web component unit testing approaches (Shadow DOM)
 + Look into [axe-core](https://github.com/dequelabs/axe-core) for a11y unit testing
 + Look into [pikapkg/web](https://github.com/pikapkg/web)
