@@ -1,12 +1,17 @@
-# Build
+# build
 dist
 build
 
-# Generated styles
+# modules
+src/web_modules
+web_modules
+node_modules
+
+# generated components and js utilities
+src/js/*
+
+# generated styles
 src/styles.css
 
-# Parcel
-.cache
-
-# Error logs
+# error logs
 yarn-error.log
