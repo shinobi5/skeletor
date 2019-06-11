@@ -1,3 +1,7 @@
+/** 
+ * using service workers:
+ * https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers
+ * */ 
 
 // files to cache
 const cacheName = 'skeletor';
@@ -25,14 +29,16 @@ self.addEventListener('install', event => {
 // fetching content using service worker
 self.addEventListener('fetch', event => {
     event.respondWith(
-        caches.match(event.request).then(r => {
+        caches.match(event.request).then(resp => {
             console.log(`[Service Worker] Fetching resource: ${event.request.url}`);
 
-            return r || fetch(event.request).then(response => {
+            return resp || fetch(event.request).then(response => {
                 return caches.open(cacheName).then(cache => {
                     console.log(`[Service Worker] Caching new resource: ${event.request.url}`);
                     cache.put(event.request, response.clone());
                     return response;
+                }).catch(() => {
+                    return caches.match('/index.html');
                 });
             });
         })
