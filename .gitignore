@@ -3,12 +3,9 @@ dist
 build
 
 # modules
-src/web_modules
+src/js/packages
 web_modules
 node_modules
-
-# generated components and js utilities
-src/js/*
 
 # generated styles
 src/styles.css

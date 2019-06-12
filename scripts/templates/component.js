@@ -1,5 +1,5 @@
 module.exports = component => {
-return `import { html, render } from '../../pkg/lit-html.js';
+return `import { html, render } from '../../packages/lit-html.js';
 
 export default class ${component} extends HTMLElement {
     constructor() {
