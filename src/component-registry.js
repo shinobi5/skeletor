@@ -2,5 +2,5 @@
  * auto generated components registry
  */
  
-import test from './js/components/test/test.js'; 
-	customElements.define('x-test', test);
+import testOne from './js/components/test-one/test-one.js'; 
+	customElements.define('x-test-one', testOne);

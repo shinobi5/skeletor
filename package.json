@@ -30,20 +30,18 @@
     "slash": "^2.0.0"
   },
   "scripts": {
-    "build": "babel src -d build && yarn css:minify",
-    "build:component": "node scripts/create-component.js",
+    "build": "yarn css:minify && node scripts/copy.js",
     "build:registry": "node scripts/build-registry.js",
-    "clean:modules": "rm -rf node_modules",
+    "clean:modules": "rm -rf node_modules src/js/pkg",
     "clean:build": "rm -rf build",
-    "serve:copy": "node scripts/copy.js",
-    "serve:serve": "node scripts/server.js",
-    "create-component": "yarn build:component && yarn build:registry",
+    "clean": "yarn clean:build && yarn clean:modules",
+    "create-component": "node scripts/create-component.js && yarn build:registry",
     "css:concat": "cat src/css/settings/* src/css/global/* src/css/elements/* src/css/objects/* src/css/utilities/* > src/styles.css",
     "css:minify": "cleancss -o src/styles.css src/styles.css",
     "css:watch": "onchange 'src/css/**/*' -- yarn css:concat",
     "imagemin": "imagemin --out-dir=src/img src/img/**/*.{png,jpg,gif}",
-    "prepare": "pika-web --dest src/web_modules --clean --optimize",
-    "serve": "yarn serve:copy && yarn serve:serve",
-    "start": " yarn css:concat && npm-run-all --parallel css:watch serve"
+    "prepare": "pika-web --dest src/js/pkg --clean --optimize",
+    "serve": "node scripts/server.js",
+    "start": "yarn css:concat && npm-run-all --parallel css:watch serve"
   }
 }
