@@ -70,7 +70,7 @@ src/
 
 ## Web Components
 
-> Before generating a custom element change the component prefix (`x` by default) by updating the value of `componentPrefix` in [build-registry.js](https://github.com/shinobi5/skeletor/blob/master/scripts/build-registry.js). Custom element names require a dash (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements))
+> Before generating a custom element change the component prefix (`x` by default) by updating the value of `componentPrefix` in [create-component.js](https://github.com/shinobi5/skeletor/blob/master/scripts/create-component.js). Custom element names require a dash (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements))
 
 **Create boilerplate component and unit test file in `src/js/components/`**
 
