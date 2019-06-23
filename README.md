@@ -147,7 +147,7 @@ For more detail on how to use its features view the [official documentation](htt
 
 ## State
 
-View Beedle's [official documentation](https://beedle.hankchizljaw.io/) for understanding how to use this tiny library to manage application state.
+View Beedle's [official documentation](https://beedle.hankchizljaw.io/) for how to use this tiny library to manage application state.
 
 ## Bundling
 
