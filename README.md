@@ -128,7 +128,7 @@ For further reading check out this article discussing [SSR for web components](h
 
 ## Routing
 
-The simplest way to get started with using the [router-component](https://github.com/mkay581/router-component) is to include it via a script tag and then use it with web components for the routed views/pages.
+The simplest way to get started using the [router-component](https://github.com/mkay581/router-component) is to include it via a script tag and then use it with web components for the routed views/pages.
 
 ```html
 <head>
@@ -151,4 +151,4 @@ View Beedle's [official documentation](https://beedle.hankchizljaw.io/) for unde
 
 ## Bundling
 
-A bundler like [rollup](https://github.com/rollup/rollup) can be included depending on the size and complexity of the project and browser support required.
+A bundler like [rollup](https://github.com/rollup/rollup), [parcel](https://parceljs.org/), or [webpack](https://webpack.js.org/) can be included depending on the size and complexity of the project and browser support required.
