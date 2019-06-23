@@ -1,2 +1,2 @@
-module.exports = component => `import ${component} from './${component}';
+module.exports = component => `import ${component} from './${component}.js';
 `;
