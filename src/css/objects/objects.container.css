@@ -1,0 +1,7 @@
+.o-container {
+    position: relative;
+    width: auto;
+    max-width: var(--container-maxwidth);
+    margin: auto;
+    padding: 0 20px;
+}

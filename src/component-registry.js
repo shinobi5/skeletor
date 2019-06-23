@@ -1,0 +1,3 @@
+/**
+ * auto generated components registry
+ */
