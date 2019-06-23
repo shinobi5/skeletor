@@ -8,8 +8,17 @@
     "url": "https://github.com/shinobi5/skeletor"
   },
   "license": "MIT",
+  "keywords": [
+    "boilerplate",
+    "web",
+    "components",
+    "custom",
+    "elements",
+    "shadow",
+    "dom"
+  ],
   "dependencies": {
-    "beedle": "^0.7.3",
+    "beedle": "^0.8.1",
     "lit-html": "^1.1.0",
     "router-component": "^0.8.0"
   },

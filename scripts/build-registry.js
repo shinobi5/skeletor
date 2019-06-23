@@ -26,8 +26,7 @@ const componentImports = components.map(componentPath => {
     return `import ${processedComponent} from './js/components/${component}/${component}.js';`;
 });
 
-const output = `
-${[header, ...componentImports].join('\n')}`;
+const output = `${[header, ...componentImports].join('\n')}`;
 
 try {
     fs.writeFileSync(componentRegistry, output);
