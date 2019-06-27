@@ -50,6 +50,8 @@ yarn build
 
 ```
 src/
+├── font
+├── img
 ├── css
 │   └── settings
 │   └── global
