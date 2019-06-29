@@ -12,12 +12,6 @@ Front-end boilerplate with a focus on the web platform.
 -   [router-component](https://github.com/mkay581/router-component): very lightweight web component for client-side routing
 -   [beedle](https://github.com/andybelldesign/beedle): tiny library for client-side state management
 
-### Styles
-
-Minimal global CSS is provided with tools to watch for changes and concatenate the individual files into a single minified `styles.css`.
-
-The concatenating happens in order from broad to specific styles based on the folder they're in (in the following order): `settings, global, elements, objects, components, utilities`.
-
 ## Getting Started
 
 **Clone the repo and give the project a name**
@@ -127,6 +121,12 @@ For further reading check out this article discussing [SSR for web components](h
 -   [webcomponents](https://www.webcomponents.org)
 -   [Open WC](https://open-wc.org/)
 -   [MDN](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
+
+## Global CSS
+
+Minimal global CSS is provided with tools to watch for changes and concatenate the individual files into a single minified `styles.css`.
+
+The concatenating happens in order from broad to specific styles based on the folder they're in (in the following order): `settings, global, elements, objects, components, utilities`.
 
 ## Routing
 
