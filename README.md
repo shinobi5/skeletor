@@ -122,7 +122,7 @@ For further reading check out this article discussing [SSR for web components](h
 -   [Open WC](https://open-wc.org/)
 -   [MDN](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
 
-## Global CSS
+## CSS
 
 Minimal global CSS is provided with tools to watch for changes and concatenate the individual files into a single minified `styles.css`.
 
