@@ -42,7 +42,7 @@
     "slash": "^2.0.0"
   },
   "scripts": {
-    "build": "yarn css:minify && node scripts/copy.js",
+    "build": "yarn css:concat && yarn css:minify && node scripts/copy.js",
     "build:registry": "node scripts/build-registry.js",
     "clean:modules": "rm -rf node_modules src/js/web_modules",
     "clean:build": "rm -rf build",
