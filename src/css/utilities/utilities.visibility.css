@@ -20,7 +20,7 @@
     position: absolute;
 }
 
-/* extends the .u-sr class to allow the element 
+/* extends the .sr-only class to allow the element 
 to be focusable when navigated to via the keyboard */
 .sr-only.focusable:focus,
 .sr-only.focusable:active {
