@@ -10,7 +10,7 @@ Front-end boilerplate with a focus on the web platform.
 -   [lit-html](https://github.com/polymer/lit-html): virtual DOM alternative for performant updates to the DOM with web components
 -   [router-component](https://github.com/mkay581/router-component): very lightweight web component for client-side routing
 -   [beedle](https://github.com/andybelldesign/beedle): tiny library for client-side state management
--   [@pikapkg/web](https://github.com/pikapkg/web): provides the ability to consume npm packages directly in the browser without requiring a bundler
+-   [@pikapkg/web](https://github.com/pikapkg/web): provides the ability to consume npm packages directly in the browser
 -   [rollup](https://github.com/rollup/rollup): optional JS module bundler
 -   [babel](https://babeljs.io): optional JS compiler
 
