@@ -35,7 +35,7 @@ yarn
 yarn start
 ```
 
-**Create build for production in the root of the project at `/build/`**
+**Create build for production in the root of the project at `build/`**
 
 ```
 yarn build
