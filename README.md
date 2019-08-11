@@ -156,7 +156,7 @@ View Beedle's [official documentation](https://beedle.hankchizljaw.io/) for how 
 
 [Rollup](https://github.com/rollup/rollup) is included for optional bundling. See `rollup.config.js` for default configuration.
 
-**Generate a bundled `index.js` file in `/build/js/`**
+**Generate a bundled `index.js` file in `build/js/`**
 
 ```
 yarn build:bundle
