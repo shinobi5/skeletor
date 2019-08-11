@@ -7,10 +7,11 @@ Front-end boilerplate with a focus on the web platform.
 -   **Web component generator**: produces a minimal boilerplate and corresponding test file
 -   **Service worker** for offline support
 -   **Web manifest** for [PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) features
--   [@pikapkg/web](https://github.com/pikapkg/web): provides the ability to consume npm packages directly in the browser without requiring a bundler
 -   [lit-html](https://github.com/polymer/lit-html): virtual DOM alternative for performant updates to the DOM with web components
 -   [router-component](https://github.com/mkay581/router-component): very lightweight web component for client-side routing
 -   [beedle](https://github.com/andybelldesign/beedle): tiny library for client-side state management
+-   [@pikapkg/web](https://github.com/pikapkg/web): provides the ability to consume npm packages directly in the browser without requiring a bundler
+-   [rollup](https://github.com/rollup/rollup): Optional bundler
 
 ## Getting Started
 
