@@ -48,7 +48,7 @@ yarn build
 yarn build:babel
 ```
 
-**Create build and compile JS with babel and bundle modules with rollup**
+**Create build and compile JS with babel/generate bundle with rollup**
 
 ```
 yarn build:bundle
