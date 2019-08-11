@@ -42,6 +42,18 @@ yarn start
 yarn build
 ```
 
+**Create build and compile JS with babel**
+
+```
+yarn build:babel
+```
+
+**Create build and compile JS with babel and bundle modules with rollup**
+
+```
+yarn build:bundle
+```
+
 **Boilerplate structure**
 
 ```
@@ -152,13 +164,3 @@ For more detail on how to use its features view the [official documentation](htt
 ## State
 
 View Beedle's [official documentation](https://beedle.hankchizljaw.io/) for how to use this tiny library to manage application state.
-
-## Bundling
-
-[Rollup](https://github.com/rollup/rollup) is included for optional bundling. See [rollup.config.js](https://github.com/shinobi5/skeletor/blob/master/rollup.config.js) for default configuration.
-
-**Generate a bundled `index.js` file in `build/js/`**
-
-```
-yarn build:bundle
-```
