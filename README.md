@@ -153,4 +153,10 @@ View Beedle's [official documentation](https://beedle.hankchizljaw.io/) for how 
 
 ## Bundling
 
-A bundler like [rollup](https://github.com/rollup/rollup), [parcel](https://parceljs.org/), or [webpack](https://webpack.js.org/) can be included depending on the size and complexity of the project and browser support required.
+[Rollup](https://github.com/rollup/rollup) is included for optional bundling. 
+
+**To generate a bundled js file**
+
+```
+yarn build:bundle
+```
