@@ -54,3 +54,13 @@ self.addEventListener('fetch', event => {
         })
     );
 });
+
+const registerServiceWorker = () => {
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js');
+    }
+};
+
+const serviceWorkerOn = false;
+
+serviceWorkerOn && registerServiceWorker();

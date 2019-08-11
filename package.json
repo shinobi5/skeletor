@@ -42,7 +42,10 @@
     "slash": "^2.0.0"
   },
   "scripts": {
+    "babel": "npx babel src --out-dir build --copy-files",
     "build": "yarn css:concat && yarn css:minify && node scripts/copy.js",
+    "build:babel": "yarn css:concat && yarn css:minify && yarn babel",
+    "build:bundle": "yarn build:babel && rollup -c",
     "build:registry": "node scripts/build-registry.js",
     "clean:modules": "rm -rf node_modules src/js/web_modules",
     "clean:build": "rm -rf build",
