@@ -112,7 +112,7 @@ yarn create-component:registry
 
 ### Server Side Rendering (SSR)
 
-Server Side Rendering is still an unsolved problem when it comes to custom Web Components due to issues with rendering the Shadow DOM on the server or before Javascript runs on the client. This is a shame, but hopefully it is solved in the near future.
+Server Side Rendering is still an unsolved problem when it comes to custom Web Components due to issues with rendering the Shadow DOM on the server or before Javascript runs on the client.
 
 A proposal for a declarative `shadowroot` element looked promising but was ultimately rejected by browser implementers. See [this issue on Github](https://github.com/whatwg/dom/issues/510) and this is where [the hope ends](https://github.com/whatwg/dom/issues/510#issuecomment-370980398).
 
