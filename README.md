@@ -166,3 +166,9 @@ For more detail on how to use its features view the [official documentation](htt
 ## State
 
 View Beedle's [official documentation](https://beedle.hankchizljaw.io/) for how to use this tiny library to manage application state.
+
+### Todo
+1. Select test frameworks and create web component test boilerplate
+1. Improve scripts
+1. Add state examples and generated boilerplate
+1. Add uglify-es CLI to scripts for JS minifying
