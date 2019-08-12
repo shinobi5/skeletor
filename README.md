@@ -144,6 +144,8 @@ The concatenating happens in order from broad to specific styles based on the fo
 
 For components, consider encapsulated styling via a custom web components shadow DOM.
 
+Add and remove folders and files from `src/css/` as necessary and modify the `css:concat` script in [package.json](https://github.com/shinobi5/skeletor/blob/master/package.json) to customise.
+
 ## Routing
 
 The simplest way to get started using the [router-component](https://github.com/mkay581/router-component) is to include it via a script tag and then use it with web components for the routed views/pages.
