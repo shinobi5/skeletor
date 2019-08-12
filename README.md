@@ -142,6 +142,8 @@ Minimal global CSS is provided with tools to watch for changes and concatenate t
 
 The concatenating happens in order from broad to specific styles based on the folder they're in (in the following order): `settings, global, elements, objects, components, utilities`.
 
+For components, consider encapsulated styling via a custom web components shadow DOM.
+
 ## Routing
 
 The simplest way to get started using the [router-component](https://github.com/mkay581/router-component) is to include it via a script tag and then use it with web components for the routed views/pages.
