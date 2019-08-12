@@ -142,8 +142,6 @@ Minimal global CSS is provided with tools to watch for changes and concatenate t
 
 The concatenating happens in order from broad to specific styles based on the folder they're in (in the following order): `settings, global, elements, objects, components, utilities`.
 
-Encapsulated styles via the shadow DOM (for custom web components) may be preferable.
-
 Rename, add and remove folders from `src/css/` as necessary and update`css:concat` script in [package.json](https://github.com/shinobi5/skeletor/blob/master/package.json) to customise concatenation.
 
 ## Routing
