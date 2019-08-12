@@ -144,7 +144,7 @@ The concatenating happens in order from broad to specific styles based on the fo
 
 For components, consider encapsulated styling via a custom web components shadow DOM.
 
-Add and remove folders and files from `src/css/` as necessary and modify the `css:concat` script in [package.json](https://github.com/shinobi5/skeletor/blob/master/package.json) to customise.
+Rename, add and remove folders from `src/css/` as necessary and update`css:concat` script in [package.json](https://github.com/shinobi5/skeletor/blob/master/package.json) to customise concatenation.
 
 ## Routing
 
