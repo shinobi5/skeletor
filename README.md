@@ -138,7 +138,7 @@ For further reading check out this article discussing [SSR for web components](h
 
 ## CSS
 
-Minimal global CSS is provided with tools to watch for changes and concatenate the individual files into a single minified `styles.css`.
+Minimal global CSS is provided with CLI tools to watch for changes and concatenate the individual files into a single minified `styles.css`.
 
 The concatenating happens in order from broad to specific styles based on the folder they're in (in the following order): `settings, global, elements, objects, components, utilities`.
 
