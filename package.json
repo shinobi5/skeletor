@@ -40,7 +40,8 @@
     "pretty-quick": "^1.11.0",
     "prompt": "^1.0.0",
     "rollup": "^1.19.4",
-    "slash": "^2.0.0"
+    "slash": "^2.0.0",
+    "uglify-es": "^3.3.9"
   },
   "scripts": {
     "babel": "npx babel src -out-dir build --copy-files",
