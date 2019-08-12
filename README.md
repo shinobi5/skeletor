@@ -48,7 +48,7 @@ yarn build
 yarn build:babel
 ```
 
-**Create build, compile JS with babel, and generate bundle with rollup**
+**Create build, compile JS with babel and generate bundle with rollup**
 
 ```
 yarn build:bundle
@@ -165,4 +165,4 @@ For more detail on how to use its features view the [official documentation](htt
 
 ## State
 
-View Beedle's [official documentation](https://beedle.hankchizljaw.io/) for how to use this tiny library to manage application state.
+View Beedle's [official documentation](https://beedle.hankchizljaw.io/) for how to use this tiny library to manage application state. [Redux](https://github.com/reduxjs/redux) is another option (although heavier and more complex) for managing state.
