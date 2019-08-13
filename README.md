@@ -54,13 +54,13 @@ yarn start
 yarn build
 ```
 
-**Create build and compile JS with babel**
+**Option: Create build and compile JS with babel**
 
 ```
 yarn build:babel
 ```
 
-**Create build, compile JS with babel and generate bundle with rollup**
+**Option: Create build, compile JS with babel and generate bundle with rollup**
 
 ```
 yarn build:bundle
