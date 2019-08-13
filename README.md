@@ -28,7 +28,7 @@ git clone git@github.com:shinobi5/skeletor.git <project-name>
 git remote set-url origin <repo-url>
 ```
 
-**Push boilerplate to new repo**
+**Push skeletor boilerplate to new repo**
 
 ```
 git push origin master
