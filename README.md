@@ -83,7 +83,7 @@ src/
 │   └── components
 │   └── web_modules
 ├── index.html
-├── index.js
+├── app.js
 ├── component-registry.js
 ├── service-worker.js
 └── manifest.json

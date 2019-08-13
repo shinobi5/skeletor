@@ -5,7 +5,7 @@ const dest = 'build';
 
 const files = [
     'index.html',
-    'index.js',
+    'app.js',
     'component-registry.js',
     'service-worker.js',
     'manifest.json',

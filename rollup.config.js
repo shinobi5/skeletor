@@ -1,8 +1,8 @@
 export default [
     {
-        input: 'build/index.js',
+        input: 'build/app.js',
         output: {
-            file: 'build/index.js',
+            file: 'build/app.js',
             format: 'esm',
         },
     },
