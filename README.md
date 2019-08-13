@@ -179,7 +179,7 @@ For more detail on how to use its features view the [official documentation](htt
 
 View Beedle's [official documentation](https://beedle.hankchizljaw.io/) for how to use this tiny library to manage application state.
 
-### Todo
+## Todo
 
 1. Select test frameworks and create web component test boilerplate
 1. Improve scripts
