@@ -22,10 +22,16 @@ Front-end boilerplate with a focus on the web platform.
 git clone git@github.com:shinobi5/skeletor.git <project-name>
 ```
 
-**Point to new project repo**
+**Point to new project repo (assuming a remote repo is already exists)**
 
 ```
 git remote set-url origin <repo-url>
+```
+
+**Push boilerplate to new repo**
+
+```
+git push origin master
 ```
 
 **Install npm modules and generate browser ready npm packages at `src/js/web_modules/`**
@@ -174,6 +180,7 @@ For more detail on how to use its features view the [official documentation](htt
 View Beedle's [official documentation](https://beedle.hankchizljaw.io/) for how to use this tiny library to manage application state.
 
 ### Todo
+
 1. Select test frameworks and create web component test boilerplate
 1. Improve scripts
 1. Add state examples and generated boilerplate
