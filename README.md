@@ -16,19 +16,19 @@ Front-end boilerplate with a focus on the web platform.
 
 ## Getting Started
 
-**Clone the repo and give the project a name**
+**Clone the repository and give the project a name**
 
 ```
 git clone git@github.com:shinobi5/skeletor.git <project-name>
 ```
 
-**Point to new project repo (assuming a remote repo for the project exists)**
+**Point to new project repository (assuming a remote repository for the project exists)**
 
 ```
 git remote set-url origin <repo-url>
 ```
 
-**Push skeletor boilerplate to new repo**
+**Push skeletor boilerplate to new repository**
 
 ```
 git push origin master
