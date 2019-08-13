@@ -22,7 +22,7 @@ Front-end boilerplate with a focus on the web platform.
 git clone git@github.com:shinobi5/skeletor.git <project-name>
 ```
 
-**Point to new project repo (assuming a remote repo already exists)**
+**Point to new project repo (assuming a remote repo for the project exists)**
 
 ```
 git remote set-url origin <repo-url>
