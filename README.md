@@ -11,7 +11,7 @@ Front-end boilerplate with a focus on the web platform.
 -   [router-component](https://github.com/mkay581/router-component): very lightweight web component for client-side routing
 -   [beedle](https://github.com/andybelldesign/beedle): tiny library for client-side state management
 -   [@pikapkg/web](https://github.com/pikapkg/web): provides the ability to consume npm packages directly in the browser
--   [rollup](https://github.com/rollup/rollup): JS module bundler
+-   [rollup](https://github.com/rollup/rollup): JS bundler
 -   [babel](https://babeljs.io): JS transpiler
 
 ## Getting Started
