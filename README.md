@@ -12,7 +12,7 @@ Front-end boilerplate with a focus on the web platform.
 -   [beedle](https://github.com/andybelldesign/beedle): tiny library for client-side state management
 -   [@pikapkg/web](https://github.com/pikapkg/web): provides the ability to consume npm packages directly in the browser
 -   [rollup](https://github.com/rollup/rollup): JS module bundler
--   [babel](https://babeljs.io): JS compiler
+-   [babel](https://babeljs.io): JS transpiler
 
 ## Getting Started
 
