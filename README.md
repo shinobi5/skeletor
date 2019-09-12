@@ -90,7 +90,6 @@ src/
 │   └── web_modules
 ├── index.html
 ├── app.js
-├── component-registry.js
 ├── service-worker.js
 └── manifest.json
 └── favicon.ico
