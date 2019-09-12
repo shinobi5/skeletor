@@ -28,7 +28,7 @@ git clone git@github.com:shinobi5/skeletor.git <project-name>
 cd <project-name> && rm -rf .git && git init
 ```
 
-**Option: Point to new remote repository and push the project**
+**_Option:_ Point to new remote repository and push the project**
 
 ```
 git remote set-url origin <repo-url> && git push origin master
