@@ -28,16 +28,10 @@ git clone git@github.com:shinobi5/skeletor.git <project-name>
 cd <project-name> && rm -rf .git && git init
 ```
 
-**Point to the new repository (assuming one exists)**
+**Option: Point to new remote repository and push the project**
 
 ```
-git remote set-url origin <repo-url>
-```
-
-**Push skeletor boilerplate to the new repository**
-
-```
-git push origin master
+git remote set-url origin <repo-url> && git push origin master
 ```
 
 **Install npm modules and generate browser ready npm packages at `src/js/web_modules/`**
