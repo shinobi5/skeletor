@@ -54,7 +54,7 @@
     "clean:build": "rm -rf build",
     "clean": "yarn clean:build && yarn clean:modules",
     "create-component": "node scripts/create-component.js",
-    "css:concat": "cat src/css/settings/* src/css/global/* src/css/elements/* src/css/objects/* src/css/components/* src/css/utilities/* > src/styles.css",
+    "css:concat": "cat src/css/settings/* src/css/global/* src/css/elements/* src/css/components/* src/css/utilities/* > src/styles.css",
     "css:minify": "cleancss -o src/styles.css src/styles.css",
     "css:watch": "onchange 'src/css/**/*' -- yarn css:concat",
     "imagemin": "imagemin --out-dir=src/img src/img/**/*.{png,jpg,gif}",

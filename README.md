@@ -76,7 +76,6 @@ src/
 │   └── settings
 │   └── global
 │   └── elements
-│   └── objects
 │   └── components
 │   └── utilities
 ├── js
@@ -132,7 +131,7 @@ For further reading check out this article discussing [SSR for web components](h
 
 Minimal global CSS is provided with CLI tools to watch for changes and concatenate the individual files into a single minified `styles.css`.
 
-The concatenating happens in order from broad to specific styles based on the folder they're in (in the following order): `settings, global, elements, objects, components, utilities`.
+The concatenating happens in order from broad to specific styles based on the folder they're in (in the following order): `settings, global, elements, components, utilities`.
 
 Rename, add and remove folders from `src/css/` as necessary and update the `css:concat` script in [package.json](https://github.com/shinobi5/skeletor/blob/master/package.json) to customise concatenation order.
 
