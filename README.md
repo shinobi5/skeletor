@@ -22,7 +22,6 @@ Front-end boilerplate with a focus on the web platform.
 git clone git@github.com:shinobi5/skeletor.git <project-name>
 ```
 
-
 **Initialize new git repository**
 
 ```
@@ -119,25 +118,6 @@ yarn create-component
 </head>
 <body>
     <x-custom-element>Custom element</x-custom-element>
-</body>
-```
-
-**To create a component and auto-generate a file that imports all created components**
-
-```
-yarn create-component:registry
-```
-
-**Include `component-registry.js` in the page and use the custom elements**
-
-```html
-<head>
-    <script type="module" src="component-registry.js" defer></script>
-</head>
-<body>
-    <x-element-one>Custom element one</x-element-one>
-    <x-element-two>Custom element two</x-element-two>
-    <x-element-three>Custom element three</x-element-three>
 </body>
 ```
 

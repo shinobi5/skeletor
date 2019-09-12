@@ -9,7 +9,6 @@ const contentToCache = [
     '/',
     '/index.html',
     '/app.js',
-    '/component-registry.js',
     '/styles.css',
     '/favicon.ico',
 ];

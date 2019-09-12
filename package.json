@@ -7,7 +7,7 @@
     "url": "https://github.com/shinobi5/skeletor"
   },
   "license": "MIT",
-    "bugs": {
+  "bugs": {
     "url": "https://github.com/shinobi5/skeletor/issues"
   },
   "keywords": [
@@ -50,11 +50,9 @@
     "build": "yarn css:concat && yarn css:minify && node scripts/copy.js",
     "build:babel": "yarn css:concat && yarn css:minify && yarn babel",
     "build:bundle": "yarn build && rollup -c && npx babel build --out-dir build",
-    "build:registry": "node scripts/build-registry.js",
     "clean:modules": "rm -rf node_modules src/js/web_modules",
     "clean:build": "rm -rf build",
     "clean": "yarn clean:build && yarn clean:modules",
-    "create-component:registry": "node scripts/create-component.js && yarn build:registry",
     "create-component": "node scripts/create-component.js",
     "css:concat": "cat src/css/settings/* src/css/global/* src/css/elements/* src/css/objects/* src/css/components/* src/css/utilities/* > src/styles.css",
     "css:minify": "cleancss -o src/styles.css src/styles.css",
