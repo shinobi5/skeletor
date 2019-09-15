@@ -6,7 +6,6 @@ const dest = 'build';
 const files = [
     'index.html',
     'app.js',
-    'component-registry.js',
     'service-worker.js',
     'manifest.json',
     'styles.css',
