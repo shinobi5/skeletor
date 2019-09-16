@@ -9,7 +9,7 @@ const componentsDir = path.join(process.cwd(), 'src/js/components');
 
 const componentPrefix = 'x';
 
-const camelCase = pattern =>
+const processHyphen = pattern =>
     pattern.replace(/-([a-z])/gi, (_, match) => {
         return match.toUpperCase();
     });
@@ -23,7 +23,7 @@ prompt.get(
             name: 'componentName',
             type: 'string',
             pattern: /^[a-zA-Z0-9\-]+$/,
-            default: 'component',
+            default: 'Component',
         },
     ],
     (err, result) => {
@@ -39,21 +39,25 @@ prompt.get(
 
 function createComponent(config) {
     const { componentName } = config;
-    const processedComponent = camelCase(componentName);
-    const componentDir = path.join(componentsDir, componentName);
-    const componentFileName = path.join(componentDir, `${componentName}.js`);
-    const testFileName = path.join(componentDir, `${componentName}.test.js`);
+    const processedName = processHyphen(componentName);
+    const componentDir = path.join(componentsDir, processedName);
+    const componentFileName = path.join(componentDir, `${processedName}.js`);
+    const testFileName = path.join(componentDir, `${processedName}.test.js`);
 
     if (fs.existsSync(componentDir)) {
-        error(`:bomb: ${componentDir} already exists`);
+        error(`:bomb: ${processHyphen(componentDir)} already exists`);
         process.exit(1);
     }
 
     mkdirp.sync(componentDir);
     fs.writeFileSync(
         componentFileName,
-        componentTemplate(componentName, processedComponent, componentPrefix)
+        componentTemplate(
+            processedName,
+            componentName.toLowerCase(),
+            componentPrefix
+        )
     );
-    fs.writeFileSync(testFileName, testTemplate(processedComponent));
+    fs.writeFileSync(testFileName, testTemplate(processedName));
     info(`:floppy_disk: ${componentName} created`);
 }
