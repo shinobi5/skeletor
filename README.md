@@ -12,8 +12,8 @@ Framework agnostic front-end boilerplate for static websites and web application
 -   [router-component](https://github.com/mkay581/router-component): very lightweight web component for client-side routing
 -   [beedle](https://github.com/andybelldesign/beedle): tiny library for client-side state management
 -   [@pikapkg/web](https://github.com/pikapkg/web): provides the ability to consume npm packages directly in the browser
--   [babel](https://babeljs.io): JS transpiler
--   [rollup](https://github.com/rollup/rollup): JS bundler
+-   [babel](https://babeljs.io): JavaScript transpiler
+-   [rollup](https://github.com/rollup/rollup): JavaScript bundler
 
 ## Getting Started
 
