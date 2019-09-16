@@ -1,6 +1,6 @@
 # Skeletor
 
-Framework agnostic front-end boilerplate for static websites and web applications.
+Framework agnostic rront-end boilerplate with a focus on the web platform.
 
 ## Features
 
