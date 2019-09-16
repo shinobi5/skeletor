@@ -8,7 +8,7 @@ Front-end boilerplate with a focus on the web platform.
 -   **Service worker**: offline support
 -   **Web manifest**: [PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) features
 -   [lit-html](https://github.com/polymer/lit-html): virtual DOM alternative for performant updates to the DOM with web components
--   [haunted](https://github.com/matthewp/haunted): React Hooks API for web components
+-   [haunted](https://github.com/matthewp/haunted): Hooks API for web components
 -   [router-component](https://github.com/mkay581/router-component): very lightweight web component for client-side routing
 -   [beedle](https://github.com/andybelldesign/beedle): tiny library for client-side state management
 -   [@pikapkg/web](https://github.com/pikapkg/web): provides the ability to consume npm packages directly in the browser
