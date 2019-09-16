@@ -5,6 +5,7 @@ build
 # modules
 src/js/packages
 web_modules
+modules
 node_modules
 
 # generated styles
