@@ -1,17 +1,28 @@
 module.exports = (ComponentName, elementName, elementPrefix) => {
-    return `import { component, html } from './js/web_modules/haunted.js';
+    return `import { html, render } from '../../web_modules/lit-html.js';
 
-const ${ComponentName} = () => {
-    return html\`
-        <style>
-            :host {
-                display: block;
-            }
-        </style>
-        <slot></slot>
-    \`;
-};
+export default class ${ComponentName} extends HTMLElement {
+    constructor() {
+        super();
+        this.root = this.attachShadow({ mode: 'open' });
+    }
 
-customElements.define('${elementPrefix}-${elementName}', component(${ComponentName}));
+    connectedCallback() {
+        render(this.render(), this.root);
+    }
+
+    render() {
+        return html\`
+            <style>
+                :host {
+                    display: block;
+                }
+            </style>
+            <slot></slot>
+        \`;
+    }
+}
+
+customElements.define('${elementPrefix}-${elementName}', ${ComponentName});
 `;
 };

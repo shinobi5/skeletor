@@ -1,6 +1,6 @@
-# Skeletor
+# Skeletor [WIP]
 
-Front-end boilerplate with a focus on the web platform.
+Framework agnostic Front-end boilerplate for static websites and web applications.
 
 ## Features
 
