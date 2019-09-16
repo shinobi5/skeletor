@@ -1,6 +1,6 @@
-# Skeletor [WIP]
+# Skeletor
 
-Framework agnostic Front-end boilerplate for static websites and web applications.
+Framework agnostic front-end boilerplate for static websites and web applications.
 
 ## Features
 
@@ -8,7 +8,7 @@ Framework agnostic Front-end boilerplate for static websites and web application
 -   **Service worker**: offline support
 -   **Web manifest**: [PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) features
 -   [lit-html](https://github.com/polymer/lit-html): virtual DOM alternative for performant updates to the DOM with web components
--   [haunted](https://github.com/matthewp/haunted): Hooks API for web components
+-   [haunted](https://github.com/matthewp/haunted): hooks (react) API for web components
 -   [router-component](https://github.com/mkay581/router-component): very lightweight web component for client-side routing
 -   [beedle](https://github.com/andybelldesign/beedle): tiny library for client-side state management
 -   [@pikapkg/web](https://github.com/pikapkg/web): provides the ability to consume npm packages directly in the browser
@@ -35,7 +35,7 @@ cd <project-name> && rm -rf .git && git init
 git remote set-url origin <repo-url> && git push origin master
 ```
 
-**Install npm modules and generate browser ready npm packages at `src/js/web_modules/`**
+**Install npm modules and generate browser ready npm packages at `src/js//modules/`**
 
 > npm packages listed in `dependencies` in `package.json` will be processed by `@pikapkg/web` and ready to be used directly in the browser without a module bundling build step. Search [pika](https://www.pika.dev/) for esm ready packages.
 
@@ -81,7 +81,7 @@ src/
 │   └── utilities
 ├── js
 │   └── components
-│   └── web_modules
+│   └── modules
 ├── index.html
 ├── app.js
 ├── service-worker.js
@@ -142,7 +142,7 @@ The simplest way to get started using the [router-component](https://github.com/
 
 ```html
 <head>
-    <script src="js/web_modules/router-component.js"></script>
+    <script src="js/modules/router-component.js"></script>
 </head>
 <body>
     <router-component>
