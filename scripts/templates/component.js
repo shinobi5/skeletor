@@ -1,7 +1,7 @@
-module.exports = (component, processedComponent, componentPrefix) => {
+module.exports = (ComponentName, elementName, elementPrefix) => {
     return `import { html, render } from '../../web_modules/lit-html.js';
 
-export default class ${processedComponent} extends HTMLElement {
+export default class ${ComponentName} extends HTMLElement {
     constructor() {
         super();
         this.root = this.attachShadow({ mode: 'open' });
@@ -23,6 +23,6 @@ export default class ${processedComponent} extends HTMLElement {
     }
 }
 
-customElements.define('${componentPrefix}-${component}', ${processedComponent});
+customElements.define('${elementPrefix}-${elementName}', ${ComponentName});
 `;
 };

@@ -9,12 +9,17 @@
         <link rel="manifest" href="manifest.json" />
         <link rel="shortcut icon" href="favicon.ico" />
         <link rel="stylesheet" href="styles.css" />
+        <script
+            type="module"
+            src="js/components/ComponentHooks/ComponentHooks.js"
+            defer
+        ></script>
     </head>
     <body>
         <a href="#content" class="sr-only">Skip to content</a>
 
         <main id="content">
-            Content
+            <x-componenthooks></x-componenthooks>
         </main>
 
         <script type="module" src="app.js"></script>
