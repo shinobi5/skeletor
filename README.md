@@ -23,7 +23,7 @@ Framework agnostic front-end boilerplate with a focus on the web platform.
 git clone git@github.com:shinobi5/skeletor.git <project-name>
 ```
 
-**Initialize new git repository**
+**Initialise new git repository**
 
 ```
 cd <project-name> && rm -rf .git && git init
