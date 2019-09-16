@@ -59,5 +59,5 @@ function createComponent(config) {
         )
     );
     fs.writeFileSync(testFileName, testTemplate(processedName));
-    info(`:floppy_disk: ${componentName} created`);
+    info(`:floppy_disk: ${processedName} created`);
 }
