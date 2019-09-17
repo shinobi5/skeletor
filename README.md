@@ -4,7 +4,7 @@ Framework agnostic front-end boilerplate with a focus on the web platform.
 
 ## Features
 
--   **Web component generator**: web component boilerplate and test file generator
+-   **Web component generator**: web component boilerplate and test generator
 -   **Service worker**: offline support
 -   **Web manifest**: [PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) features
 -   [lit-html](https://github.com/polymer/lit-html): virtual DOM alternative for web components
