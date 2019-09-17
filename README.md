@@ -37,7 +37,7 @@ git remote set-url origin <repo-url> && git push origin master
 
 **Install npm modules and generate browser ready npm packages at `src/js/modules/`**
 
-> npm packages listed in `dependencies` in `package.json` will be processed by `@pikapkg/web` and ready to be used directly in the browser without a module bundling build step. Search [pika](https://www.pika.dev/) for esm ready packages.
+> npm packages listed in `dependencies` in `package.json` will be processed by `@pikapkg/web` and ready to be used directly in the browser. Search [pika](https://www.pika.dev/) for esm ready packages.
 
 ```
 yarn
