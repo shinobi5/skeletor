@@ -23,6 +23,6 @@ export default class ${ComponentName} extends HTMLElement {
     }
 }
 
-customElements.define('${elementPrefix}-${elementName}', ${ComponentName});
+customElements.define('${elementPrefix}-${elementName.toLowerCase()}', ${ComponentName});
 `;
 };

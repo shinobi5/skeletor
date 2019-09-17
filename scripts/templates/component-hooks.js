@@ -12,6 +12,6 @@ const ${ComponentName} = () => {
     \`;
 };
 
-customElements.define('${elementPrefix}-${elementName}', component(${ComponentName}));
+customElements.define('${elementPrefix}-${elementName.toLowerCase()}', component(${ComponentName}));
 `;
 };
