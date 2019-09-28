@@ -1,0 +1,33 @@
+/* hide from screen readers */
+.hidden {
+    display: none !important;
+}
+
+/* hide visually and from screen readers, but maintain layout */
+.invisible {
+    visibility: hidden;
+}
+
+/* hide only visually, but have it available for screen readers */
+.sr-only {
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip: rect(0, 0, 0, 0);
+    position: absolute;
+}
+
+/* extends the .sr-only class to allow the element 
+to be focusable when navigated to via the keyboard */
+.sr-only.focusable:focus,
+.sr-only.focusable:active {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}

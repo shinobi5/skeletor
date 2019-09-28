@@ -1,0 +1,8 @@
+{
+    "plugins": [
+        ["@pika/web/assets/babel-plugin.js"]
+    ],
+    "presets": [
+        "@babel/preset-env"
+    ]
+}
