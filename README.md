@@ -26,12 +26,6 @@ git clone git@github.com:shinobi5/skeletor.git <project-name>
 cd <project-name> && rm -rf .git && git init
 ```
 
-**Point to new repository (assuming one exists)**
-
-```
-git remote add origin <repo-url>
-```
-
 **Install npm modules and generate browser ready npm packages at `src/js/modules/`**
 
 > `yarn` is used but can be substituted with `npm` if that is preferred.
