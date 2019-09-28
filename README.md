@@ -26,10 +26,10 @@ git clone git@github.com:shinobi5/skeletor.git <project-name>
 cd <project-name> && rm -rf .git && git init
 ```
 
-**Point to new repository (assuming one exists) and push the project**
+**Point to new repository (assuming one exists)**
 
 ```
-git remote set-url origin <repo-url> && git push origin master
+git remote add origin <repo-url>
 ```
 
 **Install npm modules and generate browser ready npm packages at `src/js/modules/`**
@@ -244,11 +244,7 @@ If using web components with haunted's hooks API then state can be handled withi
 
 Global state can be handled with beedle. View beedle's [official documentation](https://beedle.hankchizljaw.io/) for how to use this tiny library to manage application state.
 
-Alternatively, [redux](https://github.com/reduxjs/redux) can be used to manage global application state by adding it to the project and configuring as required:
-
-```
-yarn add redux
-```
+Alternatively, [redux](https://github.com/reduxjs/redux) can be used to manage global application state by adding it to the project.
 
 ## Server Side Rendering (SSR)
 
