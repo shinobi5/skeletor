@@ -144,11 +144,20 @@ class App extends HTMLElement {
 customElements.define('x-app', App);
 ```
 
+### Server Side Rendering (SSR)
+
+Server Side Rendering is still an unsolved problem when it comes to custom Web Components due to issues with rendering the Shadow DOM on the server or before JavaScript runs on the client.
+
+A proposal for a declarative `shadowroot` element looked promising but was ultimately rejected by browser implementers.
+
 ### Resources
 
 -   [webcomponents](https://www.webcomponents.org)
 -   [Open WC](https://open-wc.org/)
 -   [MDN](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
+-   https://github.com/whatwg/dom/issues/510
+-   https://github.com/whatwg/dom/issues/510#issuecomment-370980398
+-   [SSR for web components](https://medium.com/@treshugart/%C3%A5server-side-rendering-web-components-e5df705f3f48)
 
 ## Styling
 
@@ -239,15 +248,3 @@ If using web components with haunted's hooks API then state can be handled withi
 Global state can be handled with beedle. View beedle's [official documentation](https://beedle.hankchizljaw.io/) for how to use this tiny library to manage application state.
 
 Alternatively, [redux](https://github.com/reduxjs/redux) can be used to manage global application state by adding it to the project.
-
-## Server Side Rendering (SSR)
-
-Server Side Rendering is still an unsolved problem when it comes to custom Web Components due to issues with rendering the Shadow DOM on the server or before JavaScript runs on the client.
-
-A proposal for a declarative `shadowroot` element looked promising but was ultimately rejected by browser implementers.
-
-### Further reading
-
--   https://github.com/whatwg/dom/issues/510
--   https://github.com/whatwg/dom/issues/510#issuecomment-370980398
--   [SSR for web components](https://medium.com/@treshugart/%C3%A5server-side-rendering-web-components-e5df705f3f48)
