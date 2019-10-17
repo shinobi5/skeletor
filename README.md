@@ -54,12 +54,6 @@ yarn build
 yarn build:babel
 ```
 
-**_Option:_ Create build, transpile JS with babel and generate bundle with rollup**
-
-```
-yarn build:bundle
-```
-
 **Boilerplate structure**
 
 ```
