@@ -140,7 +140,7 @@ customElements.define('x-app', App);
 
 ### Server Side Rendering (SSR)
 
-Server Side Rendering is still an unsolved problem when it comes to custom Web Components due to issues with rendering the Shadow DOM on the server or before JavaScript runs on the client.
+Server Side Rendering is still an unsolved problem when it comes to custom Web Components due to issues with rendering the ShadowDOM on the server or before JavaScript runs on the client.
 
 A proposal for a declarative `shadowroot` element looked promising but was ultimately rejected by browser implementers.
 
