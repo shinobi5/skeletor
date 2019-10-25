@@ -1,8 +1,10 @@
 # build
 build
+dist
 
 # modules
 src/js/modules
+node_modules
 
 # generated styles
 src/styles.css
