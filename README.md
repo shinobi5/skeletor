@@ -114,30 +114,6 @@ const App = () => {
 customElements.define('x-app', component(App));
 ```
 
-```javascript
-import { html, render } from '../../modules/lit-html.js';
-import '../CustomElement/CustomElement.js';
-
-class App extends HTMLElement {
-    constructor() {
-        super();
-        this.root = this.attachShadow({ mode: 'open' });
-    }
-
-    connectedCallback() {
-        render(this.render(), this.root);
-    }
-
-    render() {
-        return html`
-            <x-custom-element>Custom element</x-custom-element>
-        `;
-    }
-}
-
-customElements.define('x-app', App);
-```
-
 ### Server Side Rendering (SSR)
 
 Server Side Rendering is still an unsolved problem when it comes to custom Web Components due to issues with rendering the ShadowDOM on the server or before JavaScript runs on the client.
@@ -203,36 +179,6 @@ const App = () => {
 };
 
 customElements.define('x-app', component(App, { useShadowDOM: false }));
-```
-
-```javascript
-import { html, render } from '../../modules/lit-html.js';
-import '../../modules/router-component.js';
-import '../FirstPage/FirstPage.js';
-import '../SecondPage/SecondPage.js';
-import '../PageNotFound/PageNotFound.js';
-
-class App extends HTMLElement {
-    constructor() {
-        super();
-    }
-
-    connectedCallback() {
-        render(this.render(), this);
-    }
-
-    render() {
-        return html`
-            <router-component>
-                <x-first-page path="^/(index.html)?$"></x-first-page>
-                <x-second-page path="second-page"></x-second-page>
-                <x-page-not-found path=".*"></x-page-not-found>
-            </router-component>
-        `;
-    }
-}
-
-customElements.define('x-app', App);
 ```
 
 ## State Management
