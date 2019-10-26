@@ -6,8 +6,8 @@ Framework agnostic front-end boilerplate with a focus on the web platform.
 
 -   [Web component](https://developer.mozilla.org/en-US/docs/Web/Web_Components) generator
 -   [PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) support: web app manifest and service worker for offline support
--   [lit-html](https://github.com/polymer/lit-html): virtual DOM alternative for web components
--   [haunted](https://github.com/matthewp/haunted): hooks (react) API for web components
+-   [lit-html](https://github.com/polymer/lit-html): HTML templates in JavaScript with template literals
+-   [haunted](https://github.com/matthewp/haunted): React's Hooks API for web components
 -   [router-component](https://github.com/mkay581/router-component): very lightweight web component for client-side routing
 -   [beedle](https://github.com/andybelldesign/beedle): tiny library for client-side state management
 -   [@pikapkg/web](https://github.com/pikapkg/web): consume npm packages directly in the browser
