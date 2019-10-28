@@ -36,7 +36,7 @@ cd <project-name> && rm -rf .git && git init
 yarn
 ```
 
-**Serve the project at `localhost:1234`**
+**Serve the project at `localhost:8080`**
 
 ```
 yarn start
@@ -48,32 +48,26 @@ yarn start
 yarn build
 ```
 
-**_Option:_ Create build and transpile JS with babel**
+**_Optional_: Create build and transpile JS with babel**
 
 ```
 yarn build:babel
 ```
 
-**Boilerplate structure**
+**_Optional_: Serve, develop and bundle with webpack**
+
+> Remove the reference to `app.js` from `src/index.html` so only the bundled js files are included in the generated `build/index.html`.
+
+Serve the project at `localhost:8080`
 
 ```
-src/
-├── font
-├── img
-├── css
-│   └── settings
-│   └── global
-│   └── elements
-│   └── components
-│   └── utilities
-├── js
-│   └── components
-│   └── modules
-├── index.html
-├── app.js
-├── service-worker.js
-└── manifest.json
-└── favicon.ico
+yarn start:webpack
+```
+
+Create build for production in the root of the project at `build/`
+
+```
+yarn build:webpack
 ```
 
 ## Web Components
