@@ -48,13 +48,13 @@ yarn start
 yarn build
 ```
 
-**_Optional_: Create build and transpile JS with babel**
+Optional: **Create build and transpile JS with babel**
 
 ```
 yarn build:babel
 ```
 
-**_Optional_: Serve, develop and bundle with webpack**
+Optional: **Serve and bundle with webpack**
 
 > Remove the reference to `app.js` from `src/index.html` so only the bundled js files are included in the generated `build/index.html`.
 
