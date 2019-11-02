@@ -1,6 +1,9 @@
 {
     "plugins": [
-        ["@pika/web/assets/babel-plugin.js"]
+        [
+            "@pika/web/assets/babel-plugin.js", 
+            "@babel/plugin-transform-runtime"
+        ]
     ],
     "presets": [
         "@babel/preset-env"
