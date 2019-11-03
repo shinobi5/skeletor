@@ -5,11 +5,11 @@ Front-end boilerplate with a focus on the web platform.
 ## Features
 
 -   [Web component](https://developer.mozilla.org/en-US/docs/Web/Web_Components) generator
--   [PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) support: web app manifest and service worker for offline support
+-   [PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) generator
+-   [redux](https://github.com/reduxjs/redux) and [beedle](https://github.com/andybelldesign/beedle) boilerplate generators
 -   [lit-html](https://github.com/polymer/lit-html): HTML templates in JavaScript with template literals
 -   [haunted](https://github.com/matthewp/haunted): React's Hooks API for web components
--   [router-component](https://github.com/mkay581/router-component): very lightweight web component for client-side routing
--   [beedle](https://github.com/andybelldesign/beedle): tiny library for client-side state management
+-   [router-component](https://github.com/mkay581/router-component): lightweight web component for client-side routing
 -   [@pikapkg/web](https://github.com/pikapkg/web): consume npm packages directly in the browser
 
 ## Getting Started
@@ -68,24 +68,6 @@ Create build for production in the root of the project at `build/`
 
 ```
 yarn build:webpack
-```
-
-## Progressive Web App (PWA)
-
-**Create PWA manifest and service worker files**
-
-```
-yarn create-pwa
-```
-
-**Add reference to `manifest.json` and `service-worker.js` in `index.html`**
-
-```
-<link rel="manifest" href="manifest.json" />
-```
-
-```
-<script href="service-worker.js"></script>
 ```
 
 ## Web Components
@@ -197,10 +179,28 @@ customElements.define('x-app', component(App, { useShadowDOM: false }));
 
 If using web components with haunted's hooks API then state can be handled within the components. View haunted's [official documentation](https://github.com/matthewp/haunted) for examples.
 
-Global state can be handled with either [redux](https://github.com/reduxjs/redux) or [beedle](https://github.com/andybelldesign/beedle).
+Global state can be handled with either [redux](https://github.com/reduxjs/redux) or [beedle](https://github.com/andybelldesign/beedle) (both libraries included by default).
 
-**Generate redux state boilerplate**
+**Generate redux boilerplate at `src/state`**
 
 ```
 yarn create-redux
+```
+
+## Progressive Web App (PWA)
+
+**Create PWA manifest and service worker files**
+
+```
+yarn create-pwa
+```
+
+**Add reference to `manifest.json` and `service-worker.js` in `index.html`**
+
+```
+<link rel="manifest" href="manifest.json" />
+```
+
+```
+<script href="service-worker.js"></script>
 ```
