@@ -203,7 +203,7 @@ yarn create-beedle
 yarn create-pwa
 ```
 
-**Add reference to `manifest.json` and `service-worker.js` in `index.html`**
+**Include `manifest.json` and `service-worker.js` in `index.html`**
 
 ```
 <link rel="manifest" href="manifest.json" />
