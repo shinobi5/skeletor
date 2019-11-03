@@ -70,9 +70,27 @@ Create build for production in the root of the project at `build/`
 yarn build:webpack
 ```
 
+## Progressive Web App (PWA)
+
+**Create PWA manifest and service worker files**
+
+```
+yarn create-pwa
+```
+
+**Add reference to `manifest.json` and `service-worker.js` in `index.html`**
+
+```
+<link rel="manifest" href="manifest.json" />
+```
+
+```
+<script href="service-worker.js"></script>
+```
+
 ## Web Components
 
-> Custom element names require a hyphen (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)). Set element prefix in the `create-component` setup.
+> Custom element names require a hyphen (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)). Change the value of `elementPrefix` in `scripts/create-component.js` (default value is `x`)
 
 **Create boilerplate component in `src/js/components/`**
 
@@ -110,7 +128,7 @@ customElements.define('x-app', component(App));
 
 ### Server Side Rendering (SSR)
 
-Server Side Rendering is still an unsolved problem when it comes to custom Web Components due to issues with rendering the ShadowDOM on the server or before JavaScript runs on the client.
+Server Side Rendering of custom web components is still an unsolved problem due to issues with rendering the ShadowDOM on the server.
 
 A proposal for a declarative `shadowroot` element looked promising but was ultimately rejected by browser implementers.
 
@@ -125,7 +143,7 @@ A proposal for a declarative `shadowroot` element looked promising but was ultim
 
 ## Styling
 
-If using web components, component styles can be set within the component via the [shadowDOM](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM) for encapsulated styles.
+For web components, styles can be set within the element via the [shadowDOM](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM) for encapsulated styles.
 
 For global styles, minimal global CSS is provided with CLI tools to watch for changes and concatenate the individual files into a single minified `styles.css`.
 
@@ -179,6 +197,10 @@ customElements.define('x-app', component(App, { useShadowDOM: false }));
 
 If using web components with haunted's hooks API then state can be handled within the components. View haunted's [official documentation](https://github.com/matthewp/haunted) for examples.
 
-Global state can be handled with beedle. View beedle's [official documentation](https://beedle.hankchizljaw.io/) for how to use this tiny library to manage application state.
+Global state can be handled with either [redux](https://github.com/reduxjs/redux) or [beedle](https://github.com/andybelldesign/beedle).
 
-Alternatively, [redux](https://github.com/reduxjs/redux) can be used to manage global application state by adding it to the project.
+**Generate redux state boilerplate**
+
+```
+yarn create-redux
+```

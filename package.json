@@ -69,6 +69,8 @@
     "clean": "yarn clean:build && rm -rf node_modules",
     "clean:build": "rm -rf build",
     "create-component": "node scripts/create-component.js",
+    "create-pwa": "node scripts/create-pwa.js",
+    "create-redux": "node scripts/create-redux.js",
     "css:concat": "cat src/css/settings/* src/css/global/* src/css/elements/* src/css/components/* src/css/utilities/* > src/styles.css",
     "css:minify": "cleancss -o src/styles.css src/styles.css",
     "css:watch": "onchange 'src/css/**/*' -- yarn css:concat",
