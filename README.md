@@ -11,6 +11,8 @@ Front-end boilerplate with a focus on the web platform.
 -   [haunted](https://github.com/matthewp/haunted): React's Hooks API for web components
 -   [router-component](https://github.com/mkay581/router-component): lightweight web component for client-side routing
 -   [@pikapkg/web](https://github.com/pikapkg/web): consume npm packages directly in the browser
+-   [babel](https://babeljs.io/): Transpile JavaScript
+-   [webpack](https://webpack.js.org/): Module bundler
 
 ## Getting Started
 
@@ -54,7 +56,7 @@ yarn build
 yarn build:babel
 ```
 
-**_Optional_: Serve and bundle with webpack**
+**_Optional_: Serve and bundle app with webpack**
 
 > Remove the reference to `app.js` from `src/index.html` so only the bundled js files are included in the generated `build/index.html`.
 
@@ -187,9 +189,15 @@ Global state can be handled with either [redux](https://github.com/reduxjs/redux
 yarn create-redux
 ```
 
+**Generate beedle boilerplate at `src/state`**
+
+```
+yarn create-beedle
+```
+
 ## Progressive Web App (PWA)
 
-**Create PWA manifest and service worker files**
+**Create PWA manifest and service worker files at `src`**
 
 ```
 yarn create-pwa
