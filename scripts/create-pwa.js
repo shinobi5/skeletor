@@ -2,7 +2,6 @@ const path = require('path');
 const fs = require('fs-extra');
 const prompt = require('prompt');
 const { info, error } = require('hankey');
-
 const manifestTemplate = require('./templates/manifest');
 const serviceWorkerTemplate = require('./templates/service-worker');
 
