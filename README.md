@@ -74,7 +74,7 @@ yarn build:webpack
 
 ## Web Components
 
-> Custom element names require a hyphen (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)). Change the value of `elementPrefix` in `scripts/create-component.js` (default value is `x`)
+> Custom element names require a hyphen (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)). Update the value of `elementPrefix` in `scripts/create-component.js` (default value is `x`)
 
 **Create boilerplate component in `src/js/components/`**
 
@@ -127,9 +127,9 @@ A proposal for a declarative `shadowroot` element looked promising but was ultim
 
 ## Styling
 
-For web components, styles can be set within the element via the [shadowDOM](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM) for encapsulated styles.
+For web components styles can be set within the [shadowDOM](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM) for encapsulated styles.
 
-For global styles, minimal global CSS is provided with CLI tools to watch for changes and concatenate the individual files into a single minified `styles.css`.
+For global styles minimal CSS is provided with CLI tools to watch for changes and concatenate the individual files into a single minified `styles.css`.
 
 The concatenating happens in order from broad to specific styles based on the folder they're in (in the following order): `settings, global, elements, components, utilities`.
 
@@ -181,7 +181,7 @@ customElements.define('x-app', component(App, { useShadowDOM: false }));
 
 If using web components with haunted's hooks API then state can be handled within the components. View haunted's [official documentation](https://github.com/matthewp/haunted) for examples.
 
-Global state can be handled with either [redux](https://github.com/reduxjs/redux) or [beedle](https://github.com/andybelldesign/beedle) (both libraries included by default).
+Global state can be handled with either [redux](https://github.com/reduxjs/redux) or [beedle](https://github.com/andybelldesign/beedle).
 
 **Generate redux boilerplate at `src/state`**
 
