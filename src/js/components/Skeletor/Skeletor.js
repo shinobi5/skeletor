@@ -24,6 +24,7 @@ export const Skeletor = () => {
             }
             img {
                 width: 180px;
+                filter: grayscale();
             }
         </style>
         <div>
