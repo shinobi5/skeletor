@@ -11,8 +11,8 @@ Front-end boilerplate with a focus on the web platform.
 -   [haunted](https://github.com/matthewp/haunted): React's Hooks API for web components
 -   [router-component](https://github.com/mkay581/router-component): lightweight web component for client-side routing
 -   [@pikapkg/web](https://github.com/pikapkg/web): consume npm packages directly in the browser
--   [babel](https://babeljs.io/): Transpile JavaScript
--   [webpack](https://webpack.js.org/): Module bundler
+-   [babel](https://babeljs.io/): transpile JavaScript
+-   [webpack](https://webpack.js.org/): module bundler
 
 ## Getting Started
 
