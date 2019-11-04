@@ -14,7 +14,7 @@ Front-end boilerplate with a focus on the web platform.
 -   [babel](https://babeljs.io/): transpile JavaScript
 -   [webpack](https://webpack.js.org/): module bundler
 
-## Getting Started
+## Getting started
 
 **Clone the repository and give the project a name**
 
@@ -72,7 +72,7 @@ Create build for production in the root of the project at `build/`
 yarn build:webpack
 ```
 
-## Web Components
+## Web components
 
 > Custom element names require a hyphen (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)). Update the value of `elementPrefix` in `scripts/create-component.js` (default value is `x`)
 
@@ -110,7 +110,7 @@ const App = () => {
 customElements.define('x-app', component(App));
 ```
 
-### Server Side Rendering (SSR)
+### Server-side rendering (SSR)
 
 Server Side Rendering of custom web components is still an unsolved problem due to issues with rendering the ShadowDOM on the server.
 
@@ -127,7 +127,7 @@ A proposal for a declarative `shadowroot` element looked promising but was ultim
 
 ## Styling
 
-For web components styles can be set within the [shadowDOM](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM) for encapsulated styles.
+When using web components, styles can be set within the [shadowDOM](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM) and will be scoped to the component.
 
 For global styles minimal CSS is provided with CLI tools to watch for changes and concatenate the individual files into a single minified `styles.css`.
 
@@ -177,9 +177,9 @@ const App = () => {
 customElements.define('x-app', component(App, { useShadowDOM: false }));
 ```
 
-## State Management
+## State management
 
-If using web components with haunted's hooks API then state can be handled within the components. View haunted's [official documentation](https://github.com/matthewp/haunted) for examples.
+Haunted's hooks API allows for state management within the components (same as API as React's hooks). View haunted's [documentation](https://github.com/matthewp/haunted) for examples.
 
 Global state can be handled with either [redux](https://github.com/reduxjs/redux) or [beedle](https://github.com/andybelldesign/beedle).
 
@@ -195,7 +195,7 @@ yarn create-redux
 yarn create-beedle
 ```
 
-## Progressive Web App (PWA)
+## Progressive web app (PWA)
 
 **Create PWA manifest and service worker files at `src`**
 
