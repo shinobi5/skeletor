@@ -23,9 +23,7 @@ mkdirp.sync(actionsDir);
 mkdirp.sync(reducersDir);
 
 fs.writeFileSync(actionsFile, actionsTemplate());
-
 fs.writeFileSync(reducersFile, reducersTemplate());
-
 fs.writeFileSync(storeFile, storeTemplate());
 
 info(`:floppy_disk: Redux boilerplate created in src/state`);

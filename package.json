@@ -36,7 +36,7 @@
     "babel-loader": "^8.0.6",
     "clean-css-cli": "^4.2.1",
     "clean-webpack-plugin": "^3.0.0",
-    "copy-webpack-plugin": "^5.0.4",
+    "copy-webpack-plugin": "^5.0.5",
     "css-loader": "^3.2.0",
     "file-loader": "^4.2.0",
     "fs-extra": "^8.0.1",
@@ -54,15 +54,9 @@
     "prettier": "1.18.2",
     "pretty-quick": "^1.11.0",
     "prompt": "^1.0.0",
-    "rollup": "^1.26.3",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-copy": "^3.1.0",
-    "rollup-plugin-generate-html-template": "^1.5.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-terser": "^5.1.2",
     "webpack": "^4.41.2",
     "webpack-bundle-analyzer": "^3.6.0",
-    "webpack-cli": "^3.3.9",
+    "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0",
     "webpack-merge": "^4.2.2"
   },
@@ -89,7 +83,9 @@
     "server:webpack": "webpack-dev-server --open --config config/webpack.dev.js",
     "start": "yarn css:concat && npm-run-all --parallel prettier:watch css:watch server:dev",
     "start:rollup": "yarn css:concat && npm-run-all --parallel prettier:watch css:watch server:rollup",
-    "start:webpack": "yarn css:concat && npm-run-all --parallel prettier:watch css:watch server:webpack"
+    "start:webpack": "yarn css:concat && npm-run-all --parallel prettier:watch css:watch server:webpack",
+    "use:rollup": "yarn add -D rollup rollup-plugin-commonjs rollup-plugin-node-resolve rollup-plugin-copy rollup-plugin-generate-html-template rollup-plugin-terser",
+    "use:webpack": "yarn add -D webpack webpack-bundle-analyzer webpack-cli webpack-dev-server webpack-merge optimize-css-assets-webpack-plugin mini-css-extract-plugin imagemin-webpack-plugin html-webpack-plugin clean-webpack-plugin copy-webpack-plugin css-loader file-loader babel-loader"
   },
   "husky": {
     "hooks": {

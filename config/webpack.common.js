@@ -14,7 +14,7 @@ const ROOT = process.cwd();
 
 module.exports = {
     entry: {
-        app: './src/main.js',
+        app: './src/app.js',
     },
     output: {
         path: path.join(ROOT, '/build'),

@@ -5,9 +5,9 @@ import { terser } from 'rollup-plugin-terser';
 import htmlTemplate from 'rollup-plugin-generate-html-template';
 
 export default {
-    input: 'src/main.js',
+    input: 'src/app.js',
     output: {
-        file: 'build/main.bundle.js',
+        file: 'build/app.bundle.js',
         format: 'iife',
         sourcemap: true,
     },
