@@ -116,12 +116,6 @@ const App = () => {
 customElements.define('x-app', component(App));
 ```
 
-### Server-side rendering (SSR)
-
-Server Side Rendering of custom web components is still an unsolved problem due to issues with rendering the ShadowDOM on the server.
-
-A proposal for a declarative `shadowroot` element looked promising but was ultimately rejected by browser implementers.
-
 ### Resources
 
 -   [webcomponents](https://www.webcomponents.org)
