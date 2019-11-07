@@ -2,7 +2,7 @@
 
 Front-end boilerplate with a focus on the web platform.
 
-## Features
+## Includes
 
 -   [Web component](https://developer.mozilla.org/en-US/docs/Web/Web_Components) generator
 -   [PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) generator
@@ -11,8 +11,6 @@ Front-end boilerplate with a focus on the web platform.
 -   [haunted](https://github.com/matthewp/haunted): React's Hooks API for web components
 -   [router-component](https://github.com/mkay581/router-component): lightweight web component for client-side routing
 -   [@pikapkg/web](https://github.com/pikapkg/web): consume npm packages directly in the browser
--   [babel](https://babeljs.io/): transpile JavaScript
--   [webpack](https://webpack.js.org/): module bundler
 
 ## Getting started
 
@@ -32,7 +30,7 @@ cd <project-name> && rm -rf .git && git init
 
 > `yarn` is used but can be substituted with `npm` if that is preferred.
 
-> npm packages listed in `dependencies` in `package.json` will be processed by `@pikapkg/web` and ready to be imported and used directly in the browser. Search [pika](https://www.pika.dev/) for esm ready packages.
+> `dependencies` will be processed by [@pikapkg/web](https://github.com/pikapkg/web) and ready to be imported and used directly in the browser. Search [pika](https://www.pika.dev/) for esm ready packages.
 
 ```
 yarn
@@ -50,26 +48,34 @@ yarn start
 yarn build
 ```
 
-**_Optional_: Create build and transpile JS with babel**
+**_Optional_: Create build and transpile JS with [babel](https://babeljs.io/)**
 
 ```
 yarn build:babel
 ```
 
-**_Optional_: Serve and bundle app with webpack**
+**_Optional_: Serve and bundle app with [rollup](https://rollupjs.org/guide/en/) or [webpack](https://webpack.js.org/)**
 
-> Remove `<script type="module" src="main.js"></script>` from `src/index.html` so only the bundled js files are included in the generated `build/index.html`.
+> Remove `<script type="module" src="app.js"></script>` from `src/index.html` so only the bundled js files are included in the generated `build/index.html`.
+
+> Replace `<bundler>` with either `rollup` or `webpack` e.g. `yarn use:rollup`
+
+Install bundler dependencies
+
+```
+yarn use:<bundler>
+```
 
 Serve the project at `localhost:8080`
 
 ```
-yarn start:webpack
+yarn start:<bundler>
 ```
 
 Create build for production in the root of the project at `build/`
 
 ```
-yarn build:webpack
+yarn build:<bundler>
 ```
 
 ## Web components
@@ -205,10 +211,14 @@ yarn create-pwa
 
 **Include `manifest.json` and `service-worker.js` in `index.html`**
 
-```
-<link rel="manifest" href="manifest.json" />
-```
-
-```
-<script href="service-worker.js"></script>
+```html
+<head>
+    ...
+    <link rel="manifest" href="manifest.json" />
+</head>
+<body>
+    ...
+    <script href="service-worker.js"></script>
+    <script type="module" src="app.js"></script>
+</body>
 ```
