@@ -71,7 +71,7 @@
     "start:rollup": "yarn css:concat && npm-run-all --parallel prettier:watch css:watch server:rollup",
     "start:webpack": "yarn css:concat && npm-run-all --parallel prettier:watch css:watch server:webpack",
     "use:rollup": "yarn add -D rollup rollup-plugin-clear rollup-plugin-commonjs rollup-plugin-node-resolve rollup-plugin-copy rollup-plugin-generate-html-template rollup-plugin-terser",
-    "use:webpack": "yarn add -D webpack webpack-bundle-analyzer webpack-cli webpack-dev-server webpack-merge optimize-css-assets-webpack-plugin mini-css-extract-plugin imagemin-webpack-plugin html-webpack-plugin clean-webpack-plugin copy-webpack-plugin css-loader file-loader babel-loader"
+    "use:webpack": "yarn add -D webpack webpack-bundle-analyzer webpack-cli webpack-dev-server webpack-merge optimize-css-assets-webpack-plugin mini-css-extract-plugin imagemin-webpack-plugin html-webpack-plugin copy-webpack-plugin css-loader file-loader babel-loader"
   },
   "husky": {
     "hooks": {
