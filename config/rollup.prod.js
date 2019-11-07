@@ -1,0 +1,40 @@
+import resolve from 'rollup-plugin-node-resolve';
+import commonjs from 'rollup-plugin-commonjs';
+import copy from 'rollup-plugin-copy';
+import { terser } from 'rollup-plugin-terser';
+import htmlTemplate from 'rollup-plugin-generate-html-template';
+
+export default {
+    input: 'src/main.js',
+    output: {
+        file: 'build/main.bundle.js',
+        format: 'iife',
+        sourcemap: true,
+    },
+    plugins: [
+        resolve(),
+        commonjs(),
+        terser(),
+        copy({
+            targets: [
+                {
+                    src: [
+                        'src/index.html',
+                        'src/styles.css',
+                        'src/service-worker.js',
+                        'src/manifest.json.js',
+                    ],
+                    dest: 'build',
+                },
+                { src: 'src/img/**/*', dest: 'build/img' },
+                { src: 'src/images/**/*', dest: 'build/images' },
+                { src: 'src/font/**/*', dest: 'build/font' },
+                { src: 'src/fonts/**/*', dest: 'build/fonts' },
+            ],
+        }),
+        htmlTemplate({
+            template: 'src/index.html',
+            target: 'index.html',
+        }),
+    ],
+};
