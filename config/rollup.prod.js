@@ -3,6 +3,7 @@ import commonjs from 'rollup-plugin-commonjs';
 import copy from 'rollup-plugin-copy';
 import { terser } from 'rollup-plugin-terser';
 import htmlTemplate from 'rollup-plugin-generate-html-template';
+import clear from 'rollup-plugin-clear';
 
 export default {
     input: 'src/app.js',
@@ -15,6 +16,9 @@ export default {
         resolve(),
         commonjs(),
         terser(),
+        clear({
+            targets: ['build'],
+        }),
         copy({
             targets: [
                 {
