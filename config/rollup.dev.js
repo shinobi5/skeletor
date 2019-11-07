@@ -2,9 +2,9 @@ import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 
 export default {
-    input: 'src/main.js',
+    input: 'src/app.js',
     output: {
-        file: 'build/main.bundle.js',
+        file: 'build/app.bundle.js',
         format: 'iife',
         sourcemap: true,
     },
