@@ -32,107 +32,111 @@ prompt.start();
 prompt.get(
     [
         {
-            description: 'Project name',
+            description: colors.brightMagenta('Project name'),
             name: 'projectName',
             type: 'string',
             pattern: /^[a-zA-Z0-9\-]+$/,
-            default: 'Skeletor',
+            default: colors.brightCyan('Skeletor'),
         },
         {
-            description: 'Project description',
+            description: colors.brightMagenta('Project description'),
             name: 'description',
             type: 'string',
             pattern: /^[a-zA-Z0-9\-]+$/,
-            default: '',
+            default: colors.brightCyan(''),
         },
         {
-            description: 'Global CSS?',
+            description: colors.brightMagenta('Global CSS?'),
             name: 'css',
             type: 'boolean',
-            default: true,
+            default: colors.brightCyan(true),
         },
         {
-            description: 'Web compoments?',
+            description: colors.brightMagenta('Web compoments?'),
             name: 'webComponents',
             type: 'boolean',
-            default: true,
+            default: colors.brightCyan(true),
         },
         {
-            description: 'Web compoments: prefix?',
+            description: colors.brightMagenta('Web compoments: prefix?'),
             name: 'elementPrefix',
             type: 'string',
-            default: 'x',
+            default: colors.brightCyan('x'),
             ask: () => {
                 return prompt.history('webComponents').value;
-            }
+            },
         },
         {
-            description: 'Router?',
+            description: colors.brightMagenta('Router?'),
             name: 'router',
             type: 'boolean',
-            default: false,
-        },        
-        {
-            description: 'Global state?',
-            name: 'state',
-            type: 'boolean',
-            default: false,
+            default: colors.brightCyan(false),
         },
         {
-            description: 'State: Beedle or Redux?',
+            description: colors.brightMagenta('Global state?'),
+            name: 'state',
+            type: 'boolean',
+            default: colors.brightCyan(false),
+        },
+        {
+            description: colors.brightMagenta('State: Beedle or Redux?'),
             name: 'state',
             type: 'string',
             pattern: /beedle|redux$/,
             message: 'Must be either beedle or redux',
-            default: 'redux',
-            ask: () => prompt.history('state').value,         
+            default: colors.brightCyan('redux'),
+            ask: () => prompt.history('state').value,
         },
         {
-            description: 'Bundler?',
+            description: colors.brightMagenta('Bundler?'),
             name: 'bundler',
             type: 'boolean',
-            default: false,
-        }, 
+            default: colors.brightCyan(false),
+        },
         {
-            description: 'Bundler: Either rollup or webpack for bundler',
+            description: colors.brightMagenta(
+                'Bundler: Either rollup or webpack for bundler'
+            ),
             name: 'bundlerType',
             type: 'string',
-            default: 'rollup',
+            default: colors.brightCyan('rollup'),
             pattern: /rollup|webpack$/,
             message: 'Must be either rollup or webpack',
             ask: () => prompt.history('bundler').value,
         },
         {
-            description: 'PWA?',
+            description: colors.brightMagenta('PWA?'),
             name: 'pwa',
             type: 'boolean',
-            default: false,
-        },        
+            default: colors.brightCyan(false),
+        },
         {
-            description: 'PWA: Theme color',
+            description: colors.brightMagenta('PWA: Theme color'),
             name: 'themeColor',
             type: 'string',
             pattern: /^#[0-9]+$/,
             message: 'Must be a hex value e.g. #222222',
-            default: '#222222',
+            default: colors.brightCyan('#222222'),
             ask: () => prompt.history('pwa').value,
         },
         {
-            description: 'PWA: Background color',
+            description: colors.brightMagenta('PWA: Background color'),
             name: 'backgroundColor',
             type: 'string',
             pattern: /^#[0-9]+$/,
             message: 'Must be a hex value e.g. #222222',
-            default: '#222222',
-            ask: () => prompt.history('pwa').value,         
+            default: colors.brightCyan('#222222'),
+            ask: () => prompt.history('pwa').value,
         },
         {
-            description: 'PWA: Enable offline service worker?',
+            description: colors.brightMagenta(
+                'PWA: Enable offline service worker?'
+            ),
             name: 'enableServiceWorker',
             type: 'boolean',
-            default: false,
+            default: colors.brightCyan(false),
             ask: () => prompt.history('pwa').value,
-        },        
+        },
     ],
     (err, result) => {
         if (err) {
@@ -151,12 +155,12 @@ function setupProject(config) {
         bundler,
         bundlerType,
         css,
-        description, 
+        description,
         elementPrefix,
         enableServiceWorker,
-        projectName, 
-        router, 
-        state, 
+        projectName,
+        router,
+        state,
         themeColor,
         webComponents,
     } = config;
@@ -171,11 +175,11 @@ function setupProject(config) {
             bundler,
             bundlerType,
             css,
-            description, 
-            projectName, 
-            router, 
-            state, 
-            webComponents,
+            description,
+            projectName,
+            router,
+            state,
+            webComponents
         )
     );
 
@@ -185,12 +189,7 @@ function setupProject(config) {
     // }
     fs.writeFileSync(
         manifest,
-        manifestTemplate(
-            projectName, 
-            description, 
-            themeColor, 
-            backgroundColor
-        )
+        manifestTemplate(projectName, description, themeColor, backgroundColor)
     );
 
     // if (fs.existsSync(serviceWorker)) {

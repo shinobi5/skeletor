@@ -1,4 +1,3 @@
-
 const path = require('path');
 const fs = require('fs-extra');
 const mkdirp = require('mkdirp');
@@ -7,7 +6,7 @@ const { info, error } = require('hankey');
 const componentTemplate = require('./templates/component');
 const componentsDir = path.join(process.cwd(), 'src/js/components');
 
-const elementPrefix = 'ljhlk';
+const elementPrefix = 'x';
 
 const processHyphen = pattern =>
     pattern.replace(/-([a-z])/gi, (_, match) => {

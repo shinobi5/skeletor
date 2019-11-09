@@ -1,0 +1,48 @@
+{
+  "name": "skeletor",
+  "description": "Front-end boilerplate with a focus on the web platform",
+  "dependencies": {
+    "@babel/runtime": "^7.6.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.4.5",
+    "@pika/web": "^0.4.3",
+    "clean-css-cli": "^4.2.1",
+    "colors": "^1.4.0",
+    "fs-extra": "^8.0.1",
+    "glob": "^7.1.3",
+    "hankey": "^0.0.3",
+    "husky": "^2.4.1",
+    "imagemin-cli": "^4.0.1",
+    "live-server": "^1.2.1",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^5.2.0",
+    "prettier": "1.18.2",
+    "pretty-quick": "^1.11.0",
+    "prompt": "^1.0.0"
+  },
+  "scripts": {
+    "babel": "npx babel src -d build --copy-files",
+    "build": "yarn css:concat && yarn css:minify && yarn imagemin && yarn babel",
+    "clean:modules": "rm -rf node_modules",
+    "clean:build": "rm -rf build",
+    "css:conat": "cat src/css/settings/* src/css/global/* src/css/elements/* src/css/components/* src/css/utilities/* > src/styles.css",
+    "css:minify": "cleancss -o src/styles.css src/styles.css",
+    "css:watch": "onchange 'src/css/**/*' -- yarn css:concat",
+    "imagemin": "imagemin --out-dir=src/img src/img/**/*.{png,jpg,gif}",
+    "prepare": "pika-web --dest src/js/modules --clean --optimize",
+    "prettier:watch": "onchange '**/*.js' '**/*.css' -- prettier --write {{changed}}",
+    "server:dev": "live-server --open=src",
+    "server:build": "live-server --open=build",
+    "setup": "node scripts/setup.js",
+    "start": "yarn css:concat && npm-run-all --parallel prettier:watch css:watch server:dev"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}

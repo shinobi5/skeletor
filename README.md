@@ -27,19 +27,15 @@ cd <project-name> && rm -rf .git && git init
 ```
 
 **Setup CLI**
-> Custom element names require a hyphen (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)). This can be set during the setup.
 
-```
-node scripts/setup.js
-```
-
-**Install npm modules and generate browser ready npm packages at `src/js/modules/`**
 > `yarn` is used but can be substituted with `npm` if that is preferred.
 
 > `dependencies` will be processed by [@pikapkg/web](https://github.com/pikapkg/web) and ready to be imported and used directly in the browser. Search [pika](https://www.pika.dev/) for esm ready packages.
 
+> Custom element names require a hyphen (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)). This can be set during the setup.
+
 ```
-yarn
+yarn && yarn setup
 ```
 
 **Serve the project at `localhost:8080`**

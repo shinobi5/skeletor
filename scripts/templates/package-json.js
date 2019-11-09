@@ -2,12 +2,12 @@ module.exports = (
     bundler,
     bundlerType,
     css,
-    description, 
-    projectName, 
-    router, 
-    state, 
-    webComponents, 
-    ) => {
+    description,
+    projectName,
+    router,
+    state,
+    webComponents
+) => {
     const serverDev = `"server:dev": "live-server --open=src",`;
     const serverDevRollup = `"server:dev": "live-server --open=src && rollup --config config/rollup.dev.js",`;
     const serverDevWebpack = `"server:dev": "webpack-dev-server --open --config config/webpack.dev.js",`;
@@ -27,7 +27,7 @@ module.exports = (
     "name": "${projectName.toLowerCase()}",
     "description": "${description}",
     "dependencies": {
-        ${state ? `"beedle": "^0.8.1",`: ''}
+        ${state ? `"beedle": "^0.8.1",` : ''}
         ${webComponents ? `"haunted": "^4.5.4",` : ''}
         ${webComponents ? `"lit-html": "^1.1.0",` : ''}
         ${state ? `"redux": "^4.0.4",` : ''}
@@ -41,6 +41,7 @@ module.exports = (
         "@babel/preset-env": "^7.4.5",
         "@pika/web": "^0.4.3",
         "clean-css-cli": "^4.2.1",
+        "colors": "^1.4.0",
         "fs-extra": "^8.0.1",
         "glob": "^7.1.3",
         "hankey": "^0.0.3",
@@ -52,30 +53,30 @@ module.exports = (
         "prettier": "1.18.2",
         "pretty-quick": "^1.11.0",
         "prompt": "^1.0.0",
-        ${rollup ? `"rollup": "^1.26.3",`: ''}
-        ${rollup ? `"rollup-plugin-clear": "^2.0.7",`: ''}
-        ${rollup ? `"rollup-plugin-commonjs": "^10.1.0",`: ''}
-        ${rollup ? `"rollup-plugin-copy": "^3.1.0",`: ''}
-        ${rollup ? `"rollup-plugin-generate-html-template": "^1.5.0",`: ''}
-        ${rollup ? `"rollup-plugin-node-resolve": "^5.2.0",`: ''}
-        ${rollup ? `"rollup-plugin-terser": "^5.1.2"`: ''}
-        ${webpack ? `"webpack": "^4.41.2",`: ''}
-        ${webpack ? `"webpack-bundle-analyzer": "^3.6.0",`: ''}
-        ${webpack ? `"webpack-cli": "^3.3.10",`: ''}
-        ${webpack ? `"webpack-dev-server": "^3.9.0",`: ''}
-        ${webpack ? `"webpack-merge": "^4.2.2",`: ''}
-        ${webpack ? `"optimize-css-assets-webpack-plugin": "^5.0.3",`: ''}
-        ${webpack ? `"mini-css-extract-plugin": "^0.8.0",`: ''}
-        ${webpack ? `"imagemin-webpack-plugin": "^2.4.2",`: ''}
-        ${webpack ? `"html-webpack-plugin": "^3.2.0",`: ''}
-        ${webpack ? `"file-loader": "^4.2.0",`: ''}
-        ${webpack ? `"css-loader": "^3.2.0",`: ''}
-        ${webpack ? `"copy-webpack-plugin": "^5.0.5",`: ''}
-        ${webpack ? `"babel-loader": "^8.0.6"`: ''}
+        ${rollup ? `"rollup": "^1.26.3",` : ''}
+        ${rollup ? `"rollup-plugin-clear": "^2.0.7",` : ''}
+        ${rollup ? `"rollup-plugin-commonjs": "^10.1.0",` : ''}
+        ${rollup ? `"rollup-plugin-copy": "^3.1.0",` : ''}
+        ${rollup ? `"rollup-plugin-generate-html-template": "^1.5.0",` : ''}
+        ${rollup ? `"rollup-plugin-node-resolve": "^5.2.0",` : ''}
+        ${rollup ? `"rollup-plugin-terser": "^5.1.2"` : ''}
+        ${webpack ? `"webpack": "^4.41.2",` : ''}
+        ${webpack ? `"webpack-bundle-analyzer": "^3.6.0",` : ''}
+        ${webpack ? `"webpack-cli": "^3.3.10",` : ''}
+        ${webpack ? `"webpack-dev-server": "^3.9.0",` : ''}
+        ${webpack ? `"webpack-merge": "^4.2.2",` : ''}
+        ${webpack ? `"optimize-css-assets-webpack-plugin": "^5.0.3",` : ''}
+        ${webpack ? `"mini-css-extract-plugin": "^0.8.0",` : ''}
+        ${webpack ? `"imagemin-webpack-plugin": "^2.4.2",` : ''}
+        ${webpack ? `"html-webpack-plugin": "^3.2.0",` : ''}
+        ${webpack ? `"file-loader": "^4.2.0",` : ''}
+        ${webpack ? `"css-loader": "^3.2.0",` : ''}
+        ${webpack ? `"copy-webpack-plugin": "^5.0.5",` : ''}
+        ${webpack ? `"babel-loader": "^8.0.6"` : ''}
     },
     "scripts": {
         "babel": "npx babel src -d build --copy-files",
-        ${!bundler ?  build : rollup ? buildRollup : buildWebpack}
+        ${!bundler ? build : rollup ? buildRollup : buildWebpack}
         "clean:modules": "rm -rf node_modules",
         "clean:build": "rm -rf build",
         ${css ? cssConcat : ''}
@@ -95,4 +96,4 @@ module.exports = (
     }
 }
 `;
-}
+};
