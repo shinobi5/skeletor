@@ -149,6 +149,6 @@ customElements.define('x-app', component(App, { useShadowDOM: false }));
 
 ## State
 
-Haunted's hooks API allows for state management within the components (same as React's hooks API). View haunted's [documentation](https://github.com/matthewp/haunted) for examples.
+For web components, Haunted's hooks API provides state management within the components (same as React's hooks API). View haunted's [documentation](https://github.com/matthewp/haunted) for examples.
 
 Global state can be handled with either [redux](https://github.com/reduxjs/redux) or [beedle](https://github.com/andybelldesign/beedle).
