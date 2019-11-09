@@ -147,7 +147,7 @@ const App = () => {
 customElements.define('x-app', component(App, { useShadowDOM: false }));
 ```
 
-## State management
+## State
 
 Haunted's hooks API allows for state management within the components (same as React's hooks API). View haunted's [documentation](https://github.com/matthewp/haunted) for examples.
 
