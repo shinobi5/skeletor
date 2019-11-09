@@ -20,7 +20,7 @@ const scriptsDir = path.join(ROOT, 'scripts');
 const stateDir = path.join(ROOT, 'src/state');
 const actionsDir = path.join(stateDir, `actions`);
 const reducersDir = path.join(stateDir, `reducers`);
-const index = path.join(srcDir, 'index.js');
+const index = path.join(srcDir, 'index.html');
 const createComponent = path.join(scriptsDir, 'create-component.js');
 const packageJSON = path.join(ROOT, `package.json`);
 const manifest = path.join(srcDir, `manifest.json`);
@@ -82,7 +82,7 @@ prompt.get(
         },
         {
             description: colors.brightMagenta('State: Beedle or Redux?'),
-            name: 'state',
+            name: 'stateType',
             type: 'string',
             pattern: /beedle|redux$/,
             message: 'Must be either beedle or redux',

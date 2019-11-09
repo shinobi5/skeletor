@@ -71,7 +71,7 @@ module.exports = (
         ${webpack ? `"css-loader": "^3.2.0",` : ''}
         ${webpack ? `"copy-webpack-plugin": "^5.0.5",` : ''}
         ${webpack ? `"babel-loader": "^8.0.6",` : ''}
-        "prompt": "^1.0.0",
+        "prompt": "^1.0.0"
     },
     "scripts": {
         "babel": "npx babel src -d build --copy-files",
@@ -86,6 +86,7 @@ module.exports = (
         "prettier:watch": "onchange '**/*.js' '**/*.css' -- prettier --write {{changed}}",
         ${!bundler ? serverDev : rollup ? serverDevRollup : serverDevWebpack}
         "server:build": "live-server --open=build",
+        "setup": "node scripts/setup.js",
         "start": "yarn css:concat && npm-run-all --parallel prettier:watch css:watch server:dev"
     },
     "husky": {

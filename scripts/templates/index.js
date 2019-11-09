@@ -7,7 +7,7 @@ module.exports = (bundler, description, projectName, pwa) => {
         <title>${projectName}</title>
         <meta name="description" content="${description}" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        ${pwa && `<link rel="manifest" href="manifest.json" />`}
+        ${pwa ? `<link rel="manifest" href="manifest.json" />` : ''}
         <link rel="shortcut icon" href="favicon.ico" />
         <link rel="stylesheet" href="styles.css" />
     </head>
@@ -26,8 +26,8 @@ module.exports = (bundler, description, projectName, pwa) => {
             Content
         </main>
 
-        ${pwa && `<script src="service-worker.js"></script>`}
-        ${!bundler && `<script type="module" src="app.js"></script>`}
+        ${pwa ? `<script src="service-worker.js"></script>` : ''}
+        ${!bundler ? `<script type="module" src="app.js"></script>` : ''}
     </body>
 </html>
 `;
