@@ -9,7 +9,7 @@ module.exports = (
     webComponents
 ) => {
     const serverDev = `"server:dev": "live-server --open=src",`;
-    const serverDevRollup = `"server:dev": "live-server --open=src && rollup --config config/rollup.dev.js",`;
+    const serverDevRollup = `"server:dev": "rollup --config config/rollup.dev.js",`;
     const serverDevWebpack = `"server:dev": "webpack-dev-server --open --config config/webpack.dev.js",`;
 
     const build = `"build": "yarn css:concat && yarn css:minify && yarn imagemin && yarn babel",`;
@@ -53,6 +53,7 @@ module.exports = (
         "prettier": "1.18.2",
         "pretty-quick": "^1.11.0",
         ${rollup ? `"rollup": "^1.26.3",` : ''}
+        ${rollup ? `"rollup-plugin-serve": "^1.0.1",` : ''}
         ${rollup ? `"rollup-plugin-clear": "^2.0.7",` : ''}
         ${rollup ? `"rollup-plugin-commonjs": "^10.1.0",` : ''}
         ${rollup ? `"rollup-plugin-copy": "^3.1.0",` : ''}
