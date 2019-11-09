@@ -858,7 +858,7 @@
     "@types/source-list-map" "*"
     source-map "^0.6.1"
 
-"@types/webpack@^4.4.24", "@types/webpack@^4.4.31":
+"@types/webpack@^4.4.24":
   version "4.39.8"
   resolved "https://registry.yarnpkg.com/@types/webpack/-/webpack-4.39.8.tgz#8083a4eb850ea02961ef6161465434c9b478851f"
   integrity sha512-lkJvwNJQUPW2SbVwAZW9s9whJp02nzLf2yTNwMULa4LloED9MYS1aNnGeoBCifpAI1pEBkTpLhuyRmBnLEOZAA==
@@ -1655,9 +1655,9 @@ buffer-xor@^1.0.3:
   integrity sha1-JuYe0UIvtw3ULm42cp7VHYVf6Nk=
 
 buffer@^4.3.0:
-  version "4.9.1"
-  resolved "https://registry.yarnpkg.com/buffer/-/buffer-4.9.1.tgz#6d1bb601b07a4efced97094132093027c95bc298"
-  integrity sha1-bRu2AbB6TvztlwlBMgkwJ8lbwpg=
+  version "4.9.2"
+  resolved "https://registry.yarnpkg.com/buffer/-/buffer-4.9.2.tgz#230ead344002988644841ab0244af8c44bbe3ef8"
+  integrity sha512-xq+q3SRMOxGivLhBNaUdC64hDTQwejJ+H0T/NB1XMtTVEwNTrfFF3gAxiyW0Bu/xWEGhjVKgUcMhCrUy2+uCWg==
   dependencies:
     base64-js "^1.0.2"
     ieee754 "^1.1.4"
@@ -1947,14 +1947,6 @@ clean-css@4.2.x, clean-css@^4.2.1:
   integrity sha512-4ZxI6dy4lrY6FHzfiy1aEOXgu4LIsW2MhwG0VBKdcoGoH/XLFgaHSdLTGr4O8Be6A8r3MOphEiI8Gc1n0ecf3g==
   dependencies:
     source-map "~0.6.0"
-
-clean-webpack-plugin@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/clean-webpack-plugin/-/clean-webpack-plugin-3.0.0.tgz#a99d8ec34c1c628a4541567aa7b457446460c62b"
-  integrity sha512-MciirUH5r+cYLGCOL5JX/ZLzOZbVr1ot3Fw+KcvbhUb6PM+yycqd9ZhIlcigQ5gl+XhppNmw3bEFuaaMNyLj3A==
-  dependencies:
-    "@types/webpack" "^4.4.31"
-    del "^4.1.1"
 
 cli-cursor@^2.1.0:
   version "2.1.0"
@@ -2953,9 +2945,9 @@ electron-to-chromium@^1.3.191:
   integrity sha512-vTH9UcMbi53x/pZKQrEcD83obE8agqQwUIx/G03/mpE1vzLm0KA3cHwuZXCysvxI1gXfNjV7Nu7Vjtp89kDzmg==
 
 electron-to-chromium@^1.3.295:
-  version "1.3.305"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.305.tgz#64f38c2986277b15c7b2c81954171ed22bee249b"
-  integrity sha512-jBEhRZ3eeJWf3eAnGYB1vDy09uBQpZWshC5fxiiIRofA9L3vkpa3SxsXleVS2MvuYir15oTVxzWPsOwj7KBzUw==
+  version "1.3.306"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.306.tgz#e8265301d053d5f74e36cb876486830261fbe946"
+  integrity sha512-frDqXvrIROoYvikSKTIKbHbzO6M3/qC6kCIt/1FOa9kALe++c4VAJnwjSFvf1tYLEUsP2n9XZ4XSCyqc3l7A/A==
 
 elliptic@^6.0.0:
   version "6.5.1"
@@ -5178,9 +5170,9 @@ logalot@^2.0.0:
     squeak "^1.0.0"
 
 loglevel@^1.6.4:
-  version "1.6.4"
-  resolved "https://registry.yarnpkg.com/loglevel/-/loglevel-1.6.4.tgz#f408f4f006db8354d0577dcf6d33485b3cb90d56"
-  integrity sha512-p0b6mOGKcGa+7nnmKbpzR6qloPbrgLcnio++E+14Vo/XffOGwZtRpUhr8dTH/x2oCMmEoIU0Zwm3ZauhvYD17g==
+  version "1.6.6"
+  resolved "https://registry.yarnpkg.com/loglevel/-/loglevel-1.6.6.tgz#0ee6300cc058db6b3551fa1c4bf73b83bb771312"
+  integrity sha512-Sgr5lbboAUBo3eXCSPL4/KoVz3ROKquOjcctxmHIt+vol2DrqTQe3SwkKKuYhEiWB5kYa13YyopJ69deJ1irzQ==
 
 longest@^1.0.0:
   version "1.0.1"
@@ -7563,11 +7555,6 @@ rollup@^1.26.3:
     "@types/estree" "*"
     "@types/node" "*"
     acorn "^7.1.0"
-
-router-component@^0.8.0:
-  version "0.8.2"
-  resolved "https://registry.yarnpkg.com/router-component/-/router-component-0.8.2.tgz#50144a93f125e7f2f57bf6c9f6524ab9eed75f12"
-  integrity sha512-0DyA4SvxoXBa5annef43UKq81wqy+Bpjp0Q8c0S7MVUGYZGPZzWHWLRDbhjnXS6zPNw6LTzJlFJkJyoGudgQMw==
 
 run-node@^1.0.0:
   version "1.0.0"

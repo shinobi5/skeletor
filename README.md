@@ -26,8 +26,14 @@ git clone git@github.com:shinobi5/skeletor.git <project-name>
 cd <project-name> && rm -rf .git && git init
 ```
 
-**Install npm modules and generate browser ready npm packages at `src/js/modules/`**
+**Setup CLI**
+> Custom element names require a hyphen (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)). This can be set during the setup.
 
+```
+node scripts/setup.js
+```
+
+**Install npm modules and generate browser ready npm packages at `src/js/modules/`**
 > `yarn` is used but can be substituted with `npm` if that is preferred.
 
 > `dependencies` will be processed by [@pikapkg/web](https://github.com/pikapkg/web) and ready to be imported and used directly in the browser. Search [pika](https://www.pika.dev/) for esm ready packages.
@@ -48,39 +54,7 @@ yarn start
 yarn build
 ```
 
-**_Optional_: Create build and transpile JS with [babel](https://babeljs.io/)**
-
-```
-yarn build:babel
-```
-
-**_Optional_: Serve and bundle app with [rollup](https://rollupjs.org/guide/en/) or [webpack](https://webpack.js.org/)**
-
-> Remove `<script type="module" src="app.js"></script>` from `src/index.html` so only the bundled js files are included in the generated `build/index.html`.
-
-> Replace `<bundler>` with either `rollup` or `webpack` e.g. `yarn use:rollup`
-
-Install bundler dependencies
-
-```
-yarn use:<bundler>
-```
-
-Serve the project at `localhost:8080`
-
-```
-yarn start:<bundler>
-```
-
-Create build for production in the root of the project at `build/`
-
-```
-yarn build:<bundler>
-```
-
 ## Web components
-
-> Custom element names require a hyphen (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)). Update the value of `elementPrefix` in `scripts/create-component.js` (default value is `x`)
 
 **Create boilerplate component in `src/js/components/`**
 
