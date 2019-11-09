@@ -1,8 +1,9 @@
 {
   "name": "skeletor",
-  "description": "Front-end boilerplate with a focus on the web platform",
+  "description": "",
   "dependencies": {
     "@babel/runtime": "^7.6.3",
+    "haunted": "^4.5.4",
     "lit-html": "^1.1.0"
   },
   "devDependencies": {
@@ -23,22 +24,30 @@
     "onchange": "^5.2.0",
     "prettier": "1.18.2",
     "pretty-quick": "^1.11.0",
+    "rollup": "^1.26.3",
+    "rollup-plugin-serve": "^1.0.1",
+    "rollup-plugin-clear": "^2.0.7",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-copy": "^3.1.0",
+    "rollup-plugin-generate-html-template": "^1.5.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^5.1.2",
     "prompt": "^1.0.0"
   },
   "scripts": {
     "babel": "npx babel src -d build --copy-files",
-    "build": "yarn css:concat && yarn css:minify && yarn imagemin && yarn babel",
+    "build": "yarn css:concat && yarn css:minify && rollup --config config/rollup.prod.js",
     "clean:modules": "rm -rf node_modules",
     "clean:build": "rm -rf build",
-    "css:conat": "cat src/css/settings/* src/css/global/* src/css/elements/* src/css/components/* src/css/utilities/* > src/styles.css",
+    "css:concat": "cat src/css/settings/* src/css/global/* src/css/elements/* src/css/components/* src/css/utilities/* > src/styles.css",
     "css:minify": "cleancss -o src/styles.css src/styles.css",
     "css:watch": "onchange 'src/css/**/*' -- yarn css:concat",
     "imagemin": "imagemin --out-dir=src/img src/img/**/*.{png,jpg,gif}",
     "prepare": "pika-web --dest src/js/modules --clean --optimize",
     "prettier:watch": "onchange '**/*.js' '**/*.css' -- prettier --write {{changed}}",
-    "server:dev": "live-server --open=src",
+    "server:dev": "rollup --config config/rollup.dev.js",
     "server:build": "live-server --open=build",
-    "setup": "yarn && node scripts/setup.js && yarn prettier --write package.json",
+    "setup": "yarn && node scripts/setup.js && yarn && prettier --write package.json",
     "start": "yarn css:concat && npm-run-all --parallel prettier:watch css:watch server:dev"
   },
   "husky": {
