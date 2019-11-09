@@ -60,10 +60,11 @@ module.exports = (
         ${rollup ? `"rollup-plugin-node-resolve": "^5.2.0",` : ''}
         ${rollup ? `"rollup-plugin-terser": "^5.1.2",` : ''}
         ${webpack ? `"webpack": "^4.41.2",` : ''}
-        ${webpack ? `"webpack-bundle-analyzer": "^3.6.0",` : ''}
         ${webpack ? `"webpack-cli": "^3.3.10",` : ''}
-        ${webpack ? `"webpack-dev-server": "^3.9.0",` : ''}
         ${webpack ? `"webpack-merge": "^4.2.2",` : ''}
+        ${webpack ? `"clean-webpack-plugin": "^3.0.0",` : ''}
+        ${webpack ? `"webpack-bundle-analyzer": "^3.6.0",` : ''}
+        ${webpack ? `"webpack-dev-server": "^3.9.0",` : ''}
         ${webpack ? `"optimize-css-assets-webpack-plugin": "^5.0.3",` : ''}
         ${webpack ? `"mini-css-extract-plugin": "^0.8.0",` : ''}
         ${webpack ? `"imagemin-webpack-plugin": "^2.4.2",` : ''}

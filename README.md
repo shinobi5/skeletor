@@ -35,7 +35,7 @@ cd <project-name> && rm -rf .git && git init
 > Custom element names require a hyphen (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)). This can be set during the setup.
 
 ```
-yarn && yarn setup
+yarn install && yarn setup && yarn prepare
 ```
 
 **Serve the project at `localhost:8080`**
