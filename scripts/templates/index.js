@@ -23,7 +23,7 @@ module.exports = (bundler, description, projectName, pwa) => {
         <a href="#content" class="sr-only">Skip to content</a>
 
         <main id="content">
-            Content
+            <x-skeletor></x-skeletor>
         </main>
 
         ${pwa ? `<script src="service-worker.js"></script>` : ''}

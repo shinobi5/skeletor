@@ -16,7 +16,7 @@ module.exports = (
     const buildRollup = `"build": "yarn css:concat && yarn css:minify && rollup --config config/rollup.prod.js",`;
     const buildWebpack = `"build": "yarn css:concat && yarn css:minify && webpack --config config/webpack.prod.js",`;
 
-    const cssConcat = `"css:conat": "cat src/css/settings/* src/css/global/* src/css/elements/* src/css/components/* src/css/utilities/* > src/styles.css",`;
+    const cssConcat = `"css:concat": "cat src/css/settings/* src/css/global/* src/css/elements/* src/css/components/* src/css/utilities/* > src/styles.css",`;
     const cssMinify = `"css:minify": "cleancss -o src/styles.css src/styles.css",`;
     const cssWatch = `"css:watch": "onchange 'src/css/**/*' -- yarn css:concat",`;
 
