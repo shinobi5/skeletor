@@ -152,37 +152,3 @@ customElements.define('x-app', component(App, { useShadowDOM: false }));
 Haunted's hooks API allows for state management within the components (same as React's hooks API). View haunted's [documentation](https://github.com/matthewp/haunted) for examples.
 
 Global state can be handled with either [redux](https://github.com/reduxjs/redux) or [beedle](https://github.com/andybelldesign/beedle).
-
-**Generate redux boilerplate at `src/state`**
-
-```
-yarn create-redux
-```
-
-**Generate beedle boilerplate at `src/state`**
-
-```
-yarn create-beedle
-```
-
-## Progressive web app (PWA)
-
-**Create PWA manifest and service worker files at `src`**
-
-```
-yarn create-pwa
-```
-
-**Include `manifest.json` and `service-worker.js` in `index.html`**
-
-```html
-<head>
-    ...
-    <link rel="manifest" href="manifest.json" />
-</head>
-<body>
-    ...
-    <script href="service-worker.js"></script>
-    <script type="module" src="app.js"></script>
-</body>
-```
