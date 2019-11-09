@@ -20,8 +20,8 @@ module.exports = (
     const cssMinify = `"css:minify": "cleancss -o src/styles.css src/styles.css",`;
     const cssWatch = `"css:watch": "onchange 'src/css/**/*' -- yarn css:concat",`;
 
-    const rollup = bundlerType === 'rollup' ? true : false;
-    const webpack = bundlerType === 'webpack' ? true : false;
+    const rollup = bundler && bundlerType === 'rollup' ? true : false;
+    const webpack = bundler && bundlerType === 'webpack' ? true : false;
 
     return `{
     "name": "${projectName.toLowerCase()}",
@@ -29,7 +29,6 @@ module.exports = (
     "dependencies": {
         ${state ? `"beedle": "^0.8.1",` : ''}
         ${webComponents ? `"haunted": "^4.5.4",` : ''}
-        ${webComponents ? `"lit-html": "^1.1.0",` : ''}
         ${state ? `"redux": "^4.0.4",` : ''}
         ${router ? `"router-component": "^0.8.0",` : ''}
         "@babel/runtime": "^7.6.3"
@@ -52,14 +51,13 @@ module.exports = (
         "onchange": "^5.2.0",
         "prettier": "1.18.2",
         "pretty-quick": "^1.11.0",
-        "prompt": "^1.0.0",
         ${rollup ? `"rollup": "^1.26.3",` : ''}
         ${rollup ? `"rollup-plugin-clear": "^2.0.7",` : ''}
         ${rollup ? `"rollup-plugin-commonjs": "^10.1.0",` : ''}
         ${rollup ? `"rollup-plugin-copy": "^3.1.0",` : ''}
         ${rollup ? `"rollup-plugin-generate-html-template": "^1.5.0",` : ''}
         ${rollup ? `"rollup-plugin-node-resolve": "^5.2.0",` : ''}
-        ${rollup ? `"rollup-plugin-terser": "^5.1.2"` : ''}
+        ${rollup ? `"rollup-plugin-terser": "^5.1.2",` : ''}
         ${webpack ? `"webpack": "^4.41.2",` : ''}
         ${webpack ? `"webpack-bundle-analyzer": "^3.6.0",` : ''}
         ${webpack ? `"webpack-cli": "^3.3.10",` : ''}
@@ -72,7 +70,8 @@ module.exports = (
         ${webpack ? `"file-loader": "^4.2.0",` : ''}
         ${webpack ? `"css-loader": "^3.2.0",` : ''}
         ${webpack ? `"copy-webpack-plugin": "^5.0.5",` : ''}
-        ${webpack ? `"babel-loader": "^8.0.6"` : ''}
+        ${webpack ? `"babel-loader": "^8.0.6",` : ''}
+        "prompt": "^1.0.0",
     },
     "scripts": {
         "babel": "npx babel src -d build --copy-files",

@@ -2,7 +2,8 @@
   "name": "skeletor",
   "description": "Front-end boilerplate with a focus on the web platform",
   "dependencies": {
-    "@babel/runtime": "^7.6.3"
+    "@babel/runtime": "^7.6.3",
+    "lit-html": "^1.1.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
