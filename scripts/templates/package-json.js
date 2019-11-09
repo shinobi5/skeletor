@@ -27,11 +27,12 @@ module.exports = (
     "name": "${projectName.toLowerCase()}",
     "description": "${description}",
     "dependencies": {
+        "@babel/runtime": "^7.6.3",
         ${state ? `"beedle": "^0.8.1",` : ''}
         ${webComponents ? `"haunted": "^4.5.4",` : ''}
         ${state ? `"redux": "^4.0.4",` : ''}
         ${router ? `"router-component": "^0.8.0",` : ''}
-        "@babel/runtime": "^7.6.3"
+        "lit-html": "^1.1.0"
     },
     "devDependencies": {
         "@babel/cli": "^7.4.4",
