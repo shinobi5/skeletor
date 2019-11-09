@@ -12,6 +12,7 @@ const actionsTemplate = require('./templates/actions');
 const reducersTemplate = require('./templates/reducers');
 const storeTemplate = require('./templates/store');
 const createComponentTemplate = require('./templates/create-component');
+const indexTemplate = require('./templates/index');
 
 const ROOT = process.cwd();
 const srcDir = path.join(ROOT, 'src');
@@ -19,6 +20,7 @@ const scriptsDir = path.join(ROOT, 'scripts');
 const stateDir = path.join(ROOT, 'src/state');
 const actionsDir = path.join(stateDir, `actions`);
 const reducersDir = path.join(stateDir, `reducers`);
+const index = path.join(scriptsDir, 'index.js');
 const createComponent = path.join(scriptsDir, 'create-component.js');
 const packageJSON = path.join(ROOT, `package.json`);
 const manifest = path.join(srcDir, `manifest.json`);
@@ -165,10 +167,10 @@ function setupProject(config) {
         webComponents,
     } = config;
 
-    // if (fs.existsSync(manifest)) {
-    //     error(`:bomb: ${manifest} already exists`);
-    //     process.exit(1);
-    // }
+    if (fs.existsSync(manifest)) {
+        error(`:bomb: ${manifest} already exists`);
+        process.exit(1);
+    }
     fs.writeFileSync(
         packageJSON,
         packageJSONTemplate(
@@ -183,28 +185,28 @@ function setupProject(config) {
         )
     );
 
-    // if (fs.existsSync(manifest)) {
-    //     error(`:bomb: ${manifest} already exists`);
-    //     process.exit(1);
-    // }
+    if (fs.existsSync(manifest)) {
+        error(`:bomb: ${manifest} already exists`);
+        process.exit(1);
+    }
     fs.writeFileSync(
         manifest,
         manifestTemplate(projectName, description, themeColor, backgroundColor)
     );
 
-    // if (fs.existsSync(serviceWorker)) {
-    //     error(`:bomb: ${serviceWorker} already exists`);
-    //     process.exit(1);
-    // }
+    if (fs.existsSync(serviceWorker)) {
+        error(`:bomb: ${serviceWorker} already exists`);
+        process.exit(1);
+    }
     fs.writeFileSync(
         serviceWorker,
         serviceWorkerTemplate(projectName, enableServiceWorker)
     );
 
-    // if (fs.existsSync(stateDir)) {
-    //     error(`:bomb: ${stateDir} already exists`);
-    //     process.exit(1);
-    // }
+    if (fs.existsSync(stateDir)) {
+        error(`:bomb: ${stateDir} already exists`);
+        process.exit(1);
+    }
     mkdirp.sync(stateDir);
     mkdirp.sync(actionsDir);
     mkdirp.sync(reducersDir);
@@ -212,11 +214,12 @@ function setupProject(config) {
     fs.writeFileSync(reducersFile, reducersTemplate());
     fs.writeFileSync(storeFile, storeTemplate());
 
-    // if (fs.existsSync(stateDir)) {
-    //     error(`:bomb: ${scriptsDir} already exists`);
-    //     process.exit(1);
-    // }
     fs.writeFileSync(createComponent, createComponentTemplate(elementPrefix));
 
-    info(`:floppy_disk: Project created`);
+    fs.writeFileSync(
+        index,
+        indexTemplate(bundler, description, projectName, pwa)
+    );
+
+    info(`:floppy_disk: Project setup complete`);
 }

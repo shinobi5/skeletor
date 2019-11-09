@@ -1,4 +1,4 @@
-module.exports = (projectName, enableServiceWorker) => {
+module.exports = (bundler, description, projectName, pwa) => {
     return `<!DOCTYPE html>
 <html lang="en">
     <head>
@@ -7,7 +7,7 @@ module.exports = (projectName, enableServiceWorker) => {
         <title>${projectName}</title>
         <meta name="description" content="${description}" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="manifest" href="manifest.json" />
+        ${pwa && `<link rel="manifest" href="manifest.json" />`}
         <link rel="shortcut icon" href="favicon.ico" />
         <link rel="stylesheet" href="styles.css" />
     </head>
@@ -26,8 +26,8 @@ module.exports = (projectName, enableServiceWorker) => {
             Content
         </main>
 
-        <script src="service-worker.js"></script>
-        <script type="module" src="main.js"></script>
+        ${pwa && `<script src="service-worker.js"></script>`}
+        ${!bundler && `<script type="module" src="app.js"></script>`}
     </body>
 </html>
 `;
