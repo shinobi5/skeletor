@@ -216,11 +216,12 @@ function setupProject(config) {
         );
     }
 
-    webComponents &&
+    if (webComponents) {
         fs.writeFileSync(
             createComponent,
             createComponentTemplate(elementPrefix)
         );
+    }
 
     info(`:floppy_disk: Project setup complete`);
 }

@@ -1,5 +1,6 @@
 {
   "name": "skeletor",
+  "description": "",
   "dependencies": {
     "@babel/runtime": "^7.6.3",
     "haunted": "^4.5.4",
@@ -38,7 +39,7 @@
     "prettier:watch": "onchange '**/*.js' '**/*.css' -- prettier --write {{changed}}",
     "server:dev": "live-server --open=src",
     "server:build": "live-server --open=build",
-    "setup": "yarn && node scripts/setup.js && yarn",
+    "setup": "yarn && node scripts/setup.js && yarn && yarn prettier --write **/*.{json,html,js}",
     "start": "yarn css:concat && npm-run-all --parallel prettier:watch css:watch server:dev"
   },
   "husky": {
