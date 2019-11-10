@@ -1,6 +1,5 @@
 {
   "name": "skeletor",
-  "description": "",
   "dependencies": {
     "@babel/runtime": "^7.6.3",
     "haunted": "^4.5.4",
@@ -28,7 +27,7 @@
   },
   "scripts": {
     "babel": "npx babel src -d build --copy-files",
-    "build": "yarn css:concat && yarn css:minify && rollup --config config/rollup.prod.js",
+    "build": "yarn css:concat && yarn css:minify && yarn imagemin && yarn babel",
     "clean:modules": "rm -rf node_modules",
     "clean:build": "rm -rf build",
     "css:concat": "cat src/css/settings/* src/css/global/* src/css/elements/* src/css/components/* src/css/utilities/* > src/styles.css",
@@ -37,7 +36,7 @@
     "imagemin": "imagemin --out-dir=src/img src/img/**/*.{png,jpg,gif}",
     "prepare": "pika-web --dest src/js/modules --clean --optimize",
     "prettier:watch": "onchange '**/*.js' '**/*.css' -- prettier --write {{changed}}",
-    "server:dev": "rollup --config config/rollup.dev.js",
+    "server:dev": "live-server --open=src",
     "server:build": "live-server --open=build",
     "setup": "yarn && node scripts/setup.js && yarn",
     "start": "yarn css:concat && npm-run-all --parallel prettier:watch css:watch server:dev"
