@@ -93,7 +93,7 @@ customElements.define('x-app', component(App));
 -   [MDN](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
 -   [SSR for web components](https://medium.com/@treshugart/%C3%A5server-side-rendering-web-components-e5df705f3f48)
 
-## Styling
+## Styles
 
 When using web components, styles can be set within the [shadowDOM](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM) and will be scoped to the component.
 
