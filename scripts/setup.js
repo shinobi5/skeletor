@@ -216,7 +216,7 @@ function setupProject(config) {
         );
     }
 
-    if (webComponents) {
+    if (elementPrefix) {
         fs.writeFileSync(
             createComponent,
             createComponentTemplate(elementPrefix)
