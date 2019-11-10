@@ -54,19 +54,10 @@ prompt.get(
             default: true,
         },
         {
-            description: colors.brightMagenta('Web compoments?'),
-            name: 'webComponents',
-            type: 'boolean',
-            default: true,
-        },
-        {
-            description: colors.brightMagenta('Web compoments: prefix?'),
+            description: colors.brightMagenta('Web compoments prefix?'),
             name: 'elementPrefix',
             type: 'string',
             default: 'x',
-            ask: () => {
-                return prompt.history('webComponents').value;
-            },
         },
         {
             description: colors.brightMagenta('Router?'),
