@@ -32,7 +32,7 @@ cd <project-name> && rm -rf .git && git init
 
 > `dependencies` will be processed by [@pikapkg/web](https://github.com/pikapkg/web) and ready to be imported and used directly in the browser. Search [pika](https://www.pika.dev/) for esm ready packages
 
-> Custom element names require a hyphen (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)). This can be set during setup (default is `x`)
+> Custom element names require a hyphen (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)). Change this during setup (default is `x`)
 
 ```
 yarn setup
@@ -100,8 +100,6 @@ When using web components, styles can be set within the [shadowDOM](https://deve
 For global styles minimal CSS is provided by default (but can be disabled through the setup CLI) with tools to watch for changes and concatenate the individual files into a single minified `styles.css`.
 
 The concatenating happens in order from broad to specific styles based on the folder they're in (in the following order): `settings, global, elements, components, utilities`.
-
-Rename, add and remove folders from `src/css/` as necessary and update the `css:concat` script in [package.json](https://github.com/shinobi5/skeletor/blob/master/package.json) to customise concatenation order.
 
 ## Router
 
