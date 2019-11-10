@@ -6,30 +6,38 @@ module.exports = (
     projectName,
     router,
     state,
-    webComponents
+    stateType
 ) => {
-    const serverDev = `"server:dev": "live-server --open=src",`;
-    const serverDevRollup = `"server:dev": "rollup --config config/rollup.dev.js",`;
-    const serverDevWebpack = `"server:dev": "webpack-dev-server --open --config config/webpack.dev.js",`;
-
-    const build = `"build": "yarn css:concat && yarn css:minify && yarn imagemin && yarn babel",`;
-    const buildRollup = `"build": "yarn css:concat && yarn css:minify && rollup --config config/rollup.prod.js",`;
-    const buildWebpack = `"build": "yarn css:concat && yarn css:minify && webpack --config config/webpack.prod.js",`;
-
     const cssConcat = `"css:concat": "cat src/css/settings/* src/css/global/* src/css/elements/* src/css/components/* src/css/utilities/* > src/styles.css",`;
     const cssMinify = `"css:minify": "cleancss -o src/styles.css src/styles.css",`;
     const cssWatch = `"css:watch": "onchange 'src/css/**/*' -- yarn css:concat",`;
 
+    const serverDev = `"server:dev": "live-server --open=src",`;
+    const serverDevRollup = `"server:dev": "rollup --config config/rollup.dev.js",`;
+    const serverDevWebpack = `"server:dev": "webpack-dev-server --open --config config/webpack.dev.js",`;
+
+    const build = `"build": "yarn imagemin && yarn babel",`;
+    const buildRollup = `"build": "rollup --config config/rollup.prod.js",`;
+    const buildWebpack = `"build": "webpack --config config/webpack.prod.js",`;
+    const buildCSS = `"build": "yarn css:concat && yarn css:minify && yarn imagemin && yarn babel",`;
+    const buildRollupCSS = `"build": "yarn css:concat && yarn css:minify && rollup --config config/rollup.prod.js",`;
+    const buildWebpackCSS = `"build": "yarn css:concat && yarn css:minify && webpack --config config/webpack.prod.js",`;
+
+    const start = `"start": "npm-run-all --parallel prettier:watch server:dev"`;
+    const startCSS = `"start": "yarn css:concat && npm-run-all --parallel prettier:watch css:watch server:dev"`;
+
     const rollup = bundler && bundlerType === 'rollup' ? true : false;
     const webpack = bundler && bundlerType === 'webpack' ? true : false;
+    const redux = state && stateType === 'redux' ? true : false;
+    const beedle = state && stateType === 'beedle' ? true : false;
 
     return `{
     "name": "${projectName.toLowerCase()}",
     "description": "${description}",
     "dependencies": {
         "@babel/runtime": "^7.6.3",
-        ${state ? `"beedle": "^0.8.1",` : ''}
-        ${state ? `"redux": "^4.0.4",` : ''}
+        ${beedle ? `"beedle": "^0.8.1",` : ''}
+        ${redux ? `"redux": "^4.0.4",` : ''}
         ${router ? `"router-component": "^0.8.0",` : ''}
         "haunted": "^4.5.4",
         "lit-html": "^1.1.0"
@@ -78,7 +86,19 @@ module.exports = (
     },
     "scripts": {
         "babel": "npx babel src -d build --copy-files",
-        ${!bundler ? build : rollup ? buildRollup : buildWebpack}
+        ${
+            !bundler && !css
+                ? build
+                : rollup && css
+                ? buildRollupCSS
+                : rollup && !css
+                ? buildRollup
+                : webpack && css
+                ? buildWebpackCSS
+                : webpack && !css
+                ? buildWebpack
+                : buildCSS
+        }
         "clean:modules": "rm -rf node_modules",
         "clean:build": "rm -rf build",
         ${css ? cssConcat : ''}
@@ -89,8 +109,8 @@ module.exports = (
         "prettier:watch": "onchange '**/*.js' '**/*.css' -- prettier --write {{changed}}",
         ${!bundler ? serverDev : rollup ? serverDevRollup : serverDevWebpack}
         "server:build": "live-server --open=build",
-        "setup": "yarn && node scripts/setup.js && yarn && yarn prettier --write **/*.{json,html,js}",
-        "start": "yarn css:concat && npm-run-all --parallel prettier:watch css:watch server:dev"
+        "setup": "yarn && node scripts/setup.js && yarn && npx prettier --write **/*.{json,html,js}",
+        ${css ? startCSS : start}
     },
     "husky": {
         "hooks": {

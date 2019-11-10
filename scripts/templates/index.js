@@ -1,4 +1,4 @@
-module.exports = (bundler, description, projectName, pwa) => {
+module.exports = (bundler, css, description, projectName, pwa) => {
     return `<!DOCTYPE html>
 <html lang="en">
     <head>
@@ -9,7 +9,7 @@ module.exports = (bundler, description, projectName, pwa) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         ${pwa ? `<link rel="manifest" href="manifest.json" />` : ''}
         <link rel="shortcut icon" href="favicon.ico" />
-        <link rel="stylesheet" href="styles.css" />
+        ${css ? `<link rel="stylesheet" href="styles.css" />` : ''}
     </head>
     <body>
         <noscript>
@@ -19,8 +19,6 @@ module.exports = (bundler, description, projectName, pwa) => {
                 >instructions for enabling JavaScript in your web browser</a
             >.
         </noscript>
-
-        <a href="#content" class="sr-only">Skip to content</a>
 
         <main id="content">
             <x-skeletor></x-skeletor>
