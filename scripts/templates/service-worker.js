@@ -9,7 +9,7 @@ const cacheName = '${projectName.toLowerCase()}-v1';
 const contentToCache = [
     '/',
     '/index.html',
-    '/main.js',
+    '/app.js',
     '/styles.css',
     '/favicon.ico',
 ];
