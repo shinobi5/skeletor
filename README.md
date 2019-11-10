@@ -28,11 +28,11 @@ cd <project-name> && rm -rf .git && git init
 
 **Setup CLI**
 
-> `yarn` is used but can be substituted with `npm` if that is preferred.
+> `yarn` is used but can be substituted with `npm` if that is preferred
 
-> `dependencies` will be processed by [@pikapkg/web](https://github.com/pikapkg/web) and ready to be imported and used directly in the browser. Search [pika](https://www.pika.dev/) for esm ready packages.
+> `dependencies` will be processed by [@pikapkg/web](https://github.com/pikapkg/web) and ready to be imported and used directly in the browser. Search [pika](https://www.pika.dev/) for esm ready packages
 
-> Custom element names require a hyphen (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)).
+> Custom element names require a hyphen (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)). This can be set during setup (default is `x`)
 
 ```
 yarn setup
@@ -91,23 +91,21 @@ customElements.define('x-app', component(App));
 -   [webcomponents](https://www.webcomponents.org)
 -   [Open WC](https://open-wc.org/)
 -   [MDN](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
--   https://github.com/whatwg/dom/issues/510
--   https://github.com/whatwg/dom/issues/510#issuecomment-370980398
 -   [SSR for web components](https://medium.com/@treshugart/%C3%A5server-side-rendering-web-components-e5df705f3f48)
 
 ## Styling
 
 When using web components, styles can be set within the [shadowDOM](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM) and will be scoped to the component.
 
-For global styles minimal CSS is provided with CLI tools to watch for changes and concatenate the individual files into a single minified `styles.css`.
+For global styles minimal CSS is provided by default (but can be disabled through the setup CLI) with tools to watch for changes and concatenate the individual files into a single minified `styles.css`.
 
 The concatenating happens in order from broad to specific styles based on the folder they're in (in the following order): `settings, global, elements, components, utilities`.
 
 Rename, add and remove folders from `src/css/` as necessary and update the `css:concat` script in [package.json](https://github.com/shinobi5/skeletor/blob/master/package.json) to customise concatenation order.
 
-## Routing
+## Router
 
-Routing can be handled with [router-component](https://github.com/mkay581/router-component).
+See [router-component](https://github.com/mkay581/router-component).
 
 **Usage examples**
 
@@ -149,6 +147,6 @@ customElements.define('x-app', component(App, { useShadowDOM: false }));
 
 ## State
 
-For web components, Haunted's hooks API provides state management within the components (same as React's hooks API). View haunted's [documentation](https://github.com/matthewp/haunted) for examples.
+Haunted's hooks API provides state management within the components (same as React's hooks API). View haunted's [documentation](https://github.com/matthewp/haunted) for examples.
 
-Global state can be handled with either [redux](https://github.com/reduxjs/redux) or [beedle](https://github.com/andybelldesign/beedle).
+Global state can be handled with either [redux](https://github.com/reduxjs/redux) or [beedle](https://github.com/andybelldesign/beedle) with or without web components.
