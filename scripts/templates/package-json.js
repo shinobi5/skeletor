@@ -109,7 +109,7 @@ module.exports = (
         "prettier:watch": "onchange '**/*.js' '**/*.css' -- prettier --write {{changed}}",
         ${!bundler ? serverDev : rollup ? serverDevRollup : serverDevWebpack}
         "server:build": "live-server --open=build",
-        "setup": "yarn && node scripts/setup.js && yarn && npx prettier --write **/*.{json,html,js}",
+        "setup": "yarn && node scripts/setup.js && npx prettier --write **/*.{json,html,js} && yarn",
         ${css ? startCSS : start}
     },
     "husky": {

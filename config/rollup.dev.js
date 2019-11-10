@@ -40,6 +40,7 @@ export default {
             target: 'index.html',
         }),
         serve({
+            open: true,
             contentBase: 'build',
             port: 8080,
         }),
