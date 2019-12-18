@@ -1,11 +1,9 @@
-module.exports = ( 
-    elementPrefix, 
-    ) => {
-return `
+module.exports = elementPrefix => {
+    return `
 const path = require('path');
 const fs = require('fs-extra');
 const mkdirp = require('mkdirp');
-const prompt = require('prompt');
+const prompts = require('prompts');
 const { info, error } = require('hankey');
 const componentTemplate = require('./templates/component');
 const componentsDir = path.join(process.cwd(), 'src/js/components');
@@ -17,47 +15,42 @@ const processHyphen = pattern =>
         return match.toUpperCase();
     });
 
-prompt.start();
-
-prompt.get(
-    [
-        {
-            description: 'Component name',
+    (async () => {
+        const response = await prompts({
             name: 'componentName',
-            type: 'string',
-            pattern: /^[a-zA-Z0-9\-]+$/,
-            default: 'Component',
-            required: true,
-        },
-    ],
-    (err, result) => {
-        if (err) {
-            error(\`:bomb: \${err}\`);
+            type: 'text',
+            message: 'Component name',
+            initial: 'Component',
+            validate: projectName => {
+                const pattern = /^[a-zA-Z0-9\-]+$/;
+                return pattern.test(projectName)
+                    ? true
+                    : colors.brightRed(
+                          'Only letters, numbers and hyphens are valid'
+                      );
+            },
+        });
+    
+        createComponent(response);
+    })();
+    
+    function createComponent(config) {
+        const { componentName } = config;
+        const processedName = processHyphen(componentName);
+        const componentDir = path.join(componentsDir, processedName);
+        const componentFileName = path.join(componentDir, \`${processedName}.js\`);
+    
+        if (fs.existsSync(componentDir)) {
+            error(\`:bomb: ${processHyphen(componentDir)} already exists\`);
             process.exit(1);
-        } else {
-            createComponent(result);
-            process.exit();
         }
+    
+        mkdirp.sync(componentDir);
+        fs.writeFileSync(
+            componentFileName,
+            componentTemplate(processedName, componentName, elementPrefix)
+        );
+        info(\`:floppy_disk: ${processedName} created\`);
     }
-);
-
-function createComponent(config) {
-    const { componentName } = config;
-    const processedName = processHyphen(componentName);
-    const componentDir = path.join(componentsDir, processedName);
-    const componentFileName = path.join(componentDir, \`\${processedName}.js\`);
-
-    if (fs.existsSync(componentDir)) {
-        error(\`:bomb: \${processHyphen(componentDir)} already exists\`);
-        process.exit(1);
-    }
-
-    mkdirp.sync(componentDir);
-    fs.writeFileSync(
-        componentFileName,
-        componentTemplate(processedName, componentName, elementPrefix)
-    );
-    info(\`:floppy_disk: \${processedName} created\`);
-}
 `;
-}
+};
