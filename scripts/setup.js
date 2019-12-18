@@ -83,7 +83,7 @@ const storeFile = path.join(stateDir, 'store.js');
             initial: false,
         },
         {
-            name: 'bundleType',
+            name: 'bundlerType',
             type: prev => (prev ? 'select' : null),
             message: colors.brightMagenta('Bundler: Rollup or Webpack'),
             initial: 0,
@@ -121,6 +121,7 @@ const storeFile = path.join(stateDir, 'store.js');
     ];
 
     const response = await prompts(questions);
+    console.log(response);
 
     setupProject(response);
 })();
