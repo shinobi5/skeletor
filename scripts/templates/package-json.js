@@ -1,4 +1,4 @@
-const deps = require('../../config/pkg.deps.js');
+const deps = require('../../config/pkg.dependencies.js');
 const scripts = require('../../config/pkg.scripts.js');
 
 module.exports = (
@@ -113,7 +113,7 @@ module.exports = (
                 : ''
         }
         ${webpack ? `"babel-loader": "${deps.webpack.babelLoader}",` : ''}
-        "prompt": "${deps.prompt}"
+        "prompts": "${deps.prompts}"
     },
     "scripts": {
         "babel": "npx babel src -d build --copy-files",
@@ -130,6 +130,7 @@ module.exports = (
                 ? scripts.build.webpack
                 : scripts.build.css
         }
+        "create-component": "node scripts/create-component.js",
         "clean:modules": "rm -rf node_modules",
         "clean:build": "rm -rf build",
         ${css ? scripts.css.concat : ''}

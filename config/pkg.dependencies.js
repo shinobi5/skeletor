@@ -24,7 +24,7 @@ module.exports = {
     },
     prettier: '1.18.2',
     prettyQuick: '^1.11.0',
-    prompt: '^1.0.0',
+    prompts: '^2.3.0',
     redux: '^4.0.4',
     rollup: {
         rollup: '^1.26.13',

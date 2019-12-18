@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs-extra');
 const mkdirp = require('mkdirp');
-const prompt = require('prompt');
+const prompts = require('prompts');
 const { info, error } = require('hankey');
 const componentTemplate = require('./templates/component');
 const componentsDir = path.join(process.cwd(), 'src/js/components');
@@ -13,29 +13,16 @@ const processHyphen = pattern =>
         return match.toUpperCase();
     });
 
-prompt.start();
+(async () => {
+    const response = await prompts({
+        name: 'componentName',
+        type: 'text',
+        message: 'Component name',
+        initial: 'Component',
+    });
 
-prompt.get(
-    [
-        {
-            description: 'Component name',
-            name: 'componentName',
-            type: 'string',
-            pattern: /^[a-zA-Z0-9-]+$/,
-            default: 'Component',
-            required: true,
-        },
-    ],
-    (err, result) => {
-        if (err) {
-            error(`:bomb: ${err}`);
-            process.exit(1);
-        } else {
-            createComponent(result);
-            process.exit();
-        }
-    }
-);
+    createComponent(response);
+})();
 
 function createComponent(config) {
     const { componentName } = config;

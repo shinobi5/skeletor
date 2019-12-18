@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs-extra');
 const mkdirp = require('mkdirp');
-const prompt = require('prompt');
+const prompts = require('prompts');
 const colors = require('colors/safe');
 const { info, error } = require('hankey');
 
@@ -29,118 +29,101 @@ const actionsFile = path.join(actionsDir, `index.js`);
 const reducersFile = path.join(reducersDir, `index.js`);
 const storeFile = path.join(stateDir, 'store.js');
 
-prompt.start();
-
-prompt.get(
-    [
+(async () => {
+    const questions = [
         {
-            description: colors.brightMagenta('Project name'),
             name: 'projectName',
-            type: 'string',
-            pattern: /^[a-zA-Z0-9\-]+$/,
-            default: 'Skeletor',
+            type: 'text',
+            message: colors.brightMagenta('Project name'),
+            initial: 'Skeletor',
         },
         {
-            description: colors.brightMagenta('Project description'),
             name: 'description',
-            type: 'string',
-            pattern: /^[a-zA-Z0-9\-]+$/,
-            default: '',
+            type: 'text',
+            message: colors.brightMagenta('Project description'),
         },
         {
-            description: colors.brightMagenta('Global CSS?'),
             name: 'css',
-            type: 'boolean',
-            default: true,
+            type: 'confirm',
+            message: colors.brightMagenta('Global CSS?'),
+            initial: true,
         },
         {
-            description: colors.brightMagenta('Web compoments prefix?'),
             name: 'elementPrefix',
-            type: 'string',
-            default: 'x',
+            type: 'text',
+            message: colors.brightMagenta('Web compoments prefix?'),
+            initial: 'x',
         },
         {
-            description: colors.brightMagenta('Router?'),
             name: 'router',
-            type: 'boolean',
-            default: false,
+            type: 'confirm',
+            message: colors.brightMagenta('Router?'),
+            initial: false,
         },
         {
-            description: colors.brightMagenta('Global state?'),
             name: 'state',
-            type: 'boolean',
-            default: false,
+            type: 'confirm',
+            message: colors.brightMagenta('Global state?'),
+            initial: false,
         },
         {
-            description: colors.brightMagenta('State: Beedle or Redux?'),
             name: 'stateType',
-            type: 'string',
-            pattern: /beedle|redux$/,
-            message: 'Must be either beedle or redux',
-            default: 'redux',
-            ask: () => prompt.history('state').value,
+            type: prev => (prev ? 'select' : null),
+            message: colors.brightMagenta('State: Beedle or Redux?'),
+            initial: 0,
+            choices: [
+                { title: 'Redux', value: 'redux' },
+                { title: 'Beedle', value: 'beedle' },
+            ],
         },
         {
-            description: colors.brightMagenta('Bundler?'),
             name: 'bundler',
-            type: 'boolean',
-            default: false,
+            type: 'confirm',
+            message: colors.brightMagenta('Bundler?'),
+            initial: false,
         },
         {
-            description: colors.brightMagenta(
-                'Bundler: Either rollup or webpack for bundler'
-            ),
-            name: 'bundlerType',
-            type: 'string',
-            default: 'rollup',
-            pattern: /rollup|webpack$/,
-            message: 'Must be either rollup or webpack',
-            ask: () => prompt.history('bundler').value,
+            name: 'bundleType',
+            type: prev => (prev ? 'select' : null),
+            message: colors.brightMagenta('Bundler: Rollup or Webpack'),
+            initial: 0,
+            choices: [
+                { title: 'Rollup', value: 'rollup' },
+                { title: 'Webpack', value: 'webpack' },
+            ],
         },
         {
-            description: colors.brightMagenta('PWA?'),
             name: 'pwa',
-            type: 'boolean',
-            default: false,
+            type: 'confirm',
+            message: colors.brightMagenta('PWA?'),
+            initial: false,
         },
         {
-            description: colors.brightMagenta('PWA: Theme color'),
             name: 'themeColor',
-            type: 'string',
-            pattern: /^#[0-9]+$/,
-            message: 'Must be a hex value e.g. #222222',
-            default: '#222222',
-            ask: () => prompt.history('pwa').value,
+            type: prev => (prev ? 'text' : null),
+            message: colors.brightMagenta('PWA: Theme color'),
+            initial: '#000000',
         },
         {
-            description: colors.brightMagenta('PWA: Background color'),
             name: 'backgroundColor',
-            type: 'string',
-            pattern: /^#[0-9]+$/,
-            message: 'Must be a hex value e.g. #222222',
-            default: '#222222',
-            ask: () => prompt.history('pwa').value,
+            type: prev => (prev ? 'text' : null),
+            message: colors.brightMagenta('PWA: Background color'),
+            initial: '#000000',
         },
         {
-            description: colors.brightMagenta(
+            name: 'enableServiceWorker',
+            type: prev => (prev ? 'confirm' : null),
+            message: colors.brightMagenta(
                 'PWA: Enable offline service worker?'
             ),
-            name: 'enableServiceWorker',
-            type: 'boolean',
-            default: false,
-            ask: () => prompt.history('pwa').value,
+            initial: false,
         },
-    ],
-    (err, result) => {
-        if (err) {
-            error(`:bomb: ${err}`);
-            process.exit(1);
-        } else {
-            setupProject(result);
-            process.exit();
-        }
-    }
-);
+    ];
+
+    const response = await prompts(questions);
+
+    setupProject(response);
+})();
 
 function setupProject(config) {
     const {
