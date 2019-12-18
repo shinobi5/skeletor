@@ -23,7 +23,9 @@ const processHyphen = pattern =>
             const pattern = /^[a-zA-Z0-9\-]+$/;
             return pattern.test(projectName)
                 ? true
-                : 'Only letters, numbers and hyphens are valid';
+                : colors.brightRed(
+                      'Only letters, numbers and hyphens are valid'
+                  );
         },
     });
 
