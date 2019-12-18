@@ -1,3 +1,6 @@
+const dependencies = require('../../config/dependencies.js');
+const scripts = require('../../config/scripts.js');
+
 module.exports = (
     bundler,
     bundlerType,
@@ -8,109 +11,163 @@ module.exports = (
     state,
     stateType
 ) => {
-    const cssConcat = `"css:concat": "cat src/css/settings/* src/css/global/* src/css/elements/* src/css/components/* src/css/utilities/* > src/styles.css",`;
-    const cssMinify = `"css:minify": "cleancss -o src/styles.css src/styles.css",`;
-    const cssWatch = `"css:watch": "onchange 'src/css/**/*' -- yarn css:concat",`;
-
-    const serverDev = `"server:dev": "live-server --open=src",`;
-    const serverDevRollup = `"server:dev": "rollup --config config/rollup.dev.js",`;
-    const serverDevWebpack = `"server:dev": "webpack-dev-server --open --config config/webpack.dev.js",`;
-
-    const build = `"build": "yarn imagemin && yarn babel",`;
-    const buildRollup = `"build": "rollup --config config/rollup.prod.js",`;
-    const buildWebpack = `"build": "webpack --config config/webpack.prod.js",`;
-    const buildCSS = `"build": "yarn css:concat && yarn css:minify && yarn imagemin && yarn babel",`;
-    const buildRollupCSS = `"build": "yarn css:concat && yarn css:minify && rollup --config config/rollup.prod.js",`;
-    const buildWebpackCSS = `"build": "yarn css:concat && yarn css:minify && webpack --config config/webpack.prod.js",`;
-
-    const start = `"start": "npm-run-all --parallel prettier:watch server:dev"`;
-    const startCSS = `"start": "yarn css:concat && npm-run-all --parallel prettier:watch css:watch server:dev"`;
-
-    const rollup = bundler && bundlerType === 'rollup' ? true : false;
-    const webpack = bundler && bundlerType === 'webpack' ? true : false;
-    const redux = state && stateType === 'redux' ? true : false;
-    const beedle = state && stateType === 'beedle' ? true : false;
+    const rollup = bundler && bundlerType === 'rollup';
+    const webpack = bundler && bundlerType === 'webpack';
+    const redux = state && stateType === 'redux';
+    const beedle = state && stateType === 'beedle';
 
     return `{
     "name": "${projectName.toLowerCase()}",
     "description": "${description}",
     "dependencies": {
-        "@babel/runtime": "^7.6.3",
-        ${beedle ? `"beedle": "^0.8.1",` : ''}
-        ${redux ? `"redux": "^4.0.4",` : ''}
-        ${router ? `"router-component": "^0.8.0",` : ''}
-        "haunted": "^4.5.4",
-        "lit-html": "^1.1.0"
+        "@babel/runtime": "${dependencies.babel.runtime}",
+        ${beedle ? `"beedle": "${dependencies.beedle}",` : ''}
+        ${redux ? `"redux": "${dependencies.redux}",` : ''}
+        ${router ? `"router-component": "${dependencies.router}",` : ''}
+        "haunted": "${dependencies.haunted}",
+        "lit-html": "${dependencies.litHtml}"
     },
     "devDependencies": {
-        "@babel/cli": "^7.4.4",
-        "@babel/core": "^7.4.5",
-        "@babel/plugin-transform-runtime": "^7.6.2",
-        "@babel/preset-env": "^7.4.5",
-        "@pika/web": "^0.4.3",
-        "clean-css-cli": "^4.2.1",
-        "colors": "^1.4.0",
-        "fs-extra": "^8.0.1",
-        "glob": "^7.1.3",
-        "hankey": "^0.0.3",
-        "husky": "^2.4.1",
-        "imagemin-cli": "^4.0.1",
-        "live-server": "^1.2.1",
-        "npm-run-all": "^4.1.5",
-        "onchange": "^5.2.0",
-        "prettier": "1.18.2",
-        "pretty-quick": "^1.11.0",
-        ${rollup ? `"rollup": "^1.26.3",` : ''}
-        ${rollup ? `"rollup-plugin-serve": "^1.0.1",` : ''}
-        ${rollup ? `"rollup-plugin-clear": "^2.0.7",` : ''}
-        ${rollup ? `"rollup-plugin-commonjs": "^10.1.0",` : ''}
-        ${rollup ? `"rollup-plugin-copy": "^3.1.0",` : ''}
-        ${rollup ? `"rollup-plugin-generate-html-template": "^1.5.0",` : ''}
-        ${rollup ? `"rollup-plugin-node-resolve": "^5.2.0",` : ''}
-        ${rollup ? `"rollup-plugin-terser": "^5.1.2",` : ''}
-        ${webpack ? `"webpack": "^4.41.2",` : ''}
-        ${webpack ? `"webpack-cli": "^3.3.10",` : ''}
-        ${webpack ? `"webpack-merge": "^4.2.2",` : ''}
-        ${webpack ? `"clean-webpack-plugin": "^3.0.0",` : ''}
-        ${webpack ? `"webpack-bundle-analyzer": "^3.6.0",` : ''}
-        ${webpack ? `"webpack-dev-server": "^3.9.0",` : ''}
-        ${webpack ? `"optimize-css-assets-webpack-plugin": "^5.0.3",` : ''}
-        ${webpack ? `"mini-css-extract-plugin": "^0.8.0",` : ''}
-        ${webpack ? `"imagemin-webpack-plugin": "^2.4.2",` : ''}
-        ${webpack ? `"html-webpack-plugin": "^3.2.0",` : ''}
-        ${webpack ? `"file-loader": "^4.2.0",` : ''}
-        ${webpack ? `"css-loader": "^3.2.0",` : ''}
-        ${webpack ? `"copy-webpack-plugin": "^5.0.5",` : ''}
-        ${webpack ? `"babel-loader": "^8.0.6",` : ''}
-        "prompt": "^1.0.0"
+        "@babel/cli": "${dependencies.babel.cli}",
+        "@babel/core": "${dependencies.babel.core}",
+        "@babel/plugin-transform-runtime": "${
+            dependencies.babel.pluginTransformRuntime
+        }",
+        "@babel/preset-env": "${dependencies.babel.presetEnv}",
+        "@pika/web": "${dependencies.pika.web}",
+        "clean-css-cli": "${dependencies.cleanCSSCli}",
+        "colors": "${dependencies.colors}",
+        "fs-extra": "${dependencies.fsExtra}",
+        "glob": "${dependencies.glob}",
+        "hankey": "${dependencies.hankey}",
+        "husky": "${dependencies.husky}",
+        "imagemin-cli": "${dependencies.imageMinCli}",
+        "live-server": "${dependencies.liveServer}",
+        "npm-run-all": "${dependencies.npmRunAll}",
+        "onchange": "${dependencies.onChange}",
+        "prettier": "${dependencies.prettier}",
+        "pretty-quick": "${dependencies.prettyQuick}",
+        ${rollup ? `"rollup": "${dependencies.rollup.rollup}",` : ''}
+        ${
+            rollup
+                ? `"rollup-plugin-serve": "${dependencies.rollup.pluginServer}",`
+                : ''
+        }
+        ${
+            rollup
+                ? `"rollup-plugin-clear": "${dependencies.rollup.pluginClear}",`
+                : ''
+        }
+        ${
+            rollup
+                ? `"rollup-plugin-commonjs": "${dependencies.rollup.pluginCommonjs}",`
+                : ''
+        }
+        ${
+            rollup
+                ? `"rollup-plugin-copy": "${dependencies.rollup.pluginCopy}",`
+                : ''
+        }
+        ${
+            rollup
+                ? `"rollup-plugin-generate-html-template": "${dependencies.rollup.pluginGenerateHtmlTemplate}",`
+                : ''
+        }
+        ${
+            rollup
+                ? `"rollup-plugin-node-resolve": "${dependencies.rollup.pluginNodeResolve}",`
+                : ''
+        }
+        ${
+            rollup
+                ? `"rollup-plugin-terser": "${dependencies.rollup.pluginTerser}",`
+                : ''
+        }
+        ${webpack ? `"webpack": "${dependencies.webpack.webpack}",` : ''}
+        ${webpack ? `"webpack-cli": "${dependencies.webpack.cli}",` : ''}
+        ${webpack ? `"webpack-merge": "${dependencies.webpack.merge}",` : ''}
+        ${
+            webpack
+                ? `"clean-webpack-plugin": "${dependencies.webpack.cleanWbpackPlugin}",`
+                : ''
+        }
+        ${
+            webpack
+                ? `"webpack-bundle-analyzer": "${dependencies.webpack.bundleAnalyzer}",`
+                : ''
+        }
+        ${
+            webpack
+                ? `"webpack-dev-server": "${dependencies.webpack.devServer}",`
+                : ''
+        }
+        ${
+            webpack
+                ? `"optimize-css-assets-webpack-plugin": "${dependencies.webpack.optimizeCssAssetsWebpackPlugin}",`
+                : ''
+        }
+        ${
+            webpack
+                ? `"mini-css-extract-plugin": "${dependencies.webpack.miniCssExtractPlugin}",`
+                : ''
+        }
+        ${
+            webpack
+                ? `"imagemin-webpack-plugin": "${dependencies.webpack.imageminWebpackPlugin}",`
+                : ''
+        }
+        ${
+            webpack
+                ? `"html-webpack-plugin": "${dependencies.webpack.htmlWebpackPlugin}",`
+                : ''
+        }
+        ${webpack ? `"file-loader": "${dependencies.webpack.fileLoader}",` : ''}
+        ${webpack ? `"css-loader": "${dependencies.webpack.cssLoader}",` : ''}
+        ${
+            webpack
+                ? `"copy-webpack-plugin": "${dependencies.webpack.copyWebpackPlugin}",`
+                : ''
+        }
+        ${
+            webpack
+                ? `"babel-loader": "${dependencies.webpack.babelLoader}",`
+                : ''
+        }
+        "prompt": "${dependencies.prompt}"
     },
     "scripts": {
         "babel": "npx babel src -d build --copy-files",
         ${
             !bundler && !css
-                ? build
+                ? scripts.build.build
                 : rollup && css
-                ? buildRollupCSS
+                ? scripts.build.rollupCss
                 : rollup && !css
-                ? buildRollup
+                ? scripts.build.rollup
                 : webpack && css
-                ? buildWebpackCSS
+                ? scripts.build.webpackCss
                 : webpack && !css
-                ? buildWebpack
-                : buildCSS
+                ? scripts.build.webpack
+                : scripts.build.css
         }
         "clean:modules": "rm -rf node_modules",
         "clean:build": "rm -rf build",
-        ${css ? cssConcat : ''}
-        ${css ? cssMinify : ''}
-        ${css ? cssWatch : ''}
+        ${css ? scripts.css.concat : ''}
+        ${css ? scripts.css.minify : ''}
+        ${css ? scripts.css.watch : ''}
         "imagemin": "imagemin --out-dir=src/img src/img/**/*.{png,jpg,gif}",
         "prepare": "pika-web --dest src/js/modules --clean --optimize",
         "prettier:watch": "onchange '**/*.js' '**/*.css' -- prettier --write {{changed}}",
-        ${!bundler ? serverDev : rollup ? serverDevRollup : serverDevWebpack}
+        ${
+            !bundler
+                ? scripts.server.dev
+                : rollup
+                ? scripts.server.devRollup
+                : scripts.server.devWebpack
+        }
         "server:build": "live-server --open=build",
         "setup": "yarn && node scripts/setup.js && npx prettier --write **/*.{json,html,js} && yarn",
-        ${css ? startCSS : start}
+        ${css ? scripts.start.css : scripts.start.start}
     },
     "husky": {
         "hooks": {
