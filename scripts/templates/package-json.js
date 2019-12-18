@@ -1,5 +1,5 @@
-const dependencies = require('../../config/dependencies.js');
-const scripts = require('../../config/scripts.js');
+const dependencies = require('../../config/pkg.dependencies.js');
+const scripts = require('../../config/pkg.scripts.js');
 
 module.exports = (
     bundler,
