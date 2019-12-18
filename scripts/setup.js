@@ -121,7 +121,6 @@ const storeFile = path.join(stateDir, 'store.js');
     ];
 
     const response = await prompts(questions);
-    console.log(response);
 
     setupProject(response);
 })();
