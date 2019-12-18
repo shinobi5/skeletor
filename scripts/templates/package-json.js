@@ -1,4 +1,4 @@
-const dependencies = require('../../config/pkg.dependencies.js');
+const deps = require('../../config/pkg.deps.js');
 const scripts = require('../../config/pkg.scripts.js');
 
 module.exports = (
@@ -20,120 +20,100 @@ module.exports = (
     "name": "${projectName.toLowerCase()}",
     "description": "${description}",
     "dependencies": {
-        "@babel/runtime": "${dependencies.babel.runtime}",
-        ${beedle ? `"beedle": "${dependencies.beedle}",` : ''}
-        ${redux ? `"redux": "${dependencies.redux}",` : ''}
-        ${router ? `"router-component": "${dependencies.router}",` : ''}
-        "haunted": "${dependencies.haunted}",
-        "lit-html": "${dependencies.litHtml}"
+        "@babel/runtime": "${deps.babel.runtime}",
+        ${beedle ? `"beedle": "${deps.beedle}",` : ''}
+        ${redux ? `"redux": "${deps.redux}",` : ''}
+        ${router ? `"router-component": "${deps.router}",` : ''}
+        "haunted": "${deps.haunted}",
+        "lit-html": "${deps.litHtml}"
     },
     "devDependencies": {
-        "@babel/cli": "${dependencies.babel.cli}",
-        "@babel/core": "${dependencies.babel.core}",
+        "@babel/cli": "${deps.babel.cli}",
+        "@babel/core": "${deps.babel.core}",
         "@babel/plugin-transform-runtime": "${
-            dependencies.babel.pluginTransformRuntime
+            deps.babel.pluginTransformRuntime
         }",
-        "@babel/preset-env": "${dependencies.babel.presetEnv}",
-        "@pika/web": "${dependencies.pika.web}",
-        "clean-css-cli": "${dependencies.cleanCSSCli}",
-        "colors": "${dependencies.colors}",
-        "fs-extra": "${dependencies.fsExtra}",
-        "glob": "${dependencies.glob}",
-        "hankey": "${dependencies.hankey}",
-        "husky": "${dependencies.husky}",
-        "imagemin-cli": "${dependencies.imageMinCli}",
-        "live-server": "${dependencies.liveServer}",
-        "npm-run-all": "${dependencies.npmRunAll}",
-        "onchange": "${dependencies.onChange}",
-        "prettier": "${dependencies.prettier}",
-        "pretty-quick": "${dependencies.prettyQuick}",
-        ${rollup ? `"rollup": "${dependencies.rollup.rollup}",` : ''}
+        "@babel/preset-env": "${deps.babel.presetEnv}",
+        "@pika/web": "${deps.pika.web}",
+        "clean-css-cli": "${deps.cleanCSSCli}",
+        "colors": "${deps.colors}",
+        "fs-extra": "${deps.fsExtra}",
+        "glob": "${deps.glob}",
+        "hankey": "${deps.hankey}",
+        "husky": "${deps.husky}",
+        "imagemin-cli": "${deps.imageMinCli}",
+        "live-server": "${deps.liveServer}",
+        "npm-run-all": "${deps.npmRunAll}",
+        "onchange": "${deps.onChange}",
+        "prettier": "${deps.prettier}",
+        "pretty-quick": "${deps.prettyQuick}",
+        ${rollup ? `"rollup": "${deps.rollup.rollup}",` : ''}
+        ${rollup ? `"rollup-plugin-serve": "${deps.rollup.pluginServer}",` : ''}
+        ${rollup ? `"rollup-plugin-clear": "${deps.rollup.pluginClear}",` : ''}
         ${
             rollup
-                ? `"rollup-plugin-serve": "${dependencies.rollup.pluginServer}",`
+                ? `"rollup-plugin-commonjs": "${deps.rollup.pluginCommonjs}",`
                 : ''
         }
+        ${rollup ? `"rollup-plugin-copy": "${deps.rollup.pluginCopy}",` : ''}
         ${
             rollup
-                ? `"rollup-plugin-clear": "${dependencies.rollup.pluginClear}",`
-                : ''
-        }
-        ${
-            rollup
-                ? `"rollup-plugin-commonjs": "${dependencies.rollup.pluginCommonjs}",`
+                ? `"rollup-plugin-generate-html-template": "${deps.rollup.pluginGenerateHtmlTemplate}",`
                 : ''
         }
         ${
             rollup
-                ? `"rollup-plugin-copy": "${dependencies.rollup.pluginCopy}",`
+                ? `"rollup-plugin-node-resolve": "${deps.rollup.pluginNodeResolve}",`
                 : ''
         }
         ${
             rollup
-                ? `"rollup-plugin-generate-html-template": "${dependencies.rollup.pluginGenerateHtmlTemplate}",`
+                ? `"rollup-plugin-terser": "${deps.rollup.pluginTerser}",`
                 : ''
         }
-        ${
-            rollup
-                ? `"rollup-plugin-node-resolve": "${dependencies.rollup.pluginNodeResolve}",`
-                : ''
-        }
-        ${
-            rollup
-                ? `"rollup-plugin-terser": "${dependencies.rollup.pluginTerser}",`
-                : ''
-        }
-        ${webpack ? `"webpack": "${dependencies.webpack.webpack}",` : ''}
-        ${webpack ? `"webpack-cli": "${dependencies.webpack.cli}",` : ''}
-        ${webpack ? `"webpack-merge": "${dependencies.webpack.merge}",` : ''}
+        ${webpack ? `"webpack": "${deps.webpack.webpack}",` : ''}
+        ${webpack ? `"webpack-cli": "${deps.webpack.cli}",` : ''}
+        ${webpack ? `"webpack-merge": "${deps.webpack.merge}",` : ''}
         ${
             webpack
-                ? `"clean-webpack-plugin": "${dependencies.webpack.cleanWbpackPlugin}",`
+                ? `"clean-webpack-plugin": "${deps.webpack.cleanWbpackPlugin}",`
                 : ''
         }
         ${
             webpack
-                ? `"webpack-bundle-analyzer": "${dependencies.webpack.bundleAnalyzer}",`
+                ? `"webpack-bundle-analyzer": "${deps.webpack.bundleAnalyzer}",`
+                : ''
+        }
+        ${webpack ? `"webpack-dev-server": "${deps.webpack.devServer}",` : ''}
+        ${
+            webpack
+                ? `"optimize-css-assets-webpack-plugin": "${deps.webpack.optimizeCssAssetsWebpackPlugin}",`
                 : ''
         }
         ${
             webpack
-                ? `"webpack-dev-server": "${dependencies.webpack.devServer}",`
+                ? `"mini-css-extract-plugin": "${deps.webpack.miniCssExtractPlugin}",`
                 : ''
         }
         ${
             webpack
-                ? `"optimize-css-assets-webpack-plugin": "${dependencies.webpack.optimizeCssAssetsWebpackPlugin}",`
+                ? `"imagemin-webpack-plugin": "${deps.webpack.imageminWebpackPlugin}",`
                 : ''
         }
         ${
             webpack
-                ? `"mini-css-extract-plugin": "${dependencies.webpack.miniCssExtractPlugin}",`
+                ? `"html-webpack-plugin": "${deps.webpack.htmlWebpackPlugin}",`
                 : ''
         }
+        ${webpack ? `"file-loader": "${deps.webpack.fileLoader}",` : ''}
+        ${webpack ? `"css-loader": "${deps.webpack.cssLoader}",` : ''}
         ${
             webpack
-                ? `"imagemin-webpack-plugin": "${dependencies.webpack.imageminWebpackPlugin}",`
+                ? `"copy-webpack-plugin": "${deps.webpack.copyWebpackPlugin}",`
                 : ''
         }
-        ${
-            webpack
-                ? `"html-webpack-plugin": "${dependencies.webpack.htmlWebpackPlugin}",`
-                : ''
-        }
-        ${webpack ? `"file-loader": "${dependencies.webpack.fileLoader}",` : ''}
-        ${webpack ? `"css-loader": "${dependencies.webpack.cssLoader}",` : ''}
-        ${
-            webpack
-                ? `"copy-webpack-plugin": "${dependencies.webpack.copyWebpackPlugin}",`
-                : ''
-        }
-        ${
-            webpack
-                ? `"babel-loader": "${dependencies.webpack.babelLoader}",`
-                : ''
-        }
-        "prompt": "${dependencies.prompt}"
+        ${webpack ? `"babel-loader": "${deps.webpack.babelLoader}",` : ''}
+        "prompt": "${deps.prompt}"
     },
     "scripts": {
         "babel": "npx babel src -d build --copy-files",

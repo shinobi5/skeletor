@@ -1,5 +1,4 @@
 module.exports = {
-    beedle: '^0.8.1',
     babel: {
         cli: '^7.4.4',
         core: '^7.4.5',
@@ -7,6 +6,7 @@ module.exports = {
         pluginTransformRuntime: '^7.6.2',
         runtime: '^7.6.3',
     },
+    beedle: '^0.8.1',
     cleanCSSCli: '^4.2.1',
     colors: '^1.4.0',
     fsExtra: '^8.0.1',
