@@ -40,7 +40,9 @@ const storeFile = path.join(stateDir, 'store.js');
                 const pattern = /^[a-zA-Z0-9\-]+$/;
                 return pattern.test(projectName)
                     ? true
-                    : 'Only letters, numbers and hyphens are valid';
+                    : colors.brightRed(
+                          'Only letters, numbers and hyphens are valid'
+                      );
             },
         },
         {
@@ -51,7 +53,9 @@ const storeFile = path.join(stateDir, 'store.js');
                 const pattern = /^[a-zA-Z0-9\-]+$/;
                 return pattern.test(description)
                     ? true
-                    : 'Only letters, numbers and hyphens are valid';
+                    : colors.brightRed(
+                          'Only letters, numbers and hyphens are valid'
+                      );
             },
         },
         {
@@ -119,7 +123,7 @@ const storeFile = path.join(stateDir, 'store.js');
                 const pattern = /^#[0-9]+$/;
                 return pattern.test(hex)
                     ? true
-                    : 'Only hex values are valid e.g #000000';
+                    : colors.brightRed('Only hex values are valid e.g #000000');
             },
         },
         {
@@ -131,7 +135,7 @@ const storeFile = path.join(stateDir, 'store.js');
                 const pattern = /^#[0-9]+$/;
                 return pattern.test(hex)
                     ? true
-                    : 'Only hex values are valid e.g #000000';
+                    : colors.brightRed('Only hex values are valid e.g #000000');
             },
         },
         {

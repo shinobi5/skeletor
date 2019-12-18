@@ -131,6 +131,8 @@ module.exports = (
                 : scripts.build.css
         }
         "create-component": "node scripts/create-component.js",
+        "create-pwa": "node scripts/create-pwa.js",
+        "create-state": "node scripts/create-state.js",
         "clean:modules": "rm -rf node_modules",
         "clean:build": "rm -rf build",
         ${css ? scripts.css.concat : ''}
