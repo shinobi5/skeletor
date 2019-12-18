@@ -1,4 +1,5 @@
-const dependencies = require('../../config/dependencies.js/index.js');
+const dependencies = require('../../config/dependencies.js');
+const scripts = require('../../config/scripts.js');
 
 module.exports = (
     bundler,
@@ -10,24 +11,6 @@ module.exports = (
     state,
     stateType
 ) => {
-    const cssConcat = `"css:concat": "cat src/css/settings/* src/css/global/* src/css/elements/* src/css/components/* src/css/utilities/* > src/styles.css",`;
-    const cssMinify = `"css:minify": "cleancss -o src/styles.css src/styles.css",`;
-    const cssWatch = `"css:watch": "onchange 'src/css/**/*' -- yarn css:concat",`;
-
-    const serverDev = `"server:dev": "live-server --open=src",`;
-    const serverDevRollup = `"server:dev": "rollup --config config/rollup.dev.js",`;
-    const serverDevWebpack = `"server:dev": "webpack-dev-server --open --config config/webpack.dev.js",`;
-
-    const build = `"build": "yarn imagemin && yarn babel",`;
-    const buildRollup = `"build": "rollup --config config/rollup.prod.js",`;
-    const buildWebpack = `"build": "webpack --config config/webpack.prod.js",`;
-    const buildCSS = `"build": "yarn css:concat && yarn css:minify && yarn imagemin && yarn babel",`;
-    const buildRollupCSS = `"build": "yarn css:concat && yarn css:minify && rollup --config config/rollup.prod.js",`;
-    const buildWebpackCSS = `"build": "yarn css:concat && yarn css:minify && webpack --config config/webpack.prod.js",`;
-
-    const start = `"start": "npm-run-all --parallel prettier:watch server:dev"`;
-    const startCSS = `"start": "yarn css:concat && npm-run-all --parallel prettier:watch css:watch server:dev"`;
-
     const rollup = bundler && bundlerType === 'rollup';
     const webpack = bundler && bundlerType === 'webpack';
     const redux = state && stateType === 'redux';
@@ -168,29 +151,35 @@ module.exports = (
         "babel": "npx babel src -d build --copy-files",
         ${
             !bundler && !css
-                ? build
+                ? scripts.build.build
                 : rollup && css
-                ? buildRollupCSS
+                ? scripts.build.rollupCss
                 : rollup && !css
-                ? buildRollup
+                ? scripts.build.rollup
                 : webpack && css
-                ? buildWebpackCSS
+                ? scripts.build.webpackCss
                 : webpack && !css
-                ? buildWebpack
-                : buildCSS
+                ? scripts.build.webpack
+                : scripts.build.css
         }
         "clean:modules": "rm -rf node_modules",
         "clean:build": "rm -rf build",
-        ${css ? cssConcat : ''}
-        ${css ? cssMinify : ''}
-        ${css ? cssWatch : ''}
+        ${css ? scripts.css.concat : ''}
+        ${css ? scripts.css.minify : ''}
+        ${css ? scripts.css.watch : ''}
         "imagemin": "imagemin --out-dir=src/img src/img/**/*.{png,jpg,gif}",
         "prepare": "pika-web --dest src/js/modules --clean --optimize",
         "prettier:watch": "onchange '**/*.js' '**/*.css' -- prettier --write {{changed}}",
-        ${!bundler ? serverDev : rollup ? serverDevRollup : serverDevWebpack}
+        ${
+            !bundler
+                ? scripts.server.dev
+                : rollup
+                ? scripts.server.devRollup
+                : scripts.server.devWebpack
+        }
         "server:build": "live-server --open=build",
         "setup": "yarn && node scripts/setup.js && npx prettier --write **/*.{json,html,js} && yarn",
-        ${css ? startCSS : start}
+        ${css ? scripts.start.css : scripts.start.start}
     },
     "husky": {
         "hooks": {
