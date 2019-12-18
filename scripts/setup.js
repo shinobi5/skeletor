@@ -36,11 +36,23 @@ const storeFile = path.join(stateDir, 'store.js');
             type: 'text',
             message: colors.brightMagenta('Project name'),
             initial: 'Skeletor',
+            validate: projectName => {
+                const pattern = /^[a-zA-Z0-9\-]+$/;
+                return pattern.test(projectName)
+                    ? true
+                    : 'Only letters, numbers and hyphens are valid';
+            },
         },
         {
             name: 'description',
             type: 'text',
             message: colors.brightMagenta('Project description'),
+            validate: description => {
+                const pattern = /^[a-zA-Z0-9\-]+$/;
+                return pattern.test(description)
+                    ? true
+                    : 'Only letters, numbers and hyphens are valid';
+            },
         },
         {
             name: 'css',
@@ -103,12 +115,24 @@ const storeFile = path.join(stateDir, 'store.js');
             type: prev => (prev ? 'text' : null),
             message: colors.brightMagenta('PWA: Theme color'),
             initial: '#000000',
+            validate: hex => {
+                const pattern = /^#[0-9]+$/;
+                return pattern.test(hex)
+                    ? true
+                    : 'Only hex values are valid e.g #000000';
+            },
         },
         {
             name: 'backgroundColor',
             type: prev => (prev ? 'text' : null),
             message: colors.brightMagenta('PWA: Background color'),
             initial: '#000000',
+            validate: hex => {
+                const pattern = /^#[0-9]+$/;
+                return pattern.test(hex)
+                    ? true
+                    : 'Only hex values are valid e.g #000000';
+            },
         },
         {
             name: 'enableServiceWorker',
