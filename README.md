@@ -26,7 +26,7 @@ git clone git@github.com:shinobi5/skeletor.git <project-name>
 cd <project-name> && rm -rf .git && git init
 ```
 
-**Setup CLI**
+**Setup**
 
 > `yarn` is used but can be substituted with `npm` if that is preferred
 
