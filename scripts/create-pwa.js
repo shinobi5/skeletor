@@ -41,7 +41,7 @@ const serviceWorker = path.join(srcDir, `service-worker.js`);
         },
         {
             name: 'themeColor',
-            type: prev => (prev ? 'text' : null),
+            type: 'text',
             message: colors.brightMagenta('PWA: Theme color'),
             initial: '#000000',
             validate: hex => {
@@ -53,7 +53,7 @@ const serviceWorker = path.join(srcDir, `service-worker.js`);
         },
         {
             name: 'backgroundColor',
-            type: prev => (prev ? 'text' : null),
+            type: 'text',
             message: colors.brightMagenta('PWA: Background color'),
             initial: '#000000',
             validate: hex => {
@@ -65,7 +65,7 @@ const serviceWorker = path.join(srcDir, `service-worker.js`);
         },
         {
             name: 'enableServiceWorker',
-            type: prev => (prev ? 'confirm' : null),
+            type: 'confirm',
             message: colors.brightMagenta(
                 'PWA: Enable offline service worker?'
             ),
@@ -74,7 +74,6 @@ const serviceWorker = path.join(srcDir, `service-worker.js`);
     ];
 
     const response = await prompts(questions);
-
     createPWA(response);
 })();
 
