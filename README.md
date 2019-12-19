@@ -34,7 +34,7 @@ git clone git@github.com:shinobi5/skeletor.git <project-name>
 cd <project-name> && rm -rf .git && git init
 ```
 
-**Setup**
+**Setup project**
 
 ```
 yarn setup
