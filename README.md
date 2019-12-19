@@ -57,7 +57,7 @@ yarn build
 **Create boilerplate component in `src/js/components/`**
 
 ```
-yarn create-component
+yarn create:component
 ```
 
 **Usage examples**
