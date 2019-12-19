@@ -26,13 +26,15 @@ git clone git@github.com:shinobi5/skeletor.git <project-name>
 cd <project-name> && rm -rf .git && git init
 ```
 
-**Setup**
+**Notes**
 
 > `yarn` is used but can be substituted with `npm` if that is preferred
 
 > `dependencies` will be processed by [@pikapkg/web](https://github.com/pikapkg/web) and ready to be imported and used directly in the browser. Search [pika](https://www.pika.dev/) for esm ready packages
 
 > Custom element names require a hyphen (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)). Change this during setup (default: `x`)
+
+**Setup**
 
 ```
 yarn setup
