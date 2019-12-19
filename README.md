@@ -12,6 +12,14 @@ Front-end boilerplate with a focus on the web platform.
 -   [router-component](https://github.com/mkay581/router-component): lightweight web component for client-side routing
 -   [@pikapkg/web](https://github.com/pikapkg/web): consume npm packages directly in the browser
 
+**Notes**
+
+> `yarn` is used in the setup steps but can be substituted with `npm` if that is preferred
+
+> `dependencies` in the project will be processed by [@pikapkg/web](https://github.com/pikapkg/web) and ready to be imported and used directly in the browser. Search [pika](https://www.pika.dev/) for esm ready packages
+
+> Custom element names require a hyphen (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)). Change this during setup (default: `x`)
+
 ## Getting started
 
 **Clone the repository and give the project a name**
@@ -25,14 +33,6 @@ git clone git@github.com:shinobi5/skeletor.git <project-name>
 ```
 cd <project-name> && rm -rf .git && git init
 ```
-
-**Notes**
-
-> `yarn` is used but can be substituted with `npm` if that is preferred
-
-> `dependencies` will be processed by [@pikapkg/web](https://github.com/pikapkg/web) and ready to be imported and used directly in the browser. Search [pika](https://www.pika.dev/) for esm ready packages
-
-> Custom element names require a hyphen (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)). Change this during setup (default: `x`)
 
 **Setup**
 
