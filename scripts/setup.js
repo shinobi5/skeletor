@@ -49,14 +49,6 @@ const storeFile = path.join(stateDir, 'store.js');
             name: 'description',
             type: 'text',
             message: colors.brightMagenta('Project description'),
-            validate: description => {
-                const pattern = /^[a-zA-Z0-9\-]+$/;
-                return pattern.test(description)
-                    ? true
-                    : colors.brightRed(
-                          'Only letters, numbers and hyphens are valid'
-                      );
-            },
         },
         {
             name: 'css',
