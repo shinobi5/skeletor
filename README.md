@@ -152,7 +152,7 @@ Haunted's hooks API provides internal component state management (same as the [R
 Global state can be handled with either [redux](https://github.com/reduxjs/redux) or [beedle](https://github.com/andybelldesign/beedle) with or without web components. Starter boilerplates can be generated through the setup CLI.
 
 ### Todo
-- Remove `mmodules` from `.gitignore`
+- Remove `src/js/modules` from `.gitignore`
 - Add netlify.toml config file
 - Update to [Snowpack](https://github.com/pikapkg/snowpack)
 - Check async error handling for scripts
