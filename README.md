@@ -10,13 +10,13 @@ Front-end boilerplate with a focus on the web platform.
 -   [lit-html](https://github.com/polymer/lit-html): HTML templates in JavaScript with template literals
 -   [haunted](https://github.com/matthewp/haunted): React's Hooks API for web components
 -   [router-component](https://github.com/mkay581/router-component): lightweight web component for client-side routing
--   [Snowpack](https://github.com/pikapkg/snowpack): consume npm packages directly in the browser
+-   [snowpack](https://github.com/pikapkg/snowpack): consume npm packages directly in the browser
 
 **Notes**
 
 > `yarn` is used in the setup steps but can be substituted with `npm` if that is preferred
 
-> `dependencies` in the project will be processed by[Snowpack](https://github.com/pikapkg/snowpack) and ready to be imported and used directly in the browser. Search [pika](https://www.pika.dev/) for esm ready packages
+> `dependencies` in the project will be processed by [snowpack](https://github.com/pikapkg/snowpack) and ready to be imported and used directly in the browser. Search [pika](https://www.pika.dev/) for esm ready packages
 
 > Custom element names require a hyphen (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)). Change this during setup (default: `x`)
 
