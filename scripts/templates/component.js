@@ -1,5 +1,5 @@
 module.exports = (ComponentName, elementName, elementPrefix) => {
-    return `import { component, html } from '../../modules/haunted.js';
+    return `import { component, html } from '../../web_modules/haunted.js';
 
 export const ${ComponentName} = () => {
     return html\`
