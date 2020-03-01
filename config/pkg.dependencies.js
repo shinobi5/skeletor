@@ -19,9 +19,6 @@ module.exports = {
     liveServer: '^1.2.1',
     npmRunAll: '^4.1.5',
     onChange: '^5.2.0',
-    pika: {
-        web: '^0.4.3',
-    },
     prettier: '1.18.2',
     prettyQuick: '^1.11.0',
     prompts: '^2.3.0',
@@ -37,6 +34,7 @@ module.exports = {
         pluginTerser: '^5.1.2',
     },
     router: '^0.8.0',
+    snowpack: '^1.5.0',
     webpack: {
         webpack: '^4.41.2',
         cli: '^3.3.10',

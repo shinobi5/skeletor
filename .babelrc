@@ -1,7 +1,6 @@
 {
     "plugins": [
         [
-            "@pika/web/assets/babel-plugin.js", 
             "@babel/plugin-transform-runtime"
         ]
     ],

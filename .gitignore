@@ -3,7 +3,7 @@ build
 dist
 
 # modules
-src/js/modules
+src/js/web_modules
 node_modules
 
 # generated styles

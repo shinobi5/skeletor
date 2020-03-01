@@ -34,7 +34,6 @@ module.exports = (
             deps.babel.pluginTransformRuntime
         }",
         "@babel/preset-env": "${deps.babel.presetEnv}",
-        "@pika/web": "${deps.pika.web}",
         "clean-css-cli": "${deps.cleanCSSCli}",
         "colors": "${deps.colors}",
         "fs-extra": "${deps.fsExtra}",
@@ -47,6 +46,7 @@ module.exports = (
         "onchange": "${deps.onChange}",
         "prettier": "${deps.prettier}",
         "pretty-quick": "${deps.prettyQuick}",
+        "prompts": "${deps.prompts}",
         ${rollup ? `"rollup": "${deps.rollup.rollup}",` : ''}
         ${rollup ? `"rollup-plugin-serve": "${deps.rollup.pluginServer}",` : ''}
         ${rollup ? `"rollup-plugin-clear": "${deps.rollup.pluginClear}",` : ''}
@@ -113,7 +113,7 @@ module.exports = (
                 : ''
         }
         ${webpack ? `"babel-loader": "${deps.webpack.babelLoader}",` : ''}
-        "prompts": "${deps.prompts}"
+        "snowpack": "${deps.snowpack}"
     },
     "scripts": {
         "babel": "npx babel src -d build --copy-files",
@@ -138,7 +138,7 @@ module.exports = (
         ${css ? scripts.css.minify : ''}
         ${css ? scripts.css.watch : ''}
         "imagemin": "imagemin --out-dir=src/img src/img/**/*.{png,jpg,gif}",
-        "prepare": "pika-web --dest src/js/modules --clean --optimize",
+        "prepare": "snowpack --dest src/js/modules --clean --optimize",
         "prettier:watch": "onchange '**/*.js' '**/*.css' -- prettier --write {{changed}}",
         ${
             !bundler

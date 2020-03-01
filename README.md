@@ -10,13 +10,13 @@ Front-end boilerplate with a focus on the web platform.
 -   [lit-html](https://github.com/polymer/lit-html): HTML templates in JavaScript with template literals
 -   [haunted](https://github.com/matthewp/haunted): React's Hooks API for web components
 -   [router-component](https://github.com/mkay581/router-component): lightweight web component for client-side routing
--   [@pikapkg/web](https://github.com/pikapkg/web): consume npm packages directly in the browser
+-   [Snowpack](https://github.com/pikapkg/snowpack): consume npm packages directly in the browser
 
 **Notes**
 
 > `yarn` is used in the setup steps but can be substituted with `npm` if that is preferred
 
-> `dependencies` in the project will be processed by [@pikapkg/web](https://github.com/pikapkg/web) and ready to be imported and used directly in the browser. Search [pika](https://www.pika.dev/) for esm ready packages
+> `dependencies` in the project will be processed by[Snowpack](https://github.com/pikapkg/snowpack) and ready to be imported and used directly in the browser. Search [pika](https://www.pika.dev/) for esm ready packages
 
 > Custom element names require a hyphen (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)). Change this during setup (default: `x`)
 
@@ -152,11 +152,10 @@ Haunted's hooks API provides internal component state management (same as the [R
 Global state can be handled with either [redux](https://github.com/reduxjs/redux) or [beedle](https://github.com/andybelldesign/beedle) with or without web components. Starter boilerplates can be generated through the setup CLI.
 
 ### Todo
-- Update `imagemin` CLI settings
-- Remove `src/js/modules` from `.gitignore`
-- Add netlify.toml config file
-- Update to [Snowpack](https://github.com/pikapkg/snowpack)
-- Check async error handling for scripts
-- Refactor and improve scripts
-- Finish redux and beedle boilerplate generators
-- Add test framework and boilerplate generators
+
+-   Update `imagemin` CLI settings
+-   Add netlify.toml config file
+-   Check async error handling for scripts
+-   Refactor and improve scripts
+-   Finish redux and beedle boilerplate generators
+-   Add test framework and boilerplate generators
