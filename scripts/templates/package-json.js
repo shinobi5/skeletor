@@ -138,7 +138,7 @@ module.exports = (
         ${css ? scripts.css.minify : ''}
         ${css ? scripts.css.watch : ''}
         "imagemin": "imagemin --out-dir=src/img src/img/**/*.{png,jpg,gif}",
-        "prepare": "snowpack --dest src/js/modules --clean --optimize",
+        "prepare": "snowpack --dest src/js/web_modules --clean --optimize",
         "prettier:watch": "onchange '**/*.js' '**/*.css' -- prettier --write {{changed}}",
         ${
             !bundler
