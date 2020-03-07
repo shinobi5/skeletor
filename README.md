@@ -2,7 +2,7 @@
 
 Front-end boilerplate with a focus on the web platform. 
 
-It's still a work in progress and I'm smoothing out the edges on it while using it in personal projects.
+It's still a work in progress and I'm smoothing out the edges on it while using it in personal projects and addressing issues as they arise.
 
 ## Includes
 
