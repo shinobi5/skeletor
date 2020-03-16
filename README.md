@@ -160,4 +160,5 @@ Global state can be handled with either [redux](https://github.com/reduxjs/redux
 -   Check async error handling for `scripts`
 -   Refactor and improve `scripts`
 -   Finish `redux` and `beedle` boilerplate generators
+-   Improve PWA boilerplate generators
 -   Add test framework and boilerplate generators
