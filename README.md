@@ -155,7 +155,7 @@ Global state can be handled with either [redux](https://github.com/reduxjs/redux
 
 ### Todo
 
--   Replace `live-server` with [servor](https://github.com/lukejacksonn/servor)
+-   Look into replacing `live-server` with [servor](https://github.com/lukejacksonn/servor)
 -   Update `imagemin` CLI settings
 -   Check async error handling for `scripts`
 -   Refactor and improve `scripts`
