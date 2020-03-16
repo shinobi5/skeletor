@@ -113,7 +113,7 @@ See [router-component](https://github.com/mkay581/router-component).
 
 ```html
 <head>
-    <script src="js/modules/router-component.js"></script>
+    <script src="js/web_modules/router-component.js"></script>
     <script src="js/components/FirstPage/FirstPage.js"></script>
     <script src="js/components/SecondPage/SecondPage.js"></script>
     <script src="js/components/PageNotFound/PageNotFound.js"></script>
@@ -129,7 +129,7 @@ See [router-component](https://github.com/mkay581/router-component).
 
 ```javascript
 import { component, html } from '../../web_modules/haunted.js';
-import '../../modules/router-component.js';
+import '../../web_modules/router-component.js';
 import '../FirstPage/FirstPage.js';
 import '../SecondPage/SecondPage.js';
 import '../PageNotFound/PageNotFound.js';
