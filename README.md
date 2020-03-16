@@ -1,6 +1,6 @@
 # Skeletor
 
-Front-end boilerplate with a focus on the web platform. 
+Front-end boilerplate with a focus on the web platform.
 
 It's still a work in progress and I'm smoothing out the edges on it while using it in personal projects and addressing issues as they arise...
 
@@ -78,7 +78,7 @@ yarn create:component
 ```
 
 ```javascript
-import { component, html } from '../../modules/haunted.js';
+import { component, html } from '../../web_modules/haunted.js';
 import '../CustomElement/CustomElement.js';
 
 const App = () => {
@@ -128,7 +128,7 @@ See [router-component](https://github.com/mkay581/router-component).
 ```
 
 ```javascript
-import { component, html } from '../../modules/haunted.js';
+import { component, html } from '../../web_modules/haunted.js';
 import '../../modules/router-component.js';
 import '../FirstPage/FirstPage.js';
 import '../SecondPage/SecondPage.js';
