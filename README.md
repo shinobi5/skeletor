@@ -157,7 +157,6 @@ Global state can be handled with either [redux](https://github.com/reduxjs/redux
 
 -   Replace `live-server` with [servor](https://github.com/lukejacksonn/servor)
 -   Update `imagemin` CLI settings
--   Add `netlify.toml` config file
 -   Check async error handling for `scripts`
 -   Refactor and improve `scripts`
 -   Finish `redux` and `beedle` boilerplate generators
