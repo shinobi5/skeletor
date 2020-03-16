@@ -30,9 +30,7 @@ module.exports = (
     "devDependencies": {
         "@babel/cli": "${deps.babel.cli}",
         "@babel/core": "${deps.babel.core}",
-        "@babel/plugin-transform-runtime": "${
-            deps.babel.pluginTransformRuntime
-        }",
+        "@babel/plugin-transform-runtime": "${deps.babel.pluginTransformRuntime}",
         "@babel/preset-env": "${deps.babel.presetEnv}",
         "clean-css-cli": "${deps.cleanCSSCli}",
         "colors": "${deps.colors}",
@@ -50,68 +48,24 @@ module.exports = (
         ${rollup ? `"rollup": "${deps.rollup.rollup}",` : ''}
         ${rollup ? `"rollup-plugin-serve": "${deps.rollup.pluginServer}",` : ''}
         ${rollup ? `"rollup-plugin-clear": "${deps.rollup.pluginClear}",` : ''}
-        ${
-            rollup
-                ? `"rollup-plugin-commonjs": "${deps.rollup.pluginCommonjs}",`
-                : ''
-        }
+        ${rollup ? `"rollup-plugin-commonjs": "${deps.rollup.pluginCommonjs}",` : ''}
         ${rollup ? `"rollup-plugin-copy": "${deps.rollup.pluginCopy}",` : ''}
-        ${
-            rollup
-                ? `"rollup-plugin-generate-html-template": "${deps.rollup.pluginGenerateHtmlTemplate}",`
-                : ''
-        }
-        ${
-            rollup
-                ? `"rollup-plugin-node-resolve": "${deps.rollup.pluginNodeResolve}",`
-                : ''
-        }
-        ${
-            rollup
-                ? `"rollup-plugin-terser": "${deps.rollup.pluginTerser}",`
-                : ''
-        }
+        ${rollup ? `"rollup-plugin-generate-html-template": "${deps.rollup.pluginGenerateHtmlTemplate}",` : ''}
+        ${rollup ? `"rollup-plugin-node-resolve": "${deps.rollup.pluginNodeResolve}",` : ''}
+        ${rollup ? `"rollup-plugin-terser": "${deps.rollup.pluginTerser}",` : ''}
         ${webpack ? `"webpack": "${deps.webpack.webpack}",` : ''}
         ${webpack ? `"webpack-cli": "${deps.webpack.cli}",` : ''}
         ${webpack ? `"webpack-merge": "${deps.webpack.merge}",` : ''}
-        ${
-            webpack
-                ? `"clean-webpack-plugin": "${deps.webpack.cleanWbpackPlugin}",`
-                : ''
-        }
-        ${
-            webpack
-                ? `"webpack-bundle-analyzer": "${deps.webpack.bundleAnalyzer}",`
-                : ''
-        }
+        ${webpack ? `"clean-webpack-plugin": "${deps.webpack.cleanWbpackPlugin}",` : ''}
+        ${webpack ? `"webpack-bundle-analyzer": "${deps.webpack.bundleAnalyzer}",` : ''}
         ${webpack ? `"webpack-dev-server": "${deps.webpack.devServer}",` : ''}
-        ${
-            webpack
-                ? `"optimize-css-assets-webpack-plugin": "${deps.webpack.optimizeCssAssetsWebpackPlugin}",`
-                : ''
-        }
-        ${
-            webpack
-                ? `"mini-css-extract-plugin": "${deps.webpack.miniCssExtractPlugin}",`
-                : ''
-        }
-        ${
-            webpack
-                ? `"imagemin-webpack-plugin": "${deps.webpack.imageminWebpackPlugin}",`
-                : ''
-        }
-        ${
-            webpack
-                ? `"html-webpack-plugin": "${deps.webpack.htmlWebpackPlugin}",`
-                : ''
-        }
+        ${webpack ? `"optimize-css-assets-webpack-plugin": "${deps.webpack.optimizeCssAssetsWebpackPlugin}",` : ''}
+        ${webpack ? `"mini-css-extract-plugin": "${deps.webpack.miniCssExtractPlugin}",` : ''}
+        ${webpack ? `"imagemin-webpack-plugin": "${deps.webpack.imageminWebpackPlugin}",` : ''}
+        ${webpack ? `"html-webpack-plugin": "${deps.webpack.htmlWebpackPlugin}",` : ''}
         ${webpack ? `"file-loader": "${deps.webpack.fileLoader}",` : ''}
         ${webpack ? `"css-loader": "${deps.webpack.cssLoader}",` : ''}
-        ${
-            webpack
-                ? `"copy-webpack-plugin": "${deps.webpack.copyWebpackPlugin}",`
-                : ''
-        }
+        ${webpack ? `"copy-webpack-plugin": "${deps.webpack.copyWebpackPlugin}",` : ''}
         ${webpack ? `"babel-loader": "${deps.webpack.babelLoader}",` : ''}
         "snowpack": "${deps.snowpack}"
     },
