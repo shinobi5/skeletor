@@ -1,4 +1,4 @@
-import { component, html } from '../../modules/haunted.js';
+import { component, html } from '../../web_modules/haunted.js';
 
 export const Skeletor = () => {
     return html`
