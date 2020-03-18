@@ -226,7 +226,7 @@ function setupProject(config) {
         );
     }
 
-    if (css) fs.rmdirSync(cssDir);
+    if (!css) fs.rmdirSync(cssDir, { recursive: true });
 
     info(`:floppy_disk: Project setup complete`);
 }
