@@ -17,7 +17,7 @@ module.exports = (
     const isBeedle = isState && stateType === 'beedle';
 
     return `{
-    "name": "${projectName.toLowerCase()}",
+    "name": "${projectName.split(' ').toLowerCase()}",
     "description": "${description}",
     "dependencies": {
         "@babel/runtime": "${deps.babel.runtime}",
@@ -73,7 +73,7 @@ module.exports = (
         "babel": "npx babel src -d build --copy-files",
         ${
             !isBundler && !isCSS
-                ? scripts.build.build
+                ? scripts.build.basic
                 : isRollup && isCSS
                 ? scripts.build.rollupCss
                 : isRollup && !isCSS
@@ -103,7 +103,7 @@ module.exports = (
         }
         "server:build": "live-server --open=build",
         "setup": "yarn && node scripts/setup.js && npx prettier --write **/*.{json,html,js} && yarn",
-        ${isCSS ? scripts.start.css : scripts.start.start}
+        ${isCSS ? scripts.start.css : scripts.start.basic}
     },
     "husky": {
         "hooks": {
