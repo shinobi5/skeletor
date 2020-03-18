@@ -1,4 +1,4 @@
-module.exports = (bundler, css, description, projectName, pwa) => {
+module.exports = (isBundler, isCSS, description, projectName, isPWA) => {
     return `<!DOCTYPE html>
 <html lang="en">
     <head>
@@ -7,9 +7,9 @@ module.exports = (bundler, css, description, projectName, pwa) => {
         <title>${projectName}</title>
         <meta name="description" content="${description}" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        ${pwa ? `<link rel="manifest" href="manifest.json" />` : ''}
+        ${isPWA ? `<link rel="manifest" href="manifest.json" />` : ''}
         <link rel="shortcut icon" href="favicon.ico" />
-        ${css ? `<link rel="stylesheet" href="styles.css" />` : ''}
+        ${isCSS ? `<link rel="stylesheet" href="styles.css" />` : ''}
     </head>
     <body>
         <noscript>
@@ -24,8 +24,8 @@ module.exports = (bundler, css, description, projectName, pwa) => {
             <x-skeletor></x-skeletor>
         </main>
 
-        ${pwa ? `<script src="service-worker.js"></script>` : ''}
-        ${!bundler ? `<script type="module" src="app.js"></script>` : ''}
+        ${isPWA ? `<script src="service-worker.js"></script>` : ''}
+        ${!isBundler ? `<script type="module" src="app.js"></script>` : ''}
     </body>
 </html>
 `;
