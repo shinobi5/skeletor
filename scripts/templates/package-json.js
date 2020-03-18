@@ -95,7 +95,7 @@ module.exports = (
         "prepare": "snowpack --dest src/js/web_modules --clean --optimize",
         "prettier:watch": "onchange '**/*.js' '**/*.css' -- prettier --write {{changed}}",
         ${
-            !bundler
+            !isBundler
                 ? scripts.server.dev
                 : isRollup
                 ? scripts.server.devRollup

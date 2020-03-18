@@ -30,10 +30,10 @@ const processHyphen = pattern =>
         const { componentName } = config;
         const processedName = processHyphen(componentName);
         const componentDir = path.join(componentsDir, processedName);
-        const componentFileName = path.join(componentDir, \`${processedName}.js\`);
+        const componentFileName = path.join(componentDir, \`\${processedName}.js\`);
     
         if (fs.existsSync(componentDir)) {
-            error(\`:bomb: ${processHyphen(componentDir)} already exists\`);
+            error(\`:bomb: \${processHyphen(componentDir)} already exists\`);
             process.exit(1);
         }
     
@@ -42,7 +42,7 @@ const processHyphen = pattern =>
             componentFileName,
             componentTemplate(processedName, componentName, elementPrefix)
         );
-        info(\`:floppy_disk: ${processedName} created\`);
+        info(\`:floppy_disk: \${processedName} created\`);
     }
 `;
 };
