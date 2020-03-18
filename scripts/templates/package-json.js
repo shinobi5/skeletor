@@ -84,8 +84,9 @@ module.exports = (
                 ? scripts.build.webpack
                 : scripts.build.css
         }
-        "create-component": "node scripts/create-component.js",
-        "create-pwa": "node scripts/create-pwa.js",
+        "copy": "node scripts/copy.js",
+        "create:component": "node scripts/create-component.js",
+        "create:pwa": "node scripts/create-pwa.js",
         "clean:modules": "rm -rf node_modules",
         "clean:build": "rm -rf build",
         ${isCSS ? scripts.css.concat : ''}

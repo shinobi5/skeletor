@@ -29,7 +29,7 @@
   "scripts": {
     "babel": "npx babel src -d build --copy-files",
     "build": "yarn css:concat && yarn css:minify && yarn imagemin && yarn babel",
-    "build:no-babel": "yarn css:concat && yarn css:minify && yarn imagemin && node scripts/copy.js",
+    "copy": "node scripts/copy.js",
     "create:component": "node scripts/create-component.js",
     "create:pwa": "node scripts/create-pwa.js",
     "clean:modules": "rm -rf node_modules",
