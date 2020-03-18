@@ -17,7 +17,7 @@ module.exports = (
     const isBeedle = isState && stateType === 'beedle';
 
     return `{
-    "name": "${projectName.split(' ').toLowerCase()}",
+    "name": "${projectName.split(' ').join('-').toLowerCase()}",
     "description": "${description}",
     "dependencies": {
         "@babel/runtime": "${deps.babel.runtime}",

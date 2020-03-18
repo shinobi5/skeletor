@@ -17,14 +17,6 @@ const serviceWorker = path.join(srcDir, `service-worker.js`);
             type: 'text',
             message: colors.brightMagenta('Project name'),
             initial: 'Skeletor',
-            validate: projectName => {
-                const pattern = /^[a-zA-Z0-9\-]+$/;
-                return pattern.test(projectName)
-                    ? true
-                    : colors.brightRed(
-                          'Only letters, numbers and hyphens are valid'
-                      );
-            },
         },
         {
             name: 'description',

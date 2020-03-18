@@ -21,14 +21,6 @@ const processHyphen = pattern =>
             type: 'text',
             message: 'Component name',
             initial: 'Component',
-            validate: projectName => {
-                const pattern = /^[a-zA-Z0-9\-]+$/;
-                return pattern.test(projectName)
-                    ? true
-                    : colors.brightRed(
-                          'Only letters, numbers and hyphens are valid'
-                      );
-            },
         });
     
         createComponent(response);

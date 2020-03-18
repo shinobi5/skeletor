@@ -5,7 +5,10 @@ module.exports = (projectName, enableServiceWorker) => {
 * */
    
 // files to cache
-const cacheName = '${projectName.toLowerCase()}-v1';
+const cacheName = '${projectName
+        .split(' ')
+        .join('-')
+        .toLowerCase()}-v1';
 const contentToCache = [
     '/',
     '/index.html',
