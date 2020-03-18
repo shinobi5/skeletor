@@ -17,6 +17,7 @@ const indexTemplate = require('./templates/index');
 const ROOT = process.cwd();
 const srcDir = path.join(ROOT, 'src');
 const scriptsDir = path.join(ROOT, 'scripts');
+const cssDir = path.join(ROOT, 'src/css');
 const stateDir = path.join(ROOT, 'src/state');
 const actionsDir = path.join(stateDir, `actions`);
 const reducersDir = path.join(stateDir, `reducers`);
@@ -30,110 +31,118 @@ const reducersFile = path.join(reducersDir, `index.js`);
 const storeFile = path.join(stateDir, 'store.js');
 
 (async () => {
-    const questions = [
-        {
-            name: 'projectName',
-            type: 'text',
-            message: colors.brightMagenta('Project name'),
-            initial: 'Skeletor',
-        },
-        {
-            name: 'description',
-            type: 'text',
-            message: colors.brightMagenta('Project description'),
-        },
-        {
-            name: 'css',
-            type: 'confirm',
-            message: colors.brightMagenta('Global CSS?'),
-            initial: true,
-        },
-        {
-            name: 'elementPrefix',
-            type: 'text',
-            message: colors.brightMagenta('Web compoments prefix?'),
-            initial: 'x',
-        },
-        {
-            name: 'router',
-            type: 'confirm',
-            message: colors.brightMagenta('Router?'),
-            initial: false,
-        },
-        {
-            name: 'state',
-            type: 'confirm',
-            message: colors.brightMagenta('Global state?'),
-            initial: false,
-        },
-        {
-            name: 'stateType',
-            type: prev => (prev ? 'select' : null),
-            message: colors.brightMagenta('State: Beedle or Redux?'),
-            initial: 0,
-            choices: [
-                { title: 'Redux', value: 'redux' },
-                { title: 'Beedle', value: 'beedle' },
-            ],
-        },
-        {
-            name: 'bundler',
-            type: 'confirm',
-            message: colors.brightMagenta('Bundler?'),
-            initial: false,
-        },
-        {
-            name: 'bundlerType',
-            type: prev => (prev ? 'select' : null),
-            message: colors.brightMagenta('Bundler: Rollup or Webpack'),
-            initial: 0,
-            choices: [
-                { title: 'Rollup', value: 'rollup' },
-                { title: 'Webpack', value: 'webpack' },
-            ],
-        },
-        {
-            name: 'pwa',
-            type: 'confirm',
-            message: colors.brightMagenta('PWA?'),
-            initial: false,
-        },
-        {
-            name: 'themeColor',
-            type: prev => (prev ? 'text' : null),
-            message: colors.brightMagenta('PWA: Theme color'),
-            initial: '#000000',
-            validate: hex => {
-                const pattern = /^#[0-9]+$/;
-                return pattern.test(hex)
-                    ? true
-                    : colors.brightRed('Only hex values are valid e.g #000000');
+    try {
+        const questions = [
+            {
+                name: 'projectName',
+                type: 'text',
+                message: colors.brightMagenta('Project name'),
+                initial: 'Skeletor',
             },
-        },
-        {
-            name: 'backgroundColor',
-            type: prev => (prev ? 'text' : null),
-            message: colors.brightMagenta('PWA: Background color'),
-            initial: '#000000',
-            validate: hex => {
-                const pattern = /^#[0-9]+$/;
-                return pattern.test(hex)
-                    ? true
-                    : colors.brightRed('Only hex values are valid e.g #000000');
+            {
+                name: 'description',
+                type: 'text',
+                message: colors.brightMagenta('Project description'),
             },
-        },
-        {
-            name: 'enableServiceWorker',
-            type: prev => (prev ? 'confirm' : null),
-            message: colors.brightMagenta(
-                'PWA: Enable offline service worker?'
-            ),
-            initial: false,
-        },
-    ];
-
-    const response = await prompts(questions);
-    setupProject(response);
+            {
+                name: 'css',
+                type: 'confirm',
+                message: colors.brightMagenta('Global CSS?'),
+                initial: true,
+            },
+            {
+                name: 'elementPrefix',
+                type: 'text',
+                message: colors.brightMagenta('Web compoments prefix?'),
+                initial: 'x',
+            },
+            {
+                name: 'router',
+                type: 'confirm',
+                message: colors.brightMagenta('Router?'),
+                initial: false,
+            },
+            {
+                name: 'state',
+                type: 'confirm',
+                message: colors.brightMagenta('Global state?'),
+                initial: false,
+            },
+            {
+                name: 'stateType',
+                type: prev => (prev ? 'select' : null),
+                message: colors.brightMagenta('State: Beedle or Redux?'),
+                initial: 0,
+                choices: [
+                    { title: 'Redux', value: 'redux' },
+                    { title: 'Beedle', value: 'beedle' },
+                ],
+            },
+            {
+                name: 'bundler',
+                type: 'confirm',
+                message: colors.brightMagenta('Bundler?'),
+                initial: false,
+            },
+            {
+                name: 'bundlerType',
+                type: prev => (prev ? 'select' : null),
+                message: colors.brightMagenta('Bundler: Rollup or Webpack'),
+                initial: 0,
+                choices: [
+                    { title: 'Rollup', value: 'rollup' },
+                    { title: 'Webpack', value: 'webpack' },
+                ],
+            },
+            {
+                name: 'pwa',
+                type: 'confirm',
+                message: colors.brightMagenta('PWA?'),
+                initial: false,
+            },
+            {
+                name: 'themeColor',
+                type: prev => (prev ? 'text' : null),
+                message: colors.brightMagenta('PWA: Theme color'),
+                initial: '#000000',
+                validate: hex => {
+                    const pattern = /^#[0-9]+$/;
+                    return pattern.test(hex)
+                        ? true
+                        : colors.brightRed(
+                              'Only hex values are valid e.g #000000'
+                          );
+                },
+            },
+            {
+                name: 'backgroundColor',
+                type: prev => (prev ? 'text' : null),
+                message: colors.brightMagenta('PWA: Background color'),
+                initial: '#000000',
+                validate: hex => {
+                    const pattern = /^#[0-9]+$/;
+                    return pattern.test(hex)
+                        ? true
+                        : colors.brightRed(
+                              'Only hex values are valid e.g #000000'
+                          );
+                },
+            },
+            {
+                name: 'enableServiceWorker',
+                type: prev => (prev ? 'confirm' : null),
+                message: colors.brightMagenta(
+                    'PWA: Enable offline service worker?'
+                ),
+                initial: false,
+            },
+        ];
+        const response = await prompts(questions);
+        setupProject(response);
+    } catch (err) {
+        error(`:bomb: ${err}`);
+        process.exit(1);
+    }
 })();
 
 function setupProject(config) {
@@ -216,6 +225,8 @@ function setupProject(config) {
             createComponentTemplate(elementPrefix)
         );
     }
+
+    if (css) fs.rmdirSync(cssDir);
 
     info(`:floppy_disk: Project setup complete`);
 }
