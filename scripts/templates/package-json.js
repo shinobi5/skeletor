@@ -2,13 +2,13 @@ const deps = require('../../config/pkg.dependencies.js');
 const scripts = require('../../config/pkg.scripts.js');
 
 module.exports = (
-    bundlerType,
-    description,
     isBundler,
+    bundlerType,
     isCSS,
+    description,
+    projectName,
     isRouter,
     isState,
-    projectName,
     stateType
 ) => {
     const isRollup = isBundler && bundlerType === 'rollup';
