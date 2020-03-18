@@ -2,28 +2,28 @@ const deps = require('../../config/pkg.dependencies.js');
 const scripts = require('../../config/pkg.scripts.js');
 
 module.exports = (
-    bundler,
+    isBundler,
     bundlerType,
-    css,
+    isCSS,
     description,
     projectName,
-    router,
-    state,
+    isRouter,
+    isState,
     stateType
 ) => {
-    const rollup = bundler && bundlerType === 'rollup';
-    const webpack = bundler && bundlerType === 'webpack';
-    const redux = state && stateType === 'redux';
-    const beedle = state && stateType === 'beedle';
+    const isRollup = isBundler && bundlerType === 'rollup';
+    const isWebpack = isBundler && bundlerType === 'webpack';
+    const isRedux = isState && stateType === 'redux';
+    const isBeedle = isState && stateType === 'beedle';
 
     return `{
     "name": "${projectName.toLowerCase()}",
     "description": "${description}",
     "dependencies": {
         "@babel/runtime": "${deps.babel.runtime}",
-        ${beedle ? `"beedle": "${deps.beedle}",` : ''}
-        ${redux ? `"redux": "${deps.redux}",` : ''}
-        ${router ? `"router-component": "${deps.router}",` : ''}
+        ${isBeedle ? `"beedle": "${deps.beedle}",` : ''}
+        ${isRedux ? `"redux": "${deps.redux}",` : ''}
+        ${isRouter ? `"router-component": "${deps.router}",` : ''}
         "haunted": "${deps.haunted}",
         "lit-html": "${deps.litHtml}"
     },
@@ -45,42 +45,42 @@ module.exports = (
         "prettier": "${deps.prettier}",
         "pretty-quick": "${deps.prettyQuick}",
         "prompts": "${deps.prompts}",
-        ${rollup ? `"rollup": "${deps.rollup.rollup}",` : ''}
-        ${rollup ? `"rollup-plugin-serve": "${deps.rollup.pluginServer}",` : ''}
-        ${rollup ? `"rollup-plugin-clear": "${deps.rollup.pluginClear}",` : ''}
-        ${rollup ? `"rollup-plugin-commonjs": "${deps.rollup.pluginCommonjs}",` : ''}
-        ${rollup ? `"rollup-plugin-copy": "${deps.rollup.pluginCopy}",` : ''}
-        ${rollup ? `"rollup-plugin-generate-html-template": "${deps.rollup.pluginGenerateHtmlTemplate}",` : ''}
-        ${rollup ? `"rollup-plugin-node-resolve": "${deps.rollup.pluginNodeResolve}",` : ''}
-        ${rollup ? `"rollup-plugin-terser": "${deps.rollup.pluginTerser}",` : ''}
-        ${webpack ? `"webpack": "${deps.webpack.webpack}",` : ''}
-        ${webpack ? `"webpack-cli": "${deps.webpack.cli}",` : ''}
-        ${webpack ? `"webpack-merge": "${deps.webpack.merge}",` : ''}
-        ${webpack ? `"clean-webpack-plugin": "${deps.webpack.cleanWbpackPlugin}",` : ''}
-        ${webpack ? `"webpack-bundle-analyzer": "${deps.webpack.bundleAnalyzer}",` : ''}
-        ${webpack ? `"webpack-dev-server": "${deps.webpack.devServer}",` : ''}
-        ${webpack ? `"optimize-css-assets-webpack-plugin": "${deps.webpack.optimizeCssAssetsWebpackPlugin}",` : ''}
-        ${webpack ? `"mini-css-extract-plugin": "${deps.webpack.miniCssExtractPlugin}",` : ''}
-        ${webpack ? `"imagemin-webpack-plugin": "${deps.webpack.imageminWebpackPlugin}",` : ''}
-        ${webpack ? `"html-webpack-plugin": "${deps.webpack.htmlWebpackPlugin}",` : ''}
-        ${webpack ? `"file-loader": "${deps.webpack.fileLoader}",` : ''}
-        ${webpack ? `"css-loader": "${deps.webpack.cssLoader}",` : ''}
-        ${webpack ? `"copy-webpack-plugin": "${deps.webpack.copyWebpackPlugin}",` : ''}
-        ${webpack ? `"babel-loader": "${deps.webpack.babelLoader}",` : ''}
+        ${isRollup ? `"rollup": "${deps.rollup.rollup}",` : ''}
+        ${isRollup ? `"rollup-plugin-serve": "${deps.rollup.pluginServer}",` : ''}
+        ${isRollup ? `"rollup-plugin-clear": "${deps.rollup.pluginClear}",` : ''}
+        ${isRollup ? `"rollup-plugin-commonjs": "${deps.rollup.pluginCommonjs}",` : ''}
+        ${isRollup ? `"rollup-plugin-copy": "${deps.rollup.pluginCopy}",` : ''}
+        ${isRollup ? `"rollup-plugin-generate-html-template": "${deps.rollup.pluginGenerateHtmlTemplate}",` : ''}
+        ${isRollup ? `"rollup-plugin-node-resolve": "${deps.rollup.pluginNodeResolve}",` : ''}
+        ${isRollup ? `"rollup-plugin-terser": "${deps.rollup.pluginTerser}",` : ''}
+        ${isWebpack ? `"webpack": "${deps.webpack.webpack}",` : ''}
+        ${isWebpack ? `"webpack-cli": "${deps.webpack.cli}",` : ''}
+        ${isWebpack ? `"webpack-merge": "${deps.webpack.merge}",` : ''}
+        ${isWebpack ? `"clean-webpack-plugin": "${deps.webpack.cleanWbpackPlugin}",` : ''}
+        ${isWebpack ? `"webpack-bundle-analyzer": "${deps.webpack.bundleAnalyzer}",` : ''}
+        ${isWebpack ? `"webpack-dev-server": "${deps.webpack.devServer}",` : ''}
+        ${isWebpack ? `"optimize-css-assets-webpack-plugin": "${deps.webpack.optimizeCssAssetsWebpackPlugin}",` : ''}
+        ${isWebpack ? `"mini-css-extract-plugin": "${deps.webpack.miniCssExtractPlugin}",` : ''}
+        ${isWebpack ? `"imagemin-webpack-plugin": "${deps.webpack.imageminWebpackPlugin}",` : ''}
+        ${isWebpack ? `"html-webpack-plugin": "${deps.webpack.htmlWebpackPlugin}",` : ''}
+        ${isWebpack ? `"file-loader": "${deps.webpack.fileLoader}",` : ''}
+        ${isWebpack ? `"css-loader": "${deps.webpack.cssLoader}",` : ''}
+        ${isWebpack ? `"copy-webpack-plugin": "${deps.webpack.copyWebpackPlugin}",` : ''}
+        ${isWebpack ? `"babel-loader": "${deps.webpack.babelLoader}",` : ''}
         "snowpack": "${deps.snowpack}"
     },
     "scripts": {
         "babel": "npx babel src -d build --copy-files",
         ${
-            !bundler && !css
+            !isBundler && !isCSS
                 ? scripts.build.build
-                : rollup && css
+                : isRollup && isCSS
                 ? scripts.build.rollupCss
-                : rollup && !css
+                : isRollup && !isCSS
                 ? scripts.build.rollup
-                : webpack && css
+                : isWebpack && isCSS
                 ? scripts.build.webpackCss
-                : webpack && !css
+                : isWebpack && !isCSS
                 ? scripts.build.webpack
                 : scripts.build.css
         }
@@ -88,22 +88,22 @@ module.exports = (
         "create-pwa": "node scripts/create-pwa.js",
         "clean:modules": "rm -rf node_modules",
         "clean:build": "rm -rf build",
-        ${css ? scripts.css.concat : ''}
-        ${css ? scripts.css.minify : ''}
-        ${css ? scripts.css.watch : ''}
+        ${isCSS ? scripts.css.concat : ''}
+        ${isCSS ? scripts.css.minify : ''}
+        ${isCSS ? scripts.css.watch : ''}
         "imagemin": "imagemin --out-dir=src/img src/img/**/*.{png,jpg,gif}",
         "prepare": "snowpack --dest src/js/web_modules --clean --optimize",
         "prettier:watch": "onchange '**/*.js' '**/*.css' -- prettier --write {{changed}}",
         ${
             !bundler
                 ? scripts.server.dev
-                : rollup
+                : isRollup
                 ? scripts.server.devRollup
                 : scripts.server.devWebpack
         }
         "server:build": "live-server --open=build",
         "setup": "yarn && node scripts/setup.js && npx prettier --write **/*.{json,html,js} && yarn",
-        ${css ? scripts.start.css : scripts.start.start}
+        ${isCSS ? scripts.start.css : scripts.start.start}
     },
     "husky": {
         "hooks": {
