@@ -155,10 +155,9 @@ Global state can be handled with either [redux](https://github.com/reduxjs/redux
 
 ### Todo
 
+-   Look into babel issues
 -   Look into replacing `live-server` with [servor](https://github.com/lukejacksonn/servor)
 -   Update `imagemin` CLI settings
--   Check async error handling for `scripts`
--   Refactor and improve `scripts`
 -   Finish `redux` and `beedle` boilerplate generators
 -   Improve PWA boilerplate generators
 -   Add test framework and boilerplate generators

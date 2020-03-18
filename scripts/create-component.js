@@ -14,14 +14,18 @@ const processHyphen = pattern =>
     });
 
 (async () => {
-    const response = await prompts({
-        name: 'componentName',
-        type: 'text',
-        message: 'Component name',
-        initial: 'Component',
-    });
-
-    createComponent(response);
+    try {
+        const response = await prompts({
+            name: 'componentName',
+            type: 'text',
+            message: 'Component name',
+            initial: 'Component',
+        });
+        createComponent(response);
+    } catch (err) {
+        error(`:bomb: ${err}`);
+        process.exit(1);
+    }
 })();
 
 function createComponent(config) {

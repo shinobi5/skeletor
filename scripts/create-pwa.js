@@ -11,62 +11,70 @@ const manifest = path.join(srcDir, `manifest.json`);
 const serviceWorker = path.join(srcDir, `service-worker.js`);
 
 (async () => {
-    const questions = [
-        {
-            name: 'projectName',
-            type: 'text',
-            message: colors.brightMagenta('Project name'),
-            initial: 'Skeletor',
-        },
-        {
-            name: 'description',
-            type: 'text',
-            message: colors.brightMagenta('Project description'),
-            validate: description => {
-                const pattern = /^[a-zA-Z0-9\-]+$/;
-                return pattern.test(description)
-                    ? true
-                    : colors.brightRed(
-                          'Only letters, numbers and hyphens are valid'
-                      );
+    try {
+        const questions = [
+            {
+                name: 'projectName',
+                type: 'text',
+                message: colors.brightMagenta('Project name'),
+                initial: 'Skeletor',
             },
-        },
-        {
-            name: 'themeColor',
-            type: 'text',
-            message: colors.brightMagenta('PWA: Theme color'),
-            initial: '#000000',
-            validate: hex => {
-                const pattern = /^#[0-9]+$/;
-                return pattern.test(hex)
-                    ? true
-                    : colors.brightRed('Only hex values are valid e.g #000000');
+            {
+                name: 'description',
+                type: 'text',
+                message: colors.brightMagenta('Project description'),
+                validate: description => {
+                    const pattern = /^[a-zA-Z0-9\-]+$/;
+                    return pattern.test(description)
+                        ? true
+                        : colors.brightRed(
+                              'Only letters, numbers and hyphens are valid'
+                          );
+                },
             },
-        },
-        {
-            name: 'backgroundColor',
-            type: 'text',
-            message: colors.brightMagenta('PWA: Background color'),
-            initial: '#000000',
-            validate: hex => {
-                const pattern = /^#[0-9]+$/;
-                return pattern.test(hex)
-                    ? true
-                    : colors.brightRed('Only hex values are valid e.g #000000');
+            {
+                name: 'themeColor',
+                type: 'text',
+                message: colors.brightMagenta('PWA: Theme color'),
+                initial: '#000000',
+                validate: hex => {
+                    const pattern = /^#[0-9]+$/;
+                    return pattern.test(hex)
+                        ? true
+                        : colors.brightRed(
+                              'Only hex values are valid e.g #000000'
+                          );
+                },
             },
-        },
-        {
-            name: 'enableServiceWorker',
-            type: 'confirm',
-            message: colors.brightMagenta(
-                'PWA: Enable offline service worker?'
-            ),
-            initial: false,
-        },
-    ];
-
-    const response = await prompts(questions);
-    createPWA(response);
+            {
+                name: 'backgroundColor',
+                type: 'text',
+                message: colors.brightMagenta('PWA: Background color'),
+                initial: '#000000',
+                validate: hex => {
+                    const pattern = /^#[0-9]+$/;
+                    return pattern.test(hex)
+                        ? true
+                        : colors.brightRed(
+                              'Only hex values are valid e.g #000000'
+                          );
+                },
+            },
+            {
+                name: 'enableServiceWorker',
+                type: 'confirm',
+                message: colors.brightMagenta(
+                    'PWA: Enable offline service worker?'
+                ),
+                initial: false,
+            },
+        ];
+        const response = await prompts(questions);
+        createPWA(response);
+    } catch (err) {
+        error(`:bomb: ${err}`);
+        process.exit(1);
+    }
 })();
 
 function createPWA(config) {
