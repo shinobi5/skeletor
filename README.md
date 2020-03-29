@@ -15,9 +15,6 @@ Currently smoothing out the edges while using it in personal projects and addres
 -   [snowpack](https://github.com/pikapkg/snowpack): consume npm packages directly in the browser
 
 **Notes**
-
-> `yarn` is used in the setup steps but can be substituted with `npm` if that is preferred
-
 > `dependencies` in the project will be processed by [snowpack](https://github.com/pikapkg/snowpack) and ready to be imported and used directly in the browser. Search [pika](https://www.pika.dev/) for esm ready packages
 
 > Custom element names require a hyphen (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)). Change this during setup (default: `x`)
