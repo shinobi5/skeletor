@@ -2,7 +2,7 @@
 
 Front-end boilerplate with a focus on the web platform.
 
-Currently smoothing out the edges while using it in personal projects and addressing issues as they arise...
+Currently smoothing out the edges while using it for personal projects...
 
 ## Includes
 
