@@ -103,7 +103,7 @@ module.exports = (
                 : scripts.server.devWebpack
         }
         "server:build": "live-server --open=build",
-        "setup": "yarn && node scripts/setup.js && npx prettier --write **/*.{json,html,js} && yarn",
+        "setup": "npm install && npm run prepare && node scripts/setup.js && npx prettier --write **/*.{json,html,js} && npm install && npm run prepare",
         ${isCSS ? scripts.start.css : scripts.start.basic}
     },
     "husky": {
