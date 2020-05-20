@@ -21,7 +21,7 @@ module.exports = (config = defaultConfig) => {
         "@babel/runtime": "${deps.babel.runtime}",
         ${isBeedle ? `"beedle": "${deps.beedle}",` : ''}
         ${isRedux ? `"redux": "${deps.redux}",` : ''}
-        ${isRouter ? `"router-component": "${deps.router}",` : ''}
+        ${config.isRouter ? `"router-component": "${deps.router}",` : ''}
         "haunted": "${deps.haunted}",
         "lit-html": "${deps.litHtml}"
     },
