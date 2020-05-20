@@ -42,7 +42,11 @@ function createComponent(config) {
     mkdirp.sync(componentDir);
     fs.writeFileSync(
         componentFileName,
-        componentTemplate(processedName, componentName, elementPrefix)
+        componentTemplate({
+            componentName,
+            elementPrefix,
+            elementName: processedName,
+        })
     );
     info(`:floppy_disk: ${processedName} created`);
 }

@@ -1,7 +1,13 @@
-module.exports = (ComponentName, elementName, elementPrefix) => {
+const defaultConfig = {
+    componentName: '',
+    elementName: '',
+    elementPrefix: 'x',
+};
+
+module.exports = (config = defaultConfig) => {
     return `import { html, render } from '../../web_modules/lit-html.js';
 
-export class ${ComponentName} extends HTMLElement {
+export class ${config.componentName} extends HTMLElement {
     constructor() {
         super();
         this.root = this.attachShadow({ mode: 'open' });
@@ -23,6 +29,8 @@ export class ${ComponentName} extends HTMLElement {
     }
 }
 
-customElements.define('${elementPrefix}-${elementName.toLowerCase()}', ${ComponentName});
+customElements.define('${
+        config.elementPrefix
+    }-${config.elementName.toLowerCase()}', ${config.componentName});
 `;
 };
