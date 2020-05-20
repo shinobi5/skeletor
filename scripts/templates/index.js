@@ -1,15 +1,22 @@
-module.exports = (isCSS, description, projectName, isPWA) => {
+const defaultConfig = {
+    description: '',
+    projectName: '',
+    isCSS: false,
+    isPWA: false,
+};
+
+module.exports = (config = defaultConfig) => {
     return `<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
-        <title>${projectName}</title>
-        <meta name="description" content="${description}" />
+        <title>${config.projectName}</title>
+        <meta name="description" content="${config.description}" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        ${isPWA ? `<link rel="manifest" href="manifest.json" />` : ''}
+        ${config.isPWA ? `<link rel="manifest" href="manifest.json" />` : ''}
         <link rel="shortcut icon" href="favicon.ico" />
-        ${isCSS ? `<link rel="stylesheet" href="styles.css" />` : ''}
+        ${config.isCSS ? `<link rel="stylesheet" href="styles.css" />` : ''}
     </head>
     <body>
         <noscript>
@@ -24,7 +31,7 @@ module.exports = (isCSS, description, projectName, isPWA) => {
             <x-skeletor></x-skeletor>
         </main>
 
-        ${isPWA ? `<script src="service-worker.js"></script>` : ''}
+        ${config.isPWA ? `<script src="service-worker.js"></script>` : ''}
         <script type="module" src="app.js"></script>
     </body>
 </html>

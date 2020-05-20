@@ -140,23 +140,31 @@ function setupProject(config) {
         pwa,
         router,
         state,
+        stateType,
         themeColor,
-        webComponents,
     } = config;
 
     fs.writeFileSync(
         packageJSON,
-        packageJSONTemplate(
-            css,
+        packageJSONTemplate({
+            isCSS: css,
             description,
             projectName,
-            router,
-            state,
-            webComponents
-        )
+            isRouter: router,
+            isState: state,
+            stateType,
+        })
     );
 
-    fs.writeFileSync(index, indexTemplate(css, description, projectName, pwa));
+    fs.writeFileSync(
+        index,
+        indexTemplate({
+            isCSS: css,
+            description,
+            projectName,
+            isPWA: pwa,
+        })
+    );
 
     if (state) {
         if (fs.existsSync(stateDir)) {
@@ -178,12 +186,12 @@ function setupProject(config) {
         }
         fs.writeFileSync(
             manifest,
-            manifestTemplate(
-                projectName,
+            manifestTemplate({
+                backgroundColor,
                 description,
+                projectName,
                 themeColor,
-                backgroundColor
-            )
+            })
         );
 
         if (fs.existsSync(serviceWorker)) {
@@ -192,7 +200,10 @@ function setupProject(config) {
         }
         fs.writeFileSync(
             serviceWorker,
-            serviceWorkerTemplate(projectName, enableServiceWorker)
+            serviceWorkerTemplate({
+                enableServiceWorker,
+                projectName,
+            })
         );
     }
 

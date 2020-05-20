@@ -1,7 +1,13 @@
-module.exports = (ComponentName, elementName, elementPrefix) => {
+const defaultConfig = {
+    componentName: '',
+    elementName: '',
+    elementPrefix: 'x',
+};
+
+module.exports = (config = defaultConfig) => {
     return `import { component, html } from '../../web_modules/haunted.js';
 
-export const ${ComponentName} = () => {
+export const ${config.componentName} = () => {
     return html\`
         <style>
             :host {
@@ -12,6 +18,8 @@ export const ${ComponentName} = () => {
     \`;
 };
 
-customElements.define('${elementPrefix}-${elementName.toLowerCase()}', component(${ComponentName}));
+customElements.define('${
+        config.elementPrefix
+    }-${config.elementName.toLowerCase()}', component(${config.componentName}));
 `;
 };

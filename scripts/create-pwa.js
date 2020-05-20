@@ -93,7 +93,12 @@ function createPWA(config) {
 
     fs.writeFileSync(
         manifest,
-        manifestTemplate(projectName, description, themeColor, backgroundColor)
+        manifestTemplate({
+            backgroundColor,
+            description,
+            projectName,
+            themeColor,
+        })
     );
 
     if (fs.existsSync(serviceWorker)) {
@@ -103,7 +108,10 @@ function createPWA(config) {
 
     fs.writeFileSync(
         serviceWorker,
-        serviceWorkerTemplate(projectName, enableServiceWorker)
+        serviceWorkerTemplate({
+            enableServiceWorker,
+            projectName,
+        })
     );
 
     info(`:floppy_disk: PWA files created`);

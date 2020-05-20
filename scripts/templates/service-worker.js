@@ -1,11 +1,16 @@
-module.exports = (projectName, enableServiceWorker) => {
+const defaultConfig = {
+    enableServiceWorker: false,
+    projectName: '',
+};
+
+module.exports = (config = defaultConfig) => {
     return `/**
 * using service workers:
 * https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers
 * */
    
 // files to cache
-const cacheName = '${projectName
+const cacheName = '${config.projectName
         .split(' ')
         .join('-')
         .toLowerCase()}-v1';
@@ -64,7 +69,7 @@ const registerServiceWorker = () => {
     }
 };
 
-const serviceWorkerOn = ${enableServiceWorker};
+const serviceWorkerOn = ${config.enableServiceWorker};
 
 serviceWorkerOn && registerServiceWorker();
 `;

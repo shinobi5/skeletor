@@ -1,8 +1,15 @@
-module.exports = (projectName, description, themeColor, backgroundColor) => {
+const defaultConfig = {
+    backgroundColor: '',
+    description: '',
+    projectName: '',
+    themeColor: '',
+};
+
+module.exports = (config = defaultConfig) => {
     return `{
-    "name": "${projectName}",
-    "short_name": "${projectName}",
-    "description": "${description}",
+    "name": "${config.projectName}",
+    "short_name": "${config.projectName}",
+    "description": "${config.description}",
     "icons": [
         {
             "src": "favicon.ico",
@@ -12,8 +19,8 @@ module.exports = (projectName, description, themeColor, backgroundColor) => {
     ],
     "start_url": "/index.html",
     "display": "fullscreen",
-    "theme_color": "${themeColor}",
-    "background_color": "${backgroundColor}"
+    "theme_color": "${config.themeColor}",
+    "background_color": "${config.backgroundColor}"
 }
 `;
 };
