@@ -79,22 +79,6 @@ const storeFile = path.join(stateDir, 'store.js');
                 ],
             },
             {
-                name: 'bundler',
-                type: 'confirm',
-                message: colors.brightMagenta('Bundler?'),
-                initial: false,
-            },
-            {
-                name: 'bundlerType',
-                type: prev => (prev ? 'select' : null),
-                message: colors.brightMagenta('Bundler: Rollup or Webpack'),
-                initial: 0,
-                choices: [
-                    { title: 'Rollup', value: 'rollup' },
-                    { title: 'Webpack', value: 'webpack' },
-                ],
-            },
-            {
                 name: 'pwa',
                 type: 'confirm',
                 message: colors.brightMagenta('PWA?'),
@@ -148,8 +132,6 @@ const storeFile = path.join(stateDir, 'store.js');
 function setupProject(config) {
     const {
         backgroundColor,
-        bundler,
-        bundlerType,
         css,
         description,
         elementPrefix,
@@ -165,8 +147,6 @@ function setupProject(config) {
     fs.writeFileSync(
         packageJSON,
         packageJSONTemplate(
-            bundler,
-            bundlerType,
             css,
             description,
             projectName,

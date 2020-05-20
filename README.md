@@ -2,8 +2,6 @@
 
 Front-end boilerplate with a focus on the web platform.
 
-Currently smoothing out the edges while using it for personal projects...
-
 ## Includes
 
 -   [Web component](https://developer.mozilla.org/en-US/docs/Web/Web_Components) generator
