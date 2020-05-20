@@ -156,10 +156,7 @@ function setupProject(config) {
         )
     );
 
-    fs.writeFileSync(
-        index,
-        indexTemplate(bundler, css, description, projectName, pwa)
-    );
+    fs.writeFileSync(index, indexTemplate(css, description, projectName, pwa));
 
     if (state) {
         if (fs.existsSync(stateDir)) {
