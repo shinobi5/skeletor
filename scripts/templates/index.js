@@ -1,4 +1,4 @@
-module.exports = (isBundler, isCSS, description, projectName, isPWA) => {
+module.exports = (isCSS, description, projectName, isPWA) => {
     return `<!DOCTYPE html>
 <html lang="en">
     <head>
@@ -25,7 +25,7 @@ module.exports = (isBundler, isCSS, description, projectName, isPWA) => {
         </main>
 
         ${isPWA ? `<script src="service-worker.js"></script>` : ''}
-        ${!isBundler ? `<script type="module" src="app.js"></script>` : ''}
+        <script type="module" src="app.js"></script>
     </body>
 </html>
 `;
