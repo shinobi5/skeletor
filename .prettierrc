@@ -1,13 +1,5 @@
 {
-    "trailingComma": "es5",
-    "tabWidth": 2,
-    "singleQuote": true,
-    "overrides": [
-        {
-            "files": "*.json",
-            "options": {
-                "tabWidth": 2
-            }
-        }
-    ]    
+  "trailingComma": "es5",
+  "tabWidth": 2,
+  "singleQuote": true,  
 }
