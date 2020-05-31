@@ -4,17 +4,17 @@ Front-end boilerplate with a focus on the web platform.
 
 ## Includes
 
--   [Web component](https://developer.mozilla.org/en-US/docs/Web/Web_Components) generator
--   [PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) generator
--   [redux](https://github.com/reduxjs/redux) and [beedle](https://github.com/andybelldesign/beedle) boilerplate generators
--   [lit-html](https://github.com/polymer/lit-html): HTML templates in JavaScript with template literals
--   [haunted](https://github.com/matthewp/haunted): React's Hooks API for web components
--   [router-component](https://github.com/mkay581/router-component): lightweight web component for client-side routing
--   [snowpack](https://github.com/pikapkg/snowpack): consume npm packages directly in the browser
+- [Web component](https://developer.mozilla.org/en-US/docs/Web/Web_Components) generator
+- [PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) generator
+- [redux](https://github.com/reduxjs/redux) and [beedle](https://github.com/andybelldesign/beedle) boilerplate generators
+- [lit-html](https://github.com/polymer/lit-html): HTML templates in JavaScript with template literals
+- [haunted](https://github.com/matthewp/haunted): React's Hooks API for web components
+- [router-component](https://github.com/mkay581/router-component): lightweight web component for client-side routing
+- [snowpack](https://github.com/pikapkg/snowpack): consume npm packages directly in the browser
 
 **Notes**
 
-> `dependencies` in the project will be processed by [snowpack](https://github.com/pikapkg/snowpack) and ready to be imported and used directly in the browser. Search [pika](https://www.pika.dev/) for esm ready packages
+> Project `scripts` requires [yarn](https://yarnpkg.com/) > `dependencies` in the project will be processed by [snowpack](https://github.com/pikapkg/snowpack) and ready to be imported and used directly in the browser. Search [pika](https://www.pika.dev/) for esm ready packages
 
 > Custom element names require a hyphen (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)). Change this during setup (default: `x`)
 
@@ -62,14 +62,14 @@ npm run create:component
 
 ```html
 <head>
-    <script
-        type="module"
-        src="js/components/custom-element/custom-element.js"
-        defer
-    ></script>
+  <script
+    type="module"
+    src="js/components/custom-element/custom-element.js"
+    defer
+  ></script>
 </head>
 <body>
-    <x-custom-element>Custom element</x-custom-element>
+  <x-custom-element>Custom element</x-custom-element>
 </body>
 ```
 
@@ -78,9 +78,9 @@ import { component, html } from '../../web_modules/haunted.js';
 import '../CustomElement/CustomElement.js';
 
 const App = () => {
-    return html`
-        <x-custom-element>Custom element</x-custom-element>
-    `;
+  return html`
+    <x-custom-element>Custom element</x-custom-element>
+  `;
 };
 
 customElements.define('x-app', component(App));
@@ -88,10 +88,10 @@ customElements.define('x-app', component(App));
 
 ### Resources
 
--   [webcomponents](https://www.webcomponents.org)
--   [Open WC](https://open-wc.org/)
--   [MDN](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
--   [SSR for web components](https://medium.com/@treshugart/%C3%A5server-side-rendering-web-components-e5df705f3f48)
+- [webcomponents](https://www.webcomponents.org)
+- [Open WC](https://open-wc.org/)
+- [MDN](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
+- [SSR for web components](https://medium.com/@treshugart/%C3%A5server-side-rendering-web-components-e5df705f3f48)
 
 ## Styles
 
@@ -109,17 +109,17 @@ See [router-component](https://github.com/mkay581/router-component).
 
 ```html
 <head>
-    <script src="js/web_modules/router-component.js"></script>
-    <script src="js/components/FirstPage/FirstPage.js"></script>
-    <script src="js/components/SecondPage/SecondPage.js"></script>
-    <script src="js/components/PageNotFound/PageNotFound.js"></script>
+  <script src="js/web_modules/router-component.js"></script>
+  <script src="js/components/FirstPage/FirstPage.js"></script>
+  <script src="js/components/SecondPage/SecondPage.js"></script>
+  <script src="js/components/PageNotFound/PageNotFound.js"></script>
 </head>
 <body>
-    <router-component>
-        <x-first-page path="^/(index.html)?$"></x-first-page>
-        <x-second-page path="second-page"></x-second-page>
-        <x-page-not-found path=".*"></x-page-not-found>
-    </router-component>
+  <router-component>
+    <x-first-page path="^/(index.html)?$"></x-first-page>
+    <x-second-page path="second-page"></x-second-page>
+    <x-page-not-found path=".*"></x-page-not-found>
+  </router-component>
 </body>
 ```
 
@@ -131,13 +131,13 @@ import '../SecondPage/SecondPage.js';
 import '../PageNotFound/PageNotFound.js';
 
 const App = () => {
-    return html`
-        <router-component>
-            <x-first-page path="^/(index.html)?$"></x-first-page>
-            <x-second-page path="second-page"></x-second-page>
-            <x-page-not-found path=".*"></x-page-not-found>
-        </router-component>
-    `;
+  return html`
+    <router-component>
+      <x-first-page path="^/(index.html)?$"></x-first-page>
+      <x-second-page path="second-page"></x-second-page>
+      <x-page-not-found path=".*"></x-page-not-found>
+    </router-component>
+  `;
 };
 
 customElements.define('x-app', component(App, { useShadowDOM: false }));
@@ -151,9 +151,9 @@ Global state can be handled with either [redux](https://github.com/reduxjs/redux
 
 ### Todo
 
--   Finish `redux` and `beedle` boilerplate generators
--   Improve PWA boilerplate generators
--   Add test framework and boilerplate generators
--   Look into babel issues
--   Look into replacing `live-server` with [servor](https://github.com/lukejacksonn/servor)
--   Update `imagemin` CLI settings
+- Finish `redux` and `beedle` boilerplate generators
+- Improve PWA boilerplate generators
+- Add test framework and boilerplate generators
+- Look into babel issues
+- Look into replacing `live-server` with [servor](https://github.com/lukejacksonn/servor)
+- Update `imagemin` CLI settings
