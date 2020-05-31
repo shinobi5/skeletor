@@ -150,12 +150,3 @@ customElements.define('x-app', component(App, { useShadowDOM: false }));
 Haunted's hooks API provides internal component state management (same as the [React Hooks API](https://reactjs.org/docs/hooks-reference.html)). View haunted's [documentation](https://github.com/matthewp/haunted) for examples.
 
 Global state can be handled with either [redux](https://github.com/reduxjs/redux) or [beedle](https://github.com/andybelldesign/beedle) with or without web components. Starter boilerplates can be generated through the setup CLI.
-
-### Todo
-
-- Finish `redux` and `beedle` boilerplate generators
-- Improve PWA boilerplate generators
-- Add test framework and boilerplate generators
-- Look into babel issues
-- Look into replacing `live-server` with [servor](https://github.com/lukejacksonn/servor)
-- Update `imagemin` CLI settings
