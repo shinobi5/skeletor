@@ -1,0 +1,13 @@
+# build
+build
+dist
+
+# modules
+src/js/web_modules
+node_modules
+
+# generated styles
+src/styles.css
+
+# error logs
+yarn-error.log
