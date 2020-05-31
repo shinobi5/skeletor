@@ -35,19 +35,19 @@ cd <project-name> && rm -rf .git && git init
 **Setup project**
 
 ```
-npm run setup
+yarn setup
 ```
 
 **Serve the project at `localhost:8080`**
 
 ```
-npm run start
+yarn start
 ```
 
 **Create build for production in the root of the project at `build/`**
 
 ```
-npm run build
+yarn build
 ```
 
 ## Web components
@@ -55,7 +55,7 @@ npm run build
 **Create boilerplate component in `src/js/components/`**
 
 ```
-npm run create:component
+yarn create:component
 ```
 
 **Usage examples**
