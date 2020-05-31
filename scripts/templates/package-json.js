@@ -104,7 +104,6 @@ module.exports = (config = defaultConfig) => {
                 ? scripts.server.devRollup
                 : scripts.server.devWebpack
         }
-        "server:dev": "live-server --open=src",
         "server:build": "live-server --open=build",
         "setup": "npm install && npm run prepare && node scripts/setup.js && npx prettier --write **/*.{json,html,js} && npm install && npm run prepare",
         ${config.isCSS ? scripts.start.css : scripts.start.basic}
