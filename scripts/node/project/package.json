@@ -29,9 +29,9 @@
   "scripts": {
     "babel": "npx babel src -d build --copy-files",
     "build": "yarn css:concat && yarn css:minify && yarn imagemin && yarn babel",
-    "copy": "node scripts/copy.js",
-    "create:component": "node scripts/create-component.js",
-    "create:pwa": "node scripts/create-pwa.js",
+    "copy": "node scripts/node/copy.js",
+    "create:component": "node scripts/node/create-component.js",
+    "create:pwa": "node scripts/node/create-pwa.js",
     "clean:modules": "rm -rf node_modules",
     "clean:build": "rm -rf build",
     "css:concat": "cat src/css/settings/* src/css/global/* src/css/elements/* src/css/components/* src/css/utilities/* > src/styles.css",
@@ -43,7 +43,7 @@
     "prettier:write": "prettier --write .",
     "server:dev": "live-server --open=src",
     "server:build": "live-server --open=build",
-    "setup": "yarn && node scripts/setup.js && npx prettier --write **/*.{json,html,js} && yarn",
+    "setup": "yarn && node scripts/node/setup.js && npx prettier --write **/*.{json,html,js} && yarn",
     "start": "yarn css:concat && npm-run-all --parallel prettier:watch css:watch server:dev"
   },
   "husky": {

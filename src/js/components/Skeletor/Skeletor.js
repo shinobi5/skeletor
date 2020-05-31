@@ -1,4 +1,4 @@
-import { component, html } from '../../web_modules/haunted.js';
+import { component, html } from 'https://cdn.pika.dev/haunted';
 
 export const Skeletor = () => {
     return html`
