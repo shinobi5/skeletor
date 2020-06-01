@@ -1,5 +1,5 @@
-const deps = require('../../config/pkg.dependencies.js');
-const scripts = require('../../config/pkg.scripts.js');
+const deps = require('../config/pkg.dependencies.js');
+const scripts = require('../config/pkg.scripts.js');
 
 const defaultConfig = {
     isCSS: false,
@@ -86,9 +86,9 @@ module.exports = (config = defaultConfig) => {
                 ? scripts.build.webpack
                 : scripts.build.css
         }
-        "copy": "node scripts/copy.js",
-        "create:component": "node scripts/create-component.js",
-        "create:pwa": "node scripts/create-pwa.js",
+        "copy": "node scripts/node/copy.js",
+        "create:component": "node scripts/node/create-component.js",
+        "create:pwa": "node scripts/node/create-pwa.js",
         "clean:modules": "rm -rf node_modules",
         "clean:build": "rm -rf build",
         ${config.isCSS ? scripts.css.concat : ''}
@@ -105,7 +105,7 @@ module.exports = (config = defaultConfig) => {
                 : scripts.server.devWebpack
         }
         "server:build": "live-server --open=build",
-        "setup": "npm install && npm run prepare && node scripts/setup.js && npx prettier --write **/*.{json,html,js} && npm install && npm run prepare",
+        "setup": "yarn && node scripts/node/setup.js && npx prettier --write **/*.{json,html,js} && yarn",
         ${config.isCSS ? scripts.start.css : scripts.start.basic}
     },
     "husky": {

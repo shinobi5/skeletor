@@ -1,11 +1,11 @@
 module.exports = {
   build: {
     basic: `"build": "yarn imagemin && yarn babel",`,
-    rollup: `"build": "rollup --config config/rollup.prod.js",`,
-    webpack: `"build": "webpack --config config/webpack.prod.js",`,
+    rollup: `"build": "rollup --config scripts/node/config/rollup.prod.js",`,
+    webpack: `"build": "webpack --config scripts/node/config/webpack.prod.js",`,
     css: `"build": "yarn css:concat && yarn css:minify && yarn imagemin && yarn babel",`,
-    rollupCss: `"build": "yarn css:concat && yarn css:minify && rollup --config config/rollup.prod.js",`,
-    webpackCss: `"build": "yarn css:concat && yarn css:minify && webpack --config config/webpack.prod.js",`,
+    rollupCss: `"build": "yarn css:concat && yarn css:minify && rollup --config scripts/node/config/rollup.prod.js",`,
+    webpackCss: `"build": "yarn css:concat && yarn css:minify && webpack --config scripts/node/config/webpack.prod.js",`,
   },
   css: {
     concat: `"css:concat": "cat src/css/settings/* src/css/global/* src/css/elements/* src/css/components/* src/css/utilities/* > src/styles.css",`,
@@ -14,8 +14,8 @@ module.exports = {
   },
   server: {
     dev: `"server:dev": "live-server --open=src",`,
-    devRollup: `"server:dev": "rollup --config config/rollup.dev.js",`,
-    devWebpack: `"server:dev": "webpack-dev-server --open --config config/webpack.dev.js",`,
+    devRollup: `"server:dev": "rollup --config scripts/node/config/rollup.dev.js",`,
+    devWebpack: `"server:dev": "webpack-dev-server --open --config scripts/node/config/webpack.dev.js",`,
   },
   start: {
     basic: `"start": "npm-run-all --parallel prettier:watch server:dev"`,

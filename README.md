@@ -37,7 +37,7 @@ cd <project-name> && rm -rf .git && git init
 **Setup project**
 
 ```
-yarn setup
+node scripts/node/setup.js
 ```
 
 **Serve the project at `localhost:8080`**
