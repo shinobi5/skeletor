@@ -17,11 +17,11 @@ cd <project-name> && rm -rf .git && git init
 **Setup project**
 
 ```
-deno run scripts/deno/setup.ts
+deno run --allow-read --allow-write scripts/deno/setup.ts
 ```
 
 **Serve the project at `localhost:1234`**
 
 ```
-deno run scripts/deno/server.ts
+deno run --allow-net scripts/deno/server.ts
 ```
