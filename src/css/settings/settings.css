@@ -1,15 +1,15 @@
 :root {
-    /* base unit for project spacing */
-    --bu: 4;
+  /* base unit for project spacing */
+  --bu: 4;
 
-    /* font */
-    --font-primary: 'arial, sans-serif';
-    --font-secondary: 'serif';
-    --font-lineheight: 1.8;
+  /* font */
+  --font-primary: 'arial, sans-serif';
+  --font-secondary: 'serif';
+  --font-lineheight: 1.8;
 
-    /* color */
-    --color-selection: #2793c7;
+  /* color */
+  --color-selection: #2793c7;
 
-    /* layout */
-    --container-maxwidth: 1200px;
+  /* layout */
+  --container-maxwidth: 1200px;
 }

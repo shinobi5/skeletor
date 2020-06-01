@@ -1,8 +1,8 @@
 module.exports = () => {
-    return `import { combineReducers } from 'redux';
+  return `import { combineReducers } from 'redux';
 
 const rootReducer = combineReducers({
-    state: () => ({})
+  state: () => ({})
 });
 
 export default rootReducer;
