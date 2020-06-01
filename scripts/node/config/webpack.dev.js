@@ -11,5 +11,6 @@ module.exports = merge(common, {
     contentBase: path.join(ROOT, '/src'),
     watchContentBase: true,
     hot: true,
+    port: 1234
   },
 });

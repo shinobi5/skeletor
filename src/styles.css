@@ -1,0 +1,165 @@
+:root {
+    /* base unit for project spacing */
+    --bu: 4;
+
+    /* font */
+    --font-primary: 'arial, sans-serif';
+    --font-secondary: 'serif';
+    --font-lineheight: 1.8;
+
+    /* color */
+    --color-selection: #2793c7;
+
+    /* layout */
+    --container-maxwidth: 1200px;
+}
+@media print {
+    *,
+    *:before,
+    *:after,
+    *:first-letter,
+    *:first-line {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: ' (' attr(href) ')';
+    }
+
+    abbr[title]:after {
+        content: ' (' attr(title) ')';
+    }
+
+    /* 
+		don't show links that are fragment identifiers,
+		or use the `javascript:` pseudo protocol
+	*/
+    a[href^='#']:after,
+    a[href^='javascript:']:after {
+        content: '';
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #000;
+        page-break-inside: avoid;
+    }
+
+    /* 
+		printing tables:
+		http://css-discuss.incutio.com/wiki/Printing_Tables
+	*/
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+::selection {
+    background: var(--color-selection);
+    color: white;
+    text-shadow: none;
+}
+body {
+    font-family: var(--font-primary);
+    line-height: var(--font-lineheight);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.container {
+    position: relative;
+    width: auto;
+    max-width: var(--container-maxwidth);
+    margin: auto;
+    padding: 0 20px;
+}
+/* hide from screen readers */
+.hidden {
+    display: none !important;
+}
+
+/* hide visually and from screen readers, but maintain layout */
+.invisible {
+    visibility: hidden;
+}
+
+/* hide only visually, but have it available for screen readers */
+.sr-only {
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip: rect(0, 0, 0, 0);
+    position: absolute;
+}
+
+/* extends the .sr-only class to allow the element 
+to be focusable when navigated to via the keyboard */
+.sr-only.focusable:focus,
+.sr-only.focusable:active {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
