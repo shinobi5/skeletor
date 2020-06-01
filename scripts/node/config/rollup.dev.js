@@ -42,7 +42,7 @@ export default {
     serve({
       open: true,
       contentBase: 'build',
-      port: 8080,
+      port: 1234,
     }),
   ],
 };

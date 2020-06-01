@@ -13,7 +13,7 @@ module.exports = {
     watch: `"css:watch": "onchange 'src/css/**/*' -- yarn css:concat",`,
   },
   server: {
-    dev: `"server:dev": "live-server --open=src",`,
+    dev: `"server:dev": "live-server --open=src --port=1234",`,
     devRollup: `"server:dev": "rollup --config scripts/node/config/rollup.dev.js",`,
     devWebpack: `"server:dev": "webpack-dev-server --open --config scripts/node/config/webpack.dev.js",`,
   },

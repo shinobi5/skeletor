@@ -1,4 +1,4 @@
-# build
+# builds
 build
 dist
 
@@ -6,8 +6,5 @@ dist
 src/js/web_modules
 node_modules
 
-# generated styles
-src/styles.css
-
 # error logs
-yarn-error.log
+*.log

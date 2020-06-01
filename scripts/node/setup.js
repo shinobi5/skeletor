@@ -4,7 +4,7 @@ const mkdirp = require("mkdirp");
 const prompts = require("prompts");
 const colors = require("colors/safe");
 const { info, error } = require("hankey");
-const { execSync } = require('child_process');
+const { execSync } = require("child_process");
 
 const packageJSONTemplate = require("./templates/package-json");
 const manifestTemplate = require("./templates/manifest");
@@ -35,7 +35,7 @@ const storeFile = path.join(stateDir, "store.js");
   try {
     fs.copySync(`${scriptsDir}/node/project`, ROOT);
     execSync(`yarn`);
-    
+
     const questions = [
       {
         name: "projectName",
@@ -234,4 +234,4 @@ function setupProject(config) {
   if (!css) fs.rmdirSync(cssDir, { recursive: true });
 
   info(`:floppy_disk: Project setup complete`);
-};
+}

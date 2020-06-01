@@ -1,9 +1,3 @@
-const defaultConfig = {
-    componentName: '',
-    elementName: '',
-    elementPrefix: 'x',
-};
-
 module.exports = isBundler => {
     return `import { component, html } from ${isBundler ? '../../web_modules/haunted.js' : 'https://cdn.pika.dev/haunted'};
 
