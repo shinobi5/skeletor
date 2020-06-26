@@ -1,3 +1,7 @@
+/* 
+  TODO: rethink storing the dependencies here as they need to be manually 
+  checked and updated here for major version bumps
+*/
 module.exports = {
   babel: {
     cli: '^7.4.4',

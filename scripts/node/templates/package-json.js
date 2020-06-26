@@ -1,3 +1,9 @@
+/* 
+  TODO: need to rethink how to generate a new package.json file during the
+  setup stage as there are some settings here that also need to be updated
+  in scripts/node/project/package.json in order to keep them in synch
+*/
+
 const deps = require('../config/pkg.dependencies.js');
 const scripts = require('../config/pkg.scripts.js');
 
@@ -86,7 +92,7 @@ module.exports = (config = defaultConfig) => {
         ? scripts.build.webpack
         : scripts.build.css
     }
-    "copy": "node scripts/node/copy.js",
+    "create:build": "node scripts/node/create-build.js",
     "create:component": "node scripts/node/create-component.js",
     "create:pwa": "node scripts/node/create-pwa.js",
     "clean:modules": "rm -rf node_modules",
