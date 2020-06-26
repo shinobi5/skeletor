@@ -35,7 +35,7 @@ cd <project-name> && rm -rf .git && git init
 **Setup project**
 
 ```
-node scripts/node/setup.js
+node scripts/node/create-project.js
 ```
 
 **Serve the project at `localhost:1234`**

@@ -43,7 +43,7 @@
     "prettier:write": "prettier --write .",
     "server:dev": "live-server --open=src --port=1234",
     "server:build": "live-server --open=build --port=4321",
-    "setup": "yarn && node scripts/node/setup.js && npx prettier --write **/*.{json,html,js} && yarn",
+    "setup": "yarn && node scripts/node/create-project.js && npx prettier --write **/*.{json,html,js} && yarn",
     "start": "yarn css:concat && npm-run-all --parallel prettier:watch css:watch server:dev"
   },
   "husky": {

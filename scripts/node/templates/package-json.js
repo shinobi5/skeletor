@@ -111,7 +111,7 @@ module.exports = (config = defaultConfig) => {
         : scripts.server.devWebpack
     }
     "server:build": "live-server --open=build",
-    "setup": "yarn && node scripts/node/setup.js && npx prettier --write **/*.{json,html,js} && yarn",
+    "setup": "yarn && node scripts/node/create-project.js && npx prettier --write **/*.{json,html,js} && yarn",
     ${config.isCSS ? scripts.start.css : scripts.start.basic}
   },
   "husky": {
