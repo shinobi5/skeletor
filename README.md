@@ -1,4 +1,4 @@
-# :skull: Skeletor
+# :skull: Skeletor [WIP]
 
 Front-end boilerplate with a focus on the web platform.
 
