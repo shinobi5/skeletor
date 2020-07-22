@@ -8,9 +8,9 @@ Front-end boilerplate with a focus on the web platform running on [deno](https:/
 - [redux](https://github.com/reduxjs/redux) boilerplate generator
 
 **Notes**
-> This project is WIP. Currently converting the previous node scripts to deno...
+> Project is WIP. Currently converting the previous node scripts to deno...
 
-> This project requires [velociraptor](https://github.com/umbopepato/velociraptor/) to be installed to run the project scripts
+> Project requires [velociraptor](https://github.com/umbopepato/velociraptor/) to be installed to run the project scripts
 
 > Custom element names require a hyphen (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)). Change this during setup (default: `x`)
 
