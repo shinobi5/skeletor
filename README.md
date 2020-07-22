@@ -99,7 +99,7 @@ The concatenating happens in order from broad to specific styles based on the fo
 
 ## Routing
 
-See [router-component](https://github.com/mkay581/router-component).
+Routing examples using [router-component](https://github.com/mkay581/router-component).
 
 **Usage examples**
 
