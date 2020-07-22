@@ -5,7 +5,7 @@ interface config {
 }
 
 export default (config: config) => {
-    return `import { component, html } from 'https://cdn.pika.dev/haunted';
+  return `import { component, html } from 'https://cdn.pika.dev/haunted';
 
 export const ${config.componentName} = () => {
   return html\`
