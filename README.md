@@ -1,18 +1,14 @@
 # :skull: Skeletor
 
+Front-end boilerplate with a focus on the web platform running on [deno](https://deno.land/).
+
 ## Includes
 
-- [Web component](https://developer.mozilla.org/en-US/docs/Web/Web_Components) generator
+- [Web component](https://developer.mozilla.org/en-US/docs/Web/Web_Components) generator using [lit-html](https://github.com/polymer/lit-html) and [haunted](https://github.com/matthewp/haunted)
 - [PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) generator
 - [redux](https://github.com/reduxjs/redux) boilerplate generator
-- [lit-html](https://github.com/polymer/lit-html): HTML templates in JavaScript with template literals
-- [haunted](https://github.com/matthewp/haunted): React's Hooks API for web components
-- [router-component](https://github.com/mkay581/router-component): lightweight web component for client-side routing
-- [snowpack](https://github.com/pikapkg/snowpack): consume npm packages directly in the browser
 
 **Notes**
-
-> Project requires [deno](https://deno.land/)
 
 > Custom element names require a hyphen (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)). Change this during setup (default: `x`)
 
@@ -99,7 +95,7 @@ For global styles minimal CSS is provided by default (but can be disabled throug
 
 The concatenating happens in order from broad to specific styles based on the folder they're in (in the following order): `settings, global, elements, components, utilities`.
 
-## Router
+## SPA Router
 
 See [router-component](https://github.com/mkay581/router-component).
 

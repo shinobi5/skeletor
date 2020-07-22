@@ -26,7 +26,6 @@ export default (elementPrefix: string) => {
   
   function createComponent(answers: any) {
     const encoder = new TextEncoder();
-  
     const processedName = processHyphen(answers.componentName);
   
     Deno.writeFileSync(
