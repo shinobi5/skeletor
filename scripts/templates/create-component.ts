@@ -1,5 +1,4 @@
 // @ts-nocheck
-
 export default (elementPrefix: string) => {
   return `
 import { Ask } from '../deps.ts';
