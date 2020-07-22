@@ -3,7 +3,7 @@
 Front-end boilerplate with a focus on the web platform running on [deno](https://deno.land/).
 
 **Includes**
-- [web component](https://developer.mozilla.org/en-US/docs/Web/Web_Components) generator using [lit-html](https://github.com/polymer/lit-html) with [haunted](https://github.com/matthewp/haunted)
+- [web component](https://developer.mozilla.org/en-US/docs/Web/Web_Components) generator with [lit-html](https://github.com/polymer/lit-html) and [haunted](https://github.com/matthewp/haunted)
 - [progressive web app](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) generator
 - [redux](https://github.com/reduxjs/redux) / [beedle](https://github.com/hankchizljaw/beedle) boilerplate generators
 
