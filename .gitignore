@@ -2,9 +2,5 @@
 build
 dist
 
-# modules
-src/js/web_modules
-node_modules
-
 # error logs
 *.log

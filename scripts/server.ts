@@ -1,4 +1,4 @@
-import { createApp, serveStatic } from 'https://servestjs.org/@v1.1.0/mod.ts';
+import { createApp, serveStatic } from '../deps.ts';
 const app = createApp();
 app.use(serveStatic('./src'));
 app.listen({ port: 1234 });
