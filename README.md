@@ -101,8 +101,6 @@ The concatenating happens in order from broad to specific styles based on the fo
 
 Routing examples using [router-component](https://github.com/mkay581/router-component).
 
-**Usage examples**
-
 ```html
 <head>
   <script src="https://cdn.pika.dev/router-component@^0.12.2"></script>
