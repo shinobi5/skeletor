@@ -8,14 +8,14 @@ export default (config: config) => {
     return `import { component, html } from 'https://cdn.pika.dev/haunted';
 
 export const ${config.componentName} = () => {
-    return html\`
-        <style>
-            :host {
-                display: block;
-            }
-        </style>
-        <slot></slot>
-    \`;
+  return html\`
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <slot></slot>
+  \`;
 };
 
 customElements.define('${config.elementPrefix}-${config.elementName.toLowerCase()}', component(${config.componentName}));
