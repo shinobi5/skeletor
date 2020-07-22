@@ -10,7 +10,7 @@ This project is WIP. Currently converting the previous node scripts to deno...
 - [redux](https://github.com/reduxjs/redux) boilerplate generator
 
 **Notes**
-> This project requires [velociraptor](https://github.com/umbopepato/velociraptor/) to be installed for running the project scripts
+> This project requires [velociraptor](https://github.com/umbopepato/velociraptor/) to be installed to run the project scripts
 
 > Custom element names require a hyphen (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)). Change this during setup (default: `x`)
 
