@@ -3,3 +3,4 @@ scripts:
   start: deno run --allow-net --allow-read scripts/server.ts
   create-component: deno run --allow-read --allow-write scripts/create-component.ts
   build: deno run --allow-read --allow-write scripts/build.ts
+  concat-css: cat src/css/settings/* src/css/global/* src/css/elements/* src/css/components/* src/css/utilities/* > src/styles.css
