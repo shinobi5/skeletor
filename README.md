@@ -6,6 +6,7 @@ Front-end boilerplate with a focus on the web platform running on [deno](https:/
 - [web component](https://developer.mozilla.org/en-US/docs/Web/Web_Components) generator using [lit-html](https://github.com/polymer/lit-html) and [haunted](https://github.com/matthewp/haunted)
 - [progressive web app](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) generator
 - [redux](https://github.com/reduxjs/redux) boilerplate generator
+- [beedle](https://github.com/hankchizljaw/beedle) boilerplate generator
 
 **Notes**
 > Project is WIP. Currently converting the previous node scripts to deno...
@@ -141,4 +142,4 @@ customElements.define('x-app', component(App, { useShadowDOM: false }));
 
 [Haunted](https://github.com/matthewp/haunted) provides internal component state management (same as [react hooks](https://reactjs.org/docs/hooks-reference.html)).
 
-Global state can be handled with [redux](https://github.com/reduxjs/redux) with or without web components. Starter boilerplates can be generated through the setup CLI.
+Global state can be handled with [redux](https://github.com/reduxjs/redux) or [beedle](https://github.com/hankchizljaw/beedle) with or without web components. Starter boilerplates can be generated through the setup CLI.
