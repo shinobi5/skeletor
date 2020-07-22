@@ -1,11 +1,11 @@
-const defaultConfig = {
-    componentName: '',
-    elementName: '',
-    elementPrefix: 'x',
-};
+interface config {
+  componentName: string,
+  elementName: string,
+  elementPrefix: string,
+}
 
-module.exports = (config = defaultConfig) => {
-    return `import { component, html } from '../../web_modules/haunted.js';
+export default (config: config) => {
+    return `import { component, html } from 'https://cdn.pika.dev/haunted';
 
 export const ${config.componentName} = () => {
     return html\`

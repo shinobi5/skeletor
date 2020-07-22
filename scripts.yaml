@@ -1,0 +1,5 @@
+scripts:
+  server: deno run --allow-read --allow-write scripts/setup.ts
+  start: deno run --allow-net --allow-read scripts/server.ts
+  create-component: deno run --allow-read --allow-write scripts/create-component.ts
+  build: deno run --allow-read --allow-write scripts/build.ts
