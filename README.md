@@ -8,7 +8,7 @@ Front-end boilerplate with a focus on the web platform running on [deno](https:/
 - [redux](https://github.com/reduxjs/redux) / [beedle](https://github.com/hankchizljaw/beedle) boilerplate generators
 
 **Notes**
-> Project is WIP. Currently converting the previous node scripts to deno...
+> Currently converting the previous node scripts to deno...
 
 > Project requires [velociraptor](https://github.com/umbopepato/velociraptor/) to be installed to run the project scripts
 
