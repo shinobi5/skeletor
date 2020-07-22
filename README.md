@@ -2,8 +2,6 @@
 
 Front-end boilerplate with a focus on the web platform running on [deno](https://deno.land/).
 
-## Includes
-
 - [web component](https://developer.mozilla.org/en-US/docs/Web/Web_Components) generator using [lit-html](https://github.com/polymer/lit-html) and [haunted](https://github.com/matthewp/haunted)
 - [progressive web app](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) generator
 - [redux](https://github.com/reduxjs/redux) boilerplate generator
@@ -95,7 +93,7 @@ For global styles minimal CSS is provided by default (but can be disabled throug
 
 The concatenating happens in order from broad to specific styles based on the folder they're in (in the following order): `settings, global, elements, components, utilities`.
 
-## SPA Router
+## Routing
 
 See [router-component](https://github.com/mkay581/router-component).
 
@@ -141,4 +139,4 @@ customElements.define('x-app', component(App, { useShadowDOM: false }));
 
 Haunted's hooks API provides internal component state management (same as the [React Hooks API](https://reactjs.org/docs/hooks-reference.html)). View haunted's [documentation](https://github.com/matthewp/haunted) for examples.
 
-Global state can be handled with either [redux](https://github.com/reduxjs/redux) or [beedle](https://github.com/andybelldesign/beedle) with or without web components. Starter boilerplates can be generated through the setup CLI.
+Global state can be handled with [redux](https://github.com/reduxjs/redux) with or without web components. Starter boilerplates can be generated through the setup CLI.
