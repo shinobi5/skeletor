@@ -2,14 +2,14 @@
 
 Front-end boilerplate with a focus on the web platform running on [deno](https://deno.land/).
 
-This project is WIP. Currently converting the previous node scripts to deno...
-
 **Includes**
 - [web component](https://developer.mozilla.org/en-US/docs/Web/Web_Components) generator using [lit-html](https://github.com/polymer/lit-html) and [haunted](https://github.com/matthewp/haunted)
 - [progressive web app](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) generator
 - [redux](https://github.com/reduxjs/redux) boilerplate generator
 
 **Notes**
+> This project is WIP. Currently converting the previous node scripts to deno...
+
 > This project requires [velociraptor](https://github.com/umbopepato/velociraptor/) to be installed to run the project scripts
 
 > Custom element names require a hyphen (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)). Change this during setup (default: `x`)
