@@ -2,7 +2,7 @@
 
 Front-end boilerplate with a focus on the web platform running on [deno](https://deno.land/).
 
-This project is WIP. Still need to convert some of the previous node scripts over to deno.
+This project is WIP. Currently converting the previous node scripts to deno...
 
 **Includes**
 - [web component](https://developer.mozilla.org/en-US/docs/Web/Web_Components) generator using [lit-html](https://github.com/polymer/lit-html) and [haunted](https://github.com/matthewp/haunted)
