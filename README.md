@@ -84,7 +84,7 @@ vr create-component
 ```
 
 ```javascript
-import { component, html } from 'https://cdn.pika.dev/haunted';
+import { component, html } from 'https://cdn.skypack.dev/haunted';
 import '../CustomElement/CustomElement.js';
 
 const App = () => {
@@ -117,7 +117,7 @@ Routing examples using [router-component](https://github.com/mkay581/router-comp
 
 ```html
 <head>
-  <script src="https://cdn.pika.dev/router-component@^0.12.2"></script>
+  <script src="https://cdn.skypack.dev/router-component"></script>
   <script src="js/components/FirstPage/FirstPage.js"></script>
   <script src="js/components/SecondPage/SecondPage.js"></script>
   <script src="js/components/PageNotFound/PageNotFound.js"></script>
@@ -132,8 +132,8 @@ Routing examples using [router-component](https://github.com/mkay581/router-comp
 ```
 
 ```javascript
-import { component, html } from 'https://cdn.pika.dev/haunted';
-import 'https://cdn.pika.dev/router-component@^0.12.2';
+import { component, html } from 'https://cdn.skypack.dev/haunted';
+import 'https://cdn.skypack.dev/router-component';
 import '../FirstPage/FirstPage.js';
 import '../SecondPage/SecondPage.js';
 import '../PageNotFound/PageNotFound.js';
