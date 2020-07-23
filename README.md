@@ -1,6 +1,6 @@
 # :skull: Skeletor
 
-Front-end boilerplate with a focus on the web platform with [Deno](https://deno.land/).
+Front-end web platform boilerplate with [Deno](https://deno.land/).
 
 **Includes**
 - [web component](https://developer.mozilla.org/en-US/docs/Web/Web_Components) generator with [lit-html](https://github.com/polymer/lit-html) and [haunted](https://github.com/matthewp/haunted)
