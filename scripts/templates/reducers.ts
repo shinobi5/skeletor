@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
   return `import { combineReducers } from 'redux';
 
 const rootReducer = combineReducers({

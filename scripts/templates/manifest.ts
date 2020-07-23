@@ -1,11 +1,11 @@
-const defaultConfig = {
-  backgroundColor: '',
-  description: '',
-  projectName: '',
-  themeColor: '',
+interface config {
+  backgroundColor: string,
+  description: string,
+  projectName: string,
+  themeColor: string,
 };
 
-module.exports = (config = defaultConfig) => {
+export default (config: config) => {
   return `{
   "name": "${config.projectName}",
   "short_name": "${config.projectName}",

@@ -1,9 +1,9 @@
-const defaultConfig = {
-  enableServiceWorker: false,
-  projectName: '',
-};
+interface config {
+  enableServiceWorker: boolean,
+  projectName: string,
+}
 
-module.exports = (config = defaultConfig) => {
+export default (config: config) => {
   return `/**
 * using service workers:
 * https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers

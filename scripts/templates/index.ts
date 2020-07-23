@@ -1,12 +1,11 @@
-const defaultConfig = {
-  description: '',
-  projectName: '',
-  isBundler: false,
-  isCSS: false,
-  isPWA: false,
+interface config {
+  description: string,
+  projectName: string,
+  isCSS: boolean,
+  isPWA: boolean,
 };
 
-module.exports = (config = defaultConfig) => {
+export default (config: config) => {
   return `<!DOCTYPE html>
 <html lang="en">
   <head>
@@ -33,11 +32,7 @@ module.exports = (config = defaultConfig) => {
     </main>
 
     ${config.isPWA ? `<script src="service-worker.js"></script>` : ''}
-    ${
-      !config.isBundler
-        ? `<script type="module" src="app.js"></script>`
-        : ''
-    }
+    <script type="module" src="app.js"></script>
   </body>
 </html>
 `;
