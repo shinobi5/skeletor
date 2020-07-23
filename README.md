@@ -1,6 +1,24 @@
-# :skull: Skeletor
 
-Front-end web platform boilerplate with [Deno](https://deno.land/).
+<h1 align="center">
+<br>
+  <a href="https://github.com/shinobi5/skeletor"><img src="./src/img/skeletor.jpg" alt="Skeletor" width="128"></a>
+<br>
+<br>
+Skeletor
+</h1>
+
+<p align="center">Front-end web platform boilerplate with [Deno](https://deno.land/).</p>
+
+<p align="center">
+  <a href="http://makeapullrequest.com">
+    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome">
+  </a>
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" alt="License MIT">
+  </a>
+</p>
+
+<hr />
 
 **Includes**
 - [web component](https://developer.mozilla.org/en-US/docs/Web/Web_Components) generator with [lit-html](https://github.com/polymer/lit-html) and [haunted](https://github.com/matthewp/haunted)
