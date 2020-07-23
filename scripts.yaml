@@ -1,6 +1,8 @@
 scripts:
-  server: deno run --allow-read --allow-write scripts/setup.ts
-  start: deno run --allow-net --allow-read scripts/server.ts
   create-component: deno run --allow-read --allow-write scripts/create-component.ts
+  create-pwa: deno run --allow-read --allow-write scripts/create-pwa.ts
+  create-redux: deno run --allow-read --allow-write scripts/create-redux.ts
+  setup: deno run --allow-read --allow-write scripts/create-project.ts
+  start: deno run --allow-net --allow-read scripts/create-server.ts
   build: deno run --allow-read --allow-write scripts/build.ts
   concat-css: cat src/css/settings/* src/css/global/* src/css/elements/* src/css/components/* src/css/utilities/* > src/styles.css
