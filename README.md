@@ -3,7 +3,6 @@
 <br>
   <a href="https://github.com/shinobi5/skeletor"><img src="./src/img/skeletor.jpg" alt="Skeletor" width="128"></a>
 <br>
-<br>
 Skeletor
 </h1>
 
