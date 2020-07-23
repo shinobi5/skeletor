@@ -7,7 +7,7 @@
 Skeletor
 </h1>
 
-<p align="center">Front-end web platform boilerplate with [Deno](https://deno.land/).</p>
+<p align="center">Front-end web platform boilerplate with <a href="https://deno.land/">Deno</a>.</p>
 
 <p align="center">
   <a href="http://makeapullrequest.com">
