@@ -1,7 +1,7 @@
 
 <h1 align="center">
 <br>
-  <a href="https://github.com/shinobi5/skeletor"><img src="./src/img/skeletor.jpg" alt="Skeletor" width="128"></a>
+  <a href="https://github.com/shinobi5/skeletor"><img src="src/img/skeletor.png" alt="Image of Skeletor, the lead villain, from Masters of the Universe" width="150"></a>
 <br>
 Skeletor
 </h1>

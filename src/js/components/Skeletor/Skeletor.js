@@ -13,7 +13,7 @@ export const Skeletor = () => {
         align-items: center;
         justify-content: center;
         height: 100vh;
-        background-color: #000;
+        background-color: #110e0c;
       }
       h1 {
         color: white;
@@ -28,7 +28,7 @@ export const Skeletor = () => {
     </style>
     <div>
       <img
-        src="img/skeletor.jpg"
+        src="img/skeletor.png"
         alt="Image of Skeletor, the lead villain, from Masters of the Universe"
       />
       <h1>skeletor</h1>
