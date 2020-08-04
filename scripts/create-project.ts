@@ -63,7 +63,7 @@ const answers = await ask.prompt([
   },
   {
     name: "enableServiceWorker",
-    type: "input",
+    type: "confirm",
     message: "PWA: Enable offline service worker?",
   },
 ]);
@@ -74,7 +74,7 @@ function createProject(answers: any) {
   const encoder = new TextEncoder();
 
   Deno.writeFileSync(
-    `${projectRoot}/src/index.js`, 
+    `${projectRoot}/src/index.html`, 
     encoder.encode(indexTemplate({
       description: answers.description,
       projectName: answers.projectName,
@@ -123,12 +123,12 @@ function createProject(answers: any) {
 
   if (answers.elementPrefix) {
     Deno.writeFileSync(
-      `${projectRoot}/src/service-worker.js`, 
+      `${projectRoot}/scripts/templates/create-component.ts`, 
       encoder.encode(createComponentTemplate(answers.elementPrefix))
     );
   }
 
   if (!answers.css) Deno.removeSync(`${projectRoot}/src/css`, { recursive: true });
 
-  console.log(`:floppy_disk: Project setup complete`);
+  console.log(`Project setup complete`);
 };

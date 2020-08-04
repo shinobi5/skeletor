@@ -28,7 +28,7 @@ function createComponent(answers: any) {
   const processedName = processHyphen(answers.componentName);
 
   Deno.writeFileSync(
-    \`${projectRoot}/src/js/components/${answers.componentName}.js\`, 
+    \`\${projectRoot}/src/js/components/\${answers.componentName}.js\`, 
     encoder.encode(componentTemplate({
       componentName: answers.componentName,
       elementName: processedName,
