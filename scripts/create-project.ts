@@ -12,13 +12,13 @@ const ask = new Ask();
 
 const answers = await ask.prompt([
   {
-    name: "projectName",
-    type: "text",
-    message: "Project name",
+    name: 'projectName',
+    type: 'input',
+    message: 'Project name',
   },
   {
     name: "description",
-    type: "text",
+    type: "input",
     message: "Project description"
   },
   {
@@ -28,7 +28,7 @@ const answers = await ask.prompt([
   },
   {
     name: "elementPrefix",
-    type: "text",
+    type: "input",
     message: "Web compoments prefix?",
   },
   {
@@ -40,6 +40,7 @@ const answers = await ask.prompt([
     name: "stateType",
     type: "input",
     message: "State: Beedle or Redux?",
+    validate: val => val === 'Redux' || val === 'Beedle' ? true : false,
   },
   {
     name: "pwa",
