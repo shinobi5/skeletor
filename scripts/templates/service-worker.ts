@@ -1,6 +1,6 @@
 interface config {
-  enableServiceWorker: boolean,
-  projectName: string,
+  enableServiceWorker: boolean;
+  projectName: string;
 }
 
 export default (config: config) => {
@@ -10,10 +10,12 @@ export default (config: config) => {
 * */
    
 // files to cache
-const cacheName = '${config.projectName
-  .split(' ')
-  .join('-')
-  .toLowerCase()}-v1';
+const cacheName = '${
+    config.projectName
+      .split(" ")
+      .join("-")
+      .toLowerCase()
+  }-v1';
 const contentToCache = [
   '/',
   '/index.html',

@@ -1,7 +1,7 @@
 interface config {
-  componentName: string,
-  elementName: string,
-  elementPrefix: string,
+  componentName: string;
+  elementName: string;
+  elementPrefix: string;
 }
 
 export default (config: config) => {

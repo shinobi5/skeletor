@@ -1,9 +1,9 @@
 interface config {
-  backgroundColor: string,
-  description: string,
-  projectName: string,
-  themeColor: string,
-};
+  backgroundColor: string;
+  description: string;
+  projectName: string;
+  themeColor: string;
+}
 
 export default (config: config) => {
   return `{

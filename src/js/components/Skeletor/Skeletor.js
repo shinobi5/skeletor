@@ -1,4 +1,4 @@
-import { component, html } from 'https://cdn.skypack.dev/haunted';
+import { component, html } from "https://cdn.skypack.dev/haunted";
 
 export const Skeletor = () => {
   return html`
@@ -36,4 +36,4 @@ export const Skeletor = () => {
   `;
 };
 
-customElements.define('x-skeletor', component(Skeletor));
+customElements.define("x-skeletor", component(Skeletor));

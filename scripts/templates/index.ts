@@ -1,9 +1,9 @@
 interface config {
-  description: string,
-  projectName: string,
-  isCSS: boolean,
-  isPWA: boolean,
-};
+  description: string;
+  projectName: string;
+  isCSS: boolean;
+  isPWA: boolean;
+}
 
 export default (config: config) => {
   return `<!doctype html>
@@ -14,9 +14,9 @@ export default (config: config) => {
     <title>${config.projectName}</title>
     <meta name="description" content="${config.description}" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    ${config.isPWA ? `<link rel="manifest" href="manifest.json" />` : ''}
+    ${config.isPWA ? `<link rel="manifest" href="manifest.json" />` : ""}
     <link rel="shortcut icon" href="favicon.ico" />
-    ${config.isCSS ? `<link rel="stylesheet" href="styles.css" />` : ''}
+    ${config.isCSS ? `<link rel="stylesheet" href="styles.css" />` : ""}
   </head>
   <body>
     <noscript>
@@ -31,7 +31,7 @@ export default (config: config) => {
       <x-skeletor></x-skeletor>
     </main>
 
-    ${config.isPWA ? `<script src="service-worker.js"></script>` : ''}
+    ${config.isPWA ? `<script src="service-worker.js"></script>` : ""}
     <script type="module" src="app.js"></script>
   </body>
 </html>
