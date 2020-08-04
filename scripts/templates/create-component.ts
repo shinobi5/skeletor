@@ -6,7 +6,7 @@ import componentTemplate from './templates/component.ts';
 
 const projectRoot = Deno.cwd();
 const ask = new Ask();
-const elementPrefix = ${elementPrefix}; 
+const elementPrefix = '${elementPrefix}'; 
 
 const processHyphen = (pattern: string) =>
   pattern.replace(/-([a-z])/gi, (_, match) => {

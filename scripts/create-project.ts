@@ -123,7 +123,7 @@ function createProject(answers: any) {
 
   if (answers.elementPrefix) {
     Deno.writeFileSync(
-      `${projectRoot}/scripts/templates/create-component.ts`, 
+      `${projectRoot}/scripts/create-component.ts`, 
       encoder.encode(createComponentTemplate(answers.elementPrefix))
     );
   }
