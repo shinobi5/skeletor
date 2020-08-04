@@ -37,6 +37,8 @@ const answers = await ask.prompt([
     message: "Global state?",
   },
   {
+    // @todo: this option should only exist if the previous 'state' 
+    // boolean is true. Currently not possible with 'Ask'.
     name: "stateType",
     type: "input",
     message: "State: Beedle or Redux?",
@@ -47,6 +49,8 @@ const answers = await ask.prompt([
     type: "confirm",
     message: "PWA?",
   },
+    // @todo: these options should only exist when 'pwa' boolean 
+    // is true. Currently not possible with 'Ask'.
   {
     name: "themeColor",
     type: "input",
