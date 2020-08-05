@@ -113,6 +113,7 @@ function createProject(answers: any) {
 
   if (!answers.css) {
     Deno.removeSync(`${projectRoot}/src/css`, { recursive: true });
+    Deno.removeSync(`${projectRoot}/src/styles.css`);
   }
 
   console.log(`Project setup complete`);

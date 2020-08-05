@@ -20,11 +20,9 @@ export default (config: config) => {
   </head>
   <body>
     <noscript>
-      For full functionality of this site you may need to enable
-      JavaScript. Here are the
-      <a href="https://www.enable-javascript.com/"
-          >instructions for enabling JavaScript in your web browser</a
-      >.
+      For full functionality of this site you may need to enable JavaScript. 
+      Here are the <a href="https://www.enable-javascript.com/">instructions 
+      for enabling JavaScript in your web browser</a>.
     </noscript>
 
     <main id="content">
