@@ -2,7 +2,7 @@ export default () => {
   return `import { createStore, applyMiddleware, compose } from 'https://cdn.skypack.dev/redux';
 import thunk from 'https://cdn.skypack.dev/redux-thunk';
 
-import rootReducer from './reducers';
+import rootReducer from '../reducers/reducers.js';
 
 const middleware = applyMiddleware(thunk);
 
