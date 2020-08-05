@@ -153,9 +153,7 @@ customElements.define('x-app', component(App, { useShadowDOM: false }));
 
 [Haunted](https://github.com/matthewp/haunted) provides internal component state management (same as [react hooks](https://reactjs.org/docs/hooks-reference.html)).
 
-Global state can be handled with [redux](https://github.com/reduxjs/redux) with or without web components. 
-
-Redux boilerplate can be generated through the setup step or by running:
+Global state can be handled with [redux](https://github.com/reduxjs/redux) boilerplate files can be generated through the setup step or by running:
 
 ```
 vr create-redux
