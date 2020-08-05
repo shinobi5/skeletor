@@ -155,7 +155,7 @@ customElements.define('x-app', component(App, { useShadowDOM: false }));
 
 Global state can be handled with [redux](https://github.com/reduxjs/redux) with or without web components. 
 
-Starter boilerplate can be generated through the setup step or by running:
+Redux boilerplate can be generated through the setup step or by running:
 
 ```
 vr create-redux
