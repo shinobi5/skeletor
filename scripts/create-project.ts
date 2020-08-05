@@ -98,15 +98,15 @@ function createProject(answers: any) {
     Deno.mkdirSync(`${projectRoot}/src/state/actions`, { recursive: true });
     Deno.mkdirSync(`${projectRoot}/src/state/reducers`, { recursive: true });
     Deno.writeFileSync(
-      `${projectRoot}/src/state/action.js`,
+      `${projectRoot}/src/state/actions/actions.js`,
       encoder.encode(actionsTemplate()),
     );
     Deno.writeFileSync(
-      `${projectRoot}/src/state/reducers.js`,
+      `${projectRoot}/src/state/reducers/reducers.js`,
       encoder.encode(reducersTemplate()),
     );
     Deno.writeFileSync(
-      `${projectRoot}/src/state/store.js`,
+      `${projectRoot}/src/state/store/store.js`,
       encoder.encode(storeTemplate()),
     );
   }

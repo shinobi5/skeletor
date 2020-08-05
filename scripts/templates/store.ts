@@ -1,5 +1,5 @@
 export default () => {
-  return `import { createStore, applyMiddleware, compose } from 'redux';
+  return `import { createStore, applyMiddleware, compose } from 'https://cdn.skypack.dev/redux';
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 
