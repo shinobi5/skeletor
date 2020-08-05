@@ -8,28 +8,28 @@ const ask = new Ask();
 const answers = await ask.prompt([
   {
     name: "projectName",
-    type: "text",
+    type: "input",
     message: "Project name",
   },
   {
     name: "description",
-    type: "text",
+    type: "input",
     message: "Project description",
   },
   {
     name: "themeColor",
-    type: "text",
-    message: "PWA: Theme color",
+    type: "input",
+    message: "PWA - Theme color (hex)",
   },
   {
     name: "backgroundColor",
-    type: "text",
-    message: "PWA: Background color",
+    type: "input",
+    message: "PWA - Background color (hex)",
   },
   {
     name: "enableServiceWorker",
     type: "confirm",
-    message: "PWA: Enable offline service worker?",
+    message: "PWA - Enable offline service worker?",
   },
 ]);
 
@@ -56,5 +56,5 @@ function createPWA(answers: any) {
     })),
   );
 
-  console.log(`:floppy_disk: PWA files created in src`);
+  console.log(`PWA files created`);
 }

@@ -3,26 +3,23 @@ import reducersTemplate from "./templates/reducers.ts";
 import storeTemplate from "./templates/store.ts";
 
 const projectRoot = Deno.cwd();
-const stateDir = `${projectRoot}/src/state`;
 const encoder = new TextEncoder();
 
-Deno.mkdirSync(`${stateDir}/store`);
-Deno.mkdirSync(`${stateDir}/actions`);
-Deno.mkdirSync(`${stateDir}/reducers`);
+Deno.mkdirSync(`${projectRoot}/src/state/store`, { recursive: true });
+Deno.mkdirSync(`${projectRoot}/src/state/actions`, { recursive: true });
+Deno.mkdirSync(`${projectRoot}/src/state/reducers`, { recursive: true });
 
 Deno.writeFileSync(
-  `${stateDir}/action.js`,
+  `${projectRoot}/src/state/actions/actions.js`,
   encoder.encode(actionsTemplate()),
 );
-
 Deno.writeFileSync(
-  `${stateDir}/reducers.js`,
+  `${projectRoot}/src/state/reducers/reducers.js`,
   encoder.encode(reducersTemplate()),
 );
-
 Deno.writeFileSync(
-  `${stateDir}/store.js`,
+  `${projectRoot}/src/state/store/store.js`,
   encoder.encode(storeTemplate()),
 );
 
-console.log(`:floppy_disk: Redux boilerplate files created in src/state`);
+console.log(`Redux boilerplate files created`);

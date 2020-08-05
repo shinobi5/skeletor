@@ -33,4 +33,6 @@ function createComponent(answers: any) {
       elementPrefix,
     })),
   );
+
+  console.log(`${answers.componentName} component created`);
 }
