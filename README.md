@@ -22,8 +22,6 @@ Skeletor
 - [redux](https://github.com/reduxjs/redux) and [beedle](https://github.com/hankchizljaw/beedle) generators
 
 **Notes**
-> Currently converting the previous node scripts to deno...
-
 > Project requires [deno](https://deno.land/) and [velociraptor](https://github.com/umbopepato/velociraptor/) to be installed
 
 > Custom element names require a hyphen (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)). Change this during setup (default: `x`)
@@ -155,4 +153,10 @@ customElements.define('x-app', component(App, { useShadowDOM: false }));
 
 [Haunted](https://github.com/matthewp/haunted) provides internal component state management (same as [react hooks](https://reactjs.org/docs/hooks-reference.html)).
 
-Global state can be handled with [redux](https://github.com/reduxjs/redux) or [beedle](https://github.com/hankchizljaw/beedle) with or without web components. Starter boilerplates can be generated through the setup CLI.
+Global state can be handled with [redux](https://github.com/reduxjs/redux) with or without web components. 
+
+Starter boilerplate can be generated through the setup CLI or with:
+
+```
+vr create-redux
+```
