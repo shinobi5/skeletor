@@ -62,38 +62,48 @@ vr build
 
 ## Components
 
+#### Custom elemement with ShadowDOM
+
 **Create boilerplate web component in `src/js/components/`**
 
 ```
 vr create-component
 ```
 
-**Usage examples**
+#### Custom element without ShadowDOM
+
+**Create boilerplate web component in `src/js/elements/`**
+
+```
+vr create-element
+```
+
+#### Usage examples
 
 ```html
 <head>
   <script
     type="module"
-    src="js/components/custom-element/custom-element.js"
+    src="js/components/custom-component/custom-component.js"
     defer
   ></script>
 </head>
 <body>
-  <x-custom-element>Custom element</x-custom-element>
+  <x-custom-component>Custom element</x-custom-component>
 </body>
 ```
 
 ```javascript
 import { component, html } from 'https://cdn.skypack.dev/haunted';
-import '../CustomElement/CustomElement.js';
+import '../customComponent/customComponent.js';
 
-const App = () => {
+const app = () => {
   return html`
-    <x-custom-element>Custom element</x-custom-element>
+    <x-custom-component>Custom element</x-custom-component>
   `;
 };
 
-customElements.define('x-app', component(App));
+customElements.define('x-app', component(app));
 ```
 
 #### Resources
@@ -154,9 +164,9 @@ Routing examples using [router-component](https://github.com/mkay581/router-comp
 ```html
 <head>
   <script src="https://cdn.skypack.dev/router-component"></script>
-  <script src="js/components/FirstPage/FirstPage.js"></script>
-  <script src="js/components/SecondPage/SecondPage.js"></script>
-  <script src="js/components/PageNotFound/PageNotFound.js"></script>
+  <script src="js/components/firstPage/firstPage.js"></script>
+  <script src="js/components/secondPage/secondPage.js"></script>
+  <script src="js/components/pageNotFound/pageNotFound.js"></script>
 </head>
 <body>
   <router-component>
@@ -170,11 +180,11 @@ Routing examples using [router-component](https://github.com/mkay581/router-comp
 ```javascript
 import { component, html } from 'https://cdn.skypack.dev/haunted';
 import 'https://cdn.skypack.dev/router-component';
-import '../FirstPage/FirstPage.js';
-import '../SecondPage/SecondPage.js';
-import '../PageNotFound/PageNotFound.js';
+import '../firstPage/firstPage.js';
+import '../secondPage/secondPage.js';
+import '../pageNotFound/pageNotFound.js';
 
-const App = () => {
+const app = () => {
   return html`
     <router-component>
       <x-first-page path="^/(index.html)?$"></x-first-page>
@@ -184,5 +194,5 @@ const App = () => {
   `;
 };
 
-customElements.define('x-app', component(App, { useShadowDOM: false }));
+customElements.define('x-app', component(app, { useShadowDOM: false }));
 ```
