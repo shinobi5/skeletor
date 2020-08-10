@@ -197,6 +197,8 @@ const app = () => {
 customElements.define('x-app', component(app, { useShadowDOM: false }));
 ```
 
+<br />
+
 ### Bundling
 
 Bundling is not really a thing in Deno **yet** so the best approach seems to be to go with an es module approach. If you want to support IE then you got problems...
