@@ -109,7 +109,7 @@ customElements.define('x-app', component(App));
 When using web components, styles can be set within the [shadowDOM](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM) and will be natively encapsulated within the component.
 
 #### CSS-in-JS
-There is also the option to use a framework agnostic CSS-in-JS solution like [csz](https://github.com/lukejacksonn/csz) when scoped styles are needed for a custom element without using the shadowDOM (alternatively just create component scoped styles with a CSS naming method like [BEM](http://getbem.com/)).
+A framework agnostic CSS-in-JS solution like [csz](https://github.com/lukejacksonn/csz) can be used to generate scoped styles for custom elements that don't set a shadowDOM (alternatively just create component scoped styles with a CSS naming method like [BEM](http://getbem.com/)).
 
 ```javascript
 import { component, html } from 'https://cdn.skypack.dev/haunted';
