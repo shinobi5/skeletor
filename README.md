@@ -107,6 +107,29 @@ customElements.define('x-app', component(App));
 
 When using web components, styles can be set within the [shadowDOM](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM) and will be scoped to the component.
 
+There is also the option to use a framework agnostic CSS-in-JS solution like [csz](https://github.com/lukejacksonn/csz) when scoped styles are needed for a custom element without encapsulating the component with a shadowDOM (alternatively just create component scoped styles with a CSS naming method like [BEM](http://getbem.com/)).
+
+```javascript
+import { component, html } from 'https://cdn.skypack.dev/haunted';
+import css from 'https://cdn.skypack.dev/csz';
+
+const customElement = () => {
+  return html`
+    <div class=${
+      css`
+        color: rebeccapurple;
+        background-color: black;
+        padding: 20px;
+      `
+    }>
+      Custom element with scoped runtime generated styles!
+    </div>
+  `;
+};
+
+customElements.define('x-app', component(customElement, { useShadowDOM: false }));
+```
+
 Basic global styles are provided by default (but can be disabled through the setup CLI) with tools to watch for changes and concatenate the individual files into a single minified `styles.css`.
 
 The concatenating happens in order from broad to specific styles based on the folder they're in (in the following order): `settings, global, elements, components, utilities`.
