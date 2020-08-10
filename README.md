@@ -64,7 +64,7 @@ vr build
 
 #### Custom elemement with ShadowDOM
 
-> Create boilerplate web component in `src/js/components/`
+> Create boilerplate custom element with shadowDOM in `src/js/components/`
 
 ```
 vr create-component
@@ -72,7 +72,7 @@ vr create-component
 
 #### Custom element without ShadowDOM
 
-> Create boilerplate web component in `src/js/elements/`
+> Create boilerplate custom element in `src/js/elements/`
 
 ```
 vr create-element
