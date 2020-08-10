@@ -18,8 +18,8 @@ Skeletor
 
 **Includes**
 - [web component](https://developer.mozilla.org/en-US/docs/Web/Web_Components) generator with [lit-html](https://github.com/polymer/lit-html) and [haunted](https://github.com/matthewp/haunted)
-- [progressive web app](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) generator
-- [redux](https://github.com/reduxjs/redux) generator
+- [PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) manifest and service worker generator
+- [redux](https://github.com/reduxjs/redux) boilerplate generator
 
 **Notes**
 > Project requires [deno](https://deno.land/) and [velociraptor](https://github.com/umbopepato/velociraptor/) to be installed
@@ -58,9 +58,9 @@ vr start
 vr build
 ```
 
-## Web components
+## Components
 
-**Create boilerplate component in `src/js/components/`**
+**Create boilerplate web component in `src/js/components/`**
 
 ```
 vr create-component
@@ -94,7 +94,7 @@ const App = () => {
 customElements.define('x-app', component(App));
 ```
 
-### Resources
+#### Resources
 
 - [webcomponents](https://www.webcomponents.org)
 - [Open WC](https://open-wc.org/)
@@ -105,7 +105,7 @@ customElements.define('x-app', component(App));
 
 When using web components, styles can be set within the [shadowDOM](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM) and will be scoped to the component.
 
-For global styles minimal CSS is provided by default (but can be disabled through the setup CLI) with tools to watch for changes and concatenate the individual files into a single minified `styles.css`.
+Basic lllobal styles are provided by default (but can be disabled through the setup CLI) with tools to watch for changes and concatenate the individual files into a single minified `styles.css`.
 
 The concatenating happens in order from broad to specific styles based on the folder they're in (in the following order): `settings, global, elements, components, utilities`.
 
