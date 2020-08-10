@@ -159,13 +159,3 @@ const App = () => {
 
 customElements.define('x-app', component(App, { useShadowDOM: false }));
 ```
-
-## State
-
-[Haunted](https://github.com/matthewp/haunted) provides internal component state management (same as [react hooks](https://reactjs.org/docs/hooks-reference.html)).
-
-Global state can be handled with [redux](https://github.com/reduxjs/redux) and boilerplate files can be generated through the setup step or by running:
-
-```
-vr create-redux
-```
