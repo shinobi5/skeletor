@@ -22,6 +22,7 @@ Skeletor
 - [redux](https://github.com/reduxjs/redux) boilerplate generator
 
 **Notes**
+> Work in progress...
 > Project requires [deno](https://deno.land/) and [velociraptor](https://github.com/umbopepato/velociraptor/) to be installed
 
 > Custom element names require a hyphen (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)). Change this during setup (default: `x`)
@@ -105,9 +106,19 @@ customElements.define('x-app', component(App));
 
 When using web components, styles can be set within the [shadowDOM](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM) and will be scoped to the component.
 
-Basic lllobal styles are provided by default (but can be disabled through the setup CLI) with tools to watch for changes and concatenate the individual files into a single minified `styles.css`.
+Basic global styles are provided by default (but can be disabled through the setup CLI) with tools to watch for changes and concatenate the individual files into a single minified `styles.css`.
 
 The concatenating happens in order from broad to specific styles based on the folder they're in (in the following order): `settings, global, elements, components, utilities`.
+
+## State
+
+[Haunted](https://github.com/matthewp/haunted) provides internal component state management (same as [react hooks](https://reactjs.org/docs/hooks-reference.html)).
+
+Global state can be handled with [redux](https://github.com/reduxjs/redux) and boilerplate files can be generated through the setup step or by running:
+
+```
+vr create-redux
+```
 
 ## Routing
 

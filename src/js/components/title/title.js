@@ -1,6 +1,6 @@
 import { component, html } from "https://cdn.skypack.dev/haunted";
 
-export const Skeletor = () => {
+export const title = () => {
   return html`
     <style>
       :host {
@@ -9,11 +9,6 @@ export const Skeletor = () => {
           'Droid Sans', 'Helvetica Neue', sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        background-color: #110e0c;
       }
       h1 {
         color: white;
@@ -22,18 +17,11 @@ export const Skeletor = () => {
         letter-spacing: 0.5px;
         margin: 0;
       }
-      img {
-        width: 180px;
-      }
     </style>
-    <div>
-      <img
-        src="img/skeletor.png"
-        alt="Image of Skeletor, the lead villain, from Masters of the Universe"
-      />
-      <h1>skeletor</h1>
-    </div>
+    <h1>
+      <slot></slot>
+    </h1>
   `;
 };
 
-customElements.define("x-skeletor", component(Skeletor));
+customElements.define("x-title", component(title));
