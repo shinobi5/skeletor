@@ -3,7 +3,6 @@ scripts:
   update-lock: deno cache --lock=lock.json --lock-write ./deps.ts
   reload-lock: deno cache --reload --lock=lock.json ./deps.ts
   create-component: deno run --allow-read --allow-write scripts/create-component.ts
-  create-view: deno run --allow-read --allow-write scripts/create-view.ts
   create-pwa: deno run --allow-read --allow-write scripts/create-pwa.ts
   create-redux: deno run --allow-read --allow-write scripts/create-redux.ts
   setup: deno run --allow-read --allow-write scripts/create-project.ts && deno fmt

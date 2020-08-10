@@ -1,6 +1,6 @@
 import { component, html } from "https://cdn.skypack.dev/haunted";
 import css from 'https://cdn.skypack.dev/csz';
-import "../../components/title/title.js";
+import "../title/title.js";
 
 export const skeletor = () => {
   return html`

@@ -1,1 +1,1 @@
-import "./js/elements/skeletor/skeletor.js";
+import "./js/components/skeletor/skeletor.js";
