@@ -127,9 +127,10 @@ const customElement = () => {
   `;
 };
 
-customElements.define('x-app', component(customElement, { useShadowDOM: false }));
+customElements.define('x-custom-element', component(customElement, { useShadowDOM: false }));
 ```
 
+#### Global CSS
 Basic global styles are provided by default (but can be disabled through the setup CLI) with tools to watch for changes and concatenate the individual files into a single minified `styles.css`.
 
 The concatenating happens in order from broad to specific styles based on the folder they're in (in the following order): `settings, global, elements, components, utilities`.
