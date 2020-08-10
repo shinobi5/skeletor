@@ -85,7 +85,7 @@ vr create-component
 
 ```javascript
 import { component, html } from 'https://cdn.skypack.dev/haunted';
-import '../customComponent/customComponent.js';
+import '../custom-component/custom-component.js';
 
 const app = () => {
   return html`
