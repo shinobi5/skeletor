@@ -60,6 +60,8 @@ vr start
 vr build
 ```
 
+<br />
+
 ## Components
 
 #### Create boilerplate web component in `src/js/components/`
@@ -103,6 +105,8 @@ customElements.define('x-app', component(app, { useShadowDOM: false }));
 - [MDN](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
 - [SSR for web components](https://medium.com/@treshugart/%C3%A5server-side-rendering-web-components-e5df705f3f48)
 
+<br />
+
 ## CSS
 
 #### ShadowDOM
@@ -137,6 +141,8 @@ Basic global styles are provided by default (but can be disabled through the set
 
 The concatenating happens in order from broad to specific styles based on the folder they're in (in the following order): `settings, global, elements, components, utilities`.
 
+<br />
+
 ## State
 
 [Haunted](https://github.com/matthewp/haunted) provides internal component state management (same as [react hooks](https://reactjs.org/docs/hooks-reference.html)).
@@ -146,6 +152,8 @@ Global state can be handled with [redux](https://github.com/reduxjs/redux) and b
 ```
 vr create-redux
 ```
+
+<br />
 
 ## Routing
 
