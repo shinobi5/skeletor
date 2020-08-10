@@ -28,6 +28,8 @@ Skeletor
 
 > Custom element names require a hyphen (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)). Change this during setup (default: `x`)
 
+<br />
+
 ## Getting started
 
 **Clone the repository and give the project a name**
