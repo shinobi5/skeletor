@@ -203,7 +203,7 @@ customElements.define('x-app', component(app, { useShadowDOM: false }));
 
 Bundling is not really a thing in Deno yet so the best option seems to be a full-scale es module approach.
 
-Deno has a bundler that works out of the box but clearly it must be intended for producing backend bundles. The resulting frontend SystemJS bundled file produced by the internal bundler is massive and not at all suitable for production builds.
+Deno has a bundler that works out of the box but clearly it must be intended for producing backend bundles. The resulting frontend SystemJS bundled file produced by the internal bundler is massive and not at all suitable for production builds (lots of module loader boilerplate and no tree-shaking).
 
 This is a great starting point for exploring how browsers handles es modules:
 https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/  
