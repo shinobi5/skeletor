@@ -93,7 +93,7 @@ const app = () => {
   `;
 };
 
-customElements.define('x-app', component(app));
+customElements.define('x-app', component(app, { useShadowDOM: false }));
 ```
 
 #### Resources
