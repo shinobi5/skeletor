@@ -2,6 +2,7 @@ interface config {
   componentName: string;
   elementName: string;
   elementPrefix: string;
+  shadowDOM: boolean;
 }
 
 export default (config: config) => {
@@ -18,6 +19,6 @@ export const ${config.componentName} = () => {
   \`;
 };
 
-customElements.define('${config.elementPrefix}-${config.elementName.toLowerCase()}', component(${config.componentName}));
+customElements.define('${config.elementPrefix}-${config.elementName.toLowerCase()}', component(${config.componentName}, { useShadowDOM: ${config.shadowDOM }));
 `;
 };
