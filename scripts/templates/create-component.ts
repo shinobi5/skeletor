@@ -19,6 +19,11 @@ const answers = await ask.prompt([
     type: 'input',
     message: 'Component name:'
   },
+  {
+    name: "shadowDOM",
+    type: "confirm",
+    message: "ShadowDOM?",
+  },
 ]);
 
 createComponent(answers);
@@ -33,6 +38,7 @@ function createComponent(answers: any) {
       componentName: answers.componentName,
       elementName: processedName,
       elementPrefix,
+      shadowDOM: answers.shadowDOM,
     }))
   );
 };
