@@ -207,3 +207,6 @@ Deno has a bundler that works out of the box but clearly it must be intended for
 
 This is a great starting point for exploring how browsers handle es modules:<br/>
 https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/  
+
+Deno bundling v3:<br/>
+https://github.com/denoland/deno/issues/4549
