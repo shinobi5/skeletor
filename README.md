@@ -117,7 +117,7 @@ For web components, styles can be set within the [shadowDOM](https://developer.m
 #### CSS-in-JS
 A framework agnostic CSS-in-JS solution like [csz](https://github.com/lukejacksonn/csz) can be used to generate scoped styles for custom elements without a shadowDOM.
 
-Alternatively create component scoped gllobal styles with a convention like [BEM](http://getbem.com/).
+Alternatively create component scoped global styles with a convention like [BEM](http://getbem.com/) and remove the need for JS to scope and load styles at runtime.
 
 ```javascript
 import { component, html } from 'https://cdn.skypack.dev/haunted';
