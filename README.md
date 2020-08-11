@@ -201,7 +201,7 @@ customElements.define('x-app', component(app, { useShadowDOM: false }));
 
 <br />
 
-## ES Modules
+## Modules
 
 Bundling is not really a thing in Deno (yet) so the best option seems to be a full-scale native es module approach (which is a good thing in my opinion anyway).
 
