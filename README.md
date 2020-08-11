@@ -210,3 +210,6 @@ https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/
 
 Deno bundling v3:<br/>
 https://github.com/denoland/deno/issues/4549
+
+Possible option for bundling:<br/>
+https://github.com/denofn/denopack
