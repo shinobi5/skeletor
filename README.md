@@ -19,10 +19,10 @@ Skeletor
 **Includes**
 - [web component](https://developer.mozilla.org/en-US/docs/Web/Web_Components) generator with [lit-html](https://github.com/polymer/lit-html) and [haunted](https://github.com/matthewp/haunted)
 - [PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) manifest and service worker generator
-- [redux](https://github.com/reduxjs/redux) boilerplate generator
+- [redux](https://github.com/reduxjs/redux) boilerplate generator (WIP)
 
 **Notes**
-> Still a work in progress
+> This boilerplate is still a work in progress...
 
 > Project requires [deno](https://deno.land/) and [velociraptor](https://github.com/umbopepato/velociraptor/) to be installed
 
