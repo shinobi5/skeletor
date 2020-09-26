@@ -17,9 +17,9 @@ Skeletor
 <hr />
 
 **Includes**
-- [web component](https://developer.mozilla.org/en-US/docs/Web/Web_Components) generator with [lit-html](https://github.com/polymer/lit-html) and [haunted](https://github.com/matthewp/haunted)
+- [Web component](https://developer.mozilla.org/en-US/docs/Web/Web_Components) generator with [lit-html](https://github.com/polymer/lit-html) and [haunted](https://github.com/matthewp/haunted)
 - [PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) manifest and service worker generator
-- [redux](https://github.com/reduxjs/redux) boilerplate generator
+- [Redux](https://github.com/reduxjs/redux) boilerplate generator
 
 **Notes**
 > Still a work in progress
