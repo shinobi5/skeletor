@@ -22,7 +22,7 @@ Skeletor
 - [Redux](https://github.com/reduxjs/redux) boilerplate generator
 
 **Notes**
-> Still a work in progress
+> This boilerplate is still a work in progress...
 
 > Project requires [deno](https://deno.land/) and [velociraptor](https://github.com/umbopepato/velociraptor/) to be installed
 
