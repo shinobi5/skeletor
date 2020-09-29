@@ -28,8 +28,6 @@ Skeletor
 
 > Custom element names require a hyphen (see [using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)). Change this during setup (default: `x`)
 
-<br />
-
 ## Getting started
 
 **Clone the repository and give the project a name**
@@ -61,8 +59,6 @@ vr start
 ```
 vr build
 ```
-
-<br />
 
 ## Components
 
@@ -107,8 +103,6 @@ customElements.define('x-app', component(app, { useShadowDOM: false }));
 - [MDN](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
 - [SSR for web components](https://medium.com/@treshugart/%C3%A5server-side-rendering-web-components-e5df705f3f48)
 
-<br />
-
 ## CSS
 
 #### ShadowDOM
@@ -145,8 +139,6 @@ Basic global styles are provided by default (but can be disabled through the set
 
 The concatenating happens in order from broad to specific styles based on the folder they're in (in the following order): `settings, global, elements, components, utilities`.
 
-<br />
-
 ## State
 
 [Haunted](https://github.com/matthewp/haunted) provides internal component state management (same as [react hooks](https://reactjs.org/docs/hooks-reference.html)).
@@ -156,8 +148,6 @@ Global state can be handled with [redux](https://github.com/reduxjs/redux) and b
 ```
 vr create-redux
 ```
-
-<br />
 
 ## Routing
 
@@ -198,8 +188,6 @@ const app = () => {
 
 customElements.define('x-app', component(app, { useShadowDOM: false }));
 ```
-
-<br />
 
 ## Modules / Bundle
 
