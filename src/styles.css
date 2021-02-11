@@ -123,13 +123,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-x-skeletor {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background-color: #110e0c;
-}.container {
+.container {
   position: relative;
   width: auto;
   max-width: var(--container-maxwidth);
